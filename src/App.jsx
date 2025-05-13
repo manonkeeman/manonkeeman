@@ -5,7 +5,7 @@ import About from './pages/About';
 import Work from './pages/Work';
 import Journal from './pages/Journal';
 import Contact from './pages/Contact';
-import './styles.css';
+import './Styles.css';
 
 const App = () => {
     return (
