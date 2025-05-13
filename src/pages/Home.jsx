@@ -3,7 +3,8 @@ import React from 'react';
 const Home = () => {
     return (
         <div>
-            <h1>Welkom op de Homepagina van Manon Keeman!</h1>
+            <h1>Home Page</h1>
+            <p>Welkom op de Homepagina van Manon Keeman!</p>
         </div>
     );
 };
