@@ -41,6 +41,7 @@ body {
     width: 275px;
     height: 240px;
     object-fit: cover;
+    object-position: top;
 }
 
 .header-content {
@@ -54,10 +55,13 @@ body {
 }
 
 .name-title {
-    font-size: 64px;
+    font-size: 72px;
     font-weight: 700;
     margin: 0;
     line-height: 1.2;
+    text-shadow:
+            -2px 0 #cf5b5b,     /* rode schaduw links */
+            2px 0 #5fa8c1;
 }
 
 .first-name,
@@ -98,7 +102,7 @@ body {
 }
 
 .sidebar-nav ul li a:hover {
-    color: #ffffff;
+    background-color: #ffffff;
     color: #000000;
 }
 
