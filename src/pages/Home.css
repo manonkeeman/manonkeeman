@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Fira Code', monospace;
+    background-color: rgba(89, 147, 175, 0.71);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    height: 25px;
+    width: 100%;
+}
+
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.content-wrapper {
+    width: 80%;
+    background-color: #1a1a1a;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 275px 1fr 144px;
+    align-items: center;
+    background-color: #1a1a1a;
+    gap: 20px;
+}
+
+.logo {
+    width: 275px;
+    height: 240px;
+    object-fit: cover;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    height: 100%;
+    color: #e0e0e0;
+}
+
+.name-title {
+    font-size: 64px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.first-name,
+.last-name {
+    display: block;
+}
+
+.job-title {
+    font-size: 12px;
+    margin: 5px 0 0 0;
+    font-weight: 400;
+    color: #b3b3b3;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav ul li {
+    margin-bottom: 5px;
+}
+
+.sidebar-nav ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav ul li a:hover {
+    color: #ffffff;
+    color: #000000;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0px;
+    margin-top: 20px;
+    background-color: #1a1a1a;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+/* Styling van de boxen */
+.box {
+    height: 200px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #444;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+    .box-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .sidebar-nav ul {
+        align-items: center;
+    }
+}
