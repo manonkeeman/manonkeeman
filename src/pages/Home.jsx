@@ -1,20 +1,29 @@
 import React from 'react';
 import './Home.css';
+import ManonVintage from '/src/assets/Pics/ManonVintage.jpg';
+
+const boxes = [
+    { title: 'Villa Vredestein Application', tag: 'Work', date: '20 april' },
+    { title: 'Webdesign Acupunctuur by Saskia', tag: 'Work', date: 'januari 2023' },
+    { title: 'Reisverhalen Taipei-Taiwan', tag: 'Journal', date: 'november 2024 ' },
+    { title: 'Interview: Daan Dekker - De Betonnen Droom', tag: 'Journal', date: 'februari 2015' },
+    { title: 'Debutroman spoiler -Het Bijlmermeisje', tag: 'Journal', date: 'september 2016' },
+    { title: 'Reisverhalen Duik onder in Buenos Aires', tag: 'Journal', date: 'februari 2017' },
+    { title: 'Reisverhalen Bangalore - Het Silicon Valley in India', tag: 'Journal', date: 'november 2019' },
+    { title: 'Luchtvaartfamilie - Up in the sky Interview', tag: 'Journal', date: 'september 2020' },
+];
 
 const Home = () => {
     return (
         <div className="home-container">
             <div className="top-bar"></div>
             <div className="content-wrapper">
-
                 <div className="header">
-                    <img src="/src/assets/Pics/ManonVintage.jpg" alt="Logo" className="logo" />
-
+                    <img src={ManonVintage} alt="Logo" className="logo" />
                     <div className="header-content">
                         <h1 className="name-title">Manon<br />Keeman</h1>
-                        <p className="job-title">Full Stack Developer</p>
+                        <p className="job-title">Full Stack Developer - Grafisch Ontwerper - Schrijver</p>
                     </div>
-
                     <nav className="sidebar-nav">
                         <ul>
                             <li><a href="/">Home</a></li>
@@ -26,32 +35,18 @@ const Home = () => {
                     </nav>
                 </div>
 
-                {/* Container voor de boxen */}
                 <div className="box-container">
-                    <div className="box">
-                        <div className="box1-content">
-                            <div className="box1-header">
-                                <span className="box1-tag">Work</span>
-                                <span className="box1-date">20 april</span>
+                    {boxes.map((box, index) => (
+                        <div key={index} className="box">
+                            <div className="box-content">
+                                <div className="box-header">
+                                    <span className="box-tag">{box.tag}</span>
+                                    <span className="box-date">{box.date}</span>
+                                </div>
+                                <h2 className="box-title">{box.title}</h2>
                             </div>
-                            <h2 className="box1-title">Villa Vredestein Application</h2>
                         </div>
-                    </div>
-                    <div className="box">
-                        <div className="box2-content">
-                            <div className="box2-header">
-                                <span className="box2-tag">Work</span>
-                                <span className="box2-date">januari 2023</span>
-                            </div>
-                            <h2 className="box2-title">Design<br />Acupunctuur by Saskia</h2>
-                        </div>
-                    </div>
-                    <div className="box">Box 3</div>
-                    <div className="box">Box 4</div>
-                    <div className="box">Box 5</div>
-                    <div className="box">Box 6</div>
-                    <div className="box">Box 7</div>
-                    <div className="box">Box 8</div>
+                    ))}
                 </div>
             </div>
         </div>

@@ -126,7 +126,7 @@ body {
     border: 0.5px solid #444;
 }
 
-.box1-content, box2-content {
+.box-content {
     width: 100%;
     height: 100%;
     padding: 10px;
@@ -136,7 +136,7 @@ body {
     position: relative;
 }
 
-.box1-header, box2-header {
+.box-header {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -146,44 +146,22 @@ body {
     gap: 2px;
 }
 
-.box1-tag, .box2-tag {
+.box-tag {
     font-size: 12px;
     color: #fff;
     opacity: 0.7;
 }
 
-.box1-date, .box2-date {
+.box-date {
     font-size: 11px;
     color: #ccc;
 }
 
-.box1-title, .box2-title, .box3-title {
+.box-title {
     text-align: center;
     margin: 0 auto;
     font-size: 16px;
     color: #fff;
     max-width: 90%;
     line-height: 1.3;
-}
-
-/* Responsive layout */
-@media (max-width: 1024px) {
-    .box-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .box-container {
-        grid-template-columns: 1fr;
-    }
-
-    .header {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .sidebar-nav ul {
-        align-items: center;
-    }
 }
