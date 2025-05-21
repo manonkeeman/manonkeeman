@@ -28,8 +28,24 @@ const Home = () => {
 
                 {/* Container voor de boxen */}
                 <div className="box-container">
-                    <div className="box">Box 1</div>
-                    <div className="box">Box 2</div>
+                    <div className="box">
+                        <div className="box1-content">
+                            <div className="box1-header">
+                                <span className="box1-tag">Work</span>
+                                <span className="box1-date">20 april</span>
+                            </div>
+                            <h2 className="box1-title">Villa Vredestein Application</h2>
+                        </div>
+                    </div>
+                    <div className="box">
+                        <div className="box2-content">
+                            <div className="box2-header">
+                                <span className="box2-tag">Work</span>
+                                <span className="box2-date">januari 2023</span>
+                            </div>
+                            <h2 className="box2-title">Design<br />Acupunctuur by Saskia</h2>
+                        </div>
+                    </div>
                     <div className="box">Box 3</div>
                     <div className="box">Box 4</div>
                     <div className="box">Box 5</div>
