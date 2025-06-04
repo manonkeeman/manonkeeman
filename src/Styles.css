@@ -7,3 +7,44 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.navbar {
+    width: 200px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin-bottom: 10px;
+}
+
+.navbar a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.navbar a:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}

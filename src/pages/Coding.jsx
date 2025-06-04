@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Work = () => {
+const Coding = () => {
     return (
         <div>
             <h1>My Work</h1>
@@ -9,4 +9,4 @@ const Work = () => {
     );
 };
 
-export default Work;
+export default Coding;
