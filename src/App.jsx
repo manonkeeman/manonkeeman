@@ -14,7 +14,7 @@ import Contact from "./pages/Contact.jsx";
 import Footer from "./assets/Components/Footer.jsx";
 
 // Styles
-import "./styles.css";
+import "./Styles.css";
 
 export default function App() {
     // Smooth scroll naar anchors (fallback voor browsers zonder CSS smooth)
