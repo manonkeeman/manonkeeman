@@ -1,5 +1,5 @@
-import ManonMunchen from "../assets/pics/ManonMunchen.jpeg";
-import KLMPushback from "../assets/pics/KLMPushback.jpeg";
+import ManonMunchen from "../assets/Pics/ManonMunchen.jpeg";
+import KLMPushback from "../assets/Pics/KlmPushback.jpeg";
 import SamenwerkenLaptop from "../assets/Pics/SamenwerkenLaptop.jpeg"; // zorg dat dit bestand bestaat
 
 export default function Scrummaster() {
