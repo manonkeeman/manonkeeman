@@ -11,7 +11,7 @@ import Vandesignernaarfullstack from "./pages/Fullstack.jsx";
 import Contact from "./pages/Contact.jsx";
 
 // Components
-import Footer from "./assets/components/Footer.jsx";
+import Footer from "./assets/Components/Footer.jsx";
 
 // Styles
 import "./styles.css";
