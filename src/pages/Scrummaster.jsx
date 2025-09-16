@@ -1,6 +1,4 @@
-import ManonMunchen from "../assets/Pics/ManonMunchen.jpeg";
 import KLMPushback from "../assets/Pics/KlmPushback.jpeg";
-import SamenwerkenLaptop from "../assets/Pics/SamenwerkenLaptop.jpeg"; // zorg dat dit bestand bestaat
 
 export default function Scrummaster() {
     return (
@@ -22,9 +20,7 @@ export default function Scrummaster() {
                             transparant werken.
                         </p>
                     </div>
-                    <div className="image">
-                        <img src={ManonMunchen} alt="München — cockpitmoment" />
-                    </div>
+
                 </div>
 
                 {/* Blok 2 */}
@@ -60,9 +56,7 @@ export default function Scrummaster() {
                             veerkracht en een focus op samenwerking bouw ik mee aan duurzame verandering.
                         </p>
                     </div>
-                    <div className="image">
-                        <img src={SamenwerkenLaptop} alt="Scrum training bij Brunel" />
-                    </div>
+
                 </div>
 
                 <footer className="small">
