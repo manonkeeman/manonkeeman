@@ -1,0 +1,29 @@
+.footer {
+    padding: 40px 20px;
+    background: var(--bg-alt);
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.socials {
+    display: flex;
+    gap: 18px;
+}
+
+.socials a {
+    font-size: 1.6rem;
+    color: var(--muted);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.socials a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}

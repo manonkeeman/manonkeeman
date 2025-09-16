@@ -1,50 +1,297 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
 
-body {
-    font-family: 'Fira Code', monospace;
-    background-color: rgba(89, 147, 175, 0.71);
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
+/* ========= Root & Theme Tokens ========= */
+:root{
+  /* Colors */
+  --bg:#1b1b1b;         /* deep dark grey */
+  --bg-alt:#2a2a2a;     /* alt section bg */
+  --text:#f9f0dd;       /* cream text */
+  --muted:#c6c1b5;      /* subtle secondary */
+  --accent:#8c8c82;     /* grey-green accent */
+  --border:#3a3a3a;     /* soft borders */
+
+  /* Extras */
+  --radius:14px;
+  --shadow:0 8px 24px rgba(0,0,0,.35);
+  --highlight:#d9cfa9;
+  --error:#cc6666;
+  --success:#6b8c82;
 }
 
-.app-container {
-    display: flex;
-    min-height: 100vh;
+/* ========= Resets ========= */
+*{ box-sizing:border-box }
+html, body, #root{ height:100% }
+html{ scroll-behavior:smooth }
+
+body{
+  margin:0;
+  /* Body uses Montserrat; headings use Space Grotesk (see Typography) */
+  font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, "Apple Color Emoji","Segoe UI Emoji";
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden; /* prevent horizontal scroll with full-bleed hero */
 }
 
-.navbar {
-    width: 200px;
-    background-color: #1a1a1a;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+main{ display:block }
+
+/* ========= Layout Sections ========= */
+.section{
+  padding:60px 20px;
+  scroll-margin-top:84px;
+}
+.section-alt{
+  background:var(--bg-alt);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
 }
 
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.container{ max-width:1160px; margin:0 auto }
+
+/* ========= Typography ========= */
+h1,h2,h3{
+  margin:0 0 12px;
+  line-height:1.2;
+  font-weight:600;
+  letter-spacing:0;
+  /* Headings use Space Grotesk for a bolder, modern feel */
+  font-family: "Space Grotesk", Montserrat, ui-sans-serif, system-ui, -apple-system;
+}
+h1{ font-size:clamp(28px,4.2vw,44px) }
+h2{ font-size:clamp(22px,3vw,30px) }
+h3{ font-size:clamp(18px,2.2vw,22px) }
+
+p{ margin:0 0 12px; color:var(--text) }
+.small{ font-size:.95rem; color:var(--muted) }
+
+/* ========= HERO FULL-BLEED LAYOUT ========= */
+/* remove extra space around hero */
+#home{ padding:0; margin:0 }
+
+.hero-shell{
+  width:100vw; /* true full-bleed */
+  display:grid;
+  grid-template-columns: 1fr minmax(440px, 48vw); /* image left, content right */
+  min-height:100vh;
 }
 
-.navbar ul li {
-    margin-bottom: 10px;
+.hero-left{ position:relative }
+.hero-left img{
+  display:block;
+  width:100%;
+  height:100vh;         /* fill viewport height */
+  object-fit:cover;     /* smart crop */
+  border-radius:0;
 }
 
-.navbar a {
-    color: #ccc;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 5px;
+/* Right column (nav + copy), right-aligned */
+.hero-right{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  justify-content:flex-start;
+  padding:28px clamp(20px, 3vw, 48px);
+  gap:24px;
 }
 
-.navbar a:hover {
-    color: #fff;
-    background-color: #333;
+/* Nav pinned to the far right */
+.hero-nav{
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:24px;
+  justify-content:flex-end;
 }
 
-.main-content {
-    flex: 1;
-    padding: 20px;
+/* ABOUT: full-bleed shell (breek uit .container) */
+#about.section,
+#about.section-alt {
+  padding: 0;          /* geen extra ruimte */
+  margin: 0;
+  border: none;        /* wis top/bottom lijnen van .section-alt */
+}
+
+/* Breek layout naar volledige viewportbreedte */
+.about-shell {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);      /* truuk: laat het uit de container lopen */
+  display: grid;
+  grid-template-columns: 1fr minmax(420px, 48vw);  /* links tekst, rechts beeld */
+  min-height: 90vh;                    /* lager maken? zet bijv. 75vh */
+}
+
+/* Tekstkolom */
+.about-copy {
+  padding: 28px clamp(20px, 3vw, 48px);
+}
+
+/* Fotokolom: echt tegen randen, zonder kader/hoekjes */
+.about-photo {
+  position: relative;
+  overflow: hidden;
+}
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: 100vh;          /* mag overlappen boven/onder */
+  object-fit: cover;      /* netjes bijsnijden */
+  object-position: center;
+  border-radius: 0 !important;  /* overschrijft globale img-radius */
+}
+
+.about-quote {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  /* optioneel, om meer ruimte boven de quote: */
+  margin-top: 1rem;
+  /* of padding indien gewenst */
+}
+
+/* Mobiel stapelen */
+@media (max-width: 920px){
+  .about-shell { grid-template-columns: 1fr; }
+  .about-photo img { height: 58vh; }
+}
+
+/* ========= Links ========= */
+a{
+  color:var(--text);
+  text-decoration:none;
+}
+a:hover,
+a:focus-visible{
+  color:var(--accent);
+  text-decoration:underline;
+  text-decoration-color:var(--accent);
+}
+
+/* Global nav-link underline animation */
+.nav-link{
+  position:relative;
+  color:var(--text);
+}
+.nav-link:hover,
+.nav-link:focus-visible{ color:var(--accent) }
+.nav-link::after{
+  content:"";
+  position:absolute;
+  left:0; bottom:-6px;
+  width:0%; height:2px;
+  background:var(--accent);
+  transition:width .2s ease;
+}
+.nav-link:hover::after,
+.nav-link:focus-visible::after{ width:100% }
+
+/* Hero copy spacing */
+.hero-copy h1{ margin:0 0 12px }
+.hero-copy p { margin:0 0 18px }
+
+/* ========= Responsive ========= */
+@media (max-width: 920px){
+  .hero-shell{ grid-template-columns:1fr }
+  .hero-left img{ height:58vh }
+  .hero-right{
+    align-items:flex-start;    /* nav + copy left on mobile */
+    padding:20px;
+  }
+  .hero-nav{
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+}
+
+/* ========= Buttons ========= */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:14px 20px;
+  border-radius:var(--radius);
+  text-decoration:none;
+  font-weight:600;
+  border:1px solid transparent;
+  transition:
+    transform .08s ease,
+    box-shadow .2s ease,
+    border-color .2s ease,
+    background .2s ease,
+    color .2s ease,
+    filter .2s ease;
+}
+.btn:active{ transform:translateY(1px) }
+.btn:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+}
+
+/* Primary */
+.btn-primary{
+  background:var(--accent);
+  color:var(--bg);
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+}
+.btn-primary:hover{ filter:brightness(1.07) }
+
+/* Outline */
+.btn-outline{
+  background:transparent;
+  color:var(--text);
+  border-color:var(--border);
+}
+.btn-outline:hover{
+  border-color:var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+/* Arrow variant for buttons using Space Grotesk glyphs */
+.btn[data-arrow]::after{
+  content:"↗";
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, -apple-system;
+  font-weight:600;
+  margin-left:8px;
+  line-height:1;
+}
+.btn .arrow{
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, -apple-system;
+  font-weight:600;
+  margin-left:8px;
+  line-height:1;
+}
+
+/* ========= Cards & Grid ========= */
+.card{
+  background:var(--bg-alt);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow:var(--shadow);
+}
+
+.grid{ display:grid; gap:18px }
+.grid-3{ grid-template-columns:repeat(3, 1fr) }
+@media (max-width:960px){ .grid-3{ grid-template-columns:1fr 1fr } }
+@media (max-width:640px){ .grid-3{ grid-template-columns:1fr } }
+
+/* Tags */
+.tag{
+  display:inline-block;
+  font-size:.8rem;
+  font-weight:600;
+  color:var(--bg);
+  background:var(--accent);
+  padding:6px 10px;
+  border-radius:999px;
+  letter-spacing:.2px;
+}
+
+/* Misc */
+.hr{ height:1px; background:var(--border); margin:18px 0 }
+img{ max-width:100%; display:block; border-radius:12px }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{ transition:none !important; animation:none !important }
 }

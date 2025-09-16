@@ -1,30 +1,72 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Coding from './pages/Coding';
-import Design from './pages/Design';
-import Journal from './pages/Journal';
-import Contact from './pages/Contact';
-import './Styles.css';
+import { useEffect } from "react";
 
-const App = () => {
+// Pages
+import Hero from "./pages/Hero.jsx";
+import About from "./pages/About.jsx";
+import Portfolio from "./pages/Portfolio.jsx";
+import Journal from "./pages/Journal.jsx";
+import StorytellingForDevelopers from "./pages/Storytelling.jsx";
+import VanvliegtuigslepertotScrumMaster from "./pages/Scrummaster.jsx";
+import Vandesignernaarfullstack from "./pages/Fullstack.jsx";
+import Contact from "./pages/Contact.jsx";
+
+// Components
+import Footer from "./assets/components/Footer.jsx";
+
+// Styles
+import "./styles.css";
+
+export default function App() {
+    // Smooth scroll naar anchors (fallback voor browsers zonder CSS smooth)
+    useEffect(() => {
+        const handleAnchorClick = (e) => {
+            const anchor = e.target.closest('a[href^="#"]');
+            if (!anchor) return;
+
+            const id = anchor.getAttribute("href");
+            if (!id || id === "#") return;
+
+            const targetEl = document.querySelector(id);
+            if (!targetEl) return;
+
+            e.preventDefault();
+            targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+        };
+
+        document.addEventListener("click", handleAnchorClick);
+        return () => document.removeEventListener("click", handleAnchorClick);
+    }, []);
+
     return (
-        <Router>
-            <div className="app-container">
-                <main className="main-content">
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/coding" element={<Coding />} />
-                        <Route path="/design" element={<Design />} />
-                        <Route path="/journal" element={<Journal />} />
-                        <Route path="/contact" element={<Contact />} />
-                    </Routes>
-                </main>
-            </div>
-        </Router>
-    );
-};
+        <>
+            <main>
+                <section id="home" className="section">
+                    <Hero />
+                </section>
 
-export default App;
+                <section id="about" className="section section-alt">
+                    <About />
+                </section>
+
+                <section id="portfolio" className="section">
+                    <Portfolio />
+                </section>
+
+                <section id="journal" className="section section-alt">
+                    <Journal />
+                </section>
+
+                {/* Blogpagina's los toegevoegd */}
+                <StorytellingForDevelopers />
+                <VanvliegtuigslepertotScrumMaster />
+                <Vandesignernaarfullstack />
+
+                <section id="contact" className="section">
+                    <Contact />
+                </section>
+            </main>
+
+            <Footer />
+        </>
+    );
+}
