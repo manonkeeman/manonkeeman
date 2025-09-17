@@ -1,5 +1,9 @@
 import { useEffect } from "react";
 
+// Components
+import ScrollToTop from "./assets/Components/ScrollToTop";
+import Footer from "./assets/Components/Footer.jsx";
+
 // Pages
 import Hero from "./pages/Hero.jsx";
 import About from "./pages/About.jsx";
@@ -9,9 +13,6 @@ import StorytellingForDevelopers from "./pages/Storytelling.jsx";
 import VanvliegtuigslepertotScrumMaster from "./pages/Scrummaster.jsx";
 import Vandesignernaarfullstack from "./pages/Fullstack.jsx";
 import Contact from "./pages/Contact.jsx";
-
-// Components
-import Footer from "./assets/Components/Footer.jsx";
 
 // Styles
 import "./Styles.css";
@@ -67,6 +68,7 @@ export default function App() {
             </main>
 
             <Footer />
+            <ScrollToTop /> {/* scroll-to-top button altijd aanwezig */}
         </>
     );
 }

@@ -1,29 +1,61 @@
-import { useState } from "react";
-import heroImg from "../assets/Pics/ManonFront.png";
+import { useRef, useState } from "react";
+import heroImg from "../assets/Pics/ManonKeemanFullStackDeveloper.png";
 
 export default function Hero() {
-    const [open, setOpen] = useState(false);
+    const [mOpen, setMOpen] = useState(false);
+    const hoverTimer = useRef(null);
+
+    const openMenu = () => {
+        if (hoverTimer.current) clearTimeout(hoverTimer.current);
+        setMOpen(true);
+    };
+    const closeMenu = () => {
+        if (hoverTimer.current) clearTimeout(hoverTimer.current);
+        hoverTimer.current = setTimeout(() => setMOpen(false), 120);
+    };
 
     return (
         <section id="home" style={{ padding: 0, margin: 0 }}>
             <div className="hero-shell">
-                {/* NAV als eigen grid-item (desktop) + hamburger (mobiel) */}
-                <nav className={`hero-nav ${open ? "open" : ""}`} aria-label="Primaire navigatie">
-                    <button
-                        className="hero-menu-btn"
-                        aria-label="Open menu"
-                        aria-expanded={open}
-                        onClick={() => setOpen(!open)}
-                    >
-                        ☰
-                    </button>
-
-                    <ul className="hero-links">
+                {/* NAV */}
+                <nav className="hero-nav" aria-label="Primaire navigatie">
+                    {/* Desktop: rechts uitgelijnd */}
+                    <ul className="hero-links-desktop">
                         <li><a href="#about" className="nav-link">About</a></li>
                         <li><a href="#portfolio" className="nav-link">Portfolio</a></li>
                         <li><a href="#journal" className="nav-link">Journal</a></li>
-                        <li><a href="#contact" className="btn btn-primary" data-arrow>Samenwerken</a></li>
+                        <li><a href="#contact" className="btn btn-primary" data-arrow>Contact</a></li>
                     </ul>
+
+                    {/* Mobile: fixed rechts-boven */}
+                    <div
+                        className="hero-menu-mobile"
+                        onMouseEnter={openMenu}
+                        onMouseLeave={closeMenu}
+                    >
+                        <button
+                            className="hero-menu-btn"
+                            aria-label="Open menu"
+                            aria-expanded={mOpen}
+                            aria-haspopup="true"
+                            onClick={() => setMOpen(v => !v)}
+                            onFocus={openMenu}
+                            onBlur={closeMenu}
+                        >
+                            ☰
+                        </button>
+
+                        <ul
+                            className={`hero-links-mobile ${mOpen ? "show" : ""}`}
+                            role="menu"
+                            aria-label="Hoofdmenu"
+                        >
+                            <li role="none"><a role="menuitem" href="#about" className="nav-link" onClick={() => setMOpen(false)}>About</a></li>
+                            <li role="none"><a role="menuitem" href="#portfolio" className="nav-link" onClick={() => setMOpen(false)}>Portfolio</a></li>
+                            <li role="none"><a role="menuitem" href="#journal" className="nav-link" onClick={() => setMOpen(false)}>Journal</a></li>
+                            <li role="none"><a role="menuitem" href="#contact" className="nav-link" onClick={() => setMOpen(false)}>Samenwerken</a></li>
+                        </ul>
+                    </div>
                 </nav>
 
                 {/* FOTO */}
@@ -34,8 +66,10 @@ export default function Hero() {
                 {/* TEKST */}
                 <div className="hero-copy">
                     <h1>- Hi! Ik ben Manon -</h1>
-                    <h3>Ik maak orde in de chaos — met design, code en een flinke dosis nieuwsgierigheid.</h3>
-                    <p>Techniek zonder verhaal is kaal. Verhalen zonder structuur waaien weg. Ik leer elke dag en bouw met teams aan oplossingen die er echt toe doen.</p>
+                    <h3>Met design, code en nieuwsgierigheid maak ik orde uit chaos.</h3>
+                    <p>
+                        Geef me een wirwar van ideeën en ik zie er het patroon in. Met design en code leg ik lijnen — alsof ik chaos in slow motion stilzet en opnieuw orden. Ik hou van samenwerken: de energie van een team dat scherp blijft, elkaar optilt en samen resultaat neerzet. Daar kom ik tot mijn recht.
+                    </p>
                     <p className="small">Full Stack Developer • Scrum Master • Storyteller</p>
                     <div className="hero-ctas">
                         <a href="#portfolio" className="btn btn-primary">Projecten</a>
@@ -44,62 +78,118 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Component styles */}
+            {/* Styles */}
             <style>{`
         .hero-shell{
           width:100vw;
           min-height:100vh;
           display:grid;
           grid-template-columns: 1fr minmax(420px, 48vw);
-          grid-template-areas:
-            "image nav"
-            "image copy";
+          grid-template-areas: "image copy";
+          position: relative;
         }
-        .hero-nav   { 
-          grid-area: nav;  
-          display:flex; 
-          align-items:flex-start; 
-          gap:28px; 
-          justify-self:end; 
-        }
+
         .hero-left  { grid-area: image; }
-        .hero-copy  { 
-          grid-area: copy; 
-          align-self:start; 
-          justify-self:end; 
-          max-width: 56ch; 
-          padding-top: 12px; 
+        .hero-left img{
+          display:block; width:100%; height:100vh; object-fit:cover; border-radius:0;
         }
-        .hero-ctas  { display:flex; gap:16px; margin-top:16px; }
-        .hero-left img{ display:block; width:100%; height:100vh; object-fit:cover; border-radius:0; }
 
-        /* Desktop nav layout */
-        .hero-menu-btn{ display:none; background:none; border:1px solid var(--border); padding:8px 12px; border-radius:8px; color:var(--text); cursor:pointer; }
-        .hero-links{ list-style:none; display:flex; gap:28px; margin:0; padding:0; align-items:center; }
-        .hero-links li{ margin:0; }
+        .hero-copy{
+          grid-area: copy;
+          align-self:center;
+          justify-self:end;
+          max-width: 56ch;
+          padding: 0 96px 0 32px;
+          text-align: left;
+        }
+        .hero-ctas{ display:flex; gap:16px; margin-top:16px; }
 
-        /* Mobiel: hamburger bovenaan, daarna image, dan copy met extra ruimte */
+        /* Desktop nav overlay */
+        .hero-nav{
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          z-index: 10;
+          display: flex;
+          justify-content: flex-end;
+          padding: 20px clamp(16px, 3vw, 48px);
+          pointer-events: none;
+        }
+        .hero-links-desktop{
+          pointer-events: auto;
+          display:flex; gap:28px; list-style:none; margin:0; padding:0; align-items:center;
+        }
+
+        .hero-menu-mobile{ display:none; }
+
+        /* ===== Mobile ===== */
         @media (max-width: 920px){
           .hero-shell{
             grid-template-columns: 1fr;
             grid-template-areas:
-              "nav"
               "image"
               "copy";
           }
-          .hero-nav{ 
-            width:100%; 
-            justify-self:center; /* <-- hier centreer je de nav container in mobiel */
-            align-items:center; 
-            justify-content:center; /* centreert contents binnen de nav */
-            padding:12px 16px; 
+
+          .hero-links-desktop{ display:none; }
+
+          /* FIX: maak mobile nav fixed rechts-boven bovenop de foto */
+          .hero-nav{
+            position: static;   /* container zelf niet fixed */
+            pointer-events: auto;
+            padding: 0;
           }
-          .hero-menu-btn{ display:inline-flex; }
-          .hero-links{ display:none; }
-          .hero-nav.open .hero-links{
-            display:flex; flex-direction:column; align-items:center; gap:10px; width:100%; margin-top:12px;
-            background: var(--bg-alt); border:1px solid var(--border); border-radius:12px; padding:12px;
+          .hero-menu-mobile{
+            display:block;
+            position: fixed;
+            top: 10px;
+            right: 12px;
+            z-index: 1000;      /* boven de image en tekst */
           }
+          .hero-menu-btn{
+            background:none;
+            border:1px solid var(--border);
+            padding:8px 12px;
+            border-radius:8px;
+            color:var(--text);
+            cursor:pointer;
+            line-height:1;
+          }
+
+          /* Dropdown: fixed onder de knop, compact & zwart */
+          .hero-links-mobile{
+            position: fixed;
+            top: 56px;          /* ~knophoogte + marge */
+            right: 12px;
+            background: #000;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 8px;
+            list-style: none;
+            display: flex; flex-direction: column; gap: 6px;
+            min-width: 180px;
+            font-size: 11px;
+            line-height: 1.25;
+
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(-6px);
+            transition:
+              max-height .28s ease,
+              opacity .22s ease,
+              transform .22s ease,
+              visibility 0s linear .28s;
+          }
+          .hero-links-mobile.show{
+            max-height: 300px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0);
+          }
+
           .hero-left img{ height:58vh; }
           .hero-copy{ justify-self:start; padding: 16px 20px 28px; max-width: 65ch; }
           .hero-ctas{ margin-top: 18px; }

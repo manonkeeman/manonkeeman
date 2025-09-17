@@ -1,297 +1,153 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
 
-/* ========= Root & Theme Tokens ========= */
+/* ========= Tokens ========= */
 :root{
-  /* Colors */
-  --bg:#1b1b1b;         /* deep dark grey */
-  --bg-alt:#2a2a2a;     /* alt section bg */
-  --text:#f9f0dd;       /* cream text */
-  --muted:#c6c1b5;      /* subtle secondary */
-  --accent:#8c8c82;     /* grey-green accent */
-  --border:#3a3a3a;     /* soft borders */
-
-  /* Extras */
-  --radius:14px;
-  --shadow:0 8px 24px rgba(0,0,0,.35);
-  --highlight:#d9cfa9;
-  --error:#cc6666;
-  --success:#6b8c82;
+  --bg:#1b1b1b; --bg-alt:#2a2a2a; --text:#f9f0dd; --muted:#c6c1b5;
+  --accent:#8c8c82; --border:#3a3a3a;
+  --radius:14px; --shadow:0 8px 24px rgba(0,0,0,.35);
 }
 
 /* ========= Resets ========= */
 *{ box-sizing:border-box }
 html, body, #root{ height:100% }
 html{ scroll-behavior:smooth }
-
 body{
   margin:0;
-  /* Body uses Montserrat; headings use Space Grotesk (see Typography) */
   font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, "Apple Color Emoji","Segoe UI Emoji";
-  background:var(--bg);
-  color:var(--text);
-  overflow-x:hidden; /* prevent horizontal scroll with full-bleed hero */
+  background:var(--bg); color:var(--text);
+  overflow-x:hidden;
 }
-
 main{ display:block }
 
-/* ========= Layout Sections ========= */
-.section{
-  padding:60px 20px;
-  scroll-margin-top:84px;
-}
-.section-alt{
-  background:var(--bg-alt);
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-}
-
+/* ========= Utilities ========= */
+.section{ padding:60px 20px; scroll-margin-top:84px; }
+.section-alt{ background:var(--bg-alt); border-block:1px solid var(--border); }
 .container{ max-width:1160px; margin:0 auto }
 
-/* ========= Typography ========= */
+/* ========= Type ========= */
 h1,h2,h3{
-  margin:0 0 12px;
-  line-height:1.2;
-  font-weight:600;
-  letter-spacing:0;
-  /* Headings use Space Grotesk for a bolder, modern feel */
-  font-family: "Space Grotesk", Montserrat, ui-sans-serif, system-ui, -apple-system;
+  margin:0 0 12px; line-height:1.2; font-weight:600;
+  font-family:"Space Grotesk", Montserrat, ui-sans-serif, system-ui, -apple-system;
 }
 h1{ font-size:clamp(28px,4.2vw,44px) }
 h2{ font-size:clamp(22px,3vw,30px) }
 h3{ font-size:clamp(18px,2.2vw,22px) }
-
-p{ margin:0 0 12px; color:var(--text) }
+p{ margin:0 0 12px }
 .small{ font-size:.95rem; color:var(--muted) }
 
-/* ========= HERO FULL-BLEED LAYOUT ========= */
-/* remove extra space around hero */
-#home{ padding:0; margin:0 }
-
-.hero-shell{
-  width:100vw; /* true full-bleed */
-  display:grid;
-  grid-template-columns: 1fr minmax(440px, 48vw); /* image left, content right */
-  min-height:100vh;
-}
-
-.hero-left{ position:relative }
-.hero-left img{
-  display:block;
-  width:100%;
-  height:100vh;         /* fill viewport height */
-  object-fit:cover;     /* smart crop */
-  border-radius:0;
-}
-
-/* Right column (nav + copy), right-aligned */
-.hero-right{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-end;
-  justify-content:flex-start;
-  padding:28px clamp(20px, 3vw, 48px);
-  gap:24px;
-}
-
-/* Nav pinned to the far right */
-.hero-nav{
-  width:100%;
-  display:flex;
-  align-items:center;
-  gap:24px;
-  justify-content:flex-end;
-}
-
-/* ABOUT: full-bleed shell (breek uit .container) */
-#about.section,
-#about.section-alt {
-  padding: 0;          /* geen extra ruimte */
-  margin: 0;
-  border: none;        /* wis top/bottom lijnen van .section-alt */
-}
-
-/* Breek layout naar volledige viewportbreedte */
-.about-shell {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);      /* truuk: laat het uit de container lopen */
-  display: grid;
-  grid-template-columns: 1fr minmax(420px, 48vw);  /* links tekst, rechts beeld */
-  min-height: 90vh;                    /* lager maken? zet bijv. 75vh */
-}
-
-/* Tekstkolom */
-.about-copy {
-  padding: 28px clamp(20px, 3vw, 48px);
-}
-
-/* Fotokolom: echt tegen randen, zonder kader/hoekjes */
-.about-photo {
-  position: relative;
-  overflow: hidden;
-}
-.about-photo img {
-  display: block;
-  width: 100%;
-  height: 100vh;          /* mag overlappen boven/onder */
-  object-fit: cover;      /* netjes bijsnijden */
-  object-position: center;
-  border-radius: 0 !important;  /* overschrijft globale img-radius */
-}
-
-.about-quote {
-  font-style: italic;
-  margin-bottom: 1.5rem;
-  color: var(--muted);
-  /* optioneel, om meer ruimte boven de quote: */
-  margin-top: 1rem;
-  /* of padding indien gewenst */
-}
-
-/* Mobiel stapelen */
-@media (max-width: 920px){
-  .about-shell { grid-template-columns: 1fr; }
-  .about-photo img { height: 58vh; }
-}
-
 /* ========= Links ========= */
-a{
-  color:var(--text);
-  text-decoration:none;
-}
-a:hover,
-a:focus-visible{
-  color:var(--accent);
-  text-decoration:underline;
-  text-decoration-color:var(--accent);
-}
-
-/* Global nav-link underline animation */
-.nav-link{
-  position:relative;
-  color:var(--text);
-}
-.nav-link:hover,
-.nav-link:focus-visible{ color:var(--accent) }
-.nav-link::after{
-  content:"";
-  position:absolute;
-  left:0; bottom:-6px;
-  width:0%; height:2px;
-  background:var(--accent);
-  transition:width .2s ease;
-}
-.nav-link:hover::after,
-.nav-link:focus-visible::after{ width:100% }
-
-/* Hero copy spacing */
-.hero-copy h1{ margin:0 0 12px }
-.hero-copy p { margin:0 0 18px }
-
-/* ========= Responsive ========= */
-@media (max-width: 920px){
-  .hero-shell{ grid-template-columns:1fr }
-  .hero-left img{ height:58vh }
-  .hero-right{
-    align-items:flex-start;    /* nav + copy left on mobile */
-    padding:20px;
-  }
-  .hero-nav{
-    justify-content:flex-start;
-    flex-wrap:wrap;
-    gap:16px;
-  }
-}
+a{ color:var(--text); text-decoration:none }
+a:hover, a:focus-visible{ color:var(--accent); text-decoration:underline; text-decoration-color:var(--accent) }
 
 /* ========= Buttons ========= */
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:14px 20px;
-  border-radius:var(--radius);
-  text-decoration:none;
-  font-weight:600;
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:14px 20px; border-radius:var(--radius); font-weight:600;
   border:1px solid transparent;
-  transition:
-    transform .08s ease,
-    box-shadow .2s ease,
-    border-color .2s ease,
-    background .2s ease,
-    color .2s ease,
-    filter .2s ease;
+  transition:transform .08s ease, filter .2s ease, border-color .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
 }
 .btn:active{ transform:translateY(1px) }
-.btn:focus-visible{
-  outline:2px solid var(--accent);
-  outline-offset:2px;
-}
-
-/* Primary */
-.btn-primary{
-  background:var(--accent);
-  color:var(--bg);
-  box-shadow:0 6px 18px rgba(0,0,0,.25);
-}
+.btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px }
+.btn-primary{ background:var(--accent); color:var(--bg); box-shadow:0 6px 18px rgba(0,0,0,.25) }
 .btn-primary:hover{ filter:brightness(1.07) }
+.btn-outline{ background:transparent; color:var(--text); border-color:var(--border) }
+.btn-outline:hover{ border-color:var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent) }
+.btn[data-arrow]::after{ content:"↗"; margin-left:8px; font-family:"Space Grotesk", ui-sans-serif }
 
-/* Outline */
-.btn-outline{
-  background:transparent;
-  color:var(--text);
-  border-color:var(--border);
-}
-.btn-outline:hover{
-  border-color:var(--accent);
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
-}
-
-/* Arrow variant for buttons using Space Grotesk glyphs */
-.btn[data-arrow]::after{
-  content:"↗";
-  font-family: "Space Grotesk", ui-sans-serif, system-ui, -apple-system;
-  font-weight:600;
-  margin-left:8px;
-  line-height:1;
-}
-.btn .arrow{
-  font-family: "Space Grotesk", ui-sans-serif, system-ui, -apple-system;
-  font-weight:600;
-  margin-left:8px;
-  line-height:1;
-}
-
-/* ========= Cards & Grid ========= */
+/* ========= Card ========= */
 .card{
-  background:var(--bg-alt);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:20px;
-  box-shadow:var(--shadow);
+  background:var(--bg-alt); border:1px solid var(--border);
+  border-radius:var(--radius); padding:20px; box-shadow:var(--shadow);
 }
 
-.grid{ display:grid; gap:18px }
-.grid-3{ grid-template-columns:repeat(3, 1fr) }
-@media (max-width:960px){ .grid-3{ grid-template-columns:1fr 1fr } }
-@media (max-width:640px){ .grid-3{ grid-template-columns:1fr } }
+/* ========= HERO (full-bleed) ========= */
+#home{ padding:0; margin:0 }
+.hero-shell{
+  width:100vw; display:grid; grid-template-columns:1fr minmax(440px, 48vw);
+  min-height:100vh;
+}
+.hero-left{ position:relative }
+.hero-left img{ display:block; width:100%; height:100vh; object-fit:cover; border-radius:0 }
+.hero-right{
+  display:flex; flex-direction:column; align-items:flex-end; justify-content:flex-start;
+  padding:28px clamp(20px,3vw,48px); gap:24px;
+}
+.hero-nav{ width:100%; display:flex; align-items:center; gap:24px; justify-content:flex-end }
 
-/* Tags */
-.tag{
-  display:inline-block;
-  font-size:.8rem;
-  font-weight:600;
-  color:var(--bg);
-  background:var(--accent);
-  padding:6px 10px;
-  border-radius:999px;
-  letter-spacing:.2px;
+/* ========= ABOUT (full-bleed) ========= */
+#about.section, #about.section-alt{ padding:0; margin:0; border:none }
+.about-shell{
+  width:100vw; margin-left:calc(50% - 50vw);
+  display:grid; grid-template-columns:1fr minmax(420px, 48vw); min-height:90vh;
+}
+.about-copy{ padding:28px clamp(20px,3vw,48px) }
+.about-photo{ position:relative; overflow:hidden }
+.about-photo img{ display:block; width:100%; height:100vh; object-fit:cover; object-position:center; border-radius:0 !important }
+.about-quote{ font-style:italic; color:var(--muted); margin:1rem 0 1.5rem }
+
+@media (max-width:920px){
+  .about-shell{ grid-template-columns:1fr }
+  .about-photo img{ height:58vh }
 }
 
-/* Misc */
-.hr{ height:1px; background:var(--border); margin:18px 0 }
+/* ========= CONTACT (foto links, cards verdeeld rechts) ========= */
+#contact.section{ padding:0 !important; margin:0 !important; border:none !important }
+
+#contact .contact-shell{
+  width:100vw; height:100dvh; min-height:100vh;
+  margin-left:calc(50% - 50vw);
+  display:grid; grid-template-columns:minmax(420px, 48vw) 1fr; grid-template-areas:"photo copy";
+  overflow:hidden;
+}
+
+/* Foto links */
+#contact .contact-photo{
+  grid-area:photo; position:relative; width:100%; height:100%; overflow:hidden; background:#000;
+}
+#contact .contact-photo img{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center left;
+  border:0 !important; border-radius:0 !important; box-shadow:none !important;
+}
+
+/* Rechterkolom: verdeel 3 cards over de hoogte */
+#contact .contact-copy{
+  grid-area:copy;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:clamp(24px,3vw,48px);
+}
+
+/* Cards: gelijke max-breedte en centreren */
+#contact .contact-copy .card{
+  max-width:420px; margin:0 auto;
+}
+
+/* Socials */
+#contact .contact-socials{
+  display:flex; justify-content:center; gap:32px; font-size:2rem;
+}
+#contact .contact-socials a{ color:var(--muted); transition:color .2s ease, transform .2s ease }
+#contact .contact-socials a:hover{ color:var(--accent); transform:translateY(-2px) }
+
+/* Mobiel */
+@media (max-width:920px){
+  #contact .contact-shell{
+    grid-template-columns:1fr; grid-template-areas:"photo" "copy";
+    height:auto; min-height:100dvh; margin-left:0;
+  }
+  #contact .contact-photo{ height:60dvh }
+  #contact .contact-photo img{ object-position:center }
+  #contact .contact-copy{ justify-content:flex-start; gap:20px }
+  #contact .contact-socials{ font-size:1.6rem; gap:24px }
+}
+
+/* ========= Small extras ========= */
+.hero-copy h1{ margin:0 0 12px }
+.hero-copy p{ margin:0 0 18px }
 img{ max-width:100%; display:block; border-radius:12px }
 
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion:reduce){
   *{ transition:none !important; animation:none !important }
 }
