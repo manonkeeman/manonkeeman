@@ -1,4 +1,3 @@
-import portrait from "../assets/Pics/ManonKeemanAbout.png";
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
 
@@ -39,7 +38,26 @@ export default function About() {
 
           {/* FOTO */}
           <div className="about-photo">
-            <img src={portrait} alt="Portret Manon" />
+            <picture>
+              <source
+                  type="image/avif"
+                  srcSet="/about-portrait-400w.avif 400w, /about-portrait-800w.avif 800w, /about-portrait-1200w.avif 1200w"
+                  sizes="(max-width: 768px) 100vw, 48vw"
+              />
+              <source
+                  type="image/webp"
+                  srcSet="/about-portrait-400w.webp 400w, /about-portrait-800w.webp 800w, /about-portrait-1200w.webp 1200w"
+                  sizes="(max-width: 768px) 100vw, 48vw"
+              />
+              <img
+                  src="/about-portrait-800w.webp"
+                  width="800"
+                  height="600"
+                  alt="Portret Manon"
+                  loading="lazy"
+                  decoding="async"
+              />
+            </picture>
           </div>
         </div>
 
@@ -78,11 +96,10 @@ export default function About() {
           font-size: .92rem; 
         }
 
-        /* Social icons */
         .about-socials{
-          margin-top: 32px;   /* extra witruimte */
+          margin-top: 32px;
           display: flex;
-          justify-content: center;  /* centreren */
+          justify-content: center;
           gap: 20px;
           font-size: 1.6rem;
         }

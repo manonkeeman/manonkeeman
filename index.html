@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" as="image" href="/hero-800w.avif"
+        imagesrcset="/hero-400w.avif 400w, /hero-800w.avif 800w, /hero-1200w.avif 1200w"
+        imagesizes="(max-width: 768px) 100vw, 800px" fetchpriority="high">
+  <link rel="preload" as="image" href="/klm-pushback-800w.avif"
+        imagesrcset="/klm-pushback-400w.avif 400w, /klm-pushback-800w.avif 800w, /klm-pushback-1200w.avif 1200w"
+        imagesizes="(max-width: 920px) 100vw, 48vw">
   <title>Portfolio Manon Keeman</title>
-  <link rel="icon" href="/MKlogo.jpg" type="image/jpg">
+  <meta name="description" content="Portfolio van Manon Keeman — Full Stack Developer, Scrum Master en Storyteller. Met design, code en storytelling maak ik orde uit chaos.">
+  <link rel="icon" href="/MKlogo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="root"></div>

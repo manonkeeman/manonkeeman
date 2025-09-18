@@ -1,14 +1,30 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
-import portrait from "../assets/Pics/ManonKeemanContact.png";
-import contactLocaties from "../assets/Pics/ContactLocaties.png"; // kaart-afbeelding
 
 export default function Contact() {
     return (
         <div className="contact-shell">
-            {/* FOTO LINKS */}
+            {/* FOTO LINKS (boven de vouw? zo ja: geen lazy) */}
             <div className="contact-photo">
-                <img src={portrait} alt="Portret Manon Keeman" />
+                <picture>
+                    <source
+                        type="image/avif"
+                        srcSet="/contact-portrait-400w.avif 400w, /contact-portrait-800w.avif 800w, /contact-portrait-1200w.avif 1200w"
+                        sizes="(max-width: 920px) 100vw, 48vw"
+                    />
+                    <source
+                        type="image/webp"
+                        srcSet="/contact-portrait-400w.webp 400w, /contact-portrait-800w.webp 800w, /contact-portrait-1200w.webp 1200w"
+                        sizes="(max-width: 920px) 100vw, 48vw"
+                    />
+                    <img
+                        src="/contact-portrait-800w.webp"
+                        width="800"
+                        height="1067"        /* pas aan als jouw aspect ratio anders is */
+                        alt="Portret Manon Keeman"
+                        decoding="async"
+                    />
+                </picture>
             </div>
 
             {/* CARDS RECHTS */}
@@ -48,11 +64,27 @@ export default function Contact() {
                     <div className="card">
                         <h3 className="small" style={{ marginBottom: 8, color: "var(--muted)" }}>Locaties</h3>
                         <div style={{ display: "grid", placeItems: "center", paddingTop: 12 }}>
-                            <img
-                                src={contactLocaties}
-                                alt="Kaart van Nederland met Bakkum en Driebergen gemarkeerd"
-                                style={{ width: "100%", maxWidth: 360, borderRadius: "8px" }}
-                            />
+                            <picture>
+                                <source
+                                    type="image/avif"
+                                    srcSet="/contact-map-400w.avif 400w, /contact-map-800w.avif 800w, /contact-map-1200w.avif 1200w"
+                                    sizes="(max-width: 920px) 90vw, 360px"
+                                />
+                                <source
+                                    type="image/webp"
+                                    srcSet="/contact-map-400w.webp 400w, /contact-map-800w.webp 800w, /contact-map-1200w.webp 1200w"
+                                    sizes="(max-width: 920px) 90vw, 360px"
+                                />
+                                <img
+                                    src="/contact-map-400w.webp"
+                                    width="360"
+                                    height="240"
+                                    style={{ width: "100%", maxWidth: 360, borderRadius: 8 }}
+                                    alt="Kaart van Nederland met Bakkum en Driebergen gemarkeerd"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </picture>
                         </div>
                     </div>
 

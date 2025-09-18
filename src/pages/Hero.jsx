@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import heroImg from "../assets/Pics/ManonKeemanFullStackDeveloper.png";
 
 export default function Hero() {
     const [mOpen, setMOpen] = useState(false);
@@ -19,7 +18,6 @@ export default function Hero() {
             <div className="hero-shell">
                 {/* NAV */}
                 <nav className="hero-nav" aria-label="Primaire navigatie">
-                    {/* Desktop: rechts uitgelijnd */}
                     <ul className="hero-links-desktop">
                         <li><a href="#about" className="nav-link">About</a></li>
                         <li><a href="#portfolio" className="nav-link">Portfolio</a></li>
@@ -27,7 +25,7 @@ export default function Hero() {
                         <li><a href="#contact" className="btn btn-primary" data-arrow>Contact</a></li>
                     </ul>
 
-                    {/* Mobile: fixed rechts-boven */}
+                    {/* Mobile */}
                     <div
                         className="hero-menu-mobile"
                         onMouseEnter={openMenu}
@@ -60,7 +58,26 @@ export default function Hero() {
 
                 {/* FOTO */}
                 <div className="hero-left">
-                    <img src={heroImg} alt="Hero visual" />
+                    <picture>
+                        <source
+                            type="image/avif"
+                            srcSet="/hero-400w.avif 400w, /hero-800w.avif 800w, /hero-1200w.avif 1200w"
+                            sizes="(max-width: 768px) 100vw, 800px"
+                        />
+                        <source
+                            type="image/webp"
+                            srcSet="/hero-400w.webp 400w, /hero-800w.webp 800w, /hero-1200w.webp 1200w"
+                            sizes="(max-width: 768px) 100vw, 800px"
+                        />
+                        <img
+                            src="/hero-800w.webp"
+                            width="800"
+                            height="450"
+                            fetchPriority="high"
+                            decoding="async"
+                            alt="Manon Keeman – full stack developer, scrum master & storyteller"
+                        />
+                    </picture>
                 </div>
 
                 {/* TEKST */}
@@ -68,7 +85,9 @@ export default function Hero() {
                     <h1>- Hi! Ik ben Manon -</h1>
                     <h3>Met design, code en nieuwsgierigheid maak ik orde uit chaos.</h3>
                     <p>
-                        Geef me een wirwar van ideeën en ik zie er het patroon in. Met design en code leg ik lijnen — alsof ik chaos in slow motion stilzet en opnieuw orden. Ik hou van samenwerken: de energie van een team dat scherp blijft, elkaar optilt en samen resultaat neerzet. Daar kom ik tot mijn recht.
+                        Geef me een wirwar van ideeën en ik zie er het patroon in. Met design en code leg ik lijnen —
+                        alsof ik chaos in slow motion stilzet en opnieuw orden. Ik hou van samenwerken: de energie van
+                        een team dat scherp blijft, elkaar optilt en samen resultaat neerzet. Daar kom ik tot mijn recht.
                     </p>
                     <p className="small">Full Stack Developer • Scrum Master • Storyteller</p>
                     <div className="hero-ctas">
@@ -104,7 +123,6 @@ export default function Hero() {
         }
         .hero-ctas{ display:flex; gap:16px; margin-top:16px; }
 
-        /* Desktop nav overlay */
         .hero-nav{
           position: absolute;
           top: 0; left: 0; right: 0;
@@ -121,7 +139,6 @@ export default function Hero() {
 
         .hero-menu-mobile{ display:none; }
 
-        /* ===== Mobile ===== */
         @media (max-width: 920px){
           .hero-shell{
             grid-template-columns: 1fr;
@@ -132,9 +149,8 @@ export default function Hero() {
 
           .hero-links-desktop{ display:none; }
 
-          /* FIX: maak mobile nav fixed rechts-boven bovenop de foto */
           .hero-nav{
-            position: static;   /* container zelf niet fixed */
+            position: static;
             pointer-events: auto;
             padding: 0;
           }
@@ -143,7 +159,7 @@ export default function Hero() {
             position: fixed;
             top: 10px;
             right: 12px;
-            z-index: 1000;      /* boven de image en tekst */
+            z-index: 1000;
           }
           .hero-menu-btn{
             background:none;
@@ -155,10 +171,9 @@ export default function Hero() {
             line-height:1;
           }
 
-          /* Dropdown: fixed onder de knop, compact & zwart */
           .hero-links-mobile{
             position: fixed;
-            top: 56px;          /* ~knophoogte + marge */
+            top: 56px;
             right: 12px;
             background: #000;
             border: 1px solid var(--border);
