@@ -1,4 +1,4 @@
-export default function Fullstack() {
+export default function DesignChaos() {
     return (
         <section id="fullstack" className="section section-alt">
             <div className="container">

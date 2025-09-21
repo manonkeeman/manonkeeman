@@ -18,11 +18,12 @@ export default function Hero() {
             <div className="hero-shell">
                 {/* NAV */}
                 <nav className="hero-nav" aria-label="Primaire navigatie">
+                    {/* Desktop */}
                     <ul className="hero-links-desktop">
-                        <li><a href="#about" className="nav-link">About</a></li>
-                        <li><a href="#portfolio" className="nav-link">Portfolio</a></li>
-                        <li><a href="#journal" className="nav-link">Journal</a></li>
-                        <li><a href="#contact" className="btn btn-primary" data-arrow>Contact</a></li>
+                        <li><a href="/#about" className="nav-link">About</a></li>
+                        <li><a href="/#portfolio" className="nav-link">Portfolio</a></li>
+                        <li><a href="/#journal" className="nav-link">Journal</a></li>
+                        <li><a href="/#contact" className="btn btn-primary" data-arrow>Contact</a></li>
                     </ul>
 
                     {/* Mobile */}
@@ -48,10 +49,26 @@ export default function Hero() {
                             role="menu"
                             aria-label="Hoofdmenu"
                         >
-                            <li role="none"><a role="menuitem" href="#about" className="nav-link" onClick={() => setMOpen(false)}>About</a></li>
-                            <li role="none"><a role="menuitem" href="#portfolio" className="nav-link" onClick={() => setMOpen(false)}>Portfolio</a></li>
-                            <li role="none"><a role="menuitem" href="#journal" className="nav-link" onClick={() => setMOpen(false)}>Journal</a></li>
-                            <li role="none"><a role="menuitem" href="#contact" className="nav-link" onClick={() => setMOpen(false)}>Samenwerken</a></li>
+                            <li role="none">
+                                <a role="menuitem" href="/#about" className="nav-link" onClick={() => setMOpen(false)}>
+                                    About
+                                </a>
+                            </li>
+                            <li role="none">
+                                <a role="menuitem" href="/#portfolio" className="nav-link" onClick={() => setMOpen(false)}>
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li role="none">
+                                <a role="menuitem" href="/#journal" className="nav-link" onClick={() => setMOpen(false)}>
+                                    Journal
+                                </a>
+                            </li>
+                            <li role="none">
+                                <a role="menuitem" href="/#contact" className="nav-link" onClick={() => setMOpen(false)}>
+                                    Samenwerken
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -91,8 +108,8 @@ export default function Hero() {
                     </p>
                     <p className="small">Full Stack Developer • Scrum Master • Storyteller</p>
                     <div className="hero-ctas">
-                        <a href="#portfolio" className="btn btn-primary">Projecten</a>
-                        <a href="#journal" className="btn btn-outline" data-arrow>Journal</a>
+                        <a href="/#portfolio" className="btn btn-primary">Projecten</a>
+                        <a href="/#journal" className="btn btn-outline" data-arrow>Journal</a>
                     </div>
                 </div>
             </div>

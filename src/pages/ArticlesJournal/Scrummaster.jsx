@@ -26,16 +26,16 @@ export default function Scrummaster() {
                         <picture>
                             <source
                                 type="image/avif"
-                                srcSet="/klm-pushback-400w.avif 400w, /klm-pushback-800w.avif 800w, /klm-pushback-1200w.avif 1200w"
+                                srcSet="/journal/klm-pushback-400w.avif 400w, /journal/klm-pushback-800w.avif 800w, /journal/klm-pushback-1200w.avif 1200w"
                                 sizes="(max-width: 920px) 100vw, 48vw"
                             />
                             <source
                                 type="image/webp"
-                                srcSet="/klm-pushback-400w.webp 400w, /klm-pushback-800w.webp 800w, /klm-pushback-1200w.webp 1200w"
+                                srcSet="/journal/klm-pushback-400w.webp 400w, /journal/klm-pushback-800w.webp 800w, /journal/klm-pushback-1200w.webp 1200w"
                                 sizes="(max-width: 920px) 100vw, 48vw"
                             />
                             <img
-                                src="/klm-pushback-800w.webp"
+                                src="/journal/klm-pushback-800w.webp"
                                 width="800"
                                 height="533"
                                 alt="KLM — vliegtuigsleper/pushback"
@@ -85,6 +85,18 @@ export default function Scrummaster() {
                     </div>
                 </footer>
             </div>
+
+            {/* (optioneel) beetje layout styling voor story-blokken */}
+            <style>{`
+        .story-block { display: grid; grid-template-columns: 1fr; gap: 20px; margin: 28px 0; }
+        .story-block.reverse { align-items: center; }
+        .story-block .image img { border-radius: 12px; display:block; width:100%; height:auto; }
+        @media (min-width: 920px) {
+          .story-block { grid-template-columns: 1fr 1fr; gap: 36px; }
+          .story-block.reverse .image { order: 1; }
+          .story-block.reverse .text { order: 2; }
+        }
+      `}</style>
         </section>
     );
 }
