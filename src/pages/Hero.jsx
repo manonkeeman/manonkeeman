@@ -102,7 +102,7 @@ export default function Hero() {
                     <h1>- Hi! Ik ben Manon -</h1>
                     <h3>Met design, code en nieuwsgierigheid maak ik orde uit chaos.</h3>
                     <p>
-                        Geef me een wirwar van ideeën en ik zie er het patroon in. Met design en code leg ik lijnen —
+                        Geef me een wirwar van ideeën en ik zie er het patroon in. Met design en code leg ik lijnen,
                         alsof ik chaos in slow motion stilzet en opnieuw orden. Ik hou van samenwerken: de energie van
                         een team dat scherp blijft, elkaar optilt en samen resultaat neerzet. Daar kom ik tot mijn recht.
                     </p>

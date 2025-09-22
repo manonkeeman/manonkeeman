@@ -1,21 +1,48 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa";
 
 export default function ScrollToTop() {
     const [visible, setVisible] = useState(false);
+    const { pathname, hash } = useLocation();
 
+    // 1. Toggle zichtbaarheid van de "scroll naar boven"-knop
     useEffect(() => {
         const toggleVisibility = () => {
-            if (window.scrollY > 300) {
-                setVisible(true);
-            } else {
-                setVisible(false);
-            }
+            setVisible(window.scrollY > 300);
         };
         window.addEventListener("scroll", toggleVisibility);
         return () => window.removeEventListener("scroll", toggleVisibility);
     }, []);
 
+    // 2. Scroll automatisch naar hash of bovenaan bij routewissel
+    useEffect(() => {
+        if (hash) {
+            const id = hash.replace("#", "");
+            const tryScroll = () => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    return true;
+                }
+                return false;
+            };
+
+            // probeer meerdere keren tot de sectie in DOM staat
+            if (!tryScroll()) {
+                let attempts = 0;
+                const t = setInterval(() => {
+                    attempts++;
+                    if (tryScroll() || attempts > 10) clearInterval(t);
+                }, 50);
+            }
+        } else {
+            // geen hash -> gewoon naar boven scrollen
+            window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+        }
+    }, [pathname, hash]);
+
+    // 3. Handmatige scroll naar boven via de knop
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };

@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
+import { FaMedium } from "react-icons/fa6"; // Medium toegevoegd
 
 export default function About() {
   return (
@@ -9,13 +10,13 @@ export default function About() {
           <div className="about-copy">
             <h2 className="about-title">Typemachine & Toekomst</h2>
             <blockquote className="about-quote">
-              “Met vingers op de toetsen, verhalen in de lucht — techniek brengt ze samen.”
+              “Met vingers op de toetsen, verhalen in de lucht; techniek brengt ze samen.”
             </blockquote>
             <p className="about-text">
               Een oude typemachine, nostalgie in elk geluid, herinneringen aan iets ouderwets maar krachtigs. Net als die typemachine ben ik gefascineerd door precisie, ritme en het creëren met aandacht.
             </p>
             <p className="about-text">
-              Van KLM pushback-trekker tot communicatie bij de gemeente, ervaringen stapelen zich op — maar mijn hart klopt altijd voor duidelijkheid en verbinding. Techniek mag dan modern zijn, mijn waarden zijn klassiek: loyaliteit, samenwerking en avontuur.
+              Van KLM pushback-trekker tot communicatie bij de gemeente, ervaringen stapelen zich op, maar mijn hart klopt altijd voor duidelijkheid en verbinding. Techniek mag dan modern zijn, mijn waarden zijn klassiek: loyaliteit, samenwerking en avontuur.
             </p>
 
             <h3 className="about-subtitle">Skills</h3>
@@ -33,6 +34,7 @@ export default function About() {
               <a href="https://www.instagram.com/manonkeeman" target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram /></a>
               <a href="https://www.facebook.com/editor.lifestyle/" target="_blank" rel="noreferrer" aria-label="Facebook"><FaFacebook /></a>
               <a href="https://substack.com/@manonkeeman" target="_blank" rel="noreferrer" aria-label="Substack"><SiSubstack /></a>
+              <a href="https://medium.com/@manonkeeman" target="_blank" rel="noreferrer" aria-label="Medium"><FaMedium /></a>
             </div>
           </div>
 
