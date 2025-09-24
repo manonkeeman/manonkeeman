@@ -11,8 +11,8 @@ export default function Contact() {
         Driebergen: "Hoofdstraat 147, Driebergen",
     };
 
-    const mapSrc   = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESSES[city])}&output=embed`;
-    const routeHref= `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(ADDRESSES[city])}`;
+    const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESSES[city])}&output=embed`;
+    const routeHref = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(ADDRESSES[city])}`;
 
     return (
         <div className="contact-shell">
@@ -44,8 +44,8 @@ export default function Contact() {
                 <div className="contact-stack">
                     {/* Card 1 — Contact + WhatsApp */}
                     <div className="card">
-                        <h3 className="small" style={{ marginBottom: 8, color: "var(--muted)" }}>Contact</h3>
-                        <p style={{ lineHeight: 1.55, marginBottom: 12 }}>
+                        <h3 className="small card-subtle">Contact</h3>
+                        <p className="card-intro">
                             Leuk dat je er bent! Zin in een kort overleg of wil je iets samen bouwen?
                             Stuur me gerust een appje.
                         </p>
@@ -64,9 +64,9 @@ export default function Contact() {
 
                     {/* Card 2 — Locaties */}
                     <div className="card">
-                        <h3 className="small" style={{ marginBottom: 8, color: "var(--muted)" }}>Locaties</h3>
+                        <h3 className="small card-subtle">Locaties</h3>
 
-                        <div style={{ display: "flex", gap: 8, marginBottom: 10, flexWrap: "wrap" }}>
+                        <div className="chip-row">
                             <button
                                 className={`btn btn-secondary ${city === "Bakkum" ? "active" : ""}`}
                                 onClick={() => setCity("Bakkum")}
@@ -92,7 +92,7 @@ export default function Contact() {
                             />
                         </div>
 
-                        <div style={{ marginTop: 10, display: "flex", gap: 10, flexWrap: "wrap" }}>
+                        <div className="cta-row">
                             <a href={routeHref} target="_blank" rel="noreferrer" className="btn btn-secondary">
                                 Route openen
                             </a>
@@ -101,7 +101,7 @@ export default function Contact() {
 
                     {/* Card 3 — Socials */}
                     <div className="card">
-                        <h3 className="small" style={{ marginBottom: 8, color: "var(--muted)" }}>Volgen</h3>
+                        <h3 className="small card-subtle">Volgen</h3>
                         <div className="contact-socials" aria-label="Social media">
                             <a href="https://github.com/manonkeeman" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
                             <a href="https://www.linkedin.com/in/manonkeeman/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
@@ -115,115 +115,71 @@ export default function Contact() {
             </div>
 
             <style>{`
-        .contact-shell {
+        .contact-shell{
           display:grid;
           grid-template-columns: 1fr minmax(420px, 48vw);
           gap: 20px;
           align-items: stretch;
           min-height: 92vh;
         }
-
-        .contact-photo img {
-          display:block;
-          width:100%;
-          height:92vh;
-          object-fit:cover;
-          border-radius:12px;
+        .contact-photo img{
+          display:block; width:100%; height:92vh; object-fit:cover; border-radius:12px;
         }
 
-        .contact-copy { display:flex; }
-        .contact-stack {
+        .contact-copy{ display:flex; }
+        .contact-stack{
           width:100%;
-          display:flex;
-          flex-direction:column;
-          justify-content:space-between;
+          display:flex; flex-direction:column; justify-content:space-between;
           height:100%;
-          padding:8px 3cm 8px 0;
+          padding: 8px 3cm 8px 0;
+          gap: 16px;
         }
 
-        .card {
-          width:100%;
+        .card{
           border:1px solid var(--border);
           border-radius:14px;
           background:var(--bg-alt);
           padding:16px;
           box-shadow:var(--shadow);
+          width:100%;
           box-sizing:border-box;
         }
+        .card-subtle{ margin-bottom:8px; color:var(--muted); }
+        .card-intro{ line-height:1.55; margin:0 0 12px; }
 
-        .btn {
-          display:inline-flex;
-          align-items:center;
-          gap:8px;
-          padding:8px 14px;
-          border-radius:8px;
-          font-size:.95rem;
-          font-weight:500;
-          cursor:pointer;
-          text-decoration:none;
-          transition:background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease;
+        .btn{
+          display:inline-flex; align-items:center; gap:8px;
+          padding:8px 14px; border-radius:8px;
+          font-size:.95rem; font-weight:500; cursor:pointer; text-decoration:none;
+          transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease;
         }
-        .btn-primary {
-          background:var(--accent);
-          color:var(--bg);
-          border:1px solid var(--accent);
-        }
-        .btn-secondary {
-          background:transparent;
-          color:var(--text);
-          border:1px solid var(--border);
-        }
-        .btn:hover {
-          transform:translateY(-2px);
-        }
-        .btn-primary:hover {
-          background:var(--highlight);
-          border-color:var(--highlight);
-        }
-        .btn-secondary:hover {
-          color:var(--accent);
-          border-color:var(--accent);
-        }
-        .btn-secondary.active {
-          background:var(--accent);
-          color:var(--bg);
-          border-color:var(--accent);
-        }
+        .btn:hover{ transform: translateY(-2px); }
+        .btn-primary{ background:var(--accent); color:var(--bg); border:1px solid var(--accent); }
+        .btn-primary:hover{ background:var(--highlight); border-color:var(--highlight); }
+        .btn-secondary{ background:transparent; color:var(--text); border:1px solid var(--border); }
+        .btn-secondary:hover{ color:var(--accent); border-color:var(--accent); }
+        .btn-secondary.active{ background:var(--accent); color:var(--bg); border-color:var(--accent); }
 
-        .map-wrap {
-          margin-top: 10px;
-          border-radius: 12px;
-          overflow: hidden;
-          border: 1px solid var(--border);
-          aspect-ratio: 16/10;
-        }
-        .map-wrap iframe {
-          width: 100%;
-          height: 100%;
-          border: 0;
-          display:block;
-        }
+        .chip-row{ display:flex; gap:8px; flex-wrap:wrap; margin: 0 0 10px; }
 
-        .contact-socials {
-          display:flex;
-          gap:28px;
-          justify-content:center;
-          font-size:1.9rem;
-          margin-top:12px;
+        .map-wrap{
+          margin-top:10px; border-radius:12px; overflow:hidden; border:1px solid var(--border);
+          aspect-ratio: 16 / 10;
         }
-        .contact-socials a {
-          color:var(--muted);
-          transition:color .2s ease, transform .2s ease;
+        .map-wrap iframe{ width:100%; height:100%; border:0; display:block; }
+
+        .cta-row{ margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; }
+
+        .contact-socials{
+          display:flex; gap:28px; justify-content:center; font-size:1.9rem; margin-top:12px;
         }
-        .contact-socials a:hover {
-          color:var(--accent);
-          transform:translateY(-2px);
-        }
+        .contact-socials a{ color:var(--muted); transition: color .2s ease, transform .2s ease; }
+        .contact-socials a:hover{ color:var(--accent); transform: translateY(-2px); }
 
         @media (max-width: 920px){
-          .contact-shell { grid-template-columns:1fr; min-height:auto; }
-          .contact-photo img { height:58vh; }
-          .contact-stack { padding:8px 16px; justify-content:flex-start; gap:16px; }
+          .contact-shell{ grid-template-columns: 1fr; min-height:auto; }
+          .contact-photo img{ height:58vh; }
+          .contact-stack{ padding: 8px 16px; }
         }
       `}</style>
         </div>

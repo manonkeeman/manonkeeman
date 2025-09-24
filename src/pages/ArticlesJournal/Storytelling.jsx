@@ -5,7 +5,7 @@ import { FaMedium } from "react-icons/fa6";
 import { FiShare } from "react-icons/fi";
 
 export default function StorytellingForDevelopers() {
-    const base = "/journal/storytelling";
+    const base = "/journal/storytelling-it";
 
     const handleShare = () => {
         if (navigator.share) {
@@ -55,7 +55,7 @@ export default function StorytellingForDevelopers() {
 
                 {/* Header */}
                 <header className="story-header">
-                    <h1>Storytelling voor Developers</h1>
+                    <h1>Storytelling voor Developers, een vergeten superkracht</h1>
                     <p className="small meta">
                         Gepubliceerd op <time dateTime="2025-09-14">14 september 2025</time> · ~5 min lezen
                     </p>
@@ -64,57 +64,65 @@ export default function StorytellingForDevelopers() {
                 {/* Body */}
                 <article className="story-body card">
                     <p>
-                        Veel developers denken dat storytelling vooral iets is voor marketeers of schrijvers. Toch is het ook in IT
-                        een krachtige skill. Of je nu een feature uitlegt aan een product owner, documentatie schrijft of een
-                        presentatie geeft op een hackathon: jouw boodschap blijft pas echt hangen als je er een verhaal van maakt.
+                        De meeste developers zien storytelling als iets voor marketeers of schrijvers met een MacBook in een koffiebar.
+                        Maar vergis je niet: ook in IT is het een gamechanger. Of je nu een feature uitlegt aan een product owner,
+                        documentatie schrijft voor je team of je code pitcht tijdens een hackathon—het verschil zit hem niet in de logica,
+                        maar in het verhaal dat je vertelt.
                     </p>
                     <p>
-                        Voor degene die—zoals ik—nog nooit van een hackathon had gehoord: het zijn evenementen (meestal 24–48 uur)
-                        waarin teams in korte tijd samenwerken om een idee uit te werken tot een werkend prototype of demo. Er is
-                        vaak een thema zoals “bedenk een app die duurzaam reizen stimuleert”. Iedereen werkt dag en nacht (met veel
-                        pizza en koffie) aan design, code en pitches. Aan het eind presenteer je aan een jury.
+                        En over hackathons gesproken: toen ik er voor het eerst van hoorde dacht ik dat het iets met bijlen was.
+                        Het bleek een soort creatieve marathon van 24 tot 48 uur,
+                        waarin je met een team non-stop bouwt aan een prototype rond een thema.
+                        Denk: “bedenk een app die duurzaam reizen stimuleert.” Verwacht slapeloze nachten,
+                        teveel pizza en een zee van lege koffiebekers—maar ook een zaal vol energie.
+                        En op het einde: een pitch voor de jury alsof je leven er vanaf hangt.
+
                     </p>
 
                     <h2>1. Code is logica, maar mensen denken in verhalen</h2>
                     <p>
-                        Developers denken in structuren: functies, classes, API’s. De meeste mensen buiten tech niet. Verhalen werken
-                        als een brug: ze vertalen abstracte code naar concrete waarde. Een goed verhaal legt niet alle technische
-                        details uit, maar de impact: <em>wat</em> lost dit op, voor wie, en waarom maakt het uit?
+                        Jij denkt in functies, classes en API’s. De rest van de wereld niet.
+                        Een goed verhaal is de brug: het legt niet alle technische details bloot,
+                        maar wel<em>waarom het uitmaakt.</em> Wat lost dit op? Voor wie?
+                        Waarom is dit waardevol?
+
                     </p>
 
                     <h2>2. User stories zijn eigenlijk mini-verhalen</h2>
                     <p>
-                        Agile en Scrum gebruiken al storytelling, vaak zonder dat we het zo noemen. Een user story —
-                        <em>“Als gebruiker wil ik X zodat Y”</em> — is in feite een micro-verhaal. Het heeft een hoofdpersoon (de
-                        user), een behoefte (het probleem) en een oplossing (de feature). Simpel = onthouden = focus.
+                        Agile doet het stiekem al.<em>“Als gebruiker wil ik X zodat Y”</em>
+                        Hoofdpersoon: de user. Conflict: het probleem. Oplossing: de feature.
+                        Dat is een microverhaal. Korte verhalen = betere focus = makkelijker onthouden.
                     </p>
 
                     <h2>3. Storytelling in je dagelijkse werk</h2>
                     <ul>
                         <li>
-                            <strong>Code reviews:</strong> Leg niet alleen uit <em>wat</em> je hebt aangepast, maar <em>waarom</em>.
+                            <strong>Code reviews:</strong> vertel niet alleen <em>wat</em> je hebt aangepast, maar <em>waarom</em>.
                         </li>
                         <li>
-                            <strong>Presentaties:</strong> Begin met een gebruikersvoorbeeld i.p.v. direct met technische details.
+                            <strong>Presentaties:</strong> Begin met een herkenbaar voorbeeld in plaats van een diagram vol pijltjes.
                         </li>
                         <li>
-                            <strong>Documentatie:</strong> Schrijf scenario’s. “Stel, je bent nieuw en wilt in 5 minuten draaien—zo doe je dat.”
+                            <strong>Documentatie:</strong> Schrijf scenario’s. “Stel, je bent nieuw en wilt in 5 minuten draaien; zo doe je dat.”
                         </li>
                     </ul>
 
                     <h2>4. Zo word je beter</h2>
                     <ul>
-                        <li><strong>Ken je publiek.</strong> Praat met een designer anders dan met een CTO.</li>
-                        <li><strong>Gebruik metaforen.</strong> API ≈ restaurantmenu, database ≈ archiefkast.</li>
-                        <li><strong>Hou het kort.</strong> Een scherpe anekdote is vaak genoeg.</li>
-                        <li><strong>Oefen.</strong> Deel mini-verhalen in stand-ups of retrospectives en merk het verschil.</li>
+                        <li><strong>Ken je publiek.</strong> Een designer denkt anders dan een CTO.</li>
+                        <li><strong>Gebruik metaforen.</strong> API = restaurantmenu. Database = archiefkast.</li>
+                        <li><strong>Hou het scherp.</strong> Eén anekdote zegt vaak meer dan tien slides.</li>
+                        <li><strong>Oefen.</strong> Gooi mini-verhalen in een stand-up en kijk hoe anders mensen reageren.</li>
                     </ul>
 
                     <h2>5. De bonus: jij valt op</h2>
                     <p>
-                        In een wereld waar veel developers vooral praten in code, val jij op door helder en menselijk te
-                        communiceren. Storytelling maakt je niet alleen een betere teamplayer, maar ook de brug tussen techniek en
-                        business—vaak de route naar lead, architect of Scrum Master.
+                        In een wereld waar veel developers vooral praten in code, val jij op als je helder en menselijk communiceert.
+                        Storytelling maakt je een sterkere teamgenoot en laat zien dat je meer brengt dan alleen technische kennis.
+                        Voor mij is het nog oefenen, maar ik merk nu al dat een verhaal deuren opent die een droge uitleg gesloten laat.
+                        Het is geen eindpunt, maar een vaardigheid die me meeneem in mijn groei als developer,
+                        en wie weet straks ook in een rol als Scrum Master.
                     </p>
                 </article>
 

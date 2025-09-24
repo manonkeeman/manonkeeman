@@ -65,8 +65,8 @@ export default function DesignChaos() {
                 <article className="story-body card">
                     <p>
                         Ik heb een zwak voor chaos. Niet de grote apocalyptische chaos van rampenfilms, maar de alledaagse versie:
-                        te veel tabbladen open, drie halfafgewerkte schetsen op tafel, een bug in je code die je pas om 23:47
-                        ontdekt, en oh ja — een mail van je schoonmoeder die al drie dagen onbeantwoord in je inbox hangt.
+                        te veel tabbladen open, drie half afgewerkte schetsen op tafel, een bug in je code die je pas om 23:47
+                        ontdekt, en oh ja — een mail van een verre vriend die al drie dagen onbeantwoord in je inbox hangt.
                     </p>
 
                     <p>
@@ -82,14 +82,14 @@ export default function DesignChaos() {
 
                     <p>
                         Bij KLM leerde ik dat je zonder duidelijke afspraken letterlijk niet van de grond komt. Probeer maar eens
-                        een Boeing 777 achteruit te duwen met zes ego’s en nul overleg. Bij de gemeente ontdekte ik dat
-                        communicatie zonder structuur voelt als een vergadering waar iedereen tegelijk praat — veel energie, nul
+                        een Boeing 777 achteruit te duwen zonder overleg, sensatie gegarandeerd. Bij de gemeente ontdekte ik dat
+                        communicatie zonder structuur voelt als een vergadering waar iedereen tegelijk praat, veel energie, nul
                         resultaat.
                     </p>
 
                     <p>
                         En nu, als junior developer, zie ik dat code eigenlijk hetzelfde is. Een function hier, een class daar,
-                        en ineens ontstaat er een patroon. Waar eerst een muur van onbegrijpelijke brackets stond, zie je orde:
+                        en ineens ontstaat er een patroon. Waar eerst een muur van onbegrijpelijke brackets {} stond, zie je orde:
                         een systeem dat werkt, uitbreidbaar is, en zelfs elegant kan zijn.
                     </p>
 
@@ -101,7 +101,7 @@ export default function DesignChaos() {
 
                     <p>
                         Ik moest dat leren, want jarenlang dacht ik dat structuur me zou opsluiten. Dat regels beperkend waren.
-                        Maar de echte beperking zat in het eindeloze zoeken — het telkens opnieuw beginnen omdat ik geen
+                        Maar de echte beperking zat in het eindeloze zoeken — het niet weten waar te beginnen omdat ik geen
                         fundament had.
                     </p>
 

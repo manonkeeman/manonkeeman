@@ -7,7 +7,6 @@ import { FiShare } from "react-icons/fi";
 export default function Scrummaster() {
     const base = "/journal/klm-pushback";
 
-    // Web Share API (voor mobiel/ondersteunde browsers)
     const handleShare = () => {
         if (navigator.share) {
             navigator.share({
@@ -93,15 +92,16 @@ export default function Scrummaster() {
 
                     <h2>Van platform naar productteam</h2>
                     <p>
-                        Na jaren in ploegendiensten koos ik voor meer rust, regelmaat en vrijheid. Mijn achtergrond
+                        Na jaren in ploegendiensten werd het tijd voor rust, regelmaat en meer vrijheid! Mijn achtergrond
                         als grafisch vormgever en webdesigner leidde me terug naar IT. Via Equals, een vrouwennetwerk
                         dat vrouwen in tech ondersteunt, kwam ik in contact met Brunel en behaalde ik mijn
                         Scrum-certificaat.
                     </p>
                     <p>
-                        Vandaag gebruik ik die mix van communicatie, platformdiscipline en design om teams te
-                        begeleiden: mensen verbinden, obstakels wegnemen en samen waarde leveren in korte
-                        iteraties. Niet harder rennen, wel slimmer werken – met focus, transparantie en humor.
+                        Ik begon met vliegtuigen achteruit duwen. Nu help ik teams vooruit.
+                        De overstap van platform naar productteam lijkt groot, maar de kern is hetzelfde gebleven:
+                        samenwerken onder druk, helder communiceren en elke dag beter willen worden.
+                        Alleen de headset is verruild voor een scrumboard, en dat voelt net zo spannend.
                     </p>
                 </article>
 

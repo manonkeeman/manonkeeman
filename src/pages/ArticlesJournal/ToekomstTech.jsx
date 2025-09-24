@@ -98,7 +98,7 @@ export default function ToekomstTech() {
                         niet kan: levenservaring combineren met verbeelding.
                     </p>
                     <p>
-                        Jij — de mens achter de machine — ziet verbanden die een algoritme niet snapt. Je weet dat
+                        Jij, de mens achter de machine, ziet verbanden die een algoritme niet snapt. Je weet dat
                         structuur geen keurslijf is, maar een speelveld. Zoals een scrumbord je niet vastzet, maar
                         vrijheid geeft. Zoals een grid in design niet saai is, maar je de ruimte geeft om te spelen.
                     </p>

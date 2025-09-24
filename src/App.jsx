@@ -10,17 +10,12 @@ import Footer from "./assets/Components/Footer.jsx";
 import Hero from "./pages/Hero.jsx";
 import About from "./pages/About.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
-import Journal from "./pages/Journal.jsx"; // teaser/overzicht
+import Journal from "./pages/Journal.jsx";
 import Contact from "./pages/Contact.jsx";
-
-// Artikel-router (dynamisch op slug)
 import ArticleRoute from "./pages/ArticleRoute.jsx";
-
-// Styles
 import "./Styles.css";
 
 export default function App() {
-    // Smooth scroll naar anchors (ondersteunt "#id" en "/#id")
     useEffect(() => {
         const handleAnchorClick = (e) => {
             const anchor = e.target.closest('a[href^="#"], a[href^="/#"]');
@@ -29,7 +24,6 @@ export default function App() {
             const href = anchor.getAttribute("href");
             if (!href) return;
 
-            // normaliseer naar "#id"
             const normalized = href.startsWith("/#") ? href.slice(1) : href;
             if (!normalized.startsWith("#")) return;
 
@@ -48,7 +42,6 @@ export default function App() {
         <Router>
             <ScrollToTop />
             <Routes>
-                {/* HOME (landing) toont de Journal-sectie als overzicht */}
                 <Route
                     path="/"
                     element={
@@ -66,7 +59,6 @@ export default function App() {
                                     <Portfolio />
                                 </section>
 
-                                {/* Journal blijft op de landing als sectie (teasers / kaarten) */}
                                 <section id="journal" className="section section-alt">
                                     <Journal />
                                 </section>
@@ -79,8 +71,6 @@ export default function App() {
                         </>
                     }
                 />
-
-                {/* DETAIL-ARTIKEL: dynamisch op slug */}
                 <Route
                     path="/journal/:slug"
                     element={
@@ -92,10 +82,6 @@ export default function App() {
                         </>
                     }
                 />
-
-                {/* (optioneel) 404 fallback
-        <Route path="*" element={<Navigate to="/" replace />} />
-        */}
             </Routes>
         </Router>
     );
