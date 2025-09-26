@@ -5,14 +5,14 @@ import { FaMedium } from "react-icons/fa6";
 import { FiShare } from "react-icons/fi";
 
 export default function ToekomstTech() {
-    const base = "/journal/Typemachine-Toekomst";
+    const base = "/journal/toekomst-it";
 
     const handleShare = () => {
         if (navigator.share) {
             navigator
                 .share({
                     title: "De toekomst van tech",
-                    text: "AI, remote werken en waarom creativiteit ons redt.",
+                    text: "Over AI, remote werken, data en menselijkheid in IT.",
                     url: window.location.href,
                 })
                 .catch((err) => console.error("Delen geannuleerd of mislukt:", err));
@@ -22,13 +22,13 @@ export default function ToekomstTech() {
     };
 
     return (
-        <section id="article-toekomsttech" className="section section-alt">
+        <section id="toekomsttech" className="section section-alt">
             <div className="container article-container">
                 <Link to="/#journal" className="back-link">
                     ← Terug naar journal
                 </Link>
 
-                {/* Cover binnen de container en gelijk getrokken met body-breedte */}
+                {/* Cover */}
                 <figure className="story-cover">
                     <picture>
                         <source
@@ -43,9 +43,9 @@ export default function ToekomstTech() {
                         />
                         <img
                             src={`${base}-800w.webp`}
-                            alt="Abstracte tech-visual over AI, remote werken en creativiteit"
                             width="1200"
                             height="630"
+                            alt='Quote in beeld: “the hardest part of leadership today isn’t strategy. it’s staying human in a world that’s becoming machine-led.”'
                             loading="eager"
                             fetchPriority="high"
                             decoding="async"
@@ -53,6 +53,7 @@ export default function ToekomstTech() {
                     </picture>
                 </figure>
 
+                {/* Header */}
                 <header className="story-header">
                     <h1>De toekomst van tech</h1>
                     <p className="small meta">
@@ -60,84 +61,125 @@ export default function ToekomstTech() {
                     </p>
                 </header>
 
+                {/* Body */}
                 <article className="story-body card">
                     <p>
-                        Toen ik bij de gemeente werkte, leerde ik dat communicatie soms net een callcenter was:
-                        eindeloos herhalen, strak in het systeem, en tóch altijd chaos aan de lijn. Bij KLM ontdekte ik
-                        dat een vliegtuig de lucht in slepen draait om ritme, samenwerking en duidelijke signalen. Nu,
-                        als junior in IT, herken ik diezelfde dynamiek. Alleen zijn de vliegtuigen vervangen door code,
-                        en de pushbacks door pull requests.
+                        Ik begon ooit in een callcenter. Urenlang scripts herhalen,
+                        terwijl mensen vaak iets anders bedoelden.
+                        Bij KLM leerde ik dat samenwerken alleen werkt als iedereen dezelfde signalen begrijpt.
+                        Nu ik in IT zit, herken ik diezelfde zoektocht: hoe maak je iets ingewikkelds als code menselijk en begrijpelijk?
+
                     </p>
 
+                    <h2>AI: tussen hype en praktijk</h2>
                     <p>
-                        En dan heb je AI. Iedereen praat erover alsof het de nieuwe copiloot is die straks alles van je
-                        overneemt. Maar eerlijk? AI is meer een stagiair die heel snel typt, maar waarvan je elke regel
-                        nog moet dubbelchecken. Handig, maar als je hem loslaat, land je met je B787 in de sloot.
+                        Iedereen praat alsof AI de copiloot wordt.
+                        Maar voor mij voelt het als een stagiair die razendsnel typt,
+                        handig, maar je moet blijven meekijken.
+                        Soms briljant, soms onzin. AI versnelt werk, maar neemt niet zomaar de leiding.
+                    </p>
+                    <h2>Remote werken: zichtbaarheid zonder koffieknikje</h2>
+                    <p>
+                        Sinds corona is remote werken de norm geworden.
+                        Maar je mist de subtiele signalen: knikjes, blikken, informele gesprekken.
+                        Tools als GitHub, Slack en Figma zijn je nieuwe collega’s.
+                        Je moet leren hoe je ermee praat en duidelijkheid scheppen voordat vragen zich opstapelen.
                     </p>
 
-                    <hr className="rule" />
-
-                    <h2>Remote werken: chaos in pyjama</h2>
+                    <h2>Structuur en vrijheid</h2>
                     <p>
-                        De toekomst van werk lijkt remote. En dat betekent dat we niet langer vertrouwen op een
-                        gezicht-tot-gezicht knikje bij het koffiezetapparaat. Je moet je werk zichtbaar maken, al is het
-                        om 23:00 uur in je joggingbroek met een kat op je toetsenbord.
-                    </p>
-                    <p>
-                        Tools als GitHub, Slack en Figma zijn niet alleen software; het zijn eigenlijk je nieuwe
-                        collega’s. En net als met collega’s moet je leren hoe je ermee praat. Async communiceren is niet
-                        “later reageren”, het is <em>slim genoeg schrijven</em> dat de ander geen tien vragen hoeft terug
-                        te sturen.
+                        AI kan patronen herkennen, voorstellen doen, maar betekenis geven?
+                        Dat blijft menselijk werk. Je ziet verbanden, emoties, keuzes.
+                        Een bord met taken of een grid in design is geen keurslijf,
+                        het is speelruimte om te bewegen en te groeien.
                     </p>
 
-                    <hr className="rule" />
-
-                    <h2>Creativiteit als superpower</h2>
+                    <h2>Wat AI met onze data kan — voor ons of tegen ons?</h2>
                     <p>
-                        AI kan code genereren, teksten schrijven en zelfs design schetsen. Maar er is één ding dat het
-                        niet kan: levenservaring combineren met verbeelding.
-                    </p>
-                    <p>
-                        Jij, de mens achter de machine, ziet verbanden die een algoritme niet snapt. Je weet dat
-                        structuur geen keurslijf is, maar een speelveld. Zoals een scrumbord je niet vastzet, maar
-                        vrijheid geeft. Zoals een grid in design niet saai is, maar je de ruimte geeft om te spelen.
+                        Dit is waar het spannend wordt. AI systemen draaien op data.
+                        En met alle informatie die over ons verzameld wordt;
+                        wat we klikken, wat we liken, waar we verblijven, ontstaat macht.
                     </p>
                     <p>
-                        Creativiteit is niet de kers op de taart, het ís het deeg. Zonder dat valt alles uit elkaar.
+                       <strong>	•	Misbruik: </strong> AI zou kunnen voorspellen wat je voelt, wat je koopt, welke kant je opgaat, en dat tegen je inzetten (advertenties, manipulatie).
+                       <strong>	•	Onderdrukking: </strong>  in autoritaire regimes kan AI gebruikt worden voor surveillance, censuur en sociale controle.
+                        <strong>•	Onderscheiding en vooroordelen: </strong> als de data is bevooroordeeld, zal AI beslissingen herhalen die ongelijkheid in stand houden.
+                    </p>
+                    <p>
+                        Aan de andere kant:
+                        <strong>		•	Personalisatie: </strong> AI kan adviezen geven die echt op jou afgestemd zijn — beter onderwijs, medische zorg, toegankelijkheid.
+                        <strong>		•	Autoriseren: </strong>  AI kan dienen als assistent, een tweede paar ogen — niet om te vervangen, maar om jou sterker te maken.
+                        <strong>		•	Innovatie & efficiëntie: </strong> complexe problemen oplossen — milieu, gezondheidszorg, logistiek — op manieren die mensen alleen niet kunnen.
                     </p>
 
-                    <hr className="rule" />
-
-                    <h2>Skills die blijven plakken</h2>
-                    <p>In een toekomst vol AI en automatisering blijven een paar dingen goud waard:</p>
+                    <h2>Welke AI moet je kiezen — Amerikaans, Frans of Chinees?</h2>
+                    <p>
+                        Er is nu een wedloop tussen AI-modellen met verschillende achtergronden:
+                    </p>
                     <ul>
-                        <li><strong>Empathie.</strong> Kun je je verplaatsen in de gebruiker?</li>
-                        <li><strong>Storytelling.</strong> Kun je uitleggen waarom jouw code ertoe doet?</li>
-                        <li><strong>Ethiek.</strong> Durf je te vragen: wat betekent dit voor de mens?</li>
-                        <li><strong>Levenswijsheid.</strong> Glimlachen om de omweg en zien dat die óók ergens heen leidt.</li>
+                        <li><strong>ChatGPT (VS / OpenAI)</strong> robuust, veel documentatie, maar werkt binnen Amerikaanse wetten en regels, soms met beperkingen buiten de VS.</li>
+                        <li><strong>Mistral (Frankrijk / EU)</strong> met nadruk op Europese waarden, mogelijk striktere privacyregels, betere controle over data-soevereiniteit.</li>
+                        <li><strong>Claude (Anthropic / VS)</strong> vaak gepositioneerd als “veiligere AI”, met meer maatregelen tegen desinformatie of ongepaste output.</li>
+                        <li><strong>Chinese AI-modellen (zoals Baidu Ernie, Tencent AI, Huawei’s modellen)</strong> gebouwd in een anders gereguleerd systeem. Mogelijk krachtig in massale uitvoeringen, maar met andere risicokaders qua censuur, data-toegang en staatsinterventie.
+                        </li>
+                    </ul>
+                    <p>
+                        Welke je kiest, hangt af van:
+                    </p>
+                    <ul>
+                        <li><strong>	1.	Vertrouwen & transparantie:</strong> Wie controleert de AI? Wat kun je weten over de data en de beslissingen?</li>
+                        <li><strong>	2.	Privacy & soevereiniteit:</strong>  in welke jurisdictie staat je data?</li>
+                        <li><strong>	3.	Ethiek & waarden:</strong> vaak gepositioneerd als “veiligere AI”, met meer maatregelen tegen desinformatie of ongepaste output.</li>
+                        <li><strong>	4.	Prestatie & compatibiliteit:</strong> hoe goed werkt het model voor jouw taal, domein en behoeften?</li>
                     </ul>
 
+                    <h2>Mijn standpunt & twijfel</h2>
                     <p>
-                        Soms voelt de toekomst eerlijk gezegd best beangstigend. AI die sneller schrijft dan ik kan denken,
-                        banen die verdwijnen, systemen die slimmer lijken dan mensen. En we vragen ons af: waar gaat dit naartoe?
-                        Maar angst en nieuwsgierigheid zijn vaak twee kanten van dezelfde munt. Ik kies voor nieuwsgierigheid.
-                        Zolang ik blijf leren, spelen met code, schrijven alsof het mijn eigen boek is en lachen om mijn fouten,
-                        blijf ik vooruit bewegen. Misschien niet in één rechte lijn, maar wél in een richting die klopt.
+                        Ik gebruik AI, ja en voorzichtig. Niet blind vertrouwen. Ik zie het als een gereedschap, geen autoriteit.
+
+                        Ik denk dat we nu middenin een keuze zitten: óf we laten technologie bepalen hoe we leven, óf we bouwen technologie die mensen sterker maakt.
+
+                        Ik weet niet of ik de juiste richting heb gekozen. Soms twijfel ik of ik te naïef ben. Maar ik geloof dat menselijkheid,
+                        nieuwsgierigheid en kritische keuzes ons kunnen leiden, niet perfect, maar betekenisvol.
                     </p>
                 </article>
 
+                {/* Footer: socials + share */}
                 <footer className="story-footer">
                     <div className="socials">
-                        <a href="https://www.linkedin.com/in/manonkeeman/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                        <a
+                            href="https://www.linkedin.com/in/manonkeeman/"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="LinkedIn"
+                            title="Bekijk op LinkedIn"
+                        >
                             <FaLinkedin />
                         </a>
-                        <a href="https://substack.com/@manonkeeman" target="_blank" rel="noreferrer" aria-label="Substack">
+                        <a
+                            href="https://substack.com/@manonkeeman"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Substack"
+                            title="Volg op Substack"
+                        >
                             <SiSubstack />
                         </a>
-                        <a href="https://medium.com/@manonkeeman" target="_blank" rel="noreferrer" aria-label="Medium">
+                        <a
+                            href="https://medium.com/@manonkeeman"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Medium"
+                            title="Lees op Medium"
+                        >
                             <FaMedium />
                         </a>
-                        <button onClick={handleShare} className="share-btn" aria-label="Deel dit artikel" title="Deel dit artikel">
+                        <button
+                            onClick={handleShare}
+                            className="share-btn"
+                            aria-label="Deel dit artikel"
+                            title="Deel dit artikel"
+                        >
                             <FiShare />
                         </button>
                     </div>
@@ -150,11 +192,8 @@ export default function ToekomstTech() {
 
         .article-container{max-width:72rem;margin:0 auto;padding:0 clamp(16px,3vw,48px);}
 
-        /* Cover gelijk aan body-breedte en gecentreerd */
         .story-cover{margin:8px auto 16px;max-width:68ch;}
-        .story-cover picture,.story-cover img{
-          display:block;width:100%;height:auto;border-radius:14px;object-fit:cover;
-        }
+        .story-cover img{display:block;width:100%;border-radius:14px;object-fit:cover;}
 
         .story-header{text-align:center;margin-bottom:12px;}
         .story-header h1{margin:8px 0 6px;line-height:1.15;}
@@ -171,23 +210,22 @@ export default function ToekomstTech() {
         .story-body p{margin:0 0 12px;line-height:1.68;}
         .story-body h2{margin:18px 0 10px;}
         .story-body ul{margin:0 0 12px 1.1rem;}
-        .story-body li{margin:0 0 6px;}
-        .rule{height:1px;background:var(--border);border:0;margin:14px 0;}
+        .story-body li{margin:0 0 8px;}
 
         .story-footer{text-align:center;margin-top:18px;}
         .socials{
-          display:flex;justify-content:center;gap:20px;font-size:1.8rem;margin-top:12px;
+          display:flex;
+          justify-content:center;
+          gap:20px;
+          font-size:1.8rem;
+          margin-top:12px;
         }
         .socials a,.share-btn{
-          color:var(--muted);background:none;border:none;cursor:pointer;
+          color:var(--muted);
+          background:none;border:none;cursor:pointer;
           transition:color .2s ease, transform .2s ease;
         }
         .socials a:hover,.share-btn:hover{color:var(--accent);transform:translateY(-2px);}
-
-        @media (max-width: 920px){
-          .story-cover{max-width:100%;}
-          .story-body{max-width:100%;}
-        }
       `}</style>
         </section>
     );

@@ -24,27 +24,27 @@
     "words": 530
   },
   {
-    "slug": "visual-branding",
-    "title": "Visuele branding met karakter",
-    "date": "2025-09-10",
-    "excerpt": "Kleur, typografie en code: de kracht van design.",
-    "cover": "/journal/klm-pushback-800w.avif",
+    "slug": "luchtvaartfamilie2018",
+    "title": "Luchtvaartfamilie (Up in the Sky)",
+    "date": "2018-02-18",
+    "excerpt": "Een kijkje in onze luchtvaartfamilie. Interview Up in the Sky, 2018.",
+    "cover": "/journal/luchtvaartfamilie2018-800w.avif",
     "words": 600
   },
   {
-    "slug": "team-energy",
-    "title": "De energie van een team",
+    "slug": "365korteverhalen",
+    "title": "365 Korte verhalen: van idee naar boek",
     "date": "2025-09-12",
-    "excerpt": "Samenwerken, scherp blijven en elkaar optillen.",
-    "cover": "/journal/klm-pushback-800w.avif",
+    "excerpt": "Een boek in wording: 365 scènes van absurdititeit en overleven.",
+    "cover": "/journal/cover365fragmenten-800w.avif",
     "words": 400
   },
   {
-    "slug": "toekomsttech",
+    "slug": "ToekomstTech",
     "title": "De toekomst van tech",
     "date": "2025-09-18",
     "excerpt": "AI, remote werken en de rol van creativiteit.",
-    "cover": "/journal/Typemachine-Toekomst-800w.avif",
+    "cover": "/journal/toekomst-it-800w.avif",
     "words": 700
   }
 ]

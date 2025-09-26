@@ -35,9 +35,11 @@ const batch = [
     { src: "src/assets/Pics/ManonKeemanAbout.png",               outBase: "public/about-portrait" },
     { src: "src/assets/Pics/Journal/KlmPushback.jpeg",           outBase: "public/journal/klm-pushback" },
     { src: "src/assets/Pics/Journal/DesignChaos.png",            outBase: "public/journal/design-chaos" },
-    { src: "src/assets/Pics/Journal/TypemachineNaarToekomst.png",outBase: "public/journal/typemachine-toekomst" },
+    { src: "src/assets/Pics/Journal/ToekomstinIT.jpeg",          outBase: "public/journal/toekomst-it" },
     { src: "src/assets/Pics/Journal/StorytellinginIT.png",       outBase: "public/journal/storytelling-it" },
-    { src: "src/assets/Pics/ManonKeemanContact.png",             outBase: "public/contact-portrait" },
+    { src: "src/assets/Pics/Journal/Luchtvaartfamilie2018",      outBase: "public/journal/luchtvaartfamilie2018" },
+    { src: "src/assets/Pics/Journal/Cover365Fragmenten",         outBase: "public/journal/cover365fragmenten" },
+    {src: "src/assets/Pics/ManonKeemanContact.png",              outBase: "public/contact-portrait" },
     { src: "src/assets/Pics/ContactLocaties.png",                outBase: "public/contact-map" },
 ];
 

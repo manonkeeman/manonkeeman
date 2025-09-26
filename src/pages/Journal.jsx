@@ -104,8 +104,9 @@ export default function Journal() {
         .card-img img {
           width: 100%;
           height: 180px;
-          object-fit: cover;
+          object-fit: contain;
           display: block;
+           background: var(--bg-alt);
         }
 
         .card-meta {
