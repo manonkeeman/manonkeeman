@@ -41,6 +41,10 @@ const batch = [
     { src: "src/assets/Pics/Journal/Cover365Fragmenten",         outBase: "public/journal/cover365fragmenten" },
     {src: "src/assets/Pics/ManonKeemanContact.png",              outBase: "public/contact-portrait" },
     { src: "src/assets/Pics/ContactLocaties.png",                outBase: "public/contact-map" },
+    // ✅ Portfolio afbeeldingen
+    { src: "src/assets/Pics/Portfolio/VredesteinFrontend.jpeg",  outBase: "public/portfolio/villa-vredestein-frontend" },
+    { src: "src/assets/Pics/Portfolio/WebdesignAcupuncture.jpeg",outBase: "public/portfolio/webdesign-acupuncture" },
+    { src: "src/assets/Pics/Portfolio/VredesteinBackend.jpeg",   outBase: "public/portfolio/villa-vredestein-backend" },
 ];
 
 const [, , cliSrc, cliOutBase] = process.argv;

@@ -8,7 +8,7 @@ import Footer from "./assets/Components/Footer.jsx";
 // Pagina’s (home-secties)
 import Hero from "./pages/Hero.jsx";
 import About from "./pages/About.jsx";
-import Portfolio from "./pages/Portfolio/Portfolio.jsx";
+import Portfolio from "./pages/Portfolio.jsx";
 import Journal from "./pages/Journal.jsx";
 import Contact from "./pages/Contact.jsx";
 import ArticleRoute from "./pages/ArticlesJournal/ArticleRoute.jsx";
