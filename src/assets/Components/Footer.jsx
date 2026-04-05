@@ -76,7 +76,7 @@ export default function Footer() {
         .footer-logo {
           width: 40px; height: 40px;
           border-radius: 8px;
-          filter: sepia(1) saturate(4) hue-rotate(5deg) brightness(0.95);
+          filter: sepia(1) saturate(4) hue-rotate(5deg) brightness(0.75);
           margin-bottom: 4px;
         }
 
