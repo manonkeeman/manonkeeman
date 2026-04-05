@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 
 // Artikelen
 import StorytellingForDevelopers from "./Storytelling.jsx";
-import Scrummaster from "./Scrummaster.jsx";
+import FullStackDeveloper from "./FullStackDeveloper.jsx";
 import DesignChaos from "./DesignChaos.jsx";
 import ToekomstTech from "./ToekomstTech.jsx";
 import Luchtvaartfamilie2018 from "./Luchtvaartfamilie2018.jsx";
@@ -34,7 +34,7 @@ export default function ArticleRoute() {
 
     const views = {
         storytelling: <StorytellingForDevelopers />,
-        scrummaster: <Scrummaster />,
+        scrummaster: <FullStackDeveloper />,
         designchaos: <DesignChaos />,
         toekomsttech: <ToekomstTech />,
         luchtvaartfamilie2018: <Luchtvaartfamilie2018 />,
