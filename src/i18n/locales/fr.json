@@ -82,6 +82,52 @@
       }
     }
   },
+  "seo": {
+    "home": {
+      "title": "Manon Keeman — Développeuse Full Stack",
+      "description": "Portfolio de Manon Keeman — Développeuse Full Stack, Penseuse Systémique, Designer & Conteuse. React, Spring Boot, UX design. Disponible pour des missions."
+    },
+    "journal": {
+      "scrummaster": {
+        "title": "De pousseur d'avions à développeuse Full Stack | Manon Keeman",
+        "description": "Comment je suis passée de KLM pushback au monde du code et des systèmes."
+      },
+      "designchaos": {
+        "title": "Mettre de l'ordre dans le chaos avec le code et le design | Manon Keeman",
+        "description": "Pourquoi la structure n'est pas ennuyeuse mais libératrice."
+      },
+      "storytelling": {
+        "title": "Storytelling dans l'IT | Manon Keeman",
+        "description": "Pourquoi les histoires sont indispensables en technologie."
+      },
+      "luchtvaartfamilie2018": {
+        "title": "Famille de l'aviation (Up in the Sky) | Manon Keeman",
+        "description": "Un aperçu de notre famille de l'aviation. Interview Up in the Sky, 2018."
+      },
+      "365korteverhalen": {
+        "title": "365 Histoires courtes : de l'idée au livre | Manon Keeman",
+        "description": "Un livre en cours : 365 scènes d'absurdité et de survie."
+      },
+      "toekomsttech": {
+        "title": "L'avenir de la tech | Manon Keeman",
+        "description": "L'IA, le travail à distance et le rôle de la créativité."
+      }
+    },
+    "portfolio": {
+      "frontend": {
+        "title": "Frontend Vredestein — React & UX | Manon Keeman",
+        "description": "Frontend React avec authentification JWT, API REST et design UX/UI pour Villa Vredestein."
+      },
+      "acupuncture": {
+        "title": "Webdesign Acupuncture | Manon Keeman",
+        "description": "Site WordPress au design épuré avec des informations claires pour les clients."
+      },
+      "backend": {
+        "title": "Backend Tableau de bord étudiant — Spring Boot | Manon Keeman",
+        "description": "Backend Spring Boot avec authentification JWT, API REST et intégration base de données."
+      }
+    }
+  },
   "journalSection": {
     "articles": {
       "scrummaster": {

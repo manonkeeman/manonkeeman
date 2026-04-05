@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import FallbackBack from "../../assets/Pics/Portfolio/VredesteinBackend.jpeg";
+import Seo from "../../assets/Components/Seo.jsx";
 
 const COVER_BASE = "/portfolio/villa-vredestein-backend";
 const LIVE_URL = "";
@@ -280,6 +281,11 @@ export default function BackendStudentenDashboard() {
 
     return (
         <article className="section article">
+            <Seo
+                title={tr("seo.portfolio.backend.title")}
+                description={tr("seo.portfolio.backend.description")}
+                path="/backendstudentendashboard"
+            />
             <nav aria-label="Breadcrumb" className="breadcrumbs">
                 <Link to="/">{tr('nav.home')}</Link>
                 <span className="breadcrumb-sep" aria-hidden="true">›</span>

@@ -1,4 +1,6 @@
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import Seo from "../../assets/Components/Seo.jsx";
 
 // Artikelen
 import StorytellingForDevelopers from "./Storytelling.jsx";
@@ -30,6 +32,7 @@ const normalize = (s = "") =>
 
 export default function ArticleRoute() {
     const { slug = "" } = useParams();
+    const { t } = useTranslation();
     const key = normalize(slug);
 
     const views = {
@@ -41,5 +44,17 @@ export default function ArticleRoute() {
         "365korteverhalen": <Korteverhalen365 />,
     };
 
-    return views[key] ?? <NotFound slug={slug} />;
+    const article = views[key];
+    if (!article) return <NotFound slug={slug} />;
+
+    return (
+        <>
+            <Seo
+                title={t(`seo.journal.${key}.title`, { defaultValue: "Manon Keeman — Journal" })}
+                description={t(`seo.journal.${key}.description`, { defaultValue: "" })}
+                path={`/journal/${slug}`}
+            />
+            {article}
+        </>
+    );
 }

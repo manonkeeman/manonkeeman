@@ -28,6 +28,10 @@ export default function Contact() {
             if (res.ok) {
                 setStatus("sent");
                 e.target.reset();
+                // GA4 conversion event
+                if (typeof window.gtag === "function") {
+                    window.gtag("event", "form_submit", { event_category: "contact" });
+                }
             } else {
                 setStatus("error");
             }

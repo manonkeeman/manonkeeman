@@ -82,6 +82,52 @@
       }
     }
   },
+  "seo": {
+    "home": {
+      "title": "Manon Keeman — Full Stack Entwicklerin",
+      "description": "Portfolio von Manon Keeman — Full Stack Entwicklerin, Systemdenkerin, Designerin & Geschichtenerzählerin. React, Spring Boot, UX-Design. Verfügbar für Projekte."
+    },
+    "journal": {
+      "scrummaster": {
+        "title": "Vom Flugzeugschlepper zur Full Stack Entwicklerin | Manon Keeman",
+        "description": "Wie ich von KLM Pushback in die Welt des Codes und der Systeme kam."
+      },
+      "designchaos": {
+        "title": "Chaos ordnen mit Code und Design | Manon Keeman",
+        "description": "Warum Struktur nicht langweilig ist, sondern Freiheit gibt."
+      },
+      "storytelling": {
+        "title": "Storytelling in der IT | Manon Keeman",
+        "description": "Warum Geschichten in der Technologie unverzichtbar sind."
+      },
+      "luchtvaartfamilie2018": {
+        "title": "Luftfahrtfamilie (Up in the Sky) | Manon Keeman",
+        "description": "Ein Einblick in unsere Luftfahrtfamilie. Interview Up in the Sky, 2018."
+      },
+      "365korteverhalen": {
+        "title": "365 Kurzgeschichten: von der Idee zum Buch | Manon Keeman",
+        "description": "Ein Buch entsteht: 365 Szenen von Absurdität und Überleben."
+      },
+      "toekomsttech": {
+        "title": "Die Zukunft der Tech | Manon Keeman",
+        "description": "KI, Remote-Arbeit und die Rolle der Kreativität."
+      }
+    },
+    "portfolio": {
+      "frontend": {
+        "title": "Frontend Vredestein — React & UX | Manon Keeman",
+        "description": "React-Frontend mit JWT-Authentifizierung, REST-API und UX/UI-Design für Villa Vredestein."
+      },
+      "acupuncture": {
+        "title": "Webdesign Akupunktur | Manon Keeman",
+        "description": "WordPress-Website mit ruhiger Ästhetik und klaren Informationen für Klienten."
+      },
+      "backend": {
+        "title": "Backend Studenten-Dashboard — Spring Boot | Manon Keeman",
+        "description": "Spring Boot-Backend mit JWT-Authentifizierung, REST-API und Datenbankanbindung."
+      }
+    }
+  },
   "journalSection": {
     "articles": {
       "scrummaster": {

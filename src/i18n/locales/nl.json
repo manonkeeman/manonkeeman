@@ -82,6 +82,52 @@
       }
     }
   },
+  "seo": {
+    "home": {
+      "title": "Manon Keeman — Full Stack Developer",
+      "description": "Portfolio van Manon Keeman — Full Stack Developer, Systems Thinker, Designer & Storyteller. Specialisaties: React, Spring Boot, UX-design. Beschikbaar voor opdrachten."
+    },
+    "journal": {
+      "scrummaster": {
+        "title": "Van vliegtuigsleper tot Full Stack Developer | Manon Keeman",
+        "description": "Hoe ik van KLM pushback belandde in de wereld van code en systemen."
+      },
+      "designchaos": {
+        "title": "Chaos ordenen met code en design | Manon Keeman",
+        "description": "Waarom structuur niet saai is maar vrijheid geeft."
+      },
+      "storytelling": {
+        "title": "Storytelling in IT | Manon Keeman",
+        "description": "Waarom verhalen onmisbaar zijn in technologie."
+      },
+      "luchtvaartfamilie2018": {
+        "title": "Luchtvaartfamilie (Up in the Sky) | Manon Keeman",
+        "description": "Een kijkje in onze luchtvaartfamilie. Interview Up in the Sky, 2018."
+      },
+      "365korteverhalen": {
+        "title": "365 Korte verhalen: van idee naar boek | Manon Keeman",
+        "description": "Een boek in wording: 365 scènes van absurditeit en overleven."
+      },
+      "toekomsttech": {
+        "title": "De toekomst van tech | Manon Keeman",
+        "description": "AI, remote werken en de rol van creativiteit."
+      }
+    },
+    "portfolio": {
+      "frontend": {
+        "title": "Frontend Vredestein — React & UX | Manon Keeman",
+        "description": "React frontend met JWT-authenticatie, REST API en UX/UI design voor Villa Vredestein."
+      },
+      "acupuncture": {
+        "title": "Webdesign Acupunctuur | Manon Keeman",
+        "description": "WordPress-site met rustige uitstraling en duidelijke informatie voor cliënten."
+      },
+      "backend": {
+        "title": "Backend Studentendashboard — Spring Boot | Manon Keeman",
+        "description": "Spring Boot backend met JWT-authenticatie, REST API en database-koppeling."
+      }
+    }
+  },
   "journalSection": {
     "articles": {
       "scrummaster": {

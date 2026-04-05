@@ -1,11 +1,13 @@
 import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // Layout components (always needed)
 import ScrollToTop from "./assets/Components/ScrollToTop";
 import Navbar from "./assets/Components/Navbar.jsx";
 import Footer from "./assets/Components/Footer.jsx";
 import StickyWhatsApp from "./assets/Components/StickyWhatsApp.jsx";
+import Seo from "./assets/Components/Seo.jsx";
 
 // Home sections (needed immediately on first load)
 import Hero from "./pages/Hero.jsx";
@@ -41,6 +43,20 @@ function PageLoader() {
     );
 }
 
+function HomeSeo() {
+    const { t, i18n } = useTranslation();
+    useEffect(() => {
+        document.documentElement.lang = i18n.language;
+    }, [i18n.language]);
+    return (
+        <Seo
+            title={t("seo.home.title")}
+            description={t("seo.home.description")}
+            path="/"
+        />
+    );
+}
+
 export default function App() {
     useEffect(() => {
         const handleAnchorClick = (e) => {
@@ -68,6 +84,7 @@ export default function App() {
                     path="/"
                     element={
                         <Layout>
+                            <HomeSeo />
                             <section id="home"      className="section"><Hero /></section>
                             <section id="about"     className="section section-alt"><About /></section>
                             <section id="portfolio" className="section"><Portfolio /></section>

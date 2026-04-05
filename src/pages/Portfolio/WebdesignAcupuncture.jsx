@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import FallbackAcu from "../../assets/Pics/Portfolio/WebdesignAcupuncture.jpeg";
+import Seo from "../../assets/Components/Seo.jsx";
 
 const COVER_BASE = "/portfolio/webdesign-acupuncture";
 const LIVE_URL = "https://acupuncturebysaskia.com/over-saskia/";
@@ -155,6 +156,11 @@ export default function WebdesignAcupuncture() {
 
     return (
         <article className="post section">
+            <Seo
+                title={tr("seo.portfolio.acupuncture.title")}
+                description={tr("seo.portfolio.acupuncture.description")}
+                path="/webdesignacupuncture"
+            />
             <nav aria-label="Breadcrumb" className="breadcrumbs">
                 <Link to="/">{tr('nav.home')}</Link>
                 <span className="breadcrumb-sep" aria-hidden="true">›</span>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://manonkeeman.nl/</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Portfolio -->
+  <url>
+    <loc>https://manonkeeman.nl/frontendvredestein</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manonkeeman.nl/webdesignacupuncture</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manonkeeman.nl/backendstudentendashboard</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Journal -->
+  <url>
+    <loc>https://manonkeeman.nl/journal/scrummaster</loc>
+    <lastmod>2025-08-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://manonkeeman.nl/journal/designchaos</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://manonkeeman.nl/journal/storytelling</loc>
+    <lastmod>2025-09-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://manonkeeman.nl/journal/luchtvaartfamilie2018</loc>
+    <lastmod>2018-02-18</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://manonkeeman.nl/journal/365korteverhalen</loc>
+    <lastmod>2025-09-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://manonkeeman.nl/journal/ToekomstTech</loc>
+    <lastmod>2025-09-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

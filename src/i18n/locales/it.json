@@ -82,6 +82,52 @@
       }
     }
   },
+  "seo": {
+    "home": {
+      "title": "Manon Keeman — Sviluppatrice Full Stack",
+      "description": "Portfolio di Manon Keeman — Sviluppatrice Full Stack, Pensatrice Sistemica, Designer & Narratrice. React, Spring Boot, design UX. Disponibile per progetti."
+    },
+    "journal": {
+      "scrummaster": {
+        "title": "Da trainaerei a sviluppatrice Full Stack | Manon Keeman",
+        "description": "Come sono passata da KLM pushback al mondo del codice e dei sistemi."
+      },
+      "designchaos": {
+        "title": "Ordinare il caos con il codice e il design | Manon Keeman",
+        "description": "Perché la struttura non è noiosa ma dona libertà."
+      },
+      "storytelling": {
+        "title": "Storytelling nell'IT | Manon Keeman",
+        "description": "Perché le storie sono indispensabili nella tecnologia."
+      },
+      "luchtvaartfamilie2018": {
+        "title": "Famiglia dell'aviazione (Up in the Sky) | Manon Keeman",
+        "description": "Uno sguardo alla nostra famiglia dell'aviazione. Intervista Up in the Sky, 2018."
+      },
+      "365korteverhalen": {
+        "title": "365 Racconti brevi: dall'idea al libro | Manon Keeman",
+        "description": "Un libro in divenire: 365 scene di assurdità e sopravvivenza."
+      },
+      "toekomsttech": {
+        "title": "Il futuro della tecnologia | Manon Keeman",
+        "description": "L'IA, il lavoro da remoto e il ruolo della creatività."
+      }
+    },
+    "portfolio": {
+      "frontend": {
+        "title": "Frontend Vredestein — React & UX | Manon Keeman",
+        "description": "Frontend React con autenticazione JWT, API REST e design UX/UI per Villa Vredestein."
+      },
+      "acupuncture": {
+        "title": "Webdesign Agopuntura | Manon Keeman",
+        "description": "Sito WordPress dall'estetica sobria con informazioni chiare per i clienti."
+      },
+      "backend": {
+        "title": "Backend Dashboard Studenti — Spring Boot | Manon Keeman",
+        "description": "Backend Spring Boot con autenticazione JWT, API REST e integrazione database."
+      }
+    }
+  },
   "journalSection": {
     "articles": {
       "scrummaster": {

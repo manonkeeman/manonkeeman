@@ -82,6 +82,52 @@
       }
     }
   },
+  "seo": {
+    "home": {
+      "title": "Manon Keeman — Full Stack Developer",
+      "description": "Portfolio of Manon Keeman — Full Stack Developer, Systems Thinker, Designer & Storyteller. React, Spring Boot, UX design. Available for work."
+    },
+    "journal": {
+      "scrummaster": {
+        "title": "From plane pusher to Full Stack Developer | Manon Keeman",
+        "description": "How I went from KLM pushback to building systems in code."
+      },
+      "designchaos": {
+        "title": "Ordering chaos with code and design | Manon Keeman",
+        "description": "Why structure is not boring but gives freedom."
+      },
+      "storytelling": {
+        "title": "Storytelling in IT | Manon Keeman",
+        "description": "Why stories are indispensable in technology."
+      },
+      "luchtvaartfamilie2018": {
+        "title": "Aviation Family (Up in the Sky) | Manon Keeman",
+        "description": "A peek into our aviation family. Interview Up in the Sky, 2018."
+      },
+      "365korteverhalen": {
+        "title": "365 Short stories: from idea to book | Manon Keeman",
+        "description": "A book in the making: 365 scenes of absurdity and survival."
+      },
+      "toekomsttech": {
+        "title": "The future of tech | Manon Keeman",
+        "description": "AI, remote work and the role of creativity."
+      }
+    },
+    "portfolio": {
+      "frontend": {
+        "title": "Frontend Vredestein — React & UX | Manon Keeman",
+        "description": "React frontend with JWT authentication, REST API and UX/UI design for Villa Vredestein."
+      },
+      "acupuncture": {
+        "title": "Webdesign Acupuncture | Manon Keeman",
+        "description": "WordPress website with a calm aesthetic and clear information for clients."
+      },
+      "backend": {
+        "title": "Backend Student Dashboard — Spring Boot | Manon Keeman",
+        "description": "Spring Boot backend with JWT authentication, REST API and database integration."
+      }
+    }
+  },
   "journalSection": {
     "articles": {
       "scrummaster": {
