@@ -13,7 +13,7 @@ export default function Footer() {
                 {/* Col 1 — Brand */}
                 <div className="footer-col footer-brand">
                     <img
-                        src="/MKlogo.svg"
+                        src="/MKlogo.jpg"
                         alt="MK Logo"
                         className="footer-logo"
                         width="40"
@@ -76,6 +76,7 @@ export default function Footer() {
         .footer-logo {
           width: 40px; height: 40px;
           border-radius: 8px;
+          filter: sepia(1) saturate(4) hue-rotate(5deg) brightness(0.95);
           margin-bottom: 4px;
         }
 

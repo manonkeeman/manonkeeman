@@ -392,6 +392,7 @@ body.no-scroll { overflow:hidden; touch-action:none; }
 .nav-logo {
   width:32px; height:32px; border-radius:6px;
   display:block;
+  filter: sepia(1) saturate(4) hue-rotate(5deg) brightness(0.95);
 }
 .nav-github {
   font-size:1.25rem;
