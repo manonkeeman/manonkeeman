@@ -14,6 +14,8 @@ export default function Navbar() {
     return (
         <header className="site-header">
             <div className="nav-wrap">
+                {/* Brand — visible on mobile */}
+                <NavLink to="/" className="nav-brand mobile-only">Manon Keeman</NavLink>
 
                 {/* Desktop nav */}
                 <nav className="primary-nav desktop-only" aria-label="Main navigation">

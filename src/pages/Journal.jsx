@@ -15,8 +15,8 @@ export default function Journal() {
             <div className="journal-grid">
                 {items.map((item) => {
                     const base = item.cover.replace(/-\d+w\.\w+$/, "");
-                    const title   = t(`journalSection.articles.${item.slug}.title`,   { defaultValue: item.title });
-                    const excerpt = t(`journalSection.articles.${item.slug}.excerpt`, { defaultValue: item.excerpt });
+                    const title   = t(`journalSection.articles.${item.slug}.title`);
+                    const excerpt = t(`journalSection.articles.${item.slug}.excerpt`);
                     return (
                         <article key={item.slug} className="journal-card">
                             <Link to={`/journal/${item.slug}`} className="card-link" aria-label={title}>
@@ -109,7 +109,11 @@ export default function Journal() {
 
         @media (max-width: 920px) {
           .journal-grid { grid-template-columns: 1fr; padding: 0 16px; }
-          .card-img { height: 160px; }
+          .card-img { height: 180px; }
+        }
+        @media (max-width: 480px) {
+          .journal-grid { padding: 0 12px; gap: 16px; }
+          .card-img { height: 150px; }
         }
       `}</style>
         </section>

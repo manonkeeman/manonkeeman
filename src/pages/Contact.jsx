@@ -71,14 +71,14 @@ export default function Contact() {
                                 onClick={() => setCity("Bakkum")}
                                 aria-pressed={city === "Bakkum"}
                             >
-                                Bakkum — Van Renesselaan 19
+                                Bakkum
                             </button>
                             <button
                                 className={`btn btn-secondary ${city === "Driebergen" ? "active" : ""}`}
                                 onClick={() => setCity("Driebergen")}
                                 aria-pressed={city === "Driebergen"}
                             >
-                                Driebergen — Hoofdstraat 147
+                                Driebergen
                             </button>
                         </div>
 

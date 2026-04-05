@@ -170,7 +170,10 @@ export default function Portfolio() {
 
         @media (max-width: 920px) {
           .portfolio-grid { grid-template-columns: 1fr; padding: 0 16px; }
-          .card-img .media { aspect-ratio: 16 / 9; }
+        }
+        @media (max-width: 480px) {
+          .portfolio-grid { padding: 0 12px; gap: 16px; }
+          .card-link { padding: 14px; min-height: auto; }
         }
       `}</style>
         </section>

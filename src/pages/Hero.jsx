@@ -73,9 +73,14 @@ function Hero() {
             grid-template-columns: 1fr;
             grid-template-areas: "image" "copy";
           }
-          .hero-left img{ height:58vh; }
-          .hero-copy{ justify-self:start; padding:16px 20px 28px; max-width:65ch; }
-          .hero-ctas{ margin-top:18px; }
+          .hero-left img{ height:52vh; }
+          .hero-copy{ justify-self:start; padding:20px 20px 32px; max-width:65ch; }
+          .hero-ctas{ margin-top:18px; flex-wrap:wrap; }
+        }
+        @media (max-width: 480px){
+          .hero-left img{ height:42vh; }
+          .hero-copy{ padding:16px 16px 28px; }
+          .hero-ctas{ gap:10px; }
         }
       `}</style>
         </section>
