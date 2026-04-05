@@ -438,7 +438,7 @@ const titles = {
 };
 
 export default function ToekomstTech() {
-    const { i18n } = useTranslation();
+    const { t: tr, i18n } = useTranslation();
     const lang = i18n.language.split("-")[0];
     const t = ui[lang] || ui.en;
     const Body = bodies[lang] || bodies.en;
@@ -449,6 +449,13 @@ export default function ToekomstTech() {
         <section id="toekomsttech" className="section section-alt">
             <div className="container article-container">
                 <Link to="/#journal" className="back-link">{t.back}</Link>
+                <nav aria-label="Breadcrumb" className="breadcrumbs">
+                    <Link to="/">{tr('nav.home')}</Link>
+                    <span className="breadcrumb-sep" aria-hidden="true">›</span>
+                    <Link to="/#journal">{tr('nav.journal')}</Link>
+                    <span className="breadcrumb-sep" aria-hidden="true">›</span>
+                    <span aria-current="page">{t.shareTitle}</span>
+                </nav>
 
                 <figure className="story-cover">
                     <picture>
@@ -476,9 +483,13 @@ export default function ToekomstTech() {
                         <ShareButton shareTitle={t.shareTitle} shareText={t.shareText} />
                     </div>
                 </footer>
+                <div className="story-back-bottom">
+                    <Link to="/#journal" className="back-link">{t.back}</Link>
+                </div>
             </div>
 
             <style>{`
+        .story-back-bottom{margin-top:24px;padding-top:8px;border-top:1px solid var(--border);}
         .back-link{display:inline-block;margin:14px 0 8px;text-decoration:none;color:var(--accent);}
         .back-link:hover{text-decoration:underline;}
         .article-container{max-width:72rem;margin:0 auto;padding:0 clamp(16px,3vw,48px);}

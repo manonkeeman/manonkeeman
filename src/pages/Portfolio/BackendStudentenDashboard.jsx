@@ -272,7 +272,7 @@ const ui = {
 };
 
 export default function BackendStudentenDashboard() {
-    const { i18n } = useTranslation();
+    const { t: tr, i18n } = useTranslation();
     const lang = i18n.language.split("-")[0];
     const t = ui[lang] || ui.en;
     const bodyFn = bodies[lang] || bodies.en;
@@ -280,6 +280,14 @@ export default function BackendStudentenDashboard() {
 
     return (
         <article className="section article">
+            <nav aria-label="Breadcrumb" className="breadcrumbs">
+                <Link to="/">{tr('nav.home')}</Link>
+                <span className="breadcrumb-sep" aria-hidden="true">›</span>
+                <Link to="/#portfolio">{tr('nav.portfolio')}</Link>
+                <span className="breadcrumb-sep" aria-hidden="true">›</span>
+                <span aria-current="page">{t.title}</span>
+            </nav>
+
             <header className="article-header">
                 <h1 className="article-title">{t.title}</h1>
 

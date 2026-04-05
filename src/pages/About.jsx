@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
-import { SiSubstack } from "react-icons/si";
+import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaReact, FaGitAlt } from "react-icons/fa";
+import { SiSubstack, SiSpringboot, SiPostgresql, SiFigma } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
 export default function About() {
@@ -24,6 +24,15 @@ export default function About() {
               <li>{t('about.skills.uxui')}</li>
               <li>{t('about.skills.storytelling')}</li>
             </ul>
+
+            {/* Tech stack icons */}
+            <div className="about-stack" aria-label="Tech stack">
+              <span title="React"><FaReact /></span>
+              <span title="Spring Boot"><SiSpringboot /></span>
+              <span title="PostgreSQL"><SiPostgresql /></span>
+              <span title="Git"><FaGitAlt /></span>
+              <span title="Figma"><SiFigma /></span>
+            </div>
 
             {/* Social icons */}
             <div className="about-socials">
@@ -95,8 +104,27 @@ export default function About() {
           font-size: .92rem;
         }
 
+        .about-stack{
+          display: flex;
+          gap: 18px;
+          font-size: 1.7rem;
+          margin: 20px 0 0;
+          flex-wrap: wrap;
+        }
+        .about-stack span{
+          color: var(--muted);
+          transition: color .2s ease, transform .2s ease;
+          cursor: default;
+          display: flex;
+          align-items: center;
+        }
+        .about-stack span:hover{
+          color: var(--accent);
+          transform: translateY(-2px);
+        }
+
         .about-socials{
-          margin-top: 32px;
+          margin-top: 20px;
           display: flex;
           justify-content: center;
           gap: 20px;

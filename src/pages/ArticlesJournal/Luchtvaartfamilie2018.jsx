@@ -134,7 +134,7 @@ const content = {
 };
 
 export default function Luchtvaartfamilie2018() {
-    const { i18n } = useTranslation();
+    const { t: tr, i18n } = useTranslation();
     const lang = i18n.language.split("-")[0];
     const c = content[lang] || content.en;
     const base = "/journal/luchtvaartfamilie2018";
@@ -143,6 +143,13 @@ export default function Luchtvaartfamilie2018() {
         <section id="luchtvaartfamilie2018" className="section section-alt">
             <div className="container article-container">
                 <Link to="/#journal" className="back-link">{c.back}</Link>
+                <nav aria-label="Breadcrumb" className="breadcrumbs">
+                    <Link to="/">{tr('nav.home')}</Link>
+                    <span className="breadcrumb-sep" aria-hidden="true">›</span>
+                    <Link to="/#journal">{tr('nav.journal')}</Link>
+                    <span className="breadcrumb-sep" aria-hidden="true">›</span>
+                    <span aria-current="page">{c.title}</span>
+                </nav>
 
                 <figure className="story-cover">
                     <picture>
@@ -171,9 +178,13 @@ export default function Luchtvaartfamilie2018() {
                         <ShareButton shareTitle={c.shareTitle} shareText={c.shareText} />
                     </div>
                 </footer>
+                <div className="story-back-bottom">
+                    <Link to="/#journal" className="back-link">{c.back}</Link>
+                </div>
             </div>
 
             <style>{`
+        .story-back-bottom{margin-top:24px;padding-top:8px;border-top:1px solid var(--border);}
         .back-link { display:inline-block; margin:14px 0 8px; text-decoration:none; color:var(--accent); }
         .back-link:hover { text-decoration:underline; }
         .article-container { max-width:72rem; margin:0 auto; padding:0 clamp(16px,3vw,48px); }

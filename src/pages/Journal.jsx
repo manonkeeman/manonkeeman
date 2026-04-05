@@ -108,11 +108,11 @@ export default function Journal() {
         .journal-card p { margin: 0 16px 16px; line-height: 1.5; }
 
         @media (max-width: 920px) {
-          .journal-grid { grid-template-columns: 1fr; padding: 0 16px; }
+          .journal-grid { grid-template-columns: repeat(2, 1fr); padding: 0 16px; }
           .card-img { height: 180px; }
         }
-        @media (max-width: 480px) {
-          .journal-grid { padding: 0 12px; gap: 16px; }
+        @media (max-width: 600px) {
+          .journal-grid { grid-template-columns: 1fr; padding: 0 12px; gap: 16px; }
           .card-img { height: 150px; }
         }
       `}</style>

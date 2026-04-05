@@ -149,12 +149,20 @@ const content = {
 };
 
 export default function WebdesignAcupuncture() {
-    const { i18n } = useTranslation();
+    const { t: tr, i18n } = useTranslation();
     const lang = i18n.language.split("-")[0];
     const c = content[lang] || content.en;
 
     return (
-        <article className="post">
+        <article className="post section">
+            <nav aria-label="Breadcrumb" className="breadcrumbs">
+                <Link to="/">{tr('nav.home')}</Link>
+                <span className="breadcrumb-sep" aria-hidden="true">›</span>
+                <Link to="/#portfolio">{tr('nav.portfolio')}</Link>
+                <span className="breadcrumb-sep" aria-hidden="true">›</span>
+                <span aria-current="page">{c.title}</span>
+            </nav>
+
             <header className="post-header">
                 <h1 className="post-title">{c.title}</h1>
                 <figure className="post-cover">

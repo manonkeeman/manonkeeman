@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import ScrollToTop from "./assets/Components/ScrollToTop";
 import Navbar from "./assets/Components/Navbar.jsx";
 import Footer from "./assets/Components/Footer.jsx";
+import StickyWhatsApp from "./assets/Components/StickyWhatsApp.jsx";
 
 // Home sections (needed immediately on first load)
 import Hero from "./pages/Hero.jsx";
@@ -27,6 +28,7 @@ function Layout({ children }) {
             <Navbar />
             <main>{children}</main>
             <Footer />
+            <StickyWhatsApp />
         </>
     );
 }

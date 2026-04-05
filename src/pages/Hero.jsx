@@ -34,6 +34,10 @@ function Hero() {
 
                 {/* TEKST */}
                 <div className="hero-copy">
+                    <span className="hero-badge">
+                        <span className="badge-dot" aria-hidden="true"/>
+                        {t('hero.available')}
+                    </span>
                     <h1>{t('hero.greeting')}</h1>
                     <h3>{t('hero.tagline')}</h3>
                     <p>{t('hero.bio')}</p>
@@ -65,6 +69,24 @@ function Hero() {
           max-width: 56ch;
           padding: 0 96px 0 32px;
           text-align: left;
+        }
+        .hero-badge{
+          display:inline-flex; align-items:center; gap:8px;
+          font-size:.82rem; font-weight:600; letter-spacing:.04em;
+          color:var(--accent); border:1px solid var(--accent);
+          border-radius:999px; padding:5px 12px;
+          margin-bottom:16px;
+          text-transform:uppercase;
+        }
+        .badge-dot{
+          width:7px; height:7px; border-radius:50%;
+          background:var(--accent);
+          animation: pulse 2s ease-in-out infinite;
+          flex-shrink:0;
+        }
+        @keyframes pulse{
+          0%,100%{ opacity:1; transform:scale(1); }
+          50%{ opacity:.5; transform:scale(.85); }
         }
         .hero-ctas{ display:flex; gap:16px; margin-top:16px; }
 

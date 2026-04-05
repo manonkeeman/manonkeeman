@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { FaGithub } from "react-icons/fa";
 import MobileMenu from "./MobileMenu.jsx";
 import LanguageSwitcher from "./LanguageSwitcher.jsx";
 
@@ -14,6 +15,11 @@ export default function Navbar() {
     return (
         <header className="site-header">
             <div className="nav-wrap">
+                {/* Logo */}
+                <NavLink to="/" className="nav-logo-link" aria-label="Home">
+                    <img src="/MKlogo.jpg" alt="MK" className="nav-logo" width="32" height="32" />
+                </NavLink>
+
                 {/* Desktop nav */}
                 <nav className="primary-nav desktop-only" aria-label="Main navigation">
                     <NavLink to="/" end>{t('nav.home')}</NavLink>
@@ -41,6 +47,16 @@ export default function Navbar() {
 
                     <NavLink to={{ pathname: "/", hash: "#about" }}>{t('nav.about')}</NavLink>
                     <NavLink to={{ pathname: "/", hash: "#contact" }}>{t('nav.contact')}</NavLink>
+
+                    <a
+                        href="https://github.com/manonkeeman"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="GitHub"
+                        className="nav-github"
+                    >
+                        <FaGithub />
+                    </a>
 
                     <LanguageSwitcher />
                 </nav>
