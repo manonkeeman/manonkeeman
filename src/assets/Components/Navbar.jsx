@@ -14,9 +14,6 @@ export default function Navbar() {
     return (
         <header className="site-header">
             <div className="nav-wrap">
-                {/* Brand — visible on mobile */}
-                <NavLink to="/" className="nav-brand mobile-only">Manon Keeman</NavLink>
-
                 {/* Desktop nav */}
                 <nav className="primary-nav desktop-only" aria-label="Main navigation">
                     <NavLink to="/" end>{t('nav.home')}</NavLink>
@@ -24,21 +21,21 @@ export default function Navbar() {
                     <div className="nav-group">
                         <NavLink to={{ pathname: "/", hash: "#portfolio" }}>{t('nav.portfolio')}</NavLink>
                         <div className="nav-dropdown">
-                            <NavLink to="/frontendvredestein">Frontend Vredestein</NavLink>
-                            <NavLink to="/webdesignacupuncture">Webdesign Acupuncture</NavLink>
-                            <NavLink to="/backendstudentendashboard">Backend Studenten Dashboard</NavLink>
+                            <NavLink to="/frontendvredestein">{t('nav.links.portfolio.frontend')}</NavLink>
+                            <NavLink to="/webdesignacupuncture">{t('nav.links.portfolio.acupuncture')}</NavLink>
+                            <NavLink to="/backendstudentendashboard">{t('nav.links.portfolio.backend')}</NavLink>
                         </div>
                     </div>
 
                     <div className="nav-group">
                         <NavLink to={{ pathname: "/", hash: "#journal" }}>{t('nav.journal')}</NavLink>
                         <div className="nav-dropdown">
-                            <NavLink to="/journal/365korteverhalen">365 Korte Verhalen</NavLink>
-                            <NavLink to="/journal/designchaos">Design Chaos</NavLink>
-                            <NavLink to="/journal/luchtvaartfamilie2018">Luchtvaartfamilie 2018</NavLink>
-                            <NavLink to="/journal/scrummaster">Scrummaster</NavLink>
-                            <NavLink to="/journal/storytelling">Storytelling</NavLink>
-                            <NavLink to="/journal/toekomsttech">Toekomst &amp; Tech</NavLink>
+                            <NavLink to="/journal/365korteverhalen">{t('nav.links.journal.365korteverhalen')}</NavLink>
+                            <NavLink to="/journal/designchaos">{t('nav.links.journal.designchaos')}</NavLink>
+                            <NavLink to="/journal/luchtvaartfamilie2018">{t('nav.links.journal.luchtvaartfamilie2018')}</NavLink>
+                            <NavLink to="/journal/scrummaster">{t('nav.links.journal.scrummaster')}</NavLink>
+                            <NavLink to="/journal/storytelling">{t('nav.links.journal.storytelling')}</NavLink>
+                            <NavLink to="/journal/toekomsttech">{t('nav.links.journal.toekomsttech')}</NavLink>
                         </div>
                     </div>
 

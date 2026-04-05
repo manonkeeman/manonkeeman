@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaLinkedin } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
-import { FaMedium } from "react-icons/fa6";
-import { FiShare } from "react-icons/fi";
+import ShareButton from "../../assets/Components/ShareButton.jsx";
 
 const bodies = {
     nl: () => (
@@ -275,15 +274,6 @@ export default function BoekArtikel() {
     const Body = bodies[lang] || bodies.en;
     const base = "/journal/cover365fragmenten";
 
-    const handleShare = () => {
-        if (navigator.share) {
-            navigator.share({ title: t.shareTitle, text: t.shareText, url: window.location.href })
-                .catch((err) => console.error("Share cancelled:", err));
-        } else {
-            navigator.clipboard?.writeText(window.location.href);
-        }
-    };
-
     return (
         <section id="boek" className="section section-alt">
             <div className="container article-container">
@@ -312,8 +302,7 @@ export default function BoekArtikel() {
                     <div className="socials">
                         <a href="https://www.linkedin.com/in/manonkeeman/" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><FaLinkedin /></a>
                         <a href="https://substack.com/@manonkeeman" target="_blank" rel="noreferrer" aria-label="Substack" title="Substack"><SiSubstack /></a>
-                        <a href="https://medium.com/@manonkeeman" target="_blank" rel="noreferrer" aria-label="Medium" title="Medium"><FaMedium /></a>
-                        <button onClick={handleShare} className="share-btn" aria-label="Share"><FiShare /></button>
+                        <ShareButton shareTitle={t.shareTitle} shareText={t.shareText} />
                     </div>
                 </footer>
             </div>

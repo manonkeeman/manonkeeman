@@ -30,7 +30,6 @@ export default function MobileMenu({ open, onClose }) {
             }}
         >
             <div className="mobile-panel" role="document">
-                <span className="mobile-brand">Manon Keeman</span>
                 <button className="close-x" aria-label="Close menu" onClick={onClose}>×</button>
 
                 <nav className="mobile-nav" aria-label="Mobile navigation">
@@ -40,18 +39,19 @@ export default function MobileMenu({ open, onClose }) {
 
                     <details>
                         <summary>{t('nav.portfolio')}</summary>
-                        <NavLink to="/frontendvredestein" onClick={onClose}>Frontend Vredestein</NavLink>
-                        <NavLink to="/webdesignacupuncture" onClick={onClose}>Webdesign Acupuncture</NavLink>
-                        <NavLink to="/backendstudentendashboard" onClick={onClose}>Backend Studenten Dashboard</NavLink>
+                        <NavLink to="/frontendvredestein" onClick={onClose}>{t('nav.links.portfolio.frontend')}</NavLink>
+                        <NavLink to="/webdesignacupuncture" onClick={onClose}>{t('nav.links.portfolio.acupuncture')}</NavLink>
+                        <NavLink to="/backendstudentendashboard" onClick={onClose}>{t('nav.links.portfolio.backend')}</NavLink>
                     </details>
 
                     <details className="only-tall">
                         <summary>{t('nav.journal')}</summary>
-                        <NavLink to="/journal/365korteverhalen" onClick={onClose}>365 Korte Verhalen</NavLink>
-                        <NavLink to="/journal/designchaos" onClick={onClose}>Design Chaos</NavLink>
-                        <NavLink to="/journal/luchtvaartfamilie2018" onClick={onClose}>Luchtvaartfamilie 2018</NavLink>
-                        <NavLink to="/journal/storytelling" onClick={onClose}>Storytelling</NavLink>
-                        <NavLink to="/journal/toekomsttech" onClick={onClose}>Toekomst &amp; Tech</NavLink>
+                        <NavLink to="/journal/365korteverhalen" onClick={onClose}>{t('nav.links.journal.365korteverhalen')}</NavLink>
+                        <NavLink to="/journal/designchaos" onClick={onClose}>{t('nav.links.journal.designchaos')}</NavLink>
+                        <NavLink to="/journal/luchtvaartfamilie2018" onClick={onClose}>{t('nav.links.journal.luchtvaartfamilie2018')}</NavLink>
+                        <NavLink to="/journal/scrummaster" onClick={onClose}>{t('nav.links.journal.scrummaster')}</NavLink>
+                        <NavLink to="/journal/storytelling" onClick={onClose}>{t('nav.links.journal.storytelling')}</NavLink>
+                        <NavLink to="/journal/toekomsttech" onClick={onClose}>{t('nav.links.journal.toekomsttech')}</NavLink>
                     </details>
 
                     <div className="mobile-divider" />
@@ -60,7 +60,6 @@ export default function MobileMenu({ open, onClose }) {
                     <NavLink to={{ pathname: "/", hash: "#contact" }} onClick={onClose}>{t('nav.contact')}</NavLink>
                 </nav>
 
-                {/* Inline language row — no dropdown, fits naturally in panel */}
                 <div className="mobile-lang" role="group" aria-label="Language">
                     {LANGUAGES.map(({ code, label }) => (
                         <button
@@ -73,10 +72,6 @@ export default function MobileMenu({ open, onClose }) {
                         </button>
                     ))}
                 </div>
-
-                <footer className="mobile-meta">
-                    <a href="mailto:hello@manonkeeman.com">hello@manonkeeman.com</a>
-                </footer>
             </div>
         </div>
     );

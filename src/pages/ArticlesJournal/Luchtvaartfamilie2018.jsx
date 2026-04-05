@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaLinkedin } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
-import { FaMedium } from "react-icons/fa6";
-import { FiShare } from "react-icons/fi";
+import ShareButton from "../../assets/Components/ShareButton.jsx";
 
 const content = {
     nl: {
@@ -140,15 +139,6 @@ export default function Luchtvaartfamilie2018() {
     const c = content[lang] || content.en;
     const base = "/journal/luchtvaartfamilie2018";
 
-    const handleShare = () => {
-        if (navigator.share) {
-            navigator.share({ title: c.shareTitle, text: c.shareText, url: window.location.href })
-                .catch((err) => console.error("Share cancelled:", err));
-        } else {
-            navigator.clipboard?.writeText(window.location.href);
-        }
-    };
-
     return (
         <section id="luchtvaartfamilie2018" className="section section-alt">
             <div className="container article-container">
@@ -178,8 +168,7 @@ export default function Luchtvaartfamilie2018() {
                     <div className="socials">
                         <a href="https://www.linkedin.com/in/manonkeeman/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
                         <a href="https://substack.com/@manonkeeman" target="_blank" rel="noreferrer" aria-label="Substack"><SiSubstack /></a>
-                        <a href="https://medium.com/@manonkeeman" target="_blank" rel="noreferrer" aria-label="Medium"><FaMedium /></a>
-                        <button onClick={handleShare} className="share-btn" aria-label="Share"><FiShare /></button>
+                        <ShareButton shareTitle={c.shareTitle} shareText={c.shareText} />
                     </div>
                 </footer>
             </div>

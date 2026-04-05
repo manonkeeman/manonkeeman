@@ -4,7 +4,26 @@
     "portfolio": "Portfolio",
     "journal": "Journal",
     "about": "À propos",
-    "contact": "Contact"
+    "contact": "Contact",
+    "links": {
+      "portfolio": {
+        "frontend": "Frontend Vredestein",
+        "acupuncture": "Webdesign Acupuncture",
+        "backend": "Backend Tableau de bord"
+      },
+      "journal": {
+        "scrummaster": "Full Stack Developer",
+        "designchaos": "Design Chaos",
+        "luchtvaartfamilie2018": "Famille Aviation 2018",
+        "storytelling": "Storytelling",
+        "toekomsttech": "Avenir & Tech",
+        "365korteverhalen": "365 Histoires courtes"
+      }
+    }
+  },
+  "share": {
+    "label": "Partager",
+    "copied": "Lien copié !"
   },
   "hero": {
     "greeting": "Bonjour ! Je suis Manon",
