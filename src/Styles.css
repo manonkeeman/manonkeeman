@@ -391,7 +391,7 @@ body.no-scroll { overflow:hidden; touch-action:none; }
 .nav-logo-link { display:flex; align-items:center; flex-shrink:0; }
 .nav-logo {
   width:32px; height:32px; border-radius:6px;
-  filter: invert(1);
+  filter: invert(1) sepia(1) saturate(1.3) hue-rotate(7deg) brightness(0.87);
   mix-blend-mode: screen;
   display:block;
 }
