@@ -1,23 +1,23 @@
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
-// Components
+// Layout components (always needed)
 import ScrollToTop from "./assets/Components/ScrollToTop";
 import Navbar from "./assets/Components/Navbar.jsx";
 import Footer from "./assets/Components/Footer.jsx";
 
-// Pages (home sections)
+// Home sections (needed immediately on first load)
 import Hero from "./pages/Hero.jsx";
 import About from "./pages/About.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 import Journal from "./pages/Journal.jsx";
 import Contact from "./pages/Contact.jsx";
-import ArticleRoute from "./pages/ArticlesJournal/ArticleRoute.jsx";
 
-// Portfolio detail pages
-import FrontendVredestein from "./pages/Portfolio/FrontendVredestein.jsx";
-import WebdesignAcupuncture from "./pages/Portfolio/WebdesignAcupuncture.jsx";
-import BackendStudentenDashboard from "./pages/Portfolio/BackendStudentenDashboard.jsx";
+// Detail pages — lazy loaded (only fetched when user navigates there)
+const ArticleRoute          = lazy(() => import("./pages/ArticlesJournal/ArticleRoute.jsx"));
+const FrontendVredestein    = lazy(() => import("./pages/Portfolio/FrontendVredestein.jsx"));
+const WebdesignAcupuncture  = lazy(() => import("./pages/Portfolio/WebdesignAcupuncture.jsx"));
+const BackendStudentenDashboard = lazy(() => import("./pages/Portfolio/BackendStudentenDashboard.jsx"));
 
 import "./Styles.css";
 
@@ -28,6 +28,14 @@ function Layout({ children }) {
             <main>{children}</main>
             <Footer />
         </>
+    );
+}
+
+function PageLoader() {
+    return (
+        <div style={{ minHeight: "60vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <span style={{ color: "var(--muted)", fontSize: "0.95rem" }}>Loading…</span>
+        </div>
     );
 }
 
@@ -53,36 +61,40 @@ export default function App() {
         <Router>
             <ScrollToTop />
             <Routes>
-                {/* Home */}
+                {/* Home — all sections rendered directly */}
                 <Route
                     path="/"
                     element={
                         <Layout>
-                            <section id="home" className="section"><Hero /></section>
-                            <section id="about" className="section section-alt"><About /></section>
+                            <section id="home"      className="section"><Hero /></section>
+                            <section id="about"     className="section section-alt"><About /></section>
                             <section id="portfolio" className="section"><Portfolio /></section>
-                            <section id="journal" className="section section-alt"><Journal /></section>
-                            <section id="contact" className="section"><Contact /></section>
+                            <section id="journal"   className="section section-alt"><Journal /></section>
+                            <section id="contact"   className="section"><Contact /></section>
                         </Layout>
                     }
                 />
 
-                {/* Journal */}
+                {/* Journal detail — lazy */}
                 <Route
                     path="/journal/:slug"
                     element={
                         <Layout>
-                            <ArticleRoute />
+                            <Suspense fallback={<PageLoader />}>
+                                <ArticleRoute />
+                            </Suspense>
                         </Layout>
                     }
                 />
 
-                {/* Portfolio detail pages */}
+                {/* Portfolio detail pages — lazy */}
                 <Route
                     path="/frontendvredestein"
                     element={
                         <Layout>
-                            <FrontendVredestein />
+                            <Suspense fallback={<PageLoader />}>
+                                <FrontendVredestein />
+                            </Suspense>
                         </Layout>
                     }
                 />
@@ -90,7 +102,9 @@ export default function App() {
                     path="/webdesignacupuncture"
                     element={
                         <Layout>
-                            <WebdesignAcupuncture />
+                            <Suspense fallback={<PageLoader />}>
+                                <WebdesignAcupuncture />
+                            </Suspense>
                         </Layout>
                     }
                 />
@@ -98,13 +112,15 @@ export default function App() {
                     path="/backendstudentendashboard"
                     element={
                         <Layout>
-                            <BackendStudentenDashboard />
+                            <Suspense fallback={<PageLoader />}>
+                                <BackendStudentenDashboard />
+                            </Suspense>
                         </Layout>
                     }
                 />
 
                 {/* Redirects */}
-                <Route path="/frontend" element={<Navigate to="/frontendvredestein" replace />} />
+                <Route path="/frontend"            element={<Navigate to="/frontendvredestein"   replace />} />
                 <Route path="/webdesignacupunture" element={<Navigate to="/webdesignacupuncture" replace />} />
 
                 {/* 404 */}

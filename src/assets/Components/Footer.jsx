@@ -6,7 +6,9 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer-inner">
                 <p className="footer-text">
-                    © {new Date().getFullYear()} {t('footer.rights')}
+                    © {new Date().getFullYear()} {t('footer.rights')
+
+                    }
                 </p>
             </div>
 

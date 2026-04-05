@@ -1,6 +1,49 @@
 [build]
 command = "node scripts/resize.mjs && npm run build"
-publish = "dist" # Vite = dist, CRA = build
+publish = "dist"
 
 [build.environment]
 NODE_VERSION = "18"
+
+# SPA fallback — all routes handled by React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Long-term cache for hashed Vite assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache images for 1 week
+[[headers]]
+  for = "/*.avif"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/portfolio/*.avif"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/portfolio/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/journal/*.avif"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/journal/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
