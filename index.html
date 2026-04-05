@@ -34,5 +34,13 @@
 <body>
 <div id="root"></div>
 <script type="module" src="/src/main.jsx"></script>
+
+<!-- Hidden form so Netlify detects it at build time (required for React SPAs) -->
+<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <textarea name="message"></textarea>
+  <input name="bot-field" />
+</form>
 </body>
 </html>

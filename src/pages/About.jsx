@@ -1,4 +1,4 @@
-import { FaGithub, FaReact, FaGitAlt } from "react-icons/fa";
+import { FaReact, FaGitAlt } from "react-icons/fa";
 import { SiSpringboot, SiPostgresql, SiFigma } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
@@ -34,10 +34,6 @@ export default function About() {
               <span data-tooltip="Figma"><SiFigma /></span>
             </div>
 
-            {/* Social icons — alleen GitHub */}
-            <div className="about-socials">
-              <a href="https://github.com/manonkeeman" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
-            </div>
           </div>
 
           {/* FOTO */}
@@ -142,20 +138,6 @@ export default function About() {
         }
         .about-stack span:hover::after{ opacity: 1; }
 
-        .about-socials{
-          margin-top: 24px;
-          display: flex;
-          gap: 20px;
-        }
-        .about-socials a{
-          color: var(--muted);
-          font-size: 1.8rem;
-          transition: color .2s ease, transform .2s ease;
-        }
-        .about-socials a:hover{
-          color: var(--accent);
-          transform: translateY(-2px);
-        }
       `}</style>
       </section>
   );
