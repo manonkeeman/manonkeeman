@@ -49,11 +49,21 @@
   },
   "contact": {
     "label": "Kontakt",
-    "intro": "Schön, dass du hier bist! Lust auf ein kurzes Gespräch oder möchtest du etwas zusammen aufbauen? Schreib mir einfach eine Nachricht.",
-    "whatsapp": "WhatsApp schreiben",
+    "intro": "Schön, dass du hier bist! Lust auf ein kurzes Gespräch oder möchtest du etwas zusammen aufbauen?",
     "locations": "Standorte",
     "directions": "Route öffnen",
-    "follow": "Folgen"
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "namePlaceholder": "Dein Name",
+      "emailPlaceholder": "deine@email.de",
+      "messagePlaceholder": "Erzähl mir, woran du arbeitest...",
+      "send": "Senden",
+      "sending": "Senden...",
+      "success": "Danke! Ich melde mich bald.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+    }
   },
   "footer": {
     "rights": "Alle Rechte vorbehalten | Code & Content - Manon Keeman"

@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
-import { SiSubstack } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
 export default function Contact() {
     const [city, setCity] = useState("Bakkum");
+    const [status, setStatus] = useState("idle"); // idle | sending | sent | error
     const { t } = useTranslation();
 
     const ADDRESSES = {
@@ -15,9 +14,27 @@ export default function Contact() {
     const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESSES[city])}&output=embed`;
     const routeHref = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(ADDRESSES[city])}`;
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus("sending");
+        const form = e.target;
+        const data = new FormData(form);
+        try {
+            const res = await fetch("/", { method: "POST", body: data });
+            if (res.ok) {
+                setStatus("sent");
+                form.reset();
+            } else {
+                setStatus("error");
+            }
+        } catch {
+            setStatus("error");
+        }
+    };
+
     return (
         <div className="contact-shell">
-            {/* TO LINKS */}
+            {/* FOTO links */}
             <div className="contact-photo">
                 <picture>
                     <source
@@ -40,24 +57,80 @@ export default function Contact() {
                 </picture>
             </div>
 
-            {/* CARDS RECHTS */}
+            {/* CARDS rechts */}
             <div className="contact-copy">
                 <div className="contact-stack">
-                    {/* Card 1 — Contact + WhatsApp */}
+
+                    {/* Card 1 — Contactformulier */}
                     <div className="card">
                         <h3 className="small card-subtle">{t('contact.label')}</h3>
                         <p className="card-intro">{t('contact.intro')}</p>
-                        <a
-                            href="https://wa.me/31624766568"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="btn btn-primary"
-                            aria-label="WhatsApp Manon Keeman"
-                            title="WhatsApp"
-                        >
-                            <FaWhatsapp style={{ fontSize: "1.2rem" }} />
-                            <span>{t('contact.whatsapp')}</span>
-                        </a>
+
+                        {status === "sent" ? (
+                            <p className="form-success">{t('contact.form.success')}</p>
+                        ) : (
+                            <form
+                                name="contact"
+                                method="POST"
+                                data-netlify="true"
+                                netlify-honeypot="bot-field"
+                                onSubmit={handleSubmit}
+                                className="contact-form"
+                            >
+                                <input type="hidden" name="form-name" value="contact" />
+                                <p style={{ display: "none" }}><input name="bot-field" /></p>
+
+                                <div className="form-row">
+                                    <label className="form-label" htmlFor="cf-name">{t('contact.form.name')}</label>
+                                    <input
+                                        id="cf-name"
+                                        type="text"
+                                        name="name"
+                                        className="form-input"
+                                        placeholder={t('contact.form.namePlaceholder')}
+                                        required
+                                        autoComplete="name"
+                                    />
+                                </div>
+
+                                <div className="form-row">
+                                    <label className="form-label" htmlFor="cf-email">{t('contact.form.email')}</label>
+                                    <input
+                                        id="cf-email"
+                                        type="email"
+                                        name="email"
+                                        className="form-input"
+                                        placeholder={t('contact.form.emailPlaceholder')}
+                                        required
+                                        autoComplete="email"
+                                    />
+                                </div>
+
+                                <div className="form-row">
+                                    <label className="form-label" htmlFor="cf-message">{t('contact.form.message')}</label>
+                                    <textarea
+                                        id="cf-message"
+                                        name="message"
+                                        className="form-input form-textarea"
+                                        placeholder={t('contact.form.messagePlaceholder')}
+                                        rows={4}
+                                        required
+                                    />
+                                </div>
+
+                                {status === "error" && (
+                                    <p className="form-error">{t('contact.form.error')}</p>
+                                )}
+
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary form-submit"
+                                    disabled={status === "sending"}
+                                >
+                                    {status === "sending" ? t('contact.form.sending') : t('contact.form.send')}
+                                </button>
+                            </form>
+                        )}
                     </div>
 
                     {/* Card 2 — Locaties */}
@@ -96,18 +169,6 @@ export default function Contact() {
                             </a>
                         </div>
                     </div>
-
-                    {/* Card 3 — Socials */}
-                    <div className="card">
-                        <h3 className="small card-subtle">{t('contact.follow')}</h3>
-                        <div className="contact-socials" aria-label="Social media">
-                            <a href="https://github.com/manonkeeman" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
-                            <a href="https://www.linkedin.com/in/manonkeeman/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
-                            <a href="https://www.instagram.com/manonkeeman" target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram /></a>
-                            <a href="https://www.facebook.com/editor.lifestyle/" target="_blank" rel="noreferrer" aria-label="Facebook"><FaFacebook /></a>
-                            <a href="https://substack.com/@manonkeeman" target="_blank" rel="noreferrer" aria-label="Substack"><SiSubstack /></a>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -142,7 +203,51 @@ export default function Contact() {
           box-sizing:border-box;
         }
         .card-subtle{ margin-bottom:8px; color:var(--muted); }
-        .card-intro{ line-height:1.55; margin:0 0 12px; }
+        .card-intro{ line-height:1.55; margin:0 0 14px; }
+
+        /* Formulier */
+        .contact-form{ display:flex; flex-direction:column; gap:12px; }
+        .form-row{ display:flex; flex-direction:column; gap:5px; }
+        .form-label{
+          font-size:.82rem; font-weight:600; letter-spacing:.03em;
+          color:var(--muted); text-transform:uppercase;
+        }
+        .form-input{
+          background: var(--bg);
+          border: 1px solid var(--border);
+          border-radius: 9px;
+          color: var(--text);
+          font-family: inherit;
+          font-size: .95rem;
+          padding: 10px 13px;
+          transition: border-color .18s ease, box-shadow .18s ease;
+          outline: none;
+          resize: none;
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .form-input:focus{
+          border-color: var(--accent);
+          box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+        }
+        .form-input::placeholder{ color: var(--border); }
+        .form-textarea{ min-height: 100px; }
+        .form-submit{ width:100%; justify-content:center; margin-top:4px; }
+        .form-submit:disabled{ opacity:.65; cursor:not-allowed; }
+        .form-success{
+          padding: 12px 14px;
+          border-radius: 10px;
+          background: color-mix(in srgb, var(--accent) 14%, transparent);
+          border: 1px solid var(--accent);
+          color: var(--text);
+          font-size: .92rem;
+          margin: 0;
+        }
+        .form-error{
+          color: #e07070;
+          font-size: .88rem;
+          margin: 0;
+        }
 
         .btn{
           display:inline-flex; align-items:center; gap:8px;
@@ -152,7 +257,7 @@ export default function Contact() {
         }
         .btn:hover{ transform: translateY(-2px); }
         .btn-primary{ background:var(--accent); color:var(--bg); border:1px solid var(--accent); }
-        .btn-primary:hover{ background:var(--highlight); border-color:var(--highlight); }
+        .btn-primary:hover{ filter:brightness(1.08); }
         .btn-secondary{ background:transparent; color:var(--text); border:1px solid var(--border); }
         .btn-secondary:hover{ color:var(--accent); border-color:var(--accent); }
         .btn-secondary.active{ background:var(--accent); color:var(--bg); border-color:var(--accent); }
@@ -166,12 +271,6 @@ export default function Contact() {
         .map-wrap iframe{ width:100%; height:100%; border:0; display:block; }
 
         .cta-row{ margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; }
-
-        .contact-socials{
-          display:flex; gap:28px; justify-content:center; font-size:1.9rem; margin-top:12px;
-        }
-        .contact-socials a{ color:var(--muted); transition: color .2s ease, transform .2s ease; }
-        .contact-socials a:hover{ color:var(--accent); transform: translateY(-2px); }
 
         @media (max-width: 920px){
           .contact-shell{ grid-template-columns: 1fr; min-height:auto; }

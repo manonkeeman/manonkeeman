@@ -49,11 +49,21 @@
   },
   "contact": {
     "label": "Contacto",
-    "intro": "¡Qué bueno que estés aquí! ¿Quieres una charla rápida o construir algo juntos? Mándame un mensaje.",
-    "whatsapp": "WhatsApp",
+    "intro": "¡Qué bueno que estés aquí! ¿Quieres una charla rápida o construir algo juntos?",
     "locations": "Ubicaciones",
     "directions": "Cómo llegar",
-    "follow": "Seguir"
+    "form": {
+      "name": "Nombre",
+      "email": "Correo",
+      "message": "Mensaje",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "tu@email.es",
+      "messagePlaceholder": "Cuéntame en qué estás trabajando...",
+      "send": "Enviar",
+      "sending": "Enviando...",
+      "success": "¡Gracias! Me pondré en contacto pronto.",
+      "error": "Algo salió mal. Por favor inténtalo de nuevo."
+    }
   },
   "footer": {
     "rights": "Todos los derechos reservados | Código & Contenido - Manon Keeman"

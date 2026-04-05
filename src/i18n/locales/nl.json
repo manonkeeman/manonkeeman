@@ -49,11 +49,21 @@
   },
   "contact": {
     "label": "Contact",
-    "intro": "Leuk dat je er bent! Zin in een kort overleg of wil je iets samen bouwen? Stuur me gerust een berichtje.",
-    "whatsapp": "WhatsApp mij",
+    "intro": "Leuk dat je er bent! Zin in een kort overleg of wil je iets samen bouwen?",
     "locations": "Locaties",
     "directions": "Route openen",
-    "follow": "Volgen"
+    "form": {
+      "name": "Naam",
+      "email": "E-mail",
+      "message": "Bericht",
+      "namePlaceholder": "Jouw naam",
+      "emailPlaceholder": "jouw@email.nl",
+      "messagePlaceholder": "Vertel me waar je mee bezig bent...",
+      "send": "Versturen",
+      "sending": "Versturen...",
+      "success": "Bedankt! Ik neem zo snel mogelijk contact op.",
+      "error": "Er ging iets mis. Probeer het opnieuw."
+    }
   },
   "footer": {
     "rights": "Alle rechten voorbehouden | Code & Content - Manon Keeman"

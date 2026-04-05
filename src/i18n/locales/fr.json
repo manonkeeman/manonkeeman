@@ -49,11 +49,21 @@
   },
   "contact": {
     "label": "Contact",
-    "intro": "Ravie de vous voir ici ! Envie d'un rapide échange ou de construire quelque chose ensemble ? N'hésitez pas à m'envoyer un message.",
-    "whatsapp": "WhatsApp",
+    "intro": "Ravie de vous voir ici ! Envie d'un rapide échange ou de construire quelque chose ensemble ?",
     "locations": "Lieux",
     "directions": "Itinéraire",
-    "follow": "Suivre"
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Message",
+      "namePlaceholder": "Votre nom",
+      "emailPlaceholder": "votre@email.fr",
+      "messagePlaceholder": "Dites-moi sur quoi vous travaillez...",
+      "send": "Envoyer",
+      "sending": "Envoi...",
+      "success": "Merci ! Je vous contacterai bientôt.",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    }
   },
   "footer": {
     "rights": "Tous droits réservés | Code & Contenu - Manon Keeman"

@@ -49,11 +49,21 @@
   },
   "contact": {
     "label": "Contatti",
-    "intro": "Che bello averti qui! Vuoi una breve chiacchierata o costruire qualcosa insieme? Mandami pure un messaggio.",
-    "whatsapp": "WhatsApp",
+    "intro": "Che bello averti qui! Vuoi una breve chiacchierata o costruire qualcosa insieme?",
     "locations": "Luoghi",
     "directions": "Ottieni indicazioni",
-    "follow": "Seguire"
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Messaggio",
+      "namePlaceholder": "Il tuo nome",
+      "emailPlaceholder": "tua@email.it",
+      "messagePlaceholder": "Dimmi a cosa stai lavorando...",
+      "send": "Invia",
+      "sending": "Invio...",
+      "success": "Grazie! Ti contatterò presto.",
+      "error": "Qualcosa è andato storto. Riprova."
+    }
   },
   "footer": {
     "rights": "Tutti i diritti riservati | Codice & Contenuto - Manon Keeman"

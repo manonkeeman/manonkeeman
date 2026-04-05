@@ -49,11 +49,21 @@
   },
   "contact": {
     "label": "Contact",
-    "intro": "Great to have you here! Up for a quick chat or want to build something together? Feel free to send me a message.",
-    "whatsapp": "WhatsApp me",
+    "intro": "Great to have you here! Up for a quick chat or want to build something together?",
     "locations": "Locations",
     "directions": "Get directions",
-    "follow": "Follow"
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your@email.com",
+      "messagePlaceholder": "Tell me what you're working on...",
+      "send": "Send",
+      "sending": "Sending...",
+      "success": "Thanks! I'll be in touch soon.",
+      "error": "Something went wrong. Please try again."
+    }
   },
   "footer": {
     "rights": "All rights reserved | Code & Content - Manon Keeman"

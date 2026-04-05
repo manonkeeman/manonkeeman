@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaReact, FaGitAlt } from "react-icons/fa";
-import { SiSubstack, SiSpringboot, SiPostgresql, SiFigma } from "react-icons/si";
+import { FaGithub, FaReact, FaGitAlt } from "react-icons/fa";
+import { SiSpringboot, SiPostgresql, SiFigma } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
 export default function About() {
@@ -25,22 +25,18 @@ export default function About() {
               <li>{t('about.skills.storytelling')}</li>
             </ul>
 
-            {/* Tech stack icons */}
+            {/* Tech stack icons met tooltip */}
             <div className="about-stack" aria-label="Tech stack">
-              <span title="React"><FaReact /></span>
-              <span title="Spring Boot"><SiSpringboot /></span>
-              <span title="PostgreSQL"><SiPostgresql /></span>
-              <span title="Git"><FaGitAlt /></span>
-              <span title="Figma"><SiFigma /></span>
+              <span data-tooltip="React"><FaReact /></span>
+              <span data-tooltip="Spring Boot"><SiSpringboot /></span>
+              <span data-tooltip="PostgreSQL"><SiPostgresql /></span>
+              <span data-tooltip="Git"><FaGitAlt /></span>
+              <span data-tooltip="Figma"><SiFigma /></span>
             </div>
 
-            {/* Social icons */}
+            {/* Social icons — alleen GitHub */}
             <div className="about-socials">
               <a href="https://github.com/manonkeeman" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
-              <a href="https://www.linkedin.com/in/manonkeeman/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
-              <a href="https://www.instagram.com/manonkeeman" target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram /></a>
-              <a href="https://www.facebook.com/editor.lifestyle/" target="_blank" rel="noreferrer" aria-label="Facebook"><FaFacebook /></a>
-              <a href="https://substack.com/@manonkeeman" target="_blank" rel="noreferrer" aria-label="Substack"><SiSubstack /></a>
             </div>
           </div>
 
@@ -112,6 +108,7 @@ export default function About() {
           flex-wrap: wrap;
         }
         .about-stack span{
+          position: relative;
           color: var(--muted);
           transition: color .2s ease, transform .2s ease;
           cursor: default;
@@ -122,16 +119,37 @@ export default function About() {
           color: var(--accent);
           transform: translateY(-2px);
         }
+        /* Tooltip */
+        .about-stack span::after{
+          content: attr(data-tooltip);
+          position: absolute;
+          bottom: calc(100% + 8px);
+          left: 50%;
+          transform: translateX(-50%);
+          background: var(--bg-alt);
+          color: var(--text);
+          font-size: .72rem;
+          font-weight: 600;
+          letter-spacing: .03em;
+          padding: 4px 9px;
+          border-radius: 7px;
+          border: 1px solid var(--border);
+          white-space: nowrap;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity .18s ease;
+          box-shadow: var(--shadow);
+        }
+        .about-stack span:hover::after{ opacity: 1; }
 
         .about-socials{
-          margin-top: 20px;
+          margin-top: 24px;
           display: flex;
-          justify-content: center;
           gap: 20px;
-          font-size: 1.6rem;
         }
         .about-socials a{
           color: var(--muted);
+          font-size: 1.8rem;
           transition: color .2s ease, transform .2s ease;
         }
         .about-socials a:hover{
