@@ -1,9 +1,22 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./LanguageSwitcher.jsx";
+
+const LANGUAGES = [
+    { code: 'nl', label: 'NL' },
+    { code: 'en', label: 'EN' },
+    { code: 'fr', label: 'FR' },
+    { code: 'de', label: 'DE' },
+    { code: 'es', label: 'ES' },
+    { code: 'it', label: 'IT' },
+];
 
 export default function MobileMenu({ open, onClose }) {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+
+    const changeLang = (code) => {
+        i18n.changeLanguage(code);
+        localStorage.setItem('lang', code);
+    };
 
     return (
         <div
@@ -47,8 +60,18 @@ export default function MobileMenu({ open, onClose }) {
                     <NavLink to={{ pathname: "/", hash: "#contact" }} onClick={onClose}>{t('nav.contact')}</NavLink>
                 </nav>
 
-                <div className="mobile-lang">
-                    <LanguageSwitcher />
+                {/* Inline language row — no dropdown, fits naturally in panel */}
+                <div className="mobile-lang" role="group" aria-label="Language">
+                    {LANGUAGES.map(({ code, label }) => (
+                        <button
+                            key={code}
+                            className={`mobile-lang-btn${i18n.language === code ? ' active' : ''}`}
+                            onClick={() => changeLang(code)}
+                            aria-pressed={i18n.language === code}
+                        >
+                            {label}
+                        </button>
+                    ))}
                 </div>
 
                 <footer className="mobile-meta">
