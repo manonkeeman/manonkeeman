@@ -6,7 +6,7 @@
     "excerpt": "Hoe ik van KLM pushback belandde in de wereld van code en systemen.",
     "cover": "/journal/klm-pushback-800w.avif",
     "words": 750,
-    "imgPosition": "center 70%"
+    "imgPosition": "top center"
   },
   {
     "slug": "designchaos",
@@ -31,7 +31,7 @@
     "excerpt": "Een kijkje in onze luchtvaartfamilie. Interview Up in the Sky, 2018.",
     "cover": "/journal/luchtvaartfamilie2018-800w.avif",
     "words": 600,
-    "imgPosition": "center 70%"
+    "imgPosition": "top center"
   },
   {
     "slug": "365korteverhalen",
@@ -48,6 +48,6 @@
     "excerpt": "AI, remote werken en de rol van creativiteit.",
     "cover": "/journal/toekomst-it-800w.avif",
     "words": 700,
-    "imgPosition": "center 70%"
+    "imgPosition": "top center"
   }
 ]
