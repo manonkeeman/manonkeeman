@@ -77,6 +77,7 @@ export default function Footer() {
           width: 40px; height: 40px;
           border-radius: 8px;
           filter: invert(1);
+          mix-blend-mode: screen;
           margin-bottom: 4px;
         }
 

@@ -392,6 +392,7 @@ body.no-scroll { overflow:hidden; touch-action:none; }
 .nav-logo {
   width:32px; height:32px; border-radius:6px;
   filter: invert(1);
+  mix-blend-mode: screen;
   display:block;
 }
 .nav-github {
