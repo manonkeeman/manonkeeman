@@ -321,24 +321,49 @@ body.no-scroll { overflow:hidden; touch-action:none; }
 
 /* ========= Language Switcher ========= */
 .lang-switcher {
-  display: flex; align-items: center; gap: 2px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 3px;
-  background: var(--bg-alt);
+  position: relative;
 }
-.lang-btn {
-  padding: 4px 7px;
-  font-size: .72rem; font-weight: 600; letter-spacing: .04em;
-  border: none; border-radius: 7px;
-  background: transparent; color: var(--muted);
+.lang-trigger {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 10px;
+  font-size: .8rem; font-weight: 600; letter-spacing: .05em;
+  border: 1px solid var(--border); border-radius: 8px;
+  background: var(--bg-alt); color: var(--muted);
   cursor: pointer;
-  transition: background .15s ease, color .15s ease;
-  line-height: 1;
+  transition: border-color .15s ease, color .15s ease;
 }
-.lang-btn:hover { color: var(--text); }
-.lang-btn.active { background: var(--accent); color: var(--bg); }
-.lang-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lang-trigger:hover { color: var(--text); border-color: var(--accent); }
+.lang-trigger:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.lang-chevron {
+  transition: transform .2s ease;
+  color: var(--muted);
+}
+.lang-chevron.open { transform: rotate(180deg); }
+
+.lang-dropdown {
+  position: absolute; right: 0; top: calc(100% + 6px);
+  background: var(--bg-alt);
+  border: 1px solid var(--border); border-radius: 12px;
+  padding: 6px;
+  list-style: none; margin: 0;
+  min-width: 150px;
+  box-shadow: var(--shadow);
+  z-index: 200;
+}
+.lang-dropdown li { margin: 0; }
+.lang-option {
+  display: flex; align-items: center; gap: 10px; width: 100%;
+  padding: 8px 10px; border: none; border-radius: 8px;
+  background: transparent; color: var(--muted);
+  cursor: pointer; font-size: .88rem;
+  transition: background .15s ease, color .15s ease;
+  text-align: left;
+}
+.lang-option:hover { background: var(--bg); color: var(--text); }
+.lang-option.active { color: var(--accent); font-weight: 600; }
+.lang-code { font-weight: 700; font-size: .78rem; letter-spacing: .04em; min-width: 24px; }
+.lang-name { color: inherit; }
 
 /* ========= Small extras ========= */
 .hero-copy h1{ margin:0 0 12px }

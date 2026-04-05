@@ -1,42 +1,11 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import FallbackFront from "../assets/Pics/Portfolio/VredesteinFrontend.jpeg";
-import FallbackAcu   from "../assets/Pics/Portfolio/WebdesignAcupuncture.jpeg";
-import FallbackBack  from "../assets/Pics/Portfolio/VredesteinBackend.jpeg";
 
-// Public varianten (resize.mjs output) — basis zonder maat/extensie
 const PUB_FRONT = "/portfolio/villa-vredestein-frontend";
 const PUB_ACU   = "/portfolio/webdesign-acupuncture";
 const PUB_BACK  = "/portfolio/villa-vredestein-backend";
 
-function PortfolioImage({ basePublic, fallback, alt }) {
-    const [ok, setOk] = useState(null);
-
-    useEffect(() => {
-        let cancelled = false;
-        const testUrl = `${basePublic}-800w.webp`;
-        const img = new Image();
-        img.onload = () => { if (!cancelled) setOk(true); };
-        img.onerror = () => { if (!cancelled) setOk(false); };
-        img.src = testUrl;
-        return () => { cancelled = true; };
-    }, [basePublic]);
-
+function PortfolioImage({ basePublic, alt }) {
     const sizes = "(max-width: 920px) 100vw, (max-width: 1400px) 33vw, 400px";
-
-    if (ok === false || ok === null) {
-        return (
-            <img
-                src={fallback}
-                alt={alt}
-                loading="lazy"
-                decoding="async"
-                width={1200}
-                height={675}
-            />
-        );
-    }
-
     return (
         <picture>
             <source
@@ -68,7 +37,6 @@ const projects = [
         tags: ["React", "API", "JWT"],
         route: "/frontendvredestein",
         basePublic: PUB_FRONT,
-        fallbackSrc: FallbackFront,
     },
     {
         title: "Webdesign – Acupuncture by Saskia",
@@ -76,7 +44,6 @@ const projects = [
         tags: ["WordPress", "Adobe Suite"],
         route: "/webdesignacupuncture",
         basePublic: PUB_ACU,
-        fallbackSrc: FallbackAcu,
     },
     {
         title: "Villa Vredestein – Studenten Dashboard Backend",
@@ -84,7 +51,6 @@ const projects = [
         tags: ["Springboot", "Java", "API"],
         route: "/backendstudentendashboard",
         basePublic: PUB_BACK,
-        fallbackSrc: FallbackBack,
     },
 ];
 
@@ -101,7 +67,7 @@ export default function Portfolio() {
                         <>
                             <figure className="card-img">
                                 <div className="media">
-                                    <PortfolioImage basePublic={p.basePublic} fallback={p.fallbackSrc} alt={p.title} />
+                                    <PortfolioImage basePublic={p.basePublic} alt={p.title} />
                                 </div>
                             </figure>
 
