@@ -1,6 +1,5 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
-import { FaMedium } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
 
 export default function About() {
@@ -33,7 +32,6 @@ export default function About() {
               <a href="https://www.instagram.com/manonkeeman" target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram /></a>
               <a href="https://www.facebook.com/editor.lifestyle/" target="_blank" rel="noreferrer" aria-label="Facebook"><FaFacebook /></a>
               <a href="https://substack.com/@manonkeeman" target="_blank" rel="noreferrer" aria-label="Substack"><SiSubstack /></a>
-              <a href="https://medium.com/@manonkeeman" target="_blank" rel="noreferrer" aria-label="Medium"><FaMedium /></a>
             </div>
           </div>
 
