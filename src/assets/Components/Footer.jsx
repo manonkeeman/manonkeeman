@@ -1,12 +1,12 @@
-import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
-import { SiSubstack } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+    const { t } = useTranslation();
     return (
         <footer className="footer">
             <div className="footer-inner">
                 <p className="footer-text">
-                    © {new Date().getFullYear()} All rights reserved | Code & Content - Manon Keeman
+                    © {new Date().getFullYear()} {t('footer.rights')}
                 </p>
             </div>
 

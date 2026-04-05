@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import MobileMenu from "./MobileMenu.jsx";
+import LanguageSwitcher from "./LanguageSwitcher.jsx";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const { pathname } = useLocation();
+    const { t } = useTranslation();
 
-    // Sluit menu bij route change
     useEffect(() => { setOpen(false); }, [pathname]);
 
     return (
@@ -14,14 +16,12 @@ export default function Navbar() {
             <div className="nav-wrap">
 
                 {/* Desktop nav */}
-                <nav className="primary-nav desktop-only" aria-label="Hoofd navigatie">
-                    <NavLink to="/" end>Home</NavLink>
+                <nav className="primary-nav desktop-only" aria-label="Main navigation">
+                    <NavLink to="/" end>{t('nav.home')}</NavLink>
 
                     <div className="nav-group">
-                        {/* ANCHOR naar sectie op home: gebruik object-URL */}
-                        <NavLink to={{ pathname: "/", hash: "#portfolio" }}>Portfolio</NavLink>
+                        <NavLink to={{ pathname: "/", hash: "#portfolio" }}>{t('nav.portfolio')}</NavLink>
                         <div className="nav-dropdown">
-                            {/* Detailpagina’s: echte routes */}
                             <NavLink to="/frontendvredestein">Frontend Vredestein</NavLink>
                             <NavLink to="/webdesignacupuncture">Webdesign Acupuncture</NavLink>
                             <NavLink to="/backendstudentendashboard">Backend Studenten Dashboard</NavLink>
@@ -29,25 +29,27 @@ export default function Navbar() {
                     </div>
 
                     <div className="nav-group">
-                        <NavLink to={{ pathname: "/", hash: "#journal" }}>Journal</NavLink>
+                        <NavLink to={{ pathname: "/", hash: "#journal" }}>{t('nav.journal')}</NavLink>
                         <div className="nav-dropdown">
                             <NavLink to="/journal/365korteverhalen">365 Korte Verhalen</NavLink>
                             <NavLink to="/journal/designchaos">Design Chaos</NavLink>
                             <NavLink to="/journal/luchtvaartfamilie2018">Luchtvaartfamilie 2018</NavLink>
                             <NavLink to="/journal/scrummaster">Scrummaster</NavLink>
                             <NavLink to="/journal/storytelling">Storytelling</NavLink>
-                            <NavLink to="/journal/toekomsttech">Toekomst & Tech</NavLink>
+                            <NavLink to="/journal/toekomsttech">Toekomst &amp; Tech</NavLink>
                         </div>
                     </div>
 
-                    <NavLink to={{ pathname: "/", hash: "#about" }}>Over mij</NavLink>
-                    <NavLink to={{ pathname: "/", hash: "#contact" }}>Contact</NavLink>
+                    <NavLink to={{ pathname: "/", hash: "#about" }}>{t('nav.about')}</NavLink>
+                    <NavLink to={{ pathname: "/", hash: "#contact" }}>{t('nav.contact')}</NavLink>
+
+                    <LanguageSwitcher />
                 </nav>
 
                 {/* Mobile hamburger */}
                 <button
                     className="hamburger mobile-only"
-                    aria-label={open ? "Sluit menu" : "Open menu"}
+                    aria-label={open ? "Close menu" : "Open menu"}
                     aria-expanded={open}
                     aria-controls="mobile-menu"
                     onClick={() => setOpen(v => !v)}
@@ -56,7 +58,6 @@ export default function Navbar() {
                 </button>
             </div>
 
-            {/* Mobile overlay menu */}
             <MobileMenu open={open} onClose={() => setOpen(false)} />
         </header>
     );

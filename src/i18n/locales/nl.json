@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "journal": "Journal",
+    "about": "Over mij",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "- Hoi! Ik ben Manon -",
+    "tagline": "Ik vind het patroon in de ruis — en bouw er iets van.",
+    "bio": "Geef me een wirwar van ideeën en ik breng er structuur in. Ik werk op het snijvlak van design, code en taal: complexe problemen vertalen naar heldere structuren, en heldere structuren naar dingen die écht werken. Ik denk in systemen, bouw in lagen en vertel onderweg het verhaal.",
+    "roles": "Full Stack Developer • Systems Thinker • Designer • Storyteller • Builder",
+    "projects": "Projecten",
+    "journal": "Journal"
+  },
+  "about": {
+    "title": "Typemachine & Toekomst",
+    "quote": "Vingers op de toetsen, verhalen in de lucht — technologie brengt ze samen.",
+    "bio1": "Een oude typemachine: nostalgie in elk toetsaanslag, iets analogers maar krachtigs. Diezelfde fascinatie drijft mij — precisie, ritme en bouwen met aandacht. Ik zie de logica in een systeem én de menselijkheid in het ontwerp.",
+    "bio2": "Van pushback-trekker bij KLM tot communicatie bij de gemeente, ik ben door verschillende werelden bewogen — maar de rode draad is altijd hetzelfde: complexiteit leesbaar maken en mensen verbinden met wat telt. Mijn tools zijn modern. Mijn waarden niet: helderheid, samenwerking, vakmanschap.",
+    "skillsTitle": "Skills",
+    "skills": {
+      "stack": "Full stack: React, Spring Boot, Git",
+      "systems": "Systeemdenken & architectuur",
+      "uxui": "UX/UI & SEO",
+      "storytelling": "Storytelling & contentstrategie"
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "intro": "Leuk dat je er bent! Zin in een kort overleg of wil je iets samen bouwen? Stuur me gerust een berichtje.",
+    "whatsapp": "WhatsApp mij",
+    "locations": "Locaties",
+    "directions": "Route openen",
+    "follow": "Volgen"
+  },
+  "footer": {
+    "rights": "Alle rechten voorbehouden | Code & Content - Manon Keeman"
+  }
+}

@@ -1,30 +1,29 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
-import { FaMedium } from "react-icons/fa6"; // Medium toegevoegd
+import { FaMedium } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
       <section id="about" className="section section-alt" style={{ padding: 0, margin: 0 }}>
         <div className="about-shell">
           {/* TEKST */}
           <div className="about-copy">
-            <h2 className="about-title">Typewriter & Future</h2>
+            <h2 className="about-title">{t('about.title')}</h2>
             <blockquote className="about-quote">
-              "Fingers on keys, stories in the air, technology is what brings them together."
+              {t('about.quote')}
             </blockquote>
-            <p className="about-text">
-              An old typewriter: nostalgia in every keystroke, something analogue yet powerful. That same fascination drives me; precision, rhythm, and building things with intention. I see the logic in a system and the humanity in its design.
-            </p>
-            <p className="about-text">
-              From pushing back planes at KLM to communications at the municipality, I've moved through different worlds, but the thread is always the same: making complexity legible, and connecting people to what matters. My tools are modern. My values aren't: clarity, collaboration, craft.
-            </p>
+            <p className="about-text">{t('about.bio1')}</p>
+            <p className="about-text">{t('about.bio2')}</p>
 
-            <h3 className="about-subtitle">Skills</h3>
+            <h3 className="about-subtitle">{t('about.skillsTitle')}</h3>
             <ul className="about-skills">
-              <li>Full stack: React, Spring Boot, Git</li>
-              <li>Systems thinking & architecture</li>
-              <li>UX/UI & SEO</li>
-              <li>Storytelling & content strategy</li>
+              <li>{t('about.skills.stack')}</li>
+              <li>{t('about.skills.systems')}</li>
+              <li>{t('about.skills.uxui')}</li>
+              <li>{t('about.skills.storytelling')}</li>
             </ul>
 
             {/* Social icons */}
@@ -55,7 +54,7 @@ export default function About() {
                   src="/about-portrait-800w.webp"
                   width="800"
                   height="600"
-                  alt="Portret Manon"
+                  alt="Portrait Manon"
                   loading="lazy"
                   decoding="async"
               />
@@ -70,11 +69,11 @@ export default function About() {
           grid-template-columns: 1fr minmax(420px, 48vw);
           grid-template-areas: "copy photo";
         }
-        .about-copy { 
-          grid-area: copy; 
-          align-self:center; 
-          padding: 48px 48px 48px 3cm; 
-          max-width: 56ch; 
+        .about-copy {
+          grid-area: copy;
+          align-self:center;
+          padding: 48px 48px 48px 3cm;
+          max-width: 56ch;
         }
         .about-photo{ grid-area: photo; position:relative; overflow:hidden; }
         .about-photo img{ display:block; width:100%; height:92vh; object-fit:cover; margin: -6vh 0 -8vh; }
@@ -89,13 +88,13 @@ export default function About() {
         .about-quote{ margin: 0 0 16px; font-style: italic; color: var(--muted); line-height: 1.5; }
         .about-text{ margin: 0 0 12px; }
         .about-subtitle{ margin: 18px 0 6px; }
-        .about-skills{ 
-          margin:0; 
-          padding:0 0 0 1.1rem; 
-          display:grid; 
-          gap:6px; 
-          color: var(--muted); 
-          font-size: .92rem; 
+        .about-skills{
+          margin:0;
+          padding:0 0 0 1.1rem;
+          display:grid;
+          gap:6px;
+          color: var(--muted);
+          font-size: .92rem;
         }
 
         .about-socials{

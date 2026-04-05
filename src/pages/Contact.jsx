@@ -2,9 +2,11 @@ import { useState } from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
 import { FaMedium } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
     const [city, setCity] = useState("Bakkum");
+    const { t } = useTranslation();
 
     const ADDRESSES = {
         Bakkum: "Van Renesselaan 19, Bakkum",
@@ -44,11 +46,8 @@ export default function Contact() {
                 <div className="contact-stack">
                     {/* Card 1 — Contact + WhatsApp */}
                     <div className="card">
-                        <h3 className="small card-subtle">Contact</h3>
-                        <p className="card-intro">
-                            Great to have you here! Up for a quick chat or want to build something together?
-                            Feel free to send me a message.
-                        </p>
+                        <h3 className="small card-subtle">{t('contact.label')}</h3>
+                        <p className="card-intro">{t('contact.intro')}</p>
                         <a
                             href="https://wa.me/31624766568"
                             target="_blank"
@@ -58,13 +57,13 @@ export default function Contact() {
                             title="WhatsApp"
                         >
                             <FaWhatsapp style={{ fontSize: "1.2rem" }} />
-                            <span>WhatsApp me</span>
+                            <span>{t('contact.whatsapp')}</span>
                         </a>
                     </div>
 
                     {/* Card 2 — Locaties */}
                     <div className="card">
-                        <h3 className="small card-subtle">Locations</h3>
+                        <h3 className="small card-subtle">{t('contact.locations')}</h3>
 
                         <div className="chip-row">
                             <button
@@ -94,14 +93,14 @@ export default function Contact() {
 
                         <div className="cta-row">
                             <a href={routeHref} target="_blank" rel="noreferrer" className="btn btn-secondary">
-                                Get directions
+                                {t('contact.directions')}
                             </a>
                         </div>
                     </div>
 
                     {/* Card 3 — Socials */}
                     <div className="card">
-                        <h3 className="small card-subtle">Follow</h3>
+                        <h3 className="small card-subtle">{t('contact.follow')}</h3>
                         <div className="contact-socials" aria-label="Social media">
                             <a href="https://github.com/manonkeeman" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
                             <a href="https://www.linkedin.com/in/manonkeeman/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>

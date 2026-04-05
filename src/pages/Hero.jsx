@@ -1,6 +1,9 @@
 import { memo } from "react";
+import { useTranslation } from "react-i18next";
 
 function Hero() {
+    const { t } = useTranslation();
+
     return (
         <section id="home" style={{ padding: 0, margin: 0 }}>
             <div className="hero-shell">
@@ -31,23 +34,17 @@ function Hero() {
 
                 {/* TEKST */}
                 <div className="hero-copy">
-                    <h1>- Hi! I'm Manon -</h1>
-                    <h3>I find the pattern in the noise then build something from it.</h3>
-                    <p>
-                        Give me a tangle of ideas and I'll map the system underneath. I work at the intersection of
-                        design, code, and language: translating complex problems into clear structures, and clear
-                        structures into things that actually work. I think in systems, build in layers, and tell the
-                        story along the way.
-                    </p>
-                    <p className="small">Full Stack Developer • Systems Thinker • Designer • Storyteller • Builder</p>
+                    <h1>{t('hero.greeting')}</h1>
+                    <h3>{t('hero.tagline')}</h3>
+                    <p>{t('hero.bio')}</p>
+                    <p className="small">{t('hero.roles')}</p>
                     <div className="hero-ctas">
-                        <a href="/#portfolio" className="btn btn-primary">Projects</a>
-                        <a href="/#journal" className="btn btn-outline" data-arrow>Journal</a>
+                        <a href="/#portfolio" className="btn btn-primary">{t('hero.projects')}</a>
+                        <a href="/#journal" className="btn btn-outline" data-arrow>{t('hero.journal')}</a>
                     </div>
                 </div>
             </div>
 
-            {/* Styles (zonder hero-nav / mobile menu) */}
             <style>{`
         .hero-shell{
           width:100vw;

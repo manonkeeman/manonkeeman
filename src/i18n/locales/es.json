@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "portfolio": "Portfolio",
+    "journal": "Diario",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "- ¡Hola! Soy Manon -",
+    "tagline": "Encuentro el patrón en el ruido — y construyo algo a partir de él.",
+    "bio": "Dame un enredo de ideas y trazaré el sistema subyacente. Trabajo en la intersección del diseño, el código y el lenguaje: traduciendo problemas complejos en estructuras claras, y estructuras claras en cosas que realmente funcionan. Pienso en sistemas, construyo en capas y cuento la historia a lo largo del camino.",
+    "roles": "Desarrolladora Full Stack • Pensadora Sistémica • Diseñadora • Narradora • Constructora",
+    "projects": "Proyectos",
+    "journal": "Diario"
+  },
+  "about": {
+    "title": "Máquina de escribir & Futuro",
+    "quote": "Dedos en las teclas, historias en el aire — la tecnología las une.",
+    "bio1": "Una vieja máquina de escribir: nostalgia en cada pulsación, algo analógico pero poderoso. Esa misma fascinación me impulsa — precisión, ritmo y construir con intención. Veo la lógica en un sistema y la humanidad en su diseño.",
+    "bio2": "Desde empujar aviones en KLM hasta comunicaciones en el municipio, he recorrido mundos distintos — pero el hilo siempre es el mismo: hacer la complejidad legible y conectar a las personas con lo que importa. Mis herramientas son modernas. Mis valores no: claridad, colaboración, oficio.",
+    "skillsTitle": "Habilidades",
+    "skills": {
+      "stack": "Full stack: React, Spring Boot, Git",
+      "systems": "Pensamiento sistémico & arquitectura",
+      "uxui": "UX/UI & SEO",
+      "storytelling": "Storytelling & estrategia de contenido"
+    }
+  },
+  "contact": {
+    "label": "Contacto",
+    "intro": "¡Qué bueno que estés aquí! ¿Quieres una charla rápida o construir algo juntos? Mándame un mensaje.",
+    "whatsapp": "WhatsApp",
+    "locations": "Ubicaciones",
+    "directions": "Cómo llegar",
+    "follow": "Seguir"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados | Código & Contenido - Manon Keeman"
+  }
+}

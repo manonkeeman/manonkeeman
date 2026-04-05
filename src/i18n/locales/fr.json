@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "portfolio": "Portfolio",
+    "journal": "Journal",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "- Bonjour ! Je suis Manon -",
+    "tagline": "Je trouve le motif dans le bruit — et j'en construis quelque chose.",
+    "bio": "Donnez-moi un enchevêtrement d'idées et je tracerai le système sous-jacent. Je travaille à l'intersection du design, du code et du langage : traduire des problèmes complexes en structures claires, et des structures claires en choses qui fonctionnent vraiment. Je pense en systèmes, je construis en couches et je raconte l'histoire au fil du chemin.",
+    "roles": "Développeuse Full Stack • Penseuse systémique • Designer • Conteuse • Bâtisseuse",
+    "projects": "Projets",
+    "journal": "Journal"
+  },
+  "about": {
+    "title": "Machine à écrire & Avenir",
+    "quote": "Doigts sur les touches, histoires dans l'air — la technologie les réunit.",
+    "bio1": "Une vieille machine à écrire : nostalgie à chaque frappe, quelque chose d'analogique mais puissant. Cette même fascination me guide — précision, rythme et construire avec intention. Je vois la logique dans un système et l'humanité dans son design.",
+    "bio2": "De pousseur d'avions chez KLM à chargée de communication en mairie, j'ai traversé des mondes différents — mais le fil conducteur est toujours le même : rendre la complexité lisible et connecter les gens à ce qui compte. Mes outils sont modernes. Mes valeurs ne le sont pas : clarté, collaboration, savoir-faire.",
+    "skillsTitle": "Compétences",
+    "skills": {
+      "stack": "Full stack : React, Spring Boot, Git",
+      "systems": "Pensée systémique & architecture",
+      "uxui": "UX/UI & SEO",
+      "storytelling": "Storytelling & stratégie de contenu"
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "intro": "Ravie de vous voir ici ! Envie d'un rapide échange ou de construire quelque chose ensemble ? N'hésitez pas à m'envoyer un message.",
+    "whatsapp": "WhatsApp",
+    "locations": "Lieux",
+    "directions": "Itinéraire",
+    "follow": "Suivre"
+  },
+  "footer": {
+    "rights": "Tous droits réservés | Code & Contenu - Manon Keeman"
+  }
+}

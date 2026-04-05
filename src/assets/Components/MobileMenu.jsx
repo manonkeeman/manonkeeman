@@ -1,7 +1,10 @@
-// src/assets/Components/MobileMenu.jsx
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher.jsx";
 
 export default function MobileMenu({ open, onClose }) {
+    const { t } = useTranslation();
+
     return (
         <div
             id="mobile-menu"
@@ -18,19 +21,19 @@ export default function MobileMenu({ open, onClose }) {
                 <button className="close-x" aria-label="Close menu" onClick={onClose}>×</button>
 
                 <nav className="mobile-nav" aria-label="Mobile navigation">
-                    <NavLink to="/" end onClick={onClose}>Home</NavLink>
+                    <NavLink to="/" end onClick={onClose}>{t('nav.home')}</NavLink>
 
                     <div className="mobile-divider" />
 
                     <details>
-                        <summary>Portfolio</summary>
+                        <summary>{t('nav.portfolio')}</summary>
                         <NavLink to="/frontendvredestein" onClick={onClose}>Frontend Vredestein</NavLink>
                         <NavLink to="/webdesignacupuncture" onClick={onClose}>Webdesign Acupuncture</NavLink>
                         <NavLink to="/backendstudentendashboard" onClick={onClose}>Backend Studenten Dashboard</NavLink>
                     </details>
 
                     <details className="only-tall">
-                        <summary>Journal</summary>
+                        <summary>{t('nav.journal')}</summary>
                         <NavLink to="/journal/365korteverhalen" onClick={onClose}>365 Korte Verhalen</NavLink>
                         <NavLink to="/journal/designchaos" onClick={onClose}>Design Chaos</NavLink>
                         <NavLink to="/journal/luchtvaartfamilie2018" onClick={onClose}>Luchtvaartfamilie 2018</NavLink>
@@ -40,9 +43,13 @@ export default function MobileMenu({ open, onClose }) {
 
                     <div className="mobile-divider" />
 
-                    <NavLink to={{ pathname: "/", hash: "#about" }} onClick={onClose}>About</NavLink>
-                    <NavLink to={{ pathname: "/", hash: "#contact" }} onClick={onClose}>Contact</NavLink>
+                    <NavLink to={{ pathname: "/", hash: "#about" }} onClick={onClose}>{t('nav.about')}</NavLink>
+                    <NavLink to={{ pathname: "/", hash: "#contact" }} onClick={onClose}>{t('nav.contact')}</NavLink>
                 </nav>
+
+                <div className="mobile-lang">
+                    <LanguageSwitcher />
+                </div>
 
                 <footer className="mobile-meta">
                     <a href="mailto:hello@manonkeeman.com">hello@manonkeeman.com</a>

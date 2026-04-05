@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Start",
+    "portfolio": "Portfolio",
+    "journal": "Journal",
+    "about": "Über mich",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "- Hi! Ich bin Manon -",
+    "tagline": "Ich finde das Muster im Rauschen — und baue etwas daraus.",
+    "bio": "Gib mir ein Gewirr aus Ideen und ich zeichne das System darunter nach. Ich arbeite an der Schnittstelle von Design, Code und Sprache: komplexe Probleme in klare Strukturen übersetzen und klare Strukturen in Dinge, die wirklich funktionieren. Ich denke in Systemen, baue in Schichten und erzähle dabei die Geschichte.",
+    "roles": "Full Stack Entwicklerin • Systemdenkerin • Designerin • Geschichtenerzählerin • Macherin",
+    "projects": "Projekte",
+    "journal": "Journal"
+  },
+  "about": {
+    "title": "Schreibmaschine & Zukunft",
+    "quote": "Finger auf den Tasten, Geschichten in der Luft — Technologie bringt sie zusammen.",
+    "bio1": "Eine alte Schreibmaschine: Nostalgie bei jedem Anschlag, etwas Analoges und doch Kraftvolles. Diese Faszination treibt mich an — Präzision, Rhythmus und das Erschaffen mit Bedacht. Ich sehe die Logik in einem System und die Menschlichkeit in seinem Design.",
+    "bio2": "Vom Pushback-Schlepper bei KLM bis zur Kommunikation in der Gemeindeverwaltung habe ich verschiedene Welten durchlaufen — aber der rote Faden ist immer derselbe: Komplexität lesbar machen und Menschen mit dem verbinden, was zählt. Meine Werkzeuge sind modern. Meine Werte nicht: Klarheit, Zusammenarbeit, Handwerk.",
+    "skillsTitle": "Fähigkeiten",
+    "skills": {
+      "stack": "Full Stack: React, Spring Boot, Git",
+      "systems": "Systemdenken & Architektur",
+      "uxui": "UX/UI & SEO",
+      "storytelling": "Storytelling & Content-Strategie"
+    }
+  },
+  "contact": {
+    "label": "Kontakt",
+    "intro": "Schön, dass du hier bist! Lust auf ein kurzes Gespräch oder möchtest du etwas zusammen aufbauen? Schreib mir einfach eine Nachricht.",
+    "whatsapp": "WhatsApp schreiben",
+    "locations": "Standorte",
+    "directions": "Route öffnen",
+    "follow": "Folgen"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten | Code & Content - Manon Keeman"
+  }
+}
