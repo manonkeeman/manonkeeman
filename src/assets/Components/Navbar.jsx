@@ -30,16 +30,13 @@ export default function Navbar() {
 
                     <div className="nav-group">
                         <NavLink to={{ pathname: "/", hash: "#journal" }}>Journal</NavLink>
-                        <div className="nav-group">
-                            <NavLink to="/journal">Journal</NavLink>
-                            <div className="nav-dropdown">
-                                <NavLink to="/journal/365korteverhalen">365 Korte Verhalen</NavLink>
-                                <NavLink to="/journal/designchaos">Design Chaos</NavLink>
-                                <NavLink to="/journal/luchtvaartfamilie2018">Luchtvaartfamilie 2018</NavLink>
-                                <NavLink to="/journal/scrummaster">Scrummaster</NavLink>
-                                <NavLink to="/journal/storytelling">Storytelling</NavLink>
-                                <NavLink to="/journal/toekomsttech">Toekomst & Tech</NavLink>
-                            </div>
+                        <div className="nav-dropdown">
+                            <NavLink to="/journal/365korteverhalen">365 Korte Verhalen</NavLink>
+                            <NavLink to="/journal/designchaos">Design Chaos</NavLink>
+                            <NavLink to="/journal/luchtvaartfamilie2018">Luchtvaartfamilie 2018</NavLink>
+                            <NavLink to="/journal/scrummaster">Scrummaster</NavLink>
+                            <NavLink to="/journal/storytelling">Storytelling</NavLink>
+                            <NavLink to="/journal/toekomsttech">Toekomst & Tech</NavLink>
                         </div>
                     </div>
 
