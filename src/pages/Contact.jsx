@@ -17,13 +17,17 @@ export default function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus("sending");
-        const form = e.target;
-        const data = new FormData(form);
+        const fd = new FormData(e.target);
+        const body = new URLSearchParams(fd).toString();
         try {
-            const res = await fetch("/", { method: "POST", body: data });
+            const res = await fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body,
+            });
             if (res.ok) {
                 setStatus("sent");
-                form.reset();
+                e.target.reset();
             } else {
                 setStatus("error");
             }
