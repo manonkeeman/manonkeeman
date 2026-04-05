@@ -17,8 +17,8 @@
   "about": {
     "title": "Macchina da scrivere & Futuro",
     "quote": "Dita sui tasti, storie nell'aria, la tecnologia le unisce.",
-    "bio1": "Una vecchia macchina da scrivere: nostalgia a ogni battitura, qualcosa di analogico ma potente. La stessa fascinazione mi guida, precisione, ritmo e costruire con intenzione. Vedo la logica in un sistema e l'umanità nel suo design.",
-    "bio2": "Dal trainare aerei in KLM alle comunicazioni comunali, ho attraversato mondi diversi, ma il filo è sempre lo stesso: rendere la complessità leggibile e connettere le persone a ciò che conta. I miei strumenti sono moderni. I miei valori no: chiarezza, collaborazione, mestiere.",
+    "bio1": "Una vecchia macchina da scrivere: nostalgia a ogni battitura, analogica ma potente. La stessa fascinazione mi guida, precisione, ritmo e costruire con intenzione. Vedo la logica in un sistema e l'umanità nel suo design.",
+    "bio2": "Da pushback tugger alla KLM alle comunicazioni presso il comune di Amsterdam, ho attraversato mondi diversi, ma il filo è sempre lo stesso: rendere la complessità leggibile e connettere le persone a ciò che conta. I miei strumenti sono moderni. I miei valori no: chiarezza, collaborazione, mestiere.",
     "skillsTitle": "Competenze",
     "skills": {
       "stack": "Full stack: React, Spring Boot, Git",
@@ -55,8 +55,8 @@
   "journalSection": {
     "articles": {
       "scrummaster": {
-        "title": "Da trainaerei a Scrum Master",
-        "excerpt": "Come sono passata da KLM pushback a Scrum."
+        "title": "Da trainaerei a sviluppatrice Full Stack",
+        "excerpt": "Come sono passata da KLM pushback al mondo del codice e dei sistemi."
       },
       "designchaos": {
         "title": "Ordinare il caos con il codice e il design",

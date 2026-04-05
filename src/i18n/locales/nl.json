@@ -1,6 +1,3 @@
-
-
-
 {
   "nav": {
     "home": "Home",
@@ -20,8 +17,8 @@
   "about": {
     "title": "Typemachine & Toekomst",
     "quote": "Vingers op de toetsen, verhalen in de lucht, technologie brengt ze samen.",
-    "bio1": "Een oude typemachine: nostalgie in elk toetsaanslag, iets analogers maar krachtigs. Diezelfde fascinatie drijft mij, precisie, ritme en bouwen met aandacht. Ik zie de logica in een systeem én de menselijkheid in het ontwerp.",
-    "bio2": "Van pushback-trekker bij KLM tot communicatie bij de gemeente, ik ben door verschillende werelden bewogen, maar de rode draad is altijd hetzelfde: complexiteit leesbaar maken en mensen verbinden met wat telt. Mijn tools zijn modern. Mijn waarden niet: helderheid, samenwerking, vakmanschap.",
+    "bio1": "Een oude typemachine: nostalgie in elk toetsaanslag, analoog maar krachtig. Diezelfde fascinatie drijft mij, precisie, ritme en bouwen met aandacht. Ik zie de logica in een systeem én de menselijkheid in het ontwerp.",
+    "bio2": "Van pushback-tugger bij KLM tot communicatie bij de gemeente Amsterdam, ik heb door verschillende werelden bewogen, maar de rode draad is altijd hetzelfde: complexiteit leesbaar maken en mensen verbinden met wat telt. Mijn tools zijn modern. Mijn waarden niet: helderheid, samenwerking, vakmanschap.",
     "skillsTitle": "Skills",
     "skills": {
       "stack": "Full stack: React, Spring Boot, Git",
@@ -58,8 +55,8 @@
   "journalSection": {
     "articles": {
       "scrummaster": {
-        "title": "Van vliegtuigsleper tot Scrum Master",
-        "excerpt": "Hoe ik van KLM pushback naar Scrum ging."
+        "title": "Van vliegtuigsleper tot Full Stack Developer",
+        "excerpt": "Hoe ik van KLM pushback belandde in de wereld van code en systemen."
       },
       "designchaos": {
         "title": "Chaos ordenen met code en design",

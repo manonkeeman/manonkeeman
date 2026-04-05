@@ -17,8 +17,8 @@
   "about": {
     "title": "Schreibmaschine & Zukunft",
     "quote": "Finger auf den Tasten, Geschichten in der Luft, Technologie bringt sie zusammen.",
-    "bio1": "Eine alte Schreibmaschine: Nostalgie bei jedem Anschlag, etwas Analoges und doch Kraftvolles. Diese Faszination treibt mich an, Präzision, Rhythmus und das Erschaffen mit Bedacht. Ich sehe die Logik in einem System und die Menschlichkeit in seinem Design.",
-    "bio2": "Vom Pushback-Schlepper bei KLM bis zur Kommunikation in der Gemeindeverwaltung habe ich verschiedene Welten durchlaufen, aber der rote Faden ist immer derselbe: Komplexität lesbar machen und Menschen mit dem verbinden, was zählt. Meine Werkzeuge sind modern. Meine Werte nicht: Klarheit, Zusammenarbeit, Handwerk.",
+    "bio1": "Eine alte Schreibmaschine: Nostalgie bei jedem Anschlag, analog aber kraftvoll. Diese Faszination treibt mich an, Präzision, Rhythmus und das Erschaffen mit Bedacht. Ich sehe die Logik in einem System und die Menschlichkeit in seinem Design.",
+    "bio2": "Vom Pushback-Tugger bei KLM bis zur Kommunikation bei der Stadtverwaltung Amsterdam habe ich verschiedene Welten durchlaufen, aber der rote Faden ist immer derselbe: Komplexität lesbar machen und Menschen mit dem verbinden, was zählt. Meine Werkzeuge sind modern. Meine Werte nicht: Klarheit, Zusammenarbeit, Handwerk.",
     "skillsTitle": "Fähigkeiten",
     "skills": {
       "stack": "Full Stack: React, Spring Boot, Git",
@@ -55,8 +55,8 @@
   "journalSection": {
     "articles": {
       "scrummaster": {
-        "title": "Vom Flugzeugschlepper zum Scrum Master",
-        "excerpt": "Wie ich von KLM Pushback zu Scrum kam."
+        "title": "Vom Flugzeugschlepper zur Full Stack Entwicklerin",
+        "excerpt": "Wie ich von KLM Pushback in die Welt des Codes und der Systeme kam."
       },
       "designchaos": {
         "title": "Chaos ordnen mit Code und Design",
