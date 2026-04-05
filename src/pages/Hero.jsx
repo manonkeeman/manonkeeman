@@ -32,14 +32,14 @@ function Hero() {
                 {/* TEKST */}
                 <div className="hero-copy">
                     <h1>- Hi! I'm Manon -</h1>
-                    <h3>I find the pattern in the noise — then build something from it.</h3>
+                    <h3>I find the pattern in the noise then build something from it.</h3>
                     <p>
                         Give me a tangle of ideas and I'll map the system underneath. I work at the intersection of
                         design, code, and language: translating complex problems into clear structures, and clear
                         structures into things that actually work. I think in systems, build in layers, and tell the
                         story along the way.
                     </p>
-                    <p className="small">Full Stack Developer • Systems Thinker • Storyteller • Builder</p>
+                    <p className="small">Full Stack Developer • Systems Thinker • Designer • Storyteller • Builder</p>
                     <div className="hero-ctas">
                         <a href="/#portfolio" className="btn btn-primary">Projects</a>
                         <a href="/#journal" className="btn btn-outline" data-arrow>Journal</a>

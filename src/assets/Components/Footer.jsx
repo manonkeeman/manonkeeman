@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer-inner">
                 <p className="footer-text">
-                    © {new Date().getFullYear()} Alle rechten voorbehouden | Code & Content - Manon Keeman
+                    © {new Date().getFullYear()} All rights reserved | Code & Content - Manon Keeman
                 </p>
             </div>
 
