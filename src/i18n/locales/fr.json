@@ -37,5 +37,47 @@
   },
   "footer": {
     "rights": "Tous droits réservés | Code & Contenu - Manon Keeman"
+  },
+  "portfolio": {
+    "viewBtn": "Voir",
+    "projects": {
+      "frontend": {
+        "desc": "Frontend React avec authentification JWT, API REST et design UX/UI."
+      },
+      "acupuncture": {
+        "desc": "Site WordPress au design épuré avec des informations claires pour les clients."
+      },
+      "backend": {
+        "desc": "Backend Spring Boot avec authentification JWT, API REST et intégration base de données."
+      }
+    }
+  },
+  "journalSection": {
+    "articles": {
+      "scrummaster": {
+        "title": "De pousseur d'avions à Scrum Master",
+        "excerpt": "Comment je suis passée de KLM au Scrum."
+      },
+      "designchaos": {
+        "title": "Mettre de l'ordre dans le chaos avec le code et le design",
+        "excerpt": "Pourquoi la structure n'est pas ennuyeuse mais libératrice."
+      },
+      "storytelling": {
+        "title": "Storytelling dans l'IT",
+        "excerpt": "Pourquoi les histoires sont indispensables en technologie."
+      },
+      "luchtvaartfamilie2018": {
+        "title": "Famille de l'aviation (Up in the Sky)",
+        "excerpt": "Un aperçu de notre famille de l'aviation. Interview Up in the Sky, 2018."
+      },
+      "365korteverhalen": {
+        "title": "365 Histoires courtes : de l'idée au livre",
+        "excerpt": "Un livre en cours : 365 scènes d'absurdité et de survie."
+      },
+      "ToekomstTech": {
+        "title": "L'avenir de la tech",
+        "excerpt": "L'IA, le travail à distance et le rôle de la créativité."
+      }
+    }
   }
 }

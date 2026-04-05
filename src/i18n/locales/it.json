@@ -37,5 +37,47 @@
   },
   "footer": {
     "rights": "Tutti i diritti riservati | Codice & Contenuto - Manon Keeman"
+  },
+  "portfolio": {
+    "viewBtn": "Vedi",
+    "projects": {
+      "frontend": {
+        "desc": "Frontend React con autenticazione JWT, API REST e design UX/UI."
+      },
+      "acupuncture": {
+        "desc": "Sito WordPress dall'estetica sobria con informazioni chiare per i clienti."
+      },
+      "backend": {
+        "desc": "Backend Spring Boot con autenticazione JWT, API REST e integrazione database."
+      }
+    }
+  },
+  "journalSection": {
+    "articles": {
+      "scrummaster": {
+        "title": "Da trainaerei a Scrum Master",
+        "excerpt": "Come sono passata da KLM pushback a Scrum."
+      },
+      "designchaos": {
+        "title": "Ordinare il caos con il codice e il design",
+        "excerpt": "Perché la struttura non è noiosa ma dona libertà."
+      },
+      "storytelling": {
+        "title": "Storytelling nell'IT",
+        "excerpt": "Perché le storie sono indispensabili nella tecnologia."
+      },
+      "luchtvaartfamilie2018": {
+        "title": "Famiglia dell'aviazione (Up in the Sky)",
+        "excerpt": "Uno sguardo alla nostra famiglia dell'aviazione. Intervista Up in the Sky, 2018."
+      },
+      "365korteverhalen": {
+        "title": "365 Racconti brevi: dall'idea al libro",
+        "excerpt": "Un libro in divenire: 365 scene di assurdità e sopravvivenza."
+      },
+      "ToekomstTech": {
+        "title": "Il futuro della tecnologia",
+        "excerpt": "L'IA, il lavoro da remoto e il ruolo della creatività."
+      }
+    }
   }
 }

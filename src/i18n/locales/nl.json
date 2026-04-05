@@ -1,3 +1,6 @@
+
+
+
 {
   "nav": {
     "home": "Home",
@@ -37,5 +40,47 @@
   },
   "footer": {
     "rights": "Alle rechten voorbehouden | Code & Content - Manon Keeman"
+  },
+  "portfolio": {
+    "viewBtn": "Bekijk",
+    "projects": {
+      "frontend": {
+        "desc": "React Frontend met JWT-authenticatie, API en UX-UI design."
+      },
+      "acupuncture": {
+        "desc": "WordPress-site met rustige uitstraling en duidelijke info voor cliënten."
+      },
+      "backend": {
+        "desc": "Spring Boot backend met JWT-authenticatie, API en database-koppeling."
+      }
+    }
+  },
+  "journalSection": {
+    "articles": {
+      "scrummaster": {
+        "title": "Van vliegtuigsleper tot Scrum Master",
+        "excerpt": "Hoe ik van KLM pushback naar Scrum ging."
+      },
+      "designchaos": {
+        "title": "Chaos ordenen met code en design",
+        "excerpt": "Waarom structuur niet saai is maar vrijheid geeft."
+      },
+      "storytelling": {
+        "title": "Storytelling in IT",
+        "excerpt": "Waarom verhalen onmisbaar zijn in technologie."
+      },
+      "luchtvaartfamilie2018": {
+        "title": "Luchtvaartfamilie (Up in the Sky)",
+        "excerpt": "Een kijkje in onze luchtvaartfamilie. Interview Up in the Sky, 2018."
+      },
+      "365korteverhalen": {
+        "title": "365 Korte verhalen: van idee naar boek",
+        "excerpt": "Een boek in wording: 365 scènes van absurditeit en overleven."
+      },
+      "ToekomstTech": {
+        "title": "De toekomst van tech",
+        "excerpt": "AI, remote werken en de rol van creativiteit."
+      }
+    }
   }
 }

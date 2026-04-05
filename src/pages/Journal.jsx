@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import data from "../content/contentJournal.json";
 import { toCard } from "../assets/Helpers/contentHelpers";
 
 export default function Journal() {
+    const { t } = useTranslation();
     const items = data.map(toCard);
 
     return (
@@ -13,9 +15,11 @@ export default function Journal() {
             <div className="journal-grid">
                 {items.map((item) => {
                     const base = item.cover.replace(/-\d+w\.\w+$/, "");
+                    const title   = t(`journalSection.articles.${item.slug}.title`,   { defaultValue: item.title });
+                    const excerpt = t(`journalSection.articles.${item.slug}.excerpt`, { defaultValue: item.excerpt });
                     return (
                         <article key={item.slug} className="journal-card">
-                            <Link to={`/journal/${item.slug}`} className="card-link" aria-label={item.title}>
+                            <Link to={`/journal/${item.slug}`} className="card-link" aria-label={title}>
                                 <div className="card-img">
                                     <picture>
                                         <source
@@ -34,7 +38,7 @@ export default function Journal() {
                                             height="675"
                                             loading="lazy"
                                             decoding="async"
-                                            alt={item.title}
+                                            alt={title}
                                         />
                                     </picture>
                                 </div>
@@ -49,8 +53,8 @@ export default function Journal() {
                                         </>
                                     ) : null}
                                 </div>
-                                <h3>{item.title}</h3>
-                                <p>{item.excerpt}</p>
+                                <h3>{title}</h3>
+                                <p>{excerpt}</p>
                             </Link>
                         </article>
                     );

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const PUB_FRONT = "/portfolio/villa-vredestein-frontend";
 const PUB_ACU   = "/portfolio/webdesign-acupuncture";
@@ -32,22 +33,22 @@ function PortfolioImage({ basePublic, alt }) {
 
 const projects = [
     {
+        key: "frontend",
         title: "Villa Vredestein – Studenten Dashboard Frontend",
-        desc: "React Frontend, met JWT-auth, API en UX-UI design.",
         tags: ["React", "API", "JWT"],
         route: "/frontendvredestein",
         basePublic: PUB_FRONT,
     },
     {
+        key: "acupuncture",
         title: "Webdesign – Acupuncture by Saskia",
-        desc: "WordPress-site met rustige uitstraling en duidelijke info voor cliënten.",
         tags: ["WordPress", "Adobe Suite"],
         route: "/webdesignacupuncture",
         basePublic: PUB_ACU,
     },
     {
+        key: "backend",
         title: "Villa Vredestein – Studenten Dashboard Backend",
-        desc: "Spring Boot backend met JWT-auth, API en database-koppeling.",
         tags: ["Springboot", "Java", "API"],
         route: "/backendstudentendashboard",
         basePublic: PUB_BACK,
@@ -55,14 +56,15 @@ const projects = [
 ];
 
 export default function Portfolio() {
-    const safeProjects = projects.filter((p) => p?.title && p?.desc);
+    const { t } = useTranslation();
 
     return (
         <section id="portfolio" className="section">
             <h2 className="portfolio-title">Portfolio</h2>
 
             <div className="portfolio-grid">
-                {safeProjects.map((p, i) => {
+                {projects.map((p, i) => {
+                    const desc = t(`portfolio.projects.${p.key}.desc`);
                     const Card = (
                         <>
                             <figure className="card-img">
@@ -75,16 +77,16 @@ export default function Portfolio() {
                                 <h3 className="card-title" title={p.title}>{p.title}</h3>
                             </header>
 
-                            <p className="card-desc">{p.desc}</p>
+                            <p className="card-desc">{desc}</p>
 
                             {!!p.tags && (
                                 <div className="tags" aria-label="Tags">
-                                    {p.tags.map((t) => <span key={`${t}-${i}`} className="tag">{t}</span>)}
+                                    {p.tags.map((tag) => <span key={`${tag}-${i}`} className="tag">{tag}</span>)}
                                 </div>
                             )}
 
                             <div className="card-actions">
-                                <span className="btn btn-outline" aria-hidden="true">Bekijk</span>
+                                <span className="btn btn-outline" aria-hidden="true">{t('portfolio.viewBtn')}</span>
                             </div>
                         </>
                     );
