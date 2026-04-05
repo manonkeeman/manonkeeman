@@ -12,6 +12,7 @@
   --shadow:0 8px 24px rgba(0,0,0,.35);
 
   --mobile-panel-bg: var(--bg-alt);
+  --nav-h: 60px;
 }
 
 /* ========= Resets & Base ========= */
@@ -26,7 +27,7 @@ body{
   overflow-x:hidden;
   color-scheme: dark;
 }
-main{ display:block }
+main{ display:block; padding-top: var(--nav-h); }
 ::selection{ background:color-mix(in srgb, var(--accent) 35%, transparent); color:#111 }
 img{ max-width:100%; display:block; border-radius:12px }
 
@@ -35,7 +36,7 @@ img{ max-width:100%; display:block; border-radius:12px }
 }
 
 /* ========= Utilities ========= */
-.section{ padding:60px 20px; scroll-margin-top:64px; }
+.section{ padding:60px 20px; scroll-margin-top: var(--nav-h); }
 .section-alt{ background:var(--bg-alt); border-block:1px solid var(--border); }
 .container{ max-width:1160px; margin:0 auto }
 
@@ -150,10 +151,9 @@ a:hover, a:focus-visible{ color:var(--accent); text-decoration:underline; text-d
 
 /* ========= Header / Desktop Nav ========= */
 .site-header {
-  position: sticky; top: 0; z-index: 50; background: var(--bg, #000);
-  transition: transform .28s cubic-bezier(.4,0,.2,1);
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 50; background: var(--bg);
 }
-.nav-hidden { transform: translateY(-100%); }
 .nav-wrap { display:flex; align-items:center; justify-content:space-between; padding: 14px 20px; }
 .brand { font-weight:700; letter-spacing:.3px; text-decoration:none; color:var(--text, #111); }
 

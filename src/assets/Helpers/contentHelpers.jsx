@@ -33,6 +33,7 @@ export function toCard(item) {
         ageLabel: ageFrom(item.date),
         readLabel: item.words ? readTimeFromWords(item.words) : "",
         cover: item.cover,
+        imgPosition: item.imgPosition ?? "center center",
         excerpt: item.excerpt ?? "",
     };
 }

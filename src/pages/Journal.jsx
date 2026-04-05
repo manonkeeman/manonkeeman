@@ -39,6 +39,7 @@ export default function Journal() {
                                             loading="lazy"
                                             decoding="async"
                                             alt={title}
+                                            style={{ objectPosition: item.imgPosition }}
                                         />
                                     </picture>
                                 </div>
