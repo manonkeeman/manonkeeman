@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FaGithub } from "react-icons/fa";
@@ -7,13 +7,28 @@ import LanguageSwitcher from "./LanguageSwitcher.jsx";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+    const [hidden, setHidden] = useState(false);
+    const lastY = useRef(0);
     const { pathname } = useLocation();
     const { t } = useTranslation();
 
     useEffect(() => { setOpen(false); }, [pathname]);
 
+    useEffect(() => {
+        const onScroll = () => {
+            const y = window.scrollY;
+            // Only hide after scrolling past 80px; never hide when menu is open
+            if (!open) {
+                setHidden(y > lastY.current && y > 80);
+            }
+            lastY.current = y;
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
+    }, [open]);
+
     return (
-        <header className="site-header">
+        <header className={`site-header${hidden ? " nav-hidden" : ""}`}>
             <div className="nav-wrap">
                 {/* Logo */}
                 <NavLink to="/" className="nav-logo-link" aria-label="Home">

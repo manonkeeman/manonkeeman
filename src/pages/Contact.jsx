@@ -173,24 +173,10 @@ export default function Contact() {
             </div>
 
             <style>{`
-        .contact-shell{
-          display:grid;
-          grid-template-columns: 1fr minmax(420px, 48vw);
-          gap: 20px;
-          align-items: stretch;
-          min-height: 92vh;
-        }
-        .contact-photo img{
-          display:block; width:100%; height:92vh; object-fit:cover; border-radius:12px;
-        }
-
-        .contact-copy{ display:flex; }
         .contact-stack{
           width:100%;
-          display:flex; flex-direction:column; justify-content:space-between;
-          height:100%;
-          padding: 8px 3cm 8px 0;
-          gap: 16px;
+          display:flex; flex-direction:column;
+          gap: 20px;
         }
 
         .card{
