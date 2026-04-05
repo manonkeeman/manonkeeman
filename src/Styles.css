@@ -11,8 +11,7 @@
   --radius:14px;
   --shadow:0 8px 24px rgba(0,0,0,.35);
 
-  /* Mobiel menu lichtgrijs (pas aan aan jouw exacte designkleur) */
-  --mobile-panel-bg:#f0f0f0;
+  --mobile-panel-bg: var(--bg-alt);
 }
 
 /* ========= Resets & Base ========= */
@@ -195,73 +194,125 @@ a:hover, a:focus-visible{ color:var(--accent); text-decoration:underline; text-d
 .hamburger:focus-visible{ outline:2px solid var(--accent); outline-offset:2px }
 
 /* ========= Mobile Overlay Menu ========= */
-.mobile-overlay {
-  position:fixed; inset:0;
-  background: rgba(0,0,0,.35);
-  backdrop-filter: blur(2px);
-  opacity:0; pointer-events:none;
-  transition: opacity .24s ease;
-  z-index: 9999; /* boven alles */
-  overscroll-behavior: contain;
-}
-.mobile-overlay.open { opacity:1; pointer-events:auto; }
-
 /* Scroll-lock hook (optioneel; voeg/haal 'no-scroll' class op body via JS) */
 body.no-scroll { overflow:hidden; touch-action:none; }
 
 .mobile-panel {
-  position:absolute; left:0; right:0; top:0; height:100dvh;
-  background: var(--mobile-panel-bg);
-  color:#111;
-  padding: max(12px, env(safe-area-inset-top)) 18px 28px;
-  border-radius: 0 0 18px 18px;
-  transform: translate3d(0,-12px,0);
-  animation: slideDown .24s ease forwards;
-  box-shadow: 0 12px 36px rgba(0,0,0,.26);
-  -webkit-overflow-scrolling: touch;
-  display:flex; flex-direction:column;
-  overflow:hidden; /* paneel zelf verbergt overflow */
+  position: absolute; left: 0; right: 0; top: 0; height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  padding: max(16px, env(safe-area-inset-top)) 24px 32px;
+  border-right: 1px solid var(--border);
+  transform: translate3d(-100%, 0, 0);
+  animation: slideIn .26s cubic-bezier(.22,.68,0,1.2) forwards;
+  box-shadow: 4px 0 32px rgba(0,0,0,.5);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  max-width: 320px;
 }
-@keyframes slideDown{ to { transform: translate3d(0,0,0); } }
+@keyframes slideIn { to { transform: translate3d(0, 0, 0); } }
+
+.mobile-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(3px);
+  opacity: 0; pointer-events: none;
+  transition: opacity .22s ease;
+  z-index: 9999;
+  overscroll-behavior: contain;
+}
+.mobile-overlay.open { opacity: 1; pointer-events: auto; }
 
 .close-x {
-  position:absolute; right:10px; top:6px;
-  width:40px; height:40px;
-  font-size:28px; line-height:1;
-  border:0; background:transparent; cursor:pointer; color:#111;
-  display:grid; place-items:center;
-  border-radius:10px;
+  position: absolute; right: 14px; top: 14px;
+  width: 36px; height: 36px;
+  font-size: 22px; line-height: 1;
+  border: 1px solid var(--border); background: var(--bg-alt); cursor: pointer;
+  color: var(--muted);
+  display: grid; place-items: center;
+  border-radius: 10px;
+  transition: color .2s ease, border-color .2s ease;
 }
-.close-x:focus-visible{ outline:2px solid #111; outline-offset:2px }
+.close-x:hover { color: var(--text); border-color: var(--accent); }
+.close-x:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-/* Scrollbare navigatie bij lange lijsten */
+/* Brand name in mobile panel */
+.mobile-brand {
+  font-family: "Space Grotesk", ui-sans-serif;
+  font-weight: 700; font-size: 1.1rem;
+  color: var(--text); letter-spacing: .3px;
+  margin-top: 4px; margin-bottom: 4px;
+}
+
+/* Scrollable nav */
 .mobile-nav {
-  display:flex; flex-direction:column; gap:12px; margin-top:28px; font-size:1.1rem;
-  flex:1; overflow:auto; -webkit-overflow-scrolling:touch; padding-right:2px;
+  display: flex; flex-direction: column; gap: 4px;
+  margin-top: 24px; font-size: 1rem;
+  flex: 1; overflow: auto; -webkit-overflow-scrolling: touch;
 }
-.mobile-nav a {
-  padding:14px 14px; background:#fff; border:1px solid #ddd; border-radius:14px;
-  text-decoration:none; color:#111; box-shadow: 0 4px 14px rgba(0,0,0,.06);
+.mobile-nav > a {
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  text-decoration: none; color: var(--text);
+  border: 1px solid transparent;
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
 }
-.mobile-nav a:hover{ text-decoration:none; border-color:#cfcfcf }
-.mobile-nav a:focus-visible{ outline:2px solid #111; outline-offset:2px }
-.mobile-nav a.active{ outline: 2px solid #111; }
+.mobile-nav > a:hover,
+.mobile-nav > a.active {
+  background: var(--bg-alt);
+  border-color: var(--border);
+  color: var(--accent);
+  text-decoration: none;
+}
 
-.mobile-nav details { background:#fff; border:1px solid #ddd; border-radius:14px; padding: 8px 10px; }
-.mobile-nav summary { cursor:pointer; padding:8px 6px; font-weight:600; list-style:none; display:flex; align-items:center; justify-content:space-between; }
-.mobile-nav details[open] summary { margin-bottom:6px; }
-.mobile-nav details a { display:block; margin:6px 4px; }
+/* Dropdown groups */
+.mobile-nav details {
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  overflow: hidden;
+  transition: border-color .18s ease;
+}
+.mobile-nav details[open] {
+  border-color: var(--border);
+  background: var(--bg-alt);
+}
+.mobile-nav summary {
+  cursor: pointer; padding: 12px 14px;
+  font-weight: 600; list-style: none;
+  display: flex; align-items: center; justify-content: space-between;
+  color: var(--text);
+  user-select: none;
+}
+.mobile-nav summary::after { content: "›"; font-size: 1.1rem; color: var(--muted); transition: transform .2s ease; }
+.mobile-nav details[open] summary::after { transform: rotate(90deg); }
+.mobile-nav details a {
+  display: block; padding: 10px 14px 10px 20px;
+  color: var(--muted); font-size: .95rem;
+  border-top: 1px solid var(--border);
+  text-decoration: none;
+  transition: color .18s ease;
+}
+.mobile-nav details a:hover { color: var(--text); text-decoration: none; }
 
-/* Optioneel: verberg uitgebreide lijsten op erg lage hoogtes */
-.only-tall { display:block; }
-@media (max-height: 640px){ .only-tall{ display:none; } }
+/* Divider */
+.mobile-divider {
+  height: 1px; background: var(--border); margin: 8px 0;
+}
 
-.mobile-meta { margin-top:auto; padding: 18px 4px 4px; font-size:.95rem; color:#333; }
+.only-tall { display: block; }
+@media (max-height: 640px) { .only-tall { display: none; } }
 
-/* Kleine devices/landscape tweaks */
-@media (max-height: 540px){
-  .mobile-panel { padding-bottom:14px; }
-  .mobile-nav { font-size:1rem; }
+.mobile-meta {
+  margin-top: auto; padding-top: 20px;
+  font-size: .9rem; color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+.mobile-meta a { color: var(--muted); transition: color .2s ease; }
+.mobile-meta a:hover { color: var(--accent); text-decoration: none; }
+
+@media (max-height: 540px) {
+  .mobile-panel { padding-bottom: 14px; }
+  .mobile-nav { font-size: .95rem; gap: 2px; }
 }
 
 /* ========= Small extras ========= */

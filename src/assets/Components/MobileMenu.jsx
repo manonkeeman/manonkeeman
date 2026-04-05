@@ -8,16 +8,19 @@ export default function MobileMenu({ open, onClose }) {
             className={`mobile-overlay ${open ? "open" : ""}`}
             role="dialog"
             aria-modal="true"
-            aria-label="Mobiele navigatie"
+            aria-label="Mobile navigation"
             onClick={(e) => {
-                if (e.currentTarget === e.target) onClose(); // klik buiten panel sluit menu
+                if (e.currentTarget === e.target) onClose();
             }}
         >
             <div className="mobile-panel" role="document">
-                <button className="close-x" aria-label="Sluit menu" onClick={onClose}>×</button>
+                <span className="mobile-brand">Manon Keeman</span>
+                <button className="close-x" aria-label="Close menu" onClick={onClose}>×</button>
 
-                <nav className="mobile-nav" aria-label="Mobiele navigatie lijst">
+                <nav className="mobile-nav" aria-label="Mobile navigation">
                     <NavLink to="/" end onClick={onClose}>Home</NavLink>
+
+                    <div className="mobile-divider" />
 
                     <details>
                         <summary>Portfolio</summary>
@@ -26,23 +29,18 @@ export default function MobileMenu({ open, onClose }) {
                         <NavLink to="/backendstudentendashboard" onClick={onClose}>Backend Studenten Dashboard</NavLink>
                     </details>
 
-                    {/* Journal hoofdlink (compact) */}
-                    <NavLink to={{ pathname: "/", hash: "#journal" }} onClick={onClose}>
-                        Journal
-                    </NavLink>
-
-                    {/* Optioneel: toon laatste artikelen alleen op hogere schermen */}
                     <details className="only-tall">
-                        <summary>Laatste artikelen</summary>
+                        <summary>Journal</summary>
                         <NavLink to="/journal/365korteverhalen" onClick={onClose}>365 Korte Verhalen</NavLink>
                         <NavLink to="/journal/designchaos" onClick={onClose}>Design Chaos</NavLink>
                         <NavLink to="/journal/luchtvaartfamilie2018" onClick={onClose}>Luchtvaartfamilie 2018</NavLink>
-                        <NavLink to={{ pathname: "/", hash: "#journal" }} onClick={onClose}>
-                            Alle 6 artikelen →
-                        </NavLink>
+                        <NavLink to="/journal/storytelling" onClick={onClose}>Storytelling</NavLink>
+                        <NavLink to="/journal/toekomsttech" onClick={onClose}>Toekomst &amp; Tech</NavLink>
                     </details>
 
-                    <NavLink to={{ pathname: "/", hash: "#about" }} onClick={onClose}>Over mij</NavLink>
+                    <div className="mobile-divider" />
+
+                    <NavLink to={{ pathname: "/", hash: "#about" }} onClick={onClose}>About</NavLink>
                     <NavLink to={{ pathname: "/", hash: "#contact" }} onClick={onClose}>Contact</NavLink>
                 </nav>
 
