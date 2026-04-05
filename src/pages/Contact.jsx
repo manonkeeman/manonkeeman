@@ -16,7 +16,7 @@ export default function Contact() {
 
     return (
         <div className="contact-shell">
-            {/* FOTO LINKS */}
+            {/* TO LINKS */}
             <div className="contact-photo">
                 <picture>
                     <source
@@ -46,8 +46,8 @@ export default function Contact() {
                     <div className="card">
                         <h3 className="small card-subtle">Contact</h3>
                         <p className="card-intro">
-                            Leuk dat je er bent! Zin in een kort overleg of wil je iets samen bouwen?
-                            Stuur me gerust een appje.
+                            Great to have you here! Up for a quick chat or want to build something together?
+                            Feel free to send me a message.
                         </p>
                         <a
                             href="https://wa.me/31624766568"
@@ -58,13 +58,13 @@ export default function Contact() {
                             title="WhatsApp"
                         >
                             <FaWhatsapp style={{ fontSize: "1.2rem" }} />
-                            <span>WhatsApp mij</span>
+                            <span>WhatsApp me</span>
                         </a>
                     </div>
 
                     {/* Card 2 — Locaties */}
                     <div className="card">
-                        <h3 className="small card-subtle">Locaties</h3>
+                        <h3 className="small card-subtle">Locations</h3>
 
                         <div className="chip-row">
                             <button
@@ -85,7 +85,7 @@ export default function Contact() {
 
                         <div className="map-wrap">
                             <iframe
-                                title={`Kaart ${city}`}
+                                title={`Map ${city}`}
                                 src={mapSrc}
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
@@ -94,14 +94,14 @@ export default function Contact() {
 
                         <div className="cta-row">
                             <a href={routeHref} target="_blank" rel="noreferrer" className="btn btn-secondary">
-                                Route openen
+                                Get directions
                             </a>
                         </div>
                     </div>
 
                     {/* Card 3 — Socials */}
                     <div className="card">
-                        <h3 className="small card-subtle">Volgen</h3>
+                        <h3 className="small card-subtle">Follow</h3>
                         <div className="contact-socials" aria-label="Social media">
                             <a href="https://github.com/manonkeeman" target="_blank" rel="noreferrer" aria-label="GitHub"><FaGithub /></a>
                             <a href="https://www.linkedin.com/in/manonkeeman/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>

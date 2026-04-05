@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
 
-/* ========= Tokens ========= */
+/* ========= Design Tokens ========= */
 :root{
-  --bg:#1b1b1b; --bg-alt:#2a2a2a; --text:#f9f0dd; --muted:#c6c1b5;
-  --accent:#8c8c82; --border:#3a3a3a;
-  --radius:14px; --shadow:0 8px 24px rgba(0,0,0,.35);
+  --bg:#1b1b1b;
+  --bg-alt:#2a2a2a;
+  --text:#f9f0dd;
+  --muted:#c6c1b5;
+  --accent:#8c8c82;
+  --border:#3a3a3a;
+  --radius:14px;
+  --shadow:0 8px 24px rgba(0,0,0,.35);
+
+  /* Mobiel menu lichtgrijs (pas aan aan jouw exacte designkleur) */
+  --mobile-panel-bg:#f0f0f0;
 }
 
-/* ========= Resets ========= */
+/* ========= Resets & Base ========= */
 *{ box-sizing:border-box }
 html, body, #root{ height:100% }
 html{ scroll-behavior:smooth }
@@ -16,8 +24,15 @@ body{
   font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, "Apple Color Emoji","Segoe UI Emoji";
   background:var(--bg); color:var(--text);
   overflow-x:hidden;
+  color-scheme: dark;
 }
 main{ display:block }
+::selection{ background:color-mix(in srgb, var(--accent) 35%, transparent); color:#111 }
+img{ max-width:100%; display:block; border-radius:12px }
+
+@media (prefers-reduced-motion:reduce){
+  *{ transition:none !important; animation:none !important }
+}
 
 /* ========= Utilities ========= */
 .section{ padding:60px 20px; scroll-margin-top:84px; }
@@ -43,7 +58,7 @@ a:hover, a:focus-visible{ color:var(--accent); text-decoration:underline; text-d
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:10px;
   padding:14px 20px; border-radius:var(--radius); font-weight:600;
-  border:1px solid transparent;
+  border:1px solid transparent; cursor:pointer;
   transition:transform .08s ease, filter .2s ease, border-color .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
 }
 .btn:active{ transform:translateY(1px) }
@@ -54,7 +69,7 @@ a:hover, a:focus-visible{ color:var(--accent); text-decoration:underline; text-d
 .btn-outline:hover{ border-color:var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent) }
 .btn[data-arrow]::after{ content:"↗"; margin-left:8px; font-family:"Space Grotesk", ui-sans-serif }
 
-/* ========= Card ========= */
+/* ========= Cards ========= */
 .card{
   background:var(--bg-alt); border:1px solid var(--border);
   border-radius:var(--radius); padding:20px; box-shadow:var(--shadow);
@@ -92,15 +107,12 @@ a:hover, a:focus-visible{ color:var(--accent); text-decoration:underline; text-d
 
 /* ========= CONTACT (foto links, cards verdeeld rechts) ========= */
 #contact.section{ padding:0 !important; margin:0 !important; border:none !important }
-
 #contact .contact-shell{
   width:100vw; height:100dvh; min-height:100vh;
   margin-left:calc(50% - 50vw);
   display:grid; grid-template-columns:minmax(420px, 48vw) 1fr; grid-template-areas:"photo copy";
   overflow:hidden;
 }
-
-/* Foto links */
 #contact .contact-photo{
   grid-area:photo; position:relative; width:100%; height:100%; overflow:hidden; background:#000;
 }
@@ -109,29 +121,15 @@ a:hover, a:focus-visible{ color:var(--accent); text-decoration:underline; text-d
   object-fit:cover; object-position:center left;
   border:0 !important; border-radius:0 !important; box-shadow:none !important;
 }
-
-/* Rechterkolom: verdeel 3 cards over de hoogte */
 #contact .contact-copy{
   grid-area:copy;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
+  display:flex; flex-direction:column; justify-content:space-between;
   padding:clamp(24px,3vw,48px);
 }
-
-/* Cards: gelijke max-breedte en centreren */
-#contact .contact-copy .card{
-  max-width:420px; margin:0 auto;
-}
-
-/* Socials */
-#contact .contact-socials{
-  display:flex; justify-content:center; gap:32px; font-size:2rem;
-}
+#contact .contact-copy .card{ max-width:420px; margin:0 auto; }
+#contact .contact-socials{ display:flex; justify-content:center; gap:32px; font-size:2rem; }
 #contact .contact-socials a{ color:var(--muted); transition:color .2s ease, transform .2s ease }
 #contact .contact-socials a:hover{ color:var(--accent); transform:translateY(-2px) }
-
-/* Mobiel */
 @media (max-width:920px){
   #contact .contact-shell{
     grid-template-columns:1fr; grid-template-areas:"photo" "copy";
@@ -143,11 +141,129 @@ a:hover, a:focus-visible{ color:var(--accent); text-decoration:underline; text-d
   #contact .contact-socials{ font-size:1.6rem; gap:24px }
 }
 
+/* ========= Header / Desktop Nav ========= */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--bg, #000); }
+.nav-wrap { display:flex; align-items:center; justify-content:space-between; padding: 14px 20px; }
+.brand { font-weight:700; letter-spacing:.3px; text-decoration:none; color:var(--text, #111); }
+
+/* Nav rechts uitgelijnd */
+.primary-nav { margin-left:auto; display:flex; align-items:center; gap:24px; }
+.primary-nav a { color: var(--text, #f9f0dd); text-decoration:none; padding: 10px 12px; display:inline-block; }
+.primary-nav .nav-group { position:relative; display:inline-block; }
+.primary-nav .nav-group:hover .nav-dropdown { opacity:1; transform: translateY(0); pointer-events:auto; }
+.primary-nav .nav-dropdown {
+  position:absolute; left:0; top:100%; background:#1f1f1f;
+  border:1px solid var(--border,#3a3a3a); border-radius:12px; padding:8px;
+  opacity:0; transform: translateY(6px); pointer-events:none; min-width:260px;
+  box-shadow: var(--shadow, 0 8px 24px rgba(0,0,0,.35));
+}
+.primary-nav .nav-dropdown a { display:block; padding:10px 12px; border-radius:8px; }
+.primary-nav .nav-dropdown a:hover { background:#2a2a2a; }
+
+/* ========= Visibility Helpers ========= */
+.mobile-only { display: none; }
+.desktop-only { display: flex; } /* of block, afhankelijk van je markup */
+
+@media (max-width: 979.98px){
+  .mobile-only { display: inline-flex; }
+  .desktop-only { display: none; }
+
+  /* Hamburger naar rechts op mobiel */
+  .nav-wrap{ gap:12px; }
+  .brand{ order:1; }
+  .hamburger{ order:2; margin-left:auto; }
+}
+
+/* Extra veiligheid: verberg mobiele UI boven 980px expliciet */
+@media (min-width: 980px){
+  .hamburger { display: none !important; }
+  .mobile-overlay { display: none !important; }
+}
+
+/* ========= Mobile Hamburger ========= */
+.hamburger {
+  width:44px; height:36px; display:inline-flex;
+  flex-direction:column; justify-content:center; gap:6px;
+  background:transparent; border:0; cursor:pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.hamburger .bar {
+  height:2px; width:100%;
+  background: var(--text, #f9f0dd);
+  border-radius:2px; display:block;
+}
+.hamburger:focus-visible{ outline:2px solid var(--accent); outline-offset:2px }
+
+/* ========= Mobile Overlay Menu ========= */
+.mobile-overlay {
+  position:fixed; inset:0;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(2px);
+  opacity:0; pointer-events:none;
+  transition: opacity .24s ease;
+  z-index: 9999; /* boven alles */
+  overscroll-behavior: contain;
+}
+.mobile-overlay.open { opacity:1; pointer-events:auto; }
+
+/* Scroll-lock hook (optioneel; voeg/haal 'no-scroll' class op body via JS) */
+body.no-scroll { overflow:hidden; touch-action:none; }
+
+.mobile-panel {
+  position:absolute; left:0; right:0; top:0; height:100dvh;
+  background: var(--mobile-panel-bg);
+  color:#111;
+  padding: max(12px, env(safe-area-inset-top)) 18px 28px;
+  border-radius: 0 0 18px 18px;
+  transform: translate3d(0,-12px,0);
+  animation: slideDown .24s ease forwards;
+  box-shadow: 0 12px 36px rgba(0,0,0,.26);
+  -webkit-overflow-scrolling: touch;
+  display:flex; flex-direction:column;
+  overflow:hidden; /* paneel zelf verbergt overflow */
+}
+@keyframes slideDown{ to { transform: translate3d(0,0,0); } }
+
+.close-x {
+  position:absolute; right:10px; top:6px;
+  width:40px; height:40px;
+  font-size:28px; line-height:1;
+  border:0; background:transparent; cursor:pointer; color:#111;
+  display:grid; place-items:center;
+  border-radius:10px;
+}
+.close-x:focus-visible{ outline:2px solid #111; outline-offset:2px }
+
+/* Scrollbare navigatie bij lange lijsten */
+.mobile-nav {
+  display:flex; flex-direction:column; gap:12px; margin-top:28px; font-size:1.1rem;
+  flex:1; overflow:auto; -webkit-overflow-scrolling:touch; padding-right:2px;
+}
+.mobile-nav a {
+  padding:14px 14px; background:#fff; border:1px solid #ddd; border-radius:14px;
+  text-decoration:none; color:#111; box-shadow: 0 4px 14px rgba(0,0,0,.06);
+}
+.mobile-nav a:hover{ text-decoration:none; border-color:#cfcfcf }
+.mobile-nav a:focus-visible{ outline:2px solid #111; outline-offset:2px }
+.mobile-nav a.active{ outline: 2px solid #111; }
+
+.mobile-nav details { background:#fff; border:1px solid #ddd; border-radius:14px; padding: 8px 10px; }
+.mobile-nav summary { cursor:pointer; padding:8px 6px; font-weight:600; list-style:none; display:flex; align-items:center; justify-content:space-between; }
+.mobile-nav details[open] summary { margin-bottom:6px; }
+.mobile-nav details a { display:block; margin:6px 4px; }
+
+/* Optioneel: verberg uitgebreide lijsten op erg lage hoogtes */
+.only-tall { display:block; }
+@media (max-height: 640px){ .only-tall{ display:none; } }
+
+.mobile-meta { margin-top:auto; padding: 18px 4px 4px; font-size:.95rem; color:#333; }
+
+/* Kleine devices/landscape tweaks */
+@media (max-height: 540px){
+  .mobile-panel { padding-bottom:14px; }
+  .mobile-nav { font-size:1rem; }
+}
+
 /* ========= Small extras ========= */
 .hero-copy h1{ margin:0 0 12px }
 .hero-copy p{ margin:0 0 18px }
-img{ max-width:100%; display:block; border-radius:12px }
-
-@media (prefers-reduced-motion:reduce){
-  *{ transition:none !important; animation:none !important }
-}

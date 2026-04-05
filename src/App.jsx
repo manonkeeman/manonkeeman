@@ -1,11 +1,12 @@
 import { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"; // ← +Navigate
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 // Components
 import ScrollToTop from "./assets/Components/ScrollToTop";
+import Navbar from "./assets/Components/Navbar.jsx";
 import Footer from "./assets/Components/Footer.jsx";
 
-// Pagina’s (home-secties)
+// Pages (home sections)
 import Hero from "./pages/Hero.jsx";
 import About from "./pages/About.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
@@ -13,7 +14,7 @@ import Journal from "./pages/Journal.jsx";
 import Contact from "./pages/Contact.jsx";
 import ArticleRoute from "./pages/ArticlesJournal/ArticleRoute.jsx";
 
-// Portfolio detailpagina’s
+// Portfolio detail pages
 import FrontendVredestein from "./pages/Portfolio/FrontendVredestein.jsx";
 import WebdesignAcupuncture from "./pages/Portfolio/WebdesignAcupuncture.jsx";
 import BackendStudentenDashboard from "./pages/Portfolio/BackendStudentenDashboard.jsx";
@@ -23,6 +24,7 @@ import "./Styles.css";
 function Layout({ children }) {
     return (
         <>
+            <Navbar />
             <main>{children}</main>
             <Footer />
         </>
@@ -75,9 +77,9 @@ export default function App() {
                     }
                 />
 
-                {/* Portfolio detailpagina’s — zorg dat paden matchen met je <Link to="..."> */}
+                {/* Portfolio detail pages */}
                 <Route
-                    path="/frontendvredestein"              // ← MATCHT je Link uit Portfolio.jsx
+                    path="/frontendvredestein"
                     element={
                         <Layout>
                             <FrontendVredestein />
@@ -101,12 +103,12 @@ export default function App() {
                     }
                 />
 
-                {/* Redirects / alias-paden (optioneel, handig bij typos of oude links) */}
+                {/* Redirects */}
                 <Route path="/frontend" element={<Navigate to="/frontendvredestein" replace />} />
                 <Route path="/webdesignacupunture" element={<Navigate to="/webdesignacupuncture" replace />} />
 
                 {/* 404 */}
-                <Route path="*" element={<Layout><div style={{padding:24}}>Pagina niet gevonden</div></Layout>} />
+                <Route path="*" element={<Layout><div style={{ padding: 24 }}>Page not found</div></Layout>} />
             </Routes>
         </Router>
     );
