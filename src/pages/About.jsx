@@ -7,20 +7,20 @@ export default function About() {
       <section id="about" className="section section-alt" style={{ padding: 0, margin: 0 }}>
         <div className="about-shell">
           {/* TEKST */}
-          <div className=”about-copy”>
-            <h2 className=”about-title”>Typewriter & Future</h2>
-            <blockquote className=”about-quote”>
-              “Fingers on keys, stories in the air — technology is what brings them together.”
+          <div className="about-copy">
+            <h2 className="about-title">Typewriter & Future</h2>
+            <blockquote className="about-quote">
+              "Fingers on keys, stories in the air — technology is what brings them together."
             </blockquote>
-            <p className=”about-text”>
+            <p className="about-text">
               An old typewriter: nostalgia in every keystroke, something analogue yet powerful. That same fascination drives me — precision, rhythm, and building things with intention. I see the logic in a system and the humanity in its design.
             </p>
-            <p className=”about-text”>
+            <p className="about-text">
               From pushing back planes at KLM to communications at the municipality, I've moved through different worlds — but the thread is always the same: making complexity legible, and connecting people to what matters. My tools are modern. My values aren't: clarity, collaboration, craft.
             </p>
 
-            <h3 className=”about-subtitle”>Skills</h3>
-            <ul className=”about-skills”>
+            <h3 className="about-subtitle">Skills</h3>
+            <ul className="about-skills">
               <li>Full stack: React, Spring Boot, Git</li>
               <li>Systems thinking & architecture</li>
               <li>UX/UI & SEO</li>
