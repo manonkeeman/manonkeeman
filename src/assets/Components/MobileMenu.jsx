@@ -56,7 +56,7 @@ export default function MobileMenu({ open, onClose }) {
 
                     <div className="mobile-divider" />
 
-                    <NavLink to={{ pathname: "/", hash: "#about" }} onClick={onClose}>{t('nav.about')}</NavLink>
+                    <NavLink to="/about" onClick={onClose}>{t('nav.about')}</NavLink>
                     <NavLink to={{ pathname: "/", hash: "#contact" }} onClick={onClose}>{t('nav.contact')}</NavLink>
                 </nav>
 

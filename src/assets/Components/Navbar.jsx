@@ -45,7 +45,7 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    <NavLink to={{ pathname: "/", hash: "#about" }}>{t('nav.about')}</NavLink>
+                    <NavLink to="/about">{t('nav.about')}</NavLink>
                     <NavLink to={{ pathname: "/", hash: "#contact" }}>{t('nav.contact')}</NavLink>
 
 

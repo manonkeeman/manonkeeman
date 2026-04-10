@@ -11,11 +11,11 @@ import Seo from "./assets/Components/Seo.jsx";
 
 // Home sections (needed immediately on first load)
 import Hero from "./pages/Hero.jsx";
-import About from "./pages/About.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 import Contact from "./pages/Contact.jsx";
 
 // Detail pages — lazy loaded (only fetched when user navigates there)
+const About                 = lazy(() => import("./pages/About.jsx"));
 const Journal               = lazy(() => import("./pages/Journal.jsx"));
 const ArticleRoute          = lazy(() => import("./pages/ArticlesJournal/ArticleRoute.jsx"));
 const FrontendVredestein    = lazy(() => import("./pages/Portfolio/FrontendVredestein.jsx"));
@@ -87,8 +87,19 @@ export default function App() {
                             <HomeSeo />
                             <section id="home"      className="section"><Hero /></section>
                             <section id="portfolio" className="section"><Portfolio /></section>
-                            <section id="about"     className="section section-alt"><About /></section>
                             <section id="contact"   className="section"><Contact /></section>
+                        </Layout>
+                    }
+                />
+
+                {/* About pagina — lazy */}
+                <Route
+                    path="/about"
+                    element={
+                        <Layout>
+                            <Suspense fallback={<PageLoader />}>
+                                <About />
+                            </Suspense>
                         </Layout>
                     }
                 />
