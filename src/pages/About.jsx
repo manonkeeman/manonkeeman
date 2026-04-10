@@ -109,19 +109,19 @@ export default function About() {
         .about-journal-btn{
           display: inline-block;
           padding: 7px 18px;
-          border: 1px solid #6b4226;
+          border: 1px solid var(--accent);
           border-radius: 8px;
           font-size: .88rem;
           font-weight: 600;
-          color: #6b4226;
+          color: var(--accent);
           text-decoration: none;
           white-space: nowrap;
           transition: background .18s ease, color .18s ease, border-color .18s ease;
         }
         .about-journal-btn:hover{
-          background: #111;
-          color: #fff;
-          border-color: #111;
+          background: var(--accent);
+          color: var(--bg);
+          border-color: var(--accent);
         }
         .about-subtitle{ margin: 18px 0 6px; }
         .about-skills{
