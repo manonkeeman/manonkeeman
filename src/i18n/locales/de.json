@@ -39,6 +39,8 @@
     "quote": "Die seltene Kombination aus visuellem Denken, klarer Kommunikation und solider technischer Umsetzung.",
     "bio1": "Ich studierte an der Gerrit Rietveld Academie und schloss mein Diplom in Grafikdesign am SAE Institute Amsterdam ab. Danach absolvierte ich die Schrijversacademie, einfach weil guter Code und gute Kommunikation dasselbe verlangen: präzise, klar, ohne Rauschen. Genau das bringe ich als Entwicklerin mit.",
     "bio2": "Über 20 Jahre Berufserfahrung im Mittelstand: von Werbekampagnen für Renault bis hin zu Kommunikationsprojekten für die Gemeinde Amsterdam. Bei KLM schrieb ich Blogs und nahm an der ersten RTL4-Dokumentation über die Luftfahrt in der Corona-Zeit teil, unter anderem neben Pieter Elbers. Ich weiß, wie echte Aufträge funktionieren: Kundengespräche, Deadlines, Feedback und liefern, was wirklich zählt. Jetzt baue ich mit React und Spring Boot, und ich liefere noch immer auf dieselbe Weise: direkt, kompetent und mit echtem Blick für den Endnutzer.",
+    "journalCta": "Neugierig auf meine Texte, Interviews und Reisegeschichten?",
+    "journalBtn": "Zum Journal",
     "skillsTitle": "Fähigkeiten",
     "skills": {
       "stack": "Full Stack: React, Spring Boot, Git",

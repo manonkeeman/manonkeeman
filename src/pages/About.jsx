@@ -1,6 +1,7 @@
 import { FaReact, FaGitAlt } from "react-icons/fa";
 import { SiSpringboot, SiPostgresql, SiFigma } from "react-icons/si";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const { t } = useTranslation();
@@ -16,6 +17,11 @@ export default function About() {
             </blockquote>
             <p className="about-text">{t('about.bio1')}</p>
             <p className="about-text">{t('about.bio2')}</p>
+
+            <div className="about-journal-cta">
+              <span className="about-journal-tagline">{t('about.journalCta')}</span>
+              <Link to="/journal" className="about-journal-btn">{t('about.journalBtn')}</Link>
+            </div>
 
             <h3 className="about-subtitle">{t('about.skillsTitle')}</h3>
             <ul className="about-skills">
@@ -86,6 +92,34 @@ export default function About() {
         .about-title{ margin: 0 0 8px; }
         .about-quote{ margin: 0 0 16px; font-style: italic; color: var(--muted); line-height: 1.5; }
         .about-text{ margin: 0 0 12px; }
+        .about-journal-cta{
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          margin: 20px 0 4px;
+          flex-wrap: wrap;
+        }
+        .about-journal-tagline{
+          color: var(--muted);
+          font-size: .92rem;
+        }
+        .about-journal-btn{
+          display: inline-block;
+          padding: 7px 18px;
+          border: 1px solid var(--border);
+          border-radius: 8px;
+          font-size: .88rem;
+          font-weight: 600;
+          color: var(--text);
+          text-decoration: none;
+          white-space: nowrap;
+          transition: background .18s ease, color .18s ease, border-color .18s ease;
+        }
+        .about-journal-btn:hover{
+          background: var(--accent);
+          color: #fff;
+          border-color: var(--accent);
+        }
         .about-subtitle{ margin: 18px 0 6px; }
         .about-skills{
           margin:0;
