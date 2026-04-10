@@ -17,6 +17,9 @@ export default function About() {
             </blockquote>
             <p className="about-text">{t('about.bio1')}</p>
             <p className="about-text">{t('about.bio2')}</p>
+            <p className="about-text">{t('about.bio3')}</p>
+            <p className="about-text">{t('about.bio4')}</p>
+            <p className="about-text">{t('about.bio5')}</p>
 
             <div className="about-journal-cta">
               <span className="about-journal-tagline">{t('about.journalCta')}</span>
@@ -90,7 +93,7 @@ export default function About() {
         }
 
         .about-title{ margin: 0 0 8px; }
-        .about-quote{ margin: 0 0 16px; font-style: italic; color: var(--muted); line-height: 1.5; }
+        .about-quote{ margin: 0 0 16px; font-style: italic; color: var(--muted); line-height: 1.5; white-space: pre-line; }
         .about-text{ margin: 0 0 12px; }
         .about-journal-cta{
           display: flex;
@@ -106,19 +109,19 @@ export default function About() {
         .about-journal-btn{
           display: inline-block;
           padding: 7px 18px;
-          border: 1px solid var(--border);
+          border: 1px solid #6b4226;
           border-radius: 8px;
           font-size: .88rem;
           font-weight: 600;
-          color: var(--text);
+          color: #6b4226;
           text-decoration: none;
           white-space: nowrap;
           transition: background .18s ease, color .18s ease, border-color .18s ease;
         }
         .about-journal-btn:hover{
-          background: var(--accent);
+          background: #111;
           color: #fff;
-          border-color: var(--accent);
+          border-color: #111;
         }
         .about-subtitle{ margin: 18px 0 6px; }
         .about-skills{
