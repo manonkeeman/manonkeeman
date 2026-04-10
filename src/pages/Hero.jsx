@@ -40,7 +40,7 @@ function Hero() {
                     </span>
                     <h1>{t('hero.greeting')}</h1>
                     <h3>{t('hero.tagline')}</h3>
-                    <p>{t('hero.bio')}</p>
+                    <p style={{ whiteSpace: 'pre-line' }}>{t('hero.bio')}</p>
                     <p className="small">{t('hero.roles')}</p>
                     <div className="hero-ctas">
                         <a href="/journal" className="btn btn-primary">{t('nav.journal')}</a>

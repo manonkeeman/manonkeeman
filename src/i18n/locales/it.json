@@ -26,9 +26,9 @@
     "copied": "Link copiato!"
   },
   "hero": {
-    "greeting": "Ciao! Sono Manon",
-    "tagline": "Trovo il modello nel rumore, e ci costruisco qualcosa.",
-    "bio": "Dammi un groviglio di idee e mapperò il sistema sottostante. Lavoro all'intersezione di design, codice e linguaggio: tradurre problemi complessi in strutture chiare, e strutture chiare in cose che funzionano davvero. Penso in sistemi, costruisco a strati e racconto la storia lungo il percorso.",
+    "greeting": "Ciao, sono Manon",
+    "tagline": "Rendo le cose complesse chiare — e le costruisco.",
+    "bio": "Dall'idea alla struttura al prodotto funzionante.\nDesign, codice e comunicazione in un'unica linea.",
     "roles": "Sviluppatrice Full Stack • Pensatrice Sistemica • Designer • Narratrice • Costruttrice",
     "projects": "Progetti",
     "journal": "Diario",
