@@ -15,9 +15,20 @@ import Portfolio from "./pages/Portfolio.jsx";
 import Contact from "./pages/Contact.jsx";
 
 // Detail pages — lazy loaded (only fetched when user navigates there)
-const About                 = lazy(() => import("./pages/About.jsx"));
-const Journal               = lazy(() => import("./pages/Journal.jsx"));
-const ArticleRoute          = lazy(() => import("./pages/ArticlesJournal/ArticleRoute.jsx"));
+const About        = lazy(() => import("./pages/About.jsx"));
+const Journal      = lazy(() => import("./pages/Journal.jsx"));
+const ArticleRoute = lazy(() => import("./pages/ArticlesJournal/ArticleRoute.jsx"));
+
+// Prefetch veelgebruikte pagina's zodra browser idle is
+const prefetch = () => {
+    import("./pages/About.jsx");
+    import("./pages/Journal.jsx");
+};
+if (typeof requestIdleCallback !== "undefined") {
+    requestIdleCallback(prefetch);
+} else {
+    setTimeout(prefetch, 2000);
+}
 const FrontendVredestein    = lazy(() => import("./pages/Portfolio/FrontendVredestein.jsx"));
 const WebdesignAcupuncture  = lazy(() => import("./pages/Portfolio/WebdesignAcupuncture.jsx"));
 const BackendStudentenDashboard = lazy(() => import("./pages/Portfolio/BackendStudentenDashboard.jsx"));
