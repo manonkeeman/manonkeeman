@@ -34,7 +34,7 @@ export default function Navbar() {
                     </div>
 
                     <div className="nav-group">
-                        <NavLink to={{ pathname: "/", hash: "#journal" }}>{t('nav.journal')}</NavLink>
+                        <NavLink to="/journal">{t('nav.journal')}</NavLink>
                         <div className="nav-dropdown">
                             <NavLink to="/journal/365korteverhalen">{t('nav.links.journal.365korteverhalen')}</NavLink>
                             <NavLink to="/journal/designchaos">{t('nav.links.journal.designchaos')}</NavLink>
@@ -47,6 +47,7 @@ export default function Navbar() {
 
                     <NavLink to={{ pathname: "/", hash: "#about" }}>{t('nav.about')}</NavLink>
                     <NavLink to={{ pathname: "/", hash: "#contact" }}>{t('nav.contact')}</NavLink>
+
 
                     <a
                         href="https://github.com/manonkeeman"

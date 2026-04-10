@@ -45,7 +45,7 @@ export default function MobileMenu({ open, onClose }) {
                     </details>
 
                     <details className="only-tall">
-                        <summary>{t('nav.journal')}</summary>
+                        <summary><NavLink to="/journal" onClick={onClose}>{t('nav.journal')}</NavLink></summary>
                         <NavLink to="/journal/365korteverhalen" onClick={onClose}>{t('nav.links.journal.365korteverhalen')}</NavLink>
                         <NavLink to="/journal/designchaos" onClick={onClose}>{t('nav.links.journal.designchaos')}</NavLink>
                         <NavLink to="/journal/luchtvaartfamilie2018" onClick={onClose}>{t('nav.links.journal.luchtvaartfamilie2018')}</NavLink>

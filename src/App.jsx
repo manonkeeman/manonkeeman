@@ -13,10 +13,10 @@ import Seo from "./assets/Components/Seo.jsx";
 import Hero from "./pages/Hero.jsx";
 import About from "./pages/About.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
-import Journal from "./pages/Journal.jsx";
 import Contact from "./pages/Contact.jsx";
 
 // Detail pages — lazy loaded (only fetched when user navigates there)
+const Journal               = lazy(() => import("./pages/Journal.jsx"));
 const ArticleRoute          = lazy(() => import("./pages/ArticlesJournal/ArticleRoute.jsx"));
 const FrontendVredestein    = lazy(() => import("./pages/Portfolio/FrontendVredestein.jsx"));
 const WebdesignAcupuncture  = lazy(() => import("./pages/Portfolio/WebdesignAcupuncture.jsx"));
@@ -86,10 +86,21 @@ export default function App() {
                         <Layout>
                             <HomeSeo />
                             <section id="home"      className="section"><Hero /></section>
-                            <section id="about"     className="section section-alt"><About /></section>
                             <section id="portfolio" className="section"><Portfolio /></section>
-                            <section id="journal"   className="section section-alt"><Journal /></section>
+                            <section id="about"     className="section section-alt"><About /></section>
                             <section id="contact"   className="section"><Contact /></section>
+                        </Layout>
+                    }
+                />
+
+                {/* Journal overzichtspagina — lazy */}
+                <Route
+                    path="/journal"
+                    element={
+                        <Layout>
+                            <Suspense fallback={<PageLoader />}>
+                                <Journal />
+                            </Suspense>
                         </Layout>
                     }
                 />

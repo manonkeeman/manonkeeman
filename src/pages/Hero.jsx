@@ -44,7 +44,7 @@ function Hero() {
                     <p className="small">{t('hero.roles')}</p>
                     <div className="hero-ctas">
                         <a href="/#portfolio" className="btn btn-primary">{t('hero.projects')}</a>
-                        <a href="/#journal" className="btn btn-outline" data-arrow>{t('hero.journal')}</a>
+                        <a href="/journal" className="btn btn-outline" data-arrow>{t('hero.journal')}</a>
                     </div>
                 </div>
             </div>
