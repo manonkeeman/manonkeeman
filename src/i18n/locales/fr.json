@@ -35,16 +35,16 @@
     "available": "Disponible pour des missions"
   },
   "about": {
-    "title": "Machine à écrire & Avenir",
-    "quote": "Doigts sur les touches, histoires dans l'air, la technologie les réunit.",
-    "bio1": "Une vieille machine à écrire : nostalgie à chaque frappe, analogique mais puissante. Cette même fascination me guide, précision, rythme et construire avec intention. Je vois la logique dans un système et l'humanité dans son design.",
-    "bio2": "De pousseur d'avions chez KLM à chargée de communication à la municipalité d'Amsterdam, j'ai traversé des mondes différents, mais le fil conducteur est toujours le même : rendre la complexité lisible et connecter les gens à ce qui compte. Mes outils sont modernes. Mes valeurs ne le sont pas : clarté, collaboration, savoir-faire.",
+    "title": "Designer. Autrice. Développeuse.",
+    "quote": "La combinaison rare de la pensée visuelle, de la communication claire et de la construction technique solide.",
+    "bio1": "J'ai étudié à la Gerrit Rietveld Academie et obtenu mon diplôme en design graphique à l'SAE Institute Amsterdam. Ensuite, j'ai suivi la Schrijversacademie — pas comme hobby, mais parce que bon code et bonne communication exigent la même discipline : précis, clair, sans bruit. C'est exactement ce que j'apporte en tant que développeuse.",
+    "bio2": "Plus de 20 ans d'expérience dans les PME : des campagnes publicitaires pour Renault aux projets de communication pour la Commune d'Amsterdam. Chez KLM, j'ai rédigé des blogs et participé au premier documentaire télévisé RTL4 sur l'aviation pendant la pandémie de COVID — aux côtés, entre autres, de Pieter Elbers. Je sais comment fonctionnent les vraies commandes : discussions clients, délais, retours et livrer ce qui fonctionne vraiment. Maintenant je construis avec React et Spring Boot, et je livre toujours de la même façon : directement, avec compétence et attention à l'utilisateur final.",
     "skillsTitle": "Compétences",
     "skills": {
       "stack": "Full stack : React, Spring Boot, Git",
       "systems": "Pensée systémique & architecture",
-      "uxui": "UX/UI & SEO",
-      "storytelling": "Storytelling & stratégie de contenu"
+      "uxui": "UX/UI, SEO & design graphique",
+      "storytelling": "Copywriting & stratégie de contenu"
     }
   },
   "contact": {

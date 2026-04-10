@@ -35,16 +35,16 @@
     "available": "Beschikbaar voor opdrachten"
   },
   "about": {
-    "title": "Typemachine & Toekomst",
-    "quote": "Vingers op de toetsen, verhalen in de lucht, technologie brengt ze samen.",
-    "bio1": "Een oude typemachine: nostalgie in elk toetsaanslag, analoog maar krachtig. Diezelfde fascinatie drijft mij, precisie, ritme en bouwen met aandacht. Ik zie de logica in een systeem én de menselijkheid in het ontwerp.",
-    "bio2": "Van pushback-tugger bij KLM tot communicatie bij de gemeente Amsterdam, ik heb door verschillende werelden bewogen, maar de rode draad is altijd hetzelfde: complexiteit leesbaar maken en mensen verbinden met wat telt. Mijn tools zijn modern. Mijn waarden niet: helderheid, samenwerking, vakmanschap.",
+    "title": "Designer. Schrijver. Developer.",
+    "quote": "De zeldzame combinatie van visueel denken, heldere communicatie en solide technische bouw.",
+    "bio1": "Ik studeerde aan de Gerrit Rietveld Academie en behaalde mijn diploma grafisch ontwerp aan het SAE Institute Amsterdam. Daarna volgde ik de Schrijversacademie — niet als hobby, maar omdat goede code en goede communicatie dezelfde discipline vereisen: precies, helder, zonder ruis. Als developer is dat precies wat ik meebreng.",
+    "bio2": "Meer dan 20 jaar werkervaring in het MKB: van reclamecampagnes voor Renault tot communicatieprojecten voor de Gemeente Amsterdam. Bij KLM schreef ik blogs en nam ik deel aan de eerste RTL4-documentaire over de luchtvaart in coronatijd — naast onder anderen Pieter Elbers. Ik weet hoe echte opdrachten werken: klantgesprekken, deadlines, feedback en opleveren wat werkt. Nu bouw ik met React en Spring Boot, en ik lever nog steeds op dezelfde manier: direct, vakkundig en met aandacht voor de eindgebruiker.",
     "skillsTitle": "Skills",
     "skills": {
       "stack": "Full stack: React, Spring Boot, Git",
       "systems": "Systeemdenken & architectuur",
-      "uxui": "UX/UI & SEO",
-      "storytelling": "Storytelling & contentstrategie"
+      "uxui": "UX/UI, SEO & grafisch ontwerp",
+      "storytelling": "Copywriting & contentstrategie"
     }
   },
   "contact": {

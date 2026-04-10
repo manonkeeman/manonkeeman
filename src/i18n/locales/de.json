@@ -35,16 +35,16 @@
     "available": "Verfügbar für Projekte"
   },
   "about": {
-    "title": "Schreibmaschine & Zukunft",
-    "quote": "Finger auf den Tasten, Geschichten in der Luft, Technologie bringt sie zusammen.",
-    "bio1": "Eine alte Schreibmaschine: Nostalgie bei jedem Anschlag, analog aber kraftvoll. Diese Faszination treibt mich an, Präzision, Rhythmus und das Erschaffen mit Bedacht. Ich sehe die Logik in einem System und die Menschlichkeit in seinem Design.",
-    "bio2": "Vom Pushback-Tugger bei KLM bis zur Kommunikation bei der Stadtverwaltung Amsterdam habe ich verschiedene Welten durchlaufen, aber der rote Faden ist immer derselbe: Komplexität lesbar machen und Menschen mit dem verbinden, was zählt. Meine Werkzeuge sind modern. Meine Werte nicht: Klarheit, Zusammenarbeit, Handwerk.",
+    "title": "Designerin. Autorin. Entwicklerin.",
+    "quote": "Die seltene Kombination aus visuellem Denken, klarer Kommunikation und solider technischer Umsetzung.",
+    "bio1": "Ich studierte an der Gerrit Rietveld Academie und schloss mein Diplom in Grafikdesign am SAE Institute Amsterdam ab. Danach absolvierte ich die Schrijversacademie — nicht als Hobby, sondern weil guter Code und gute Kommunikation dieselbe Disziplin erfordern: präzise, klar, ohne Rauschen. Genau das bringe ich als Entwicklerin mit.",
+    "bio2": "Über 20 Jahre Berufserfahrung im Mittelstand: von Werbekampagnen für Renault bis hin zu Kommunikationsprojekten für die Gemeinde Amsterdam. Bei KLM schrieb ich Blogs und nahm an der ersten RTL4-Dokumentation über die Luftfahrt in der Corona-Zeit teil — unter anderem neben Pieter Elbers. Ich weiß, wie echte Aufträge funktionieren: Kundengespräche, Deadlines, Feedback und Liefern, was wirklich funktioniert. Jetzt baue ich mit React und Spring Boot, und ich liefere noch immer auf dieselbe Weise: direkt, kompetent und mit voller Aufmerksamkeit für den Endnutzer.",
     "skillsTitle": "Fähigkeiten",
     "skills": {
       "stack": "Full Stack: React, Spring Boot, Git",
       "systems": "Systemdenken & Architektur",
-      "uxui": "UX/UI & SEO",
-      "storytelling": "Storytelling & Content-Strategie"
+      "uxui": "UX/UI, SEO & Grafikdesign",
+      "storytelling": "Copywriting & Content-Strategie"
     }
   },
   "contact": {
