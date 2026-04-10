@@ -37,8 +37,8 @@
   "about": {
     "title": "Designer. Writer. Developer.",
     "quote": "The rare combination of visual thinking, clear communication, and solid technical build.",
-    "bio1": "I studied at the Gerrit Rietveld Academie and graduated in graphic design from SAE Institute Amsterdam. After that I trained at the Schrijversacademie — not as a hobby, but because good code and good communication demand the same discipline: precise, clear, no noise. That's exactly what I bring as a developer.",
-    "bio2": "Over 20 years of hands-on experience in SME: from advertising campaigns for Renault to communications projects for the Municipality of Amsterdam. At KLM I wrote blogs and took part in the first RTL4 television documentary about aviation during the COVID pandemic — alongside Pieter Elbers, among others. I know how real commissions work: client conversations, deadlines, feedback rounds, and delivering what actually works. Now I build with React and Spring Boot, and I still deliver the same way: straight, skilled, and with full attention to the end user.",
+    "bio1": "I studied at the Gerrit Rietveld Academie and graduated in graphic design from SAE Institute Amsterdam. After that I trained at the Schrijversacademie, simply because good code and good communication ask for exactly the same thing: precise, clear, no noise. That's what I bring as a developer.",
+    "bio2": "Over 20 years of hands-on experience in SME: from advertising campaigns for Renault to communications projects for the Municipality of Amsterdam. At KLM I wrote blogs and took part in the first RTL4 television documentary about aviation during the COVID pandemic, alongside Pieter Elbers. I know how real commissions work: client conversations, deadlines, feedback rounds, and delivering what actually works. Now I build with React and Spring Boot, and I still deliver the same way: straight, skilled, and with a genuine eye for the end user.",
     "skillsTitle": "Skills",
     "skills": {
       "stack": "Full stack: React, Spring Boot, Git",
