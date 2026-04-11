@@ -215,7 +215,7 @@ export default function FrontendVredestein() {
             </footer>
 
             <style>{`
-        .vr-page { max-width: 1000px; margin: 0 auto; padding: 0 20px 60px; }
+        .vr-page { max-width: 1000px; margin: 0 auto; padding: 28px 20px 60px; }
 
         /* HERO */
         .vr-hero {

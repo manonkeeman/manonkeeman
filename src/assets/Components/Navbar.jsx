@@ -39,7 +39,7 @@ export default function Navbar() {
                             <NavLink to="/journal/365korteverhalen">{t('nav.links.journal.365korteverhalen')}</NavLink>
                             <NavLink to="/journal/designchaos">{t('nav.links.journal.designchaos')}</NavLink>
                             <NavLink to="/journal/luchtvaartfamilie2018">{t('nav.links.journal.luchtvaartfamilie2018')}</NavLink>
-                            <NavLink to="/journal/scrummaster">{t('nav.links.journal.scrummaster')}</NavLink>
+                            <NavLink to="/journal/fullstackdeveloper">{t('nav.links.journal.scrummaster')}</NavLink>
                             <NavLink to="/journal/storytelling">{t('nav.links.journal.storytelling')}</NavLink>
                             <NavLink to="/journal/toekomsttech">{t('nav.links.journal.toekomsttech')}</NavLink>
                         </div>

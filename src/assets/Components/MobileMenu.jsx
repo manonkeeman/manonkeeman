@@ -49,7 +49,7 @@ export default function MobileMenu({ open, onClose }) {
                         <NavLink to="/journal/365korteverhalen" onClick={onClose}>{t('nav.links.journal.365korteverhalen')}</NavLink>
                         <NavLink to="/journal/designchaos" onClick={onClose}>{t('nav.links.journal.designchaos')}</NavLink>
                         <NavLink to="/journal/luchtvaartfamilie2018" onClick={onClose}>{t('nav.links.journal.luchtvaartfamilie2018')}</NavLink>
-                        <NavLink to="/journal/scrummaster" onClick={onClose}>{t('nav.links.journal.scrummaster')}</NavLink>
+                        <NavLink to="/journal/fullstackdeveloper" onClick={onClose}>{t('nav.links.journal.scrummaster')}</NavLink>
                         <NavLink to="/journal/storytelling" onClick={onClose}>{t('nav.links.journal.storytelling')}</NavLink>
                         <NavLink to="/journal/toekomsttech" onClick={onClose}>{t('nav.links.journal.toekomsttech')}</NavLink>
                     </details>

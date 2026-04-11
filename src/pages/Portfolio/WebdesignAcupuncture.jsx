@@ -187,7 +187,7 @@ export default function WebdesignAcupuncture() {
             </footer>
 
             <style>{`
-        .vr-page { max-width: 1000px; margin: 0 auto; padding: 0 20px 60px; }
+        .vr-page { max-width: 1000px; margin: 0 auto; padding: 28px 20px 60px; }
         .vr-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 48px 0 40px; }
         .vr-label { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
         .vr-title { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; margin: 0 0 16px; letter-spacing: -.02em; }

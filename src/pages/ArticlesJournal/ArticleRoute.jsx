@@ -37,6 +37,7 @@ export default function ArticleRoute() {
 
     const views = {
         storytelling: <StorytellingForDevelopers />,
+        fullstackdeveloper: <FullStackDeveloper />,
         scrummaster: <FullStackDeveloper />,
         designchaos: <DesignChaos />,
         toekomsttech: <ToekomstTech />,
