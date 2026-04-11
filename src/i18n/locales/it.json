@@ -89,7 +89,7 @@
         "desc": "Sito WordPress dall'estetica sobria con informazioni chiare per i clienti."
       },
       "backend": {
-        "desc": "Backend Spring Boot con autenticazione JWT, API REST e integrazione database."
+        "desc": "Dashboard per proprietari che affittano camere a studenti: pagamenti, contratti, piano pulizie e regole della casa in un unico posto."
       }
     }
   },

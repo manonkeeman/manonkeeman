@@ -89,7 +89,7 @@
         "desc": "Sitio WordPress con estética tranquila e información clara para clientes."
       },
       "backend": {
-        "desc": "Backend Spring Boot con autenticación JWT, API REST e integración de base de datos."
+        "desc": "Panel para arrendadores de habitaciones estudiantiles: pagos, contratos, calendario de limpieza y normas del hogar en un solo lugar."
       }
     }
   },

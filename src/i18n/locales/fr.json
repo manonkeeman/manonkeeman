@@ -89,7 +89,7 @@
         "desc": "Site WordPress au design épuré avec des informations claires pour les clients."
       },
       "backend": {
-        "desc": "Backend Spring Boot avec authentification JWT, API REST et intégration base de données."
+        "desc": "Tableau de bord pour bailleurs de chambres étudiantes : paiements, contrats, planning ménage et règlement intérieur en un seul endroit."
       }
     }
   },

@@ -89,7 +89,7 @@
         "desc": "WordPress website with a calm aesthetic and clear information for clients."
       },
       "backend": {
-        "desc": "Spring Boot backend with JWT authentication, REST API and database integration."
+        "desc": "Dashboard for student room landlords: payments, contracts, cleaning schedule and house rules all in one place."
       }
     }
   },

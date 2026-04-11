@@ -89,7 +89,7 @@
         "desc": "WordPress-site met rustige uitstraling en duidelijke info voor cliënten."
       },
       "backend": {
-        "desc": "Spring Boot backend met JWT-authenticatie, API en database-koppeling."
+        "desc": "Dashboard voor verhuurders van studentenkamers: betalingen, contracten, schoonmaakrooster en huisregels op één plek."
       }
     }
   },

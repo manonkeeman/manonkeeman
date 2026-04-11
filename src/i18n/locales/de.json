@@ -89,7 +89,7 @@
         "desc": "WordPress-Website mit ruhiger Ästhetik und klaren Informationen für Klienten."
       },
       "backend": {
-        "desc": "Spring Boot-Backend mit JWT-Authentifizierung, REST-API und Datenbankanbindung."
+        "desc": "Dashboard für Vermieter von Studentenzimmern: Zahlungen, Verträge, Reinigungsplan und Hausordnung an einem Ort."
       }
     }
   },

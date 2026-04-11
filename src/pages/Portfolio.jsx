@@ -33,12 +33,20 @@ function PortfolioImage({ basePublic, alt }) {
 
 const projects = [
     {
+        key: "backend",
+        title: "Studenten Verhuur Dashboard",
+        tags: ["Spring Boot", "Java", "PostgreSQL", "JWT"],
+        route: "/backendstudentendashboard",
+        basePublic: PUB_BACK,
+        num: "01",
+    },
+    {
         key: "frontend",
         title: "Villa Vredestein – Publieke website",
         tags: ["React", "Vite", "UX/UI", "SEO"],
         route: "/frontendvredestein",
         basePublic: PUB_FRONT,
-        num: "01",
+        num: "02",
     },
     {
         key: "acupuncture",
@@ -46,14 +54,6 @@ const projects = [
         tags: ["WordPress", "Adobe Suite", "SEO"],
         route: "/webdesignacupuncture",
         basePublic: PUB_ACU,
-        num: "02",
-    },
-    {
-        key: "backend",
-        title: "Villa Vredestein – Backend Dashboard",
-        tags: ["Spring Boot", "Java", "PostgreSQL", "JWT"],
-        route: "/backendstudentendashboard",
-        basePublic: PUB_BACK,
         num: "03",
     },
 ];

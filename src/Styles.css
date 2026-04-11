@@ -412,7 +412,7 @@ body.no-scroll { overflow:hidden; touch-action:none; }
 .breadcrumbs a { color:var(--muted); text-decoration:none; transition:color .2s ease; }
 .breadcrumbs a:hover { color:var(--accent); }
 .breadcrumbs [aria-current="page"] { color:var(--text); }
-.breadcrumb-sep { color:var(--border); user-select:none; }
+.breadcrumb-sep { color:var(--muted); user-select:none; }
 
 /* ========= Small extras ========= */
 .hero-copy h1{ margin:0 0 12px }
