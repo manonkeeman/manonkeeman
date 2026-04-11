@@ -92,6 +92,14 @@
       "title": "Manon Keeman — Desarrolladora Full Stack",
       "description": "Portfolio de Manon Keeman — Desarrolladora Full Stack, Pensadora Sistémica, Diseñadora & Narradora. React, Spring Boot, diseño UX. Disponible para proyectos."
     },
+    "about": {
+      "title": "Sobre mí — Manon Keeman | Desarrolladora Full Stack",
+      "description": "Diseñadora, escritora y desarrolladora. Hago las cosas complejas claras, y las construyo. De la Rietveld Academie a desarrolladora Full Stack, lee mi historia."
+    },
+    "journalPage": {
+      "title": "Diario — Manon Keeman | Escritura, entrevistas & más",
+      "description": "Artículos sobre desarrollo full stack, storytelling, diseño y mi camino de KLM al código. Honesto, personal y práctico."
+    },
     "journal": {
       "scrummaster": {
         "title": "De empujadora de aviones a desarrolladora Full Stack | Manon Keeman",

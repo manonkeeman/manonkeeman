@@ -92,6 +92,14 @@
       "title": "Manon Keeman — Full Stack Developer",
       "description": "Portfolio van Manon Keeman — Full Stack Developer, Systems Thinker, Designer & Storyteller. Specialisaties: React, Spring Boot, UX-design. Beschikbaar voor opdrachten."
     },
+    "about": {
+      "title": "Over mij — Manon Keeman | Full Stack Developer",
+      "description": "Designer, schrijver en developer. Ik maak complexe dingen helder en bouw ze. Van de Rietveld Academie tot Full Stack Developer, lees mijn verhaal."
+    },
+    "journalPage": {
+      "title": "Journal — Manon Keeman | Schrijven, interviews & meer",
+      "description": "Artikelen over full stack development, storytelling, design en mijn pad van KLM naar code. Eerlijk, persoonlijk en praktisch."
+    },
     "journal": {
       "scrummaster": {
         "title": "Van vliegtuigsleper tot Full Stack Developer | Manon Keeman",

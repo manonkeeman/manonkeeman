@@ -2,12 +2,18 @@ import { FaReact, FaGitAlt } from "react-icons/fa";
 import { SiSpringboot, SiPostgresql, SiFigma } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import Seo from "../assets/Components/Seo.jsx";
 
 export default function About() {
   const { t } = useTranslation();
 
   return (
       <section id="about" className="section section-alt" style={{ padding: 0, margin: 0 }}>
+        <Seo
+          title={t('seo.about.title')}
+          description={t('seo.about.description')}
+          path="/about"
+        />
         <div className="about-shell">
           {/* TEKST */}
           <div className="about-copy">

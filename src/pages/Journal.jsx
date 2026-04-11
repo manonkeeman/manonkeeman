@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import data from "../content/contentJournal.json";
 import { toCard } from "../assets/Helpers/contentHelpers";
+import Seo from "../assets/Components/Seo.jsx";
 
 export default function Journal() {
     const { t } = useTranslation();
@@ -9,6 +10,11 @@ export default function Journal() {
 
     return (
         <section id="journal" className="section">
+            <Seo
+                title={t('seo.journalPage.title')}
+                description={t('seo.journalPage.description')}
+                path="/journal"
+            />
             <h2 className="journal-title">Journal</h2>
             <p className="journal-subtitle small"></p>
 
