@@ -33,13 +33,13 @@ function useExistingFormats(base) {
 function GuardedPicture({ base, fallback, alt, sizes = "(max-width: 920px) 100vw, 920px" }) {
     const { webp, avif } = useExistingFormats(base);
     if (webp === null || avif === null || (!webp && !avif)) {
-        return <img src={fallback} alt={alt} loading="lazy" decoding="async" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }} />;
+        return <img src={fallback} alt={alt} loading="lazy" decoding="async" className="cover-img" />;
     }
     return (
         <picture>
             {webp && <source type="image/webp" srcSet={`${base}-400w.webp 400w, ${base}-800w.webp 800w, ${base}-1200w.webp 1200w`} sizes={sizes} />}
             {avif && <source type="image/avif" srcSet={`${base}-400w.avif 400w, ${base}-800w.avif 800w, ${base}-1200w.avif 1200w`} sizes={sizes} />}
-            <img src={`${base}-800w.${webp ? "webp" : "avif"}`} alt={alt} loading="lazy" decoding="async" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }} />
+            <img src={`${base}-800w.${webp ? "webp" : "avif"}`} alt={alt} loading="lazy" decoding="async" className="cover-img" />
         </picture>
     );
 }
@@ -47,105 +47,81 @@ function GuardedPicture({ base, fallback, alt, sizes = "(max-width: 920px) 100vw
 const content = {
     nl: {
         title: "Webdesign – Acupuncture by Saskia",
+        subtitle: "WordPress website",
+        tagline: "Rust en duidelijkheid.\nEen site die vertrouwen geeft.",
+        intro: "Saskia's praktijk straalt rust uit. De website moest hetzelfde doen: bezoekers direct het gevoel geven dat ze op de goede plek zijn.",
+        cards: [
+            { label: "Wat", text: "WordPress website voor een acupunctuurpraktijk: informatie, tarieven, locatie en een laagdrempelige weg naar contact." },
+            { label: "Hoe", text: "WordPress met rustige huisstijl, Adobe Suite voor visuals. Responsief, snel en goed vindbaar via SEO." },
+            { label: "Resultaat", text: "Een site die past bij de praktijk: sereen, helder en zonder drempels voor de bezoeker." },
+        ],
+        liveBtn: "Bekijk de website ↗",
         backBtn: "← Terug naar Portfolio",
-        siteBtn: "Naar website ↗",
-        context: { h: "Context", p: "De praktijk wilde een website die rust uitstraalt en vertrouwen geeft. Geen marketing-schreeuw, wel helderheid: wat is acupunctuur, waarbij helpt het, en hoe maak je een afspraak?" },
-        goals: {
-            h: "Doelen",
-            items: ["Serene visuele stijl die past bij de praktijk.", "Snelle toegang tot praktische info (locatie, tarieven, vergoedingen, intake).", "Heldere flow naar contact/afspraak, ook op mobiel.", "Basis-SEO en performance."],
-        },
-        design: {
-            h: "Ontwerp & Implementatie",
-            items: [<><strong>Typografie & kleur:</strong> zachte kleuren, ruime line-height, rustige headings.</>, <><strong>UI & navigatie:</strong> compacte hoofdnavigatie, sticky contactknop op mobiel.</>, <><strong>Performance:</strong> slank thema, caching, lazy-loading.</>, <><strong>SEO basis:</strong> nette titels/descriptions, Google Business Profile.</>],
-        },
-        highlights: { h: "Highlights", items: ["Snel bruikbaar: geen lange laadtijd", "Duidelijke knoppen op logische plekken", "Goed leesbare tekst voor iedereen"] },
-        stack: { h: "Stack", items: ["WordPress", "Adobe Suite", "Responsive layout", "SEO"] },
-        linkCard: "Bron & link",
     },
     en: {
         title: "Web Design – Acupuncture by Saskia",
+        subtitle: "WordPress website",
+        tagline: "Calm and clarity.\nA site that builds trust.",
+        intro: "Saskia's practice radiates calm. The website had to do the same: make visitors feel immediately that they're in the right place.",
+        cards: [
+            { label: "What", text: "WordPress website for an acupuncture practice: information, rates, location and a low-threshold path to contact." },
+            { label: "How", text: "WordPress with a calm visual identity, Adobe Suite for visuals. Responsive, fast and SEO-optimised." },
+            { label: "Result", text: "A site that fits the practice: serene, clear and without barriers for the visitor." },
+        ],
+        liveBtn: "View the website ↗",
         backBtn: "← Back to Portfolio",
-        siteBtn: "Visit website ↗",
-        context: { h: "Context", p: "The practice wanted a website that radiates calm and builds trust. No marketing noise, just clarity: what is acupuncture, what does it help with, and how do you book an appointment?" },
-        goals: {
-            h: "Goals",
-            items: ["Serene visual style that matches the practice.", "Quick access to practical info (location, rates, reimbursements, intake).", "Clear path to contact/booking, also on mobile.", "Basic SEO and performance."],
-        },
-        design: {
-            h: "Design & Implementation",
-            items: [<><strong>Typography & colour:</strong> soft colours, generous line-height, calm headings.</>, <><strong>UI & navigation:</strong> compact main nav, sticky contact button on mobile.</>, <><strong>Performance:</strong> lean theme, caching, lazy-loading.</>, <><strong>Basic SEO:</strong> clean titles/descriptions, Google Business Profile.</>],
-        },
-        highlights: { h: "Highlights", items: ["Fast and usable: no long load times", "Clear buttons in logical places", "Easy-to-read text for everyone"] },
-        stack: { h: "Stack", items: ["WordPress", "Adobe Suite", "Responsive layout", "SEO"] },
-        linkCard: "Source & link",
     },
     fr: {
         title: "Webdesign – Acupuncture by Saskia",
+        subtitle: "Site WordPress",
+        tagline: "Calme et clarté.\nUn site qui inspire confiance.",
+        intro: "La pratique de Saskia dégage du calme. Le site web devait faire la même chose : donner aux visiteurs le sentiment immédiat qu'ils sont au bon endroit.",
+        cards: [
+            { label: "Quoi", text: "Site WordPress pour une pratique d'acupuncture : informations, tarifs, localisation et un chemin accessible vers le contact." },
+            { label: "Comment", text: "WordPress avec une identité visuelle apaisante, Adobe Suite pour les visuels. Responsive, rapide et optimisé SEO." },
+            { label: "Résultat", text: "Un site qui correspond à la pratique : serein, clair et sans barrières pour le visiteur." },
+        ],
+        liveBtn: "Voir le site ↗",
         backBtn: "← Retour au Portfolio",
-        siteBtn: "Visiter le site ↗",
-        context: { h: "Contexte", p: "La pratique voulait un site web qui dégage du calme et inspire confiance. Pas de bruit marketing, mais de la clarté: qu'est-ce que l'acupuncture, à quoi sert-elle et comment prendre rendez-vous?" },
-        goals: {
-            h: "Objectifs",
-            items: ["Style visuel serein qui correspond a la pratique.", "Acces rapide aux infos pratiques (lieu, tarifs, remboursements, intake).", "Parcours clair vers contact/rendez-vous, aussi sur mobile.", "SEO de base et performance."],
-        },
-        design: {
-            h: "Design & Implementation",
-            items: [<><strong>Typographie & couleur:</strong> couleurs douces, grande hauteur de ligne, titres calmes.</>, <><strong>UI & navigation:</strong> navigation principale compacte, bouton contact sticky sur mobile.</>, <><strong>Performance:</strong> theme leger, mise en cache, chargement paresseux.</>, <><strong>SEO de base:</strong> titres/descriptions soignes, Google Business Profile.</>],
-        },
-        highlights: { h: "Points forts", items: ["Rapide et utilisable: pas de longs temps de chargement", "Boutons clairs aux bons endroits", "Texte facile a lire pour tout le monde"] },
-        stack: { h: "Stack", items: ["WordPress", "Adobe Suite", "Mise en page responsive", "SEO"] },
-        linkCard: "Source & lien",
     },
     de: {
         title: "Webdesign – Acupuncture by Saskia",
-        backBtn: "← Zuruck zum Portfolio",
-        siteBtn: "Zur Website ↗",
-        context: { h: "Kontext", p: "Die Praxis wollte eine Website, die Ruhe ausstrahlt und Vertrauen schafft. Kein Marketing-Schreien, sondern Klarheit: Was ist Akupunktur, wobei hilft es und wie macht man einen Termin?" },
-        goals: {
-            h: "Ziele",
-            items: ["Ruhiger visueller Stil, der zur Praxis passt.", "Schneller Zugang zu praktischen Infos (Ort, Preise, Erstattungen, Intake).", "Klarer Weg zu Kontakt/Termin, auch auf Mobilgeräten.", "Basis-SEO und Performance."],
-        },
-        design: {
-            h: "Design & Implementierung",
-            items: [<><strong>Typografie & Farbe:</strong> sanfte Farben, grosszugiger Zeilenabstand, ruhige Überschriften.</>, <><strong>UI & Navigation:</strong> kompakte Hauptnavigation, sticky Kontakt-Button auf Mobile.</>, <><strong>Performance:</strong> schlankes Theme, Caching, Lazy-Loading.</>, <><strong>Basis-SEO:</strong> saubere Titel/Beschreibungen, Google Business Profile.</>],
-        },
-        highlights: { h: "Highlights", items: ["Schnell nutzbar: keine langen Ladezeiten", "Klare Schaltflächen an logischen Stellen", "Gut lesbarer Text fur alle"] },
-        stack: { h: "Stack", items: ["WordPress", "Adobe Suite", "Responsives Layout", "SEO"] },
-        linkCard: "Quelle & Link",
+        subtitle: "WordPress-Website",
+        tagline: "Ruhe und Klarheit.\nEine Website, die Vertrauen schafft.",
+        intro: "Saskias Praxis strahlt Ruhe aus. Die Website musste dasselbe tun: Besuchern sofort das Gefühl geben, am richtigen Ort zu sein.",
+        cards: [
+            { label: "Was", text: "WordPress-Website für eine Akupunkturpraxis: Informationen, Preise, Standort und ein niedrigschwelliger Weg zum Kontakt." },
+            { label: "Wie", text: "WordPress mit ruhiger Markenidentität, Adobe Suite für Visuals. Responsiv, schnell und SEO-optimiert." },
+            { label: "Ergebnis", text: "Eine Website, die zur Praxis passt: ruhig, klar und ohne Hürden für den Besucher." },
+        ],
+        liveBtn: "Website ansehen ↗",
+        backBtn: "← Zurück zum Portfolio",
     },
     es: {
         title: "Diseño Web – Acupuncture by Saskia",
+        subtitle: "Sitio WordPress",
+        tagline: "Calma y claridad.\nUn sitio que genera confianza.",
+        intro: "La consulta de Saskia irradia calma. El sitio web tenía que hacer lo mismo: hacer que los visitantes sintieran de inmediato que están en el lugar correcto.",
+        cards: [
+            { label: "Qué", text: "Sitio WordPress para una consulta de acupuntura: información, tarifas, ubicación y un camino accesible hacia el contacto." },
+            { label: "Cómo", text: "WordPress con identidad visual tranquila, Adobe Suite para los visuales. Responsivo, rápido y optimizado para SEO." },
+            { label: "Resultado", text: "Un sitio que encaja con la consulta: sereno, claro y sin barreras para el visitante." },
+        ],
+        liveBtn: "Ver el sitio ↗",
         backBtn: "← Volver al Portfolio",
-        siteBtn: "Visitar sitio web ↗",
-        context: { h: "Contexto", p: "La consulta quería un sitio web que irradie calma y genere confianza. Sin ruido de marketing, solo claridad: ¿qué es la acupuntura, para qué ayuda y cómo pedir cita?" },
-        goals: {
-            h: "Objetivos",
-            items: ["Estilo visual sereno que encaje con la consulta.", "Acceso rapido a info practica (ubicacion, tarifas, reembolsos, intake).", "Flujo claro hacia contacto/cita, tambien en movil.", "SEO basico y rendimiento."],
-        },
-        design: {
-            h: "Diseno & Implementacion",
-            items: [<><strong>Tipografia & color:</strong> colores suaves, alto interlineado, titulos tranquilos.</>, <><strong>UI & navegacion:</strong> navegacion principal compacta, boton de contacto fijo en movil.</>, <><strong>Rendimiento:</strong> tema ligero, cache, lazy-loading.</>, <><strong>SEO basico:</strong> titulos/descripciones limpios, Google Business Profile.</>],
-        },
-        highlights: { h: "Destacados", items: ["Rapido y usable: sin tiempos de carga largos", "Botones claros en lugares logicos", "Texto facil de leer para todos"] },
-        stack: { h: "Stack", items: ["WordPress", "Adobe Suite", "Diseno responsive", "SEO"] },
-        linkCard: "Fuente & enlace",
     },
     it: {
         title: "Web Design – Acupuncture by Saskia",
+        subtitle: "Sito WordPress",
+        tagline: "Calma e chiarezza.\nUn sito che crea fiducia.",
+        intro: "Lo studio di Saskia irradia calma. Il sito web doveva fare lo stesso: far sentire ai visitatori immediatamente di essere nel posto giusto.",
+        cards: [
+            { label: "Cosa", text: "Sito WordPress per uno studio di agopuntura: informazioni, tariffe, posizione e un percorso accessibile verso il contatto." },
+            { label: "Come", text: "WordPress con identità visiva tranquilla, Adobe Suite per i visual. Responsive, veloce e ottimizzato SEO." },
+            { label: "Risultato", text: "Un sito che si adatta allo studio: sereno, chiaro e senza barriere per il visitatore." },
+        ],
+        liveBtn: "Vedi il sito ↗",
         backBtn: "← Torna al Portfolio",
-        siteBtn: "Visita il sito ↗",
-        context: { h: "Contesto", p: "Lo studio voleva un sito web che trasmettesse calma e costruisse fiducia. Nessun rumore di marketing, solo chiarezza: cos'e' l'agopuntura, per cosa aiuta e come si prenota un appuntamento?" },
-        goals: {
-            h: "Obiettivi",
-            items: ["Stile visivo sereno adatto allo studio.", "Accesso rapido alle info pratiche (luogo, tariffe, rimborsi, intake).", "Percorso chiaro verso contatto/appuntamento, anche su mobile.", "SEO di base e performance."],
-        },
-        design: {
-            h: "Design & Implementazione",
-            items: [<><strong>Tipografia & colore:</strong> colori morbidi, ampia altezza riga, titoli tranquilli.</>, <><strong>UI & navigazione:</strong> navigazione principale compatta, pulsante contatto sticky su mobile.</>, <><strong>Performance:</strong> tema snello, caching, lazy-loading.</>, <><strong>SEO di base:</strong> titoli/descrizioni curati, Google Business Profile.</>],
-        },
-        highlights: { h: "Punti salienti", items: ["Veloce e usabile: nessun lungo tempo di caricamento", "Pulsanti chiari nei posti giusti", "Testo facile da leggere per tutti"] },
-        stack: { h: "Stack", items: ["WordPress", "Adobe Suite", "Layout responsive", "SEO"] },
-        linkCard: "Sorgente & link",
     },
 };
 
@@ -155,12 +131,13 @@ export default function WebdesignAcupuncture() {
     const c = content[lang] || content.en;
 
     return (
-        <article className="post section">
+        <article className="vr-page section">
             <Seo
                 title={tr("seo.portfolio.acupuncture.title")}
                 description={tr("seo.portfolio.acupuncture.description")}
                 path="/webdesignacupuncture"
             />
+
             <nav aria-label="Breadcrumb" className="breadcrumbs">
                 <Link to="/">{tr('nav.home')}</Link>
                 <span className="breadcrumb-sep" aria-hidden="true">›</span>
@@ -169,91 +146,73 @@ export default function WebdesignAcupuncture() {
                 <span aria-current="page">{c.title}</span>
             </nav>
 
-            <header className="post-header">
-                <h1 className="post-title">{c.title}</h1>
-                <figure className="post-cover">
-                    <div className="media">
-                        <GuardedPicture base={COVER_BASE} fallback={FallbackAcu} alt="Homepage van Acupuncture by Saskia – rustig webdesign" />
+            {/* ── HERO BLOCK ── */}
+            <header className="vr-hero">
+                <div className="vr-hero-text">
+                    <p className="vr-label">{c.subtitle}</p>
+                    <h1 className="vr-title">{c.title}</h1>
+                    <p className="vr-tagline">{c.tagline}</p>
+                    <div className="vr-tags">
+                        <span className="tag">WordPress</span>
+                        <span className="tag">Adobe Suite</span>
+                        <span className="tag">SEO</span>
+                        <span className="tag">Responsive</span>
                     </div>
-                </figure>
+                    <a className="btn btn-primary vr-cta" href={LIVE_URL} target="_blank" rel="noreferrer">{c.liveBtn}</a>
+                </div>
+                <div className="vr-hero-image">
+                    <GuardedPicture base={COVER_BASE} fallback={FallbackAcu} alt="Acupuncture by Saskia website" sizes="(max-width: 768px) 100vw, 55vw" />
+                </div>
             </header>
 
-            <div className="post-grid">
-                <main className="post-body">
-                    <h2>{c.context.h}</h2>
-                    <p>{c.context.p}</p>
+            {/* ── INTRO ── */}
+            <section className="vr-intro">
+                <p>{c.intro}</p>
+            </section>
 
-                    <h2>{c.goals.h}</h2>
-                    <ul>{c.goals.items.map((item, i) => <li key={i}>{item}</li>)}</ul>
-
-                    <h2>{c.design.h}</h2>
-                    <ul>{c.design.items.map((item, i) => <li key={i}>{item}</li>)}</ul>
-                </main>
-
-                <aside className="post-aside">
-                    <div className="aside-card">
-                        <h3>{c.highlights.h}</h3>
-                        <ul>{c.highlights.items.map((item, i) => <li key={i}>{item}</li>)}</ul>
+            {/* ── THREE CARDS ── */}
+            <section className="vr-cards">
+                {c.cards.map((card) => (
+                    <div className="vr-card" key={card.label}>
+                        <span className="vr-card-label">{card.label}</span>
+                        <p className="vr-card-text">{card.text}</p>
                     </div>
+                ))}
+            </section>
 
-                    <div className="aside-card">
-                        <h3>{c.stack.h}</h3>
-                        <ul>{c.stack.items.map((item, i) => <li key={i}>{item}</li>)}</ul>
-                    </div>
-
-                    <div className="aside-card link-card">
-                        <h3>{c.linkCard}</h3>
-                        <a className="btn btn-primary" href={LIVE_URL} target="_blank" rel="noreferrer noopener">{c.siteBtn}</a>
-                    </div>
-                </aside>
-            </div>
-
-            <footer className="post-footer">
+            {/* ── FOOTER ── */}
+            <footer className="vr-footer">
                 <Link className="btn btn-outline" to="/#portfolio">{c.backBtn}</Link>
+                <a className="btn btn-primary" href={LIVE_URL} target="_blank" rel="noreferrer">{c.liveBtn}</a>
             </footer>
 
             <style>{`
-        .post { max-width: 980px; margin: 0 auto; padding: 0 16px; }
-        .post-header { margin: 8px 0 20px; }
-        .post-title { margin: 0 0 8px; line-height: 1.15; }
-        .post-cover { margin: 14px 0 8px; }
-        .post-cover .media { width: 100%; aspect-ratio: 16/9; max-height: 460px; overflow: hidden; border-radius: 14px; }
-        .post-cover picture, .post-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
-        .post-grid {
-          display: grid;
-          grid-template-columns: 1fr minmax(240px, 280px);
-          gap: 28px;
-          align-items: start;
-          margin-top: 8px;
-        }
-        .post-body h2 { margin-top: 24px; }
-        .post-body h3 { margin-top: 18px; }
-        .post-body p { line-height: 1.75; margin: 12px 0; }
-        .post-body ul { margin: 10px 0 16px 18px; }
-        .post-body li { margin: 6px 0; }
-        .post-aside { position: sticky; top: 16px; }
-        .aside-card {
-          background: var(--bg-alt);
-          border: 1px solid var(--border);
-          border-radius: 12px;
-          padding: 12px;
-          box-shadow: var(--shadow);
-          margin-bottom: 16px;
-        }
-        .aside-card h3 { margin: 0 0 8px; font-size: 1rem; }
-        .aside-card ul { margin: 0 0 0 16px; }
-        .aside-card li { margin: 6px 0; }
-        .aside-card.link-card { display: flex; flex-direction: column; align-items: stretch; text-align: left; }
-        .aside-card.link-card .btn { align-self: center; display: inline-block; margin-top: 6px; }
-        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 8px; font-size: .95rem; font-weight: 500; cursor: pointer; text-decoration: none; transition: background .18s ease, color .18s ease, border-color .18s ease; }
-        .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
-        .btn-primary { background: var(--accent); color: var(--bg); border: 1px solid var(--accent); }
-        .post-footer { margin: 20px 0; }
-        @media (max-width: 980px) {
-          .post { padding: 0 12px; }
-          .post-grid { grid-template-columns: 1fr; }
-          .post-aside { position: static; }
-          .post-cover .media { max-height: 360px; }
+        .vr-page { max-width: 1000px; margin: 0 auto; padding: 0 20px 60px; }
+        .vr-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 48px 0 40px; }
+        .vr-label { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; }
+        .vr-title { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; margin: 0 0 16px; letter-spacing: -.02em; }
+        .vr-tagline { font-size: clamp(1rem, 2vw, 1.2rem); color: var(--muted); white-space: pre-line; line-height: 1.5; margin: 0 0 24px; font-style: italic; }
+        .vr-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+        .vr-cta { align-self: flex-start; }
+        .vr-hero-image { border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+        .cover-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .vr-intro { border-left: 3px solid var(--accent); padding: 4px 0 4px 20px; margin: 0 0 56px; }
+        .vr-intro p { font-size: 1.1rem; line-height: 1.7; color: var(--muted); margin: 0; }
+        .vr-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 56px; }
+        .vr-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 14px; padding: 24px 22px; }
+        .vr-card-label { display: block; font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+        .vr-card-text { font-size: .95rem; line-height: 1.6; color: var(--text); margin: 0; }
+        .vr-footer { display: flex; gap: 14px; flex-wrap: wrap; padding-top: 16px; border-top: 1px solid var(--border); }
+        .tag { font-size: .82rem; padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); background: var(--bg); white-space: nowrap; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; border-radius: 9px; font-size: .92rem; font-weight: 600; cursor: pointer; text-decoration: none; transition: all .18s ease; border: 1px solid transparent; }
+        .btn-outline { background: transparent; color: var(--text); border-color: var(--border); }
+        .btn-outline:hover { border-color: var(--accent); }
+        .btn-primary { background: var(--accent); color: var(--bg); }
+        .btn-primary:hover { filter: brightness(1.08); }
+        @media (max-width: 720px) {
+          .vr-hero { grid-template-columns: 1fr; gap: 28px; padding: 28px 0 24px; }
+          .vr-hero-image { order: -1; }
+          .vr-cards { grid-template-columns: 1fr; }
         }
       `}</style>
         </article>
