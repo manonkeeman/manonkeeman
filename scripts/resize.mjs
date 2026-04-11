@@ -44,7 +44,7 @@ const batch = [
     // ✅ Portfolio afbeeldingen
     { src: "src/assets/Pics/Portfolio/VredesteinFrontend.jpeg",  outBase: "public/portfolio/villa-vredestein-frontend" },
     { src: "src/assets/Pics/Portfolio/WebdesignAcupuncture.jpeg",outBase: "public/portfolio/webdesign-acupuncture" },
-    { src: "src/assets/Pics/Portfolio/VredesteinBackend.jpeg",   outBase: "public/portfolio/villa-vredestein-backend" },
+    { src: "src/assets/Pics/Portfolio/StudentenDashboardBackend.jpeg", outBase: "public/portfolio/studenten-dashboard-backend" },
 ];
 
 const [, , cliSrc, cliOutBase] = process.argv;

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 const PUB_FRONT = "/portfolio/villa-vredestein-frontend";
 const PUB_ACU   = "/portfolio/webdesign-acupuncture";
-const PUB_BACK  = "/portfolio/villa-vredestein-backend";
+const PUB_BACK  = "/portfolio/studenten-dashboard-backend";
 
 function PortfolioImage({ basePublic, alt }) {
     return (
