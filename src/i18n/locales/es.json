@@ -75,9 +75,15 @@
   },
   "portfolio": {
     "viewBtn": "Ver",
+    "cta": {
+      "label": "¿Nuevo proyecto?",
+      "title": "Trabajemos juntos",
+      "sub": "Estoy disponible para nuevos proyectos. No dudes en contactarme.",
+      "btn": "Contactar"
+    },
     "projects": {
       "frontend": {
-        "desc": "Frontend en React con autenticación JWT, API REST y diseño UX/UI."
+        "desc": "Sitio web público para Villa Vredestein: historia, propósito y contacto. Construido con React y Vite."
       },
       "acupuncture": {
         "desc": "Sitio WordPress con estética tranquila e información clara para clientes."

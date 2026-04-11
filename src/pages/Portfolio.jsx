@@ -34,8 +34,8 @@ function PortfolioImage({ basePublic, alt }) {
 const projects = [
     {
         key: "frontend",
-        title: "Villa Vredestein – Frontend Dashboard",
-        tags: ["React", "JWT", "REST API", "UX/UI"],
+        title: "Villa Vredestein – Publieke website",
+        tags: ["React", "Vite", "UX/UI", "SEO"],
         route: "/frontendvredestein",
         basePublic: PUB_FRONT,
         num: "01",
@@ -119,10 +119,10 @@ export default function Portfolio() {
                 {/* Laatste kaart: CTA naar contact */}
                 <article className="portfolio-card portfolio-card--cta">
                     <div className="cta-card-inner">
-                        <p className="cta-card-label">Nieuw project?</p>
-                        <h3>Laten we samenwerken</h3>
-                        <p className="cta-card-sub">Ik ben beschikbaar voor nieuwe opdrachten. Neem gerust contact op.</p>
-                        <a href="/#contact" className="btn-cta-solid">Neem contact op →</a>
+                        <p className="cta-card-label">{t('portfolio.cta.label')}</p>
+                        <h3>{t('portfolio.cta.title')}</h3>
+                        <p className="cta-card-sub">{t('portfolio.cta.sub')}</p>
+                        <a href="/#contact" className="btn-cta-solid">{t('portfolio.cta.btn')} →</a>
                     </div>
                 </article>
             </div>
