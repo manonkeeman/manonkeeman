@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import FallbackBack from "../../assets/Pics/Portfolio/StudentenDashboardBackend.jpeg";
 import Seo from "../../assets/Components/Seo.jsx";
@@ -188,6 +188,16 @@ export default function BackendStudentenDashboard() {
     const { t: tr, i18n } = useTranslation();
     const lang = i18n.language.split("-")[0];
     const c = content[lang] || content.en;
+    const [lightbox, setLightbox] = useState(false);
+
+    const closeLightbox = useCallback(() => setLightbox(false), []);
+
+    useEffect(() => {
+        if (!lightbox) return;
+        const onKey = (e) => { if (e.key === "Escape") closeLightbox(); };
+        window.addEventListener("keydown", onKey);
+        return () => window.removeEventListener("keydown", onKey);
+    }, [lightbox, closeLightbox]);
 
     return (
         <article className="vr-page section">
@@ -220,10 +230,52 @@ export default function BackendStudentenDashboard() {
                     </div>
                     <a className="btn btn-primary vr-cta" href="/#contact">{c.ctaBtn}</a>
                 </div>
-                <div className="vr-hero-image">
+                <div
+                    className="vr-hero-image"
+                    onClick={() => setLightbox(true)}
+                    style={{ cursor: "zoom-in" }}
+                    title="Klik om te vergroten"
+                >
                     <GuardedPicture base={COVER_BASE} fallback={FallbackBack} alt="Studenten verhuur dashboard" sizes="(max-width: 768px) 100vw, 55vw" />
                 </div>
             </header>
+
+            {/* ── LIGHTBOX ── */}
+            {lightbox && (
+                <div
+                    onClick={closeLightbox}
+                    style={{
+                        position: "fixed", inset: 0, zIndex: 1000,
+                        background: "rgba(0,0,0,0.88)",
+                        display: "flex", alignItems: "center", justifyContent: "center",
+                        cursor: "zoom-out",
+                    }}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Vergroot afbeelding"
+                >
+                    <button
+                        onClick={closeLightbox}
+                        aria-label="Sluiten"
+                        style={{
+                            position: "absolute", top: "1.25rem", right: "1.5rem",
+                            background: "none", border: "none",
+                            color: "#fff", fontSize: "2rem", cursor: "pointer", lineHeight: 1,
+                        }}
+                    >×</button>
+                    <img
+                        src={FallbackBack}
+                        alt="Studenten verhuur dashboard — vergroot"
+                        onClick={(e) => e.stopPropagation()}
+                        style={{
+                            maxWidth: "90vw", maxHeight: "88vh",
+                            borderRadius: "6px",
+                            boxShadow: "0 8px 48px rgba(0,0,0,0.7)",
+                            cursor: "default",
+                        }}
+                    />
+                </div>
+            )}
 
             {/* ── INTRO ── */}
             <section className="vr-intro">
