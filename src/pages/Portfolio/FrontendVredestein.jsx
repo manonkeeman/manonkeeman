@@ -47,229 +47,277 @@ function GuardedPicture({ base, fallback, alt, sizes = "(max-width: 920px) 100vw
 const bodies = {
     nl: () => (
         <>
-            <h2>Context</h2>
-            <p>Villa Vredestein vroeg om een helder, betrouwbaar studenten dashboard. Kern: snel inloggen, direct relevante info en nul frictie. Minimalistische UI, duidelijke hiërarchie.</p>
-            <h2>Doelen</h2>
+            <h2>Wat is dit project?</h2>
+            <p>Villa Vredestein had een plek nodig waar studenten hun informatie direct konden vinden. Snel inloggen, meteen zien wat je nodig hebt, geen gedoe. Ik ontwierp en bouwde de volledige frontend: van loginscherm tot afgeschermde omgeving per gebruikersrol.</p>
+
+            <h2>Wat heb ik gemaakt?</h2>
             <ul>
-                <li>Veilige auth met <strong>JWT</strong> (login, refresh, protected routes).</li>
-                <li>Responsieve UI met goede typografie en contrast.</li>
-                <li>Kernacties prominent, ruis omlaag.</li>
-                <li>Schone component-structuur en testbare logica.</li>
+                <li><strong>Veilig inlogsysteem met JWT</strong> — een soort digitale sleutel die automatisch vernieuwd wordt zonder dat je iets merkt.</li>
+                <li><strong>Slimme paginabeveiliging</strong> — je ziet alleen de pagina's die voor jou bedoeld zijn.</li>
+                <li><strong>Overzichtelijke interface</strong> — één duidelijke actie bovenaan, de rest op de juiste plek. Geen scrollmarathon.</li>
+                <li><strong>Toegankelijk en responsief</strong> — werkt op desktop, tablet en telefoon, ook met toetsenbord of screenreader.</li>
+                <li><strong>Snelle laadtijd</strong> — geoptimaliseerde afbeeldingen en moderne buildtools zodat het direct staat.</li>
             </ul>
-            <h2>Stack & Architectuur</h2>
+
+            <h2>Stack & aanpak</h2>
             <ul>
-                <li><strong>React + Vite</strong> voor snelheid en DX.</li>
-                <li><strong>React Router</strong> met guardings (private routes).</li>
-                <li><strong>Context/Reducer</strong> voor auth en rollen.</li>
-                <li><strong>Fetch interceptors</strong> voor access/refresh tokens en API-errors.</li>
-                <li><strong>CSS tokens</strong> voor consistente spacing/typografie.</li>
+                <li><strong>React + Vite</strong> — moderne tooling voor snelle builds en prettige development-ervaring.</li>
+                <li><strong>React Router</strong> met private routes — niemand komt ergens zonder de juiste rechten.</li>
+                <li><strong>Context/Reducer</strong> — één centrale plek voor alle auth-logica, geen chaos door de codebase.</li>
+                <li><strong>Refresh queue</strong> — als een sessie verloopt, wachten alle openstaande verzoeken netjes en hervatten zodra het token is vernieuwd. De gebruiker merkt er niets van.</li>
+                <li><strong>CSS tokens</strong> — consistente opmaak door de hele app, makkelijk te schalen.</li>
             </ul>
-            <h2>Uitdagingen en Oplossingen</h2>
-            <h3>1) Stabiele JWT-flow</h3>
-            <p>Refresh-queue voorkomt dubbele refreshes; parallelle requests wachten en gaan daarna door.</p>
-            <h3>2) Toegankelijke UI</h3>
-            <p>Focus-states, aria-labels, toetsenbordnavigatie; tabellen en kaarten schalen elegant naar mobiel.</p>
-            <h3>3) Informatie-architectuur</h3>
-            <p>Above-the-fold herzien: één primaire CTA, drie secundaire taken; voorspelbare posities.</p>
+
+            <h2>Uitdagingen waar ik trots op ben</h2>
+            <h3>Token vernieuwing zonder frustratie</h3>
+            <p>Wanneer iemands sessie verliep terwijl ze bezig waren, moest de app stil op de achtergrond een nieuw token ophalen. Het lastige: meerdere verzoeken kunnen tegelijk verlopen. Met een refresh queue worden ze keurig in de rij gezet en allemaal hervat zodra het nieuwe token klaar is — geen dubbele calls, geen foutmeldingen.</p>
+
+            <h3>Toegankelijkheid die écht werkt</h3>
+            <p>Niet alleen mooi op groot scherm. Focus-states, aria-labels en volledige toetsenbordnavigatie. Tabellen en kaarten schalen soepel naar mobiel zonder dat de hiërarchie verloren gaat.</p>
+
+            <h3>Informatie-architectuur</h3>
+            <p>Wat zie je als eerste? Die vraag heb ik bewust beantwoord. De pagina is zo opgebouwd dat de meest relevante actie direct zichtbaar is, en de rest pas als je er klaar voor bent.</p>
+
             <h2>Resultaat</h2>
             <ul>
-                <li>Snelle laadtijd (Vite + AVIF/WebP assets).</li>
-                <li>Consistente UX; minder dwalen, meer flow.</li>
-                <li>Schaalbare componenten en duidelijke mappen.</li>
+                <li>Een dashboard dat studenten direct begrijpen, zonder handleiding.</li>
+                <li>Uitbreidbare componentstructuur, klaar voor nieuwe features.</li>
+                <li>Schone code die een andere developer direct kan oppakken.</li>
             </ul>
-            <h2>Link & Bron</h2>
-            <p>Live: <a href={LIVE_URL} target="_blank" rel="noreferrer">{LIVE_URL}</a></p>
+
+            <h2>Live bekijken</h2>
+            <p><a href={LIVE_URL} target="_blank" rel="noreferrer">{LIVE_URL}</a></p>
         </>
     ),
     en: () => (
         <>
-            <h2>Context</h2>
-            <p>Villa Vredestein needed a clear, reliable student dashboard. Core: fast login, immediately relevant info and zero friction. Minimalist UI, clear hierarchy.</p>
-            <h2>Goals</h2>
+            <h2>What is this project?</h2>
+            <p>Villa Vredestein needed a place where students could find their information right away. Quick login, see what you need immediately, no hassle. I designed and built the entire frontend: from the login screen to the role-protected environment.</p>
+
+            <h2>What did I build?</h2>
             <ul>
-                <li>Secure auth with <strong>JWT</strong> (login, refresh, protected routes).</li>
-                <li>Responsive UI with good typography and contrast.</li>
-                <li>Core actions prominent, noise reduced.</li>
-                <li>Clean component structure and testable logic.</li>
+                <li><strong>Secure login with JWT</strong> — a kind of digital key that automatically renews itself without you noticing.</li>
+                <li><strong>Smart page protection</strong> — you only see the pages meant for you.</li>
+                <li><strong>Clear interface</strong> — one obvious action at the top, the rest in the right place. No scroll marathons.</li>
+                <li><strong>Accessible and responsive</strong> — works on desktop, tablet and phone, including with keyboard or screen reader.</li>
+                <li><strong>Fast load time</strong> — optimised images and modern build tools so everything loads instantly.</li>
             </ul>
-            <h2>Stack & Architecture</h2>
+
+            <h2>Stack & approach</h2>
             <ul>
-                <li><strong>React + Vite</strong> for speed and DX.</li>
-                <li><strong>React Router</strong> with guards (private routes).</li>
-                <li><strong>Context/Reducer</strong> for auth and roles.</li>
-                <li><strong>Fetch interceptors</strong> for access/refresh tokens and API errors.</li>
-                <li><strong>CSS tokens</strong> for consistent spacing/typography.</li>
+                <li><strong>React + Vite</strong> — modern tooling for fast builds and a smooth development experience.</li>
+                <li><strong>React Router</strong> with private routes — nobody gets anywhere without the right permissions.</li>
+                <li><strong>Context/Reducer</strong> — one central place for all auth logic, no chaos scattered through the codebase.</li>
+                <li><strong>Refresh queue</strong> — when a session expires, all pending requests wait politely and resume once the new token is ready. The user never notices.</li>
+                <li><strong>CSS tokens</strong> — consistent styling throughout the app, easy to scale.</li>
             </ul>
-            <h2>Challenges and Solutions</h2>
-            <h3>1) Stable JWT flow</h3>
-            <p>Refresh queue prevents double refreshes; parallel requests wait and then continue.</p>
-            <h3>2) Accessible UI</h3>
-            <p>Focus states, aria-labels, keyboard navigation; tables and cards scale elegantly to mobile.</p>
-            <h3>3) Information architecture</h3>
-            <p>Above-the-fold revised: one primary CTA, three secondary tasks; predictable positions.</p>
+
+            <h2>Challenges I'm proud of</h2>
+            <h3>Token renewal without friction</h3>
+            <p>When a session expired mid-use, the app had to silently fetch a new token in the background. The tricky part: multiple requests can expire simultaneously. With a refresh queue they're queued up and all resumed once the new token is ready — no duplicate calls, no error messages.</p>
+
+            <h3>Accessibility that actually works</h3>
+            <p>Not just pretty on a large screen. Focus states, aria-labels and full keyboard navigation. Tables and cards scale smoothly to mobile without losing hierarchy.</p>
+
+            <h3>Information architecture</h3>
+            <p>What do you see first? I answered that question deliberately. The page is structured so the most relevant action is immediately visible, and the rest appears when you're ready for it.</p>
+
             <h2>Results</h2>
             <ul>
-                <li>Fast load time (Vite + AVIF/WebP assets).</li>
-                <li>Consistent UX; less wandering, more flow.</li>
-                <li>Scalable components and clear folder structure.</li>
+                <li>A dashboard students understand immediately, without a manual.</li>
+                <li>Scalable component structure, ready for new features.</li>
+                <li>Clean code that another developer can pick up straight away.</li>
             </ul>
-            <h2>Link & Source</h2>
-            <p>Live: <a href={LIVE_URL} target="_blank" rel="noreferrer">{LIVE_URL}</a></p>
+
+            <h2>View live</h2>
+            <p><a href={LIVE_URL} target="_blank" rel="noreferrer">{LIVE_URL}</a></p>
         </>
     ),
     fr: () => (
         <>
-            <h2>Contexte</h2>
-            <p>Villa Vredestein avait besoin d'un tableau de bord étudiant clair et fiable. L'essentiel: connexion rapide, informations directement pertinentes et zéro friction. Interface minimaliste, hiérarchie claire.</p>
-            <h2>Objectifs</h2>
+            <h2>Qu'est-ce que ce projet ?</h2>
+            <p>Villa Vredestein avait besoin d'un endroit où les étudiants pouvaient trouver leurs informations directement. Connexion rapide, voir ce dont vous avez besoin immédiatement, sans tracas. J'ai conçu et construit l'intégralité du frontend : de l'écran de connexion à l'environnement protégé par rôle.</p>
+
+            <h2>Qu'ai-je construit ?</h2>
             <ul>
-                <li>Authentification sécurisée avec <strong>JWT</strong> (connexion, rafraîchissement, routes protégées).</li>
-                <li>Interface responsive avec une bonne typographie et un bon contraste.</li>
-                <li>Actions principales en avant, bruit réduit.</li>
-                <li>Structure de composants propre et logique testable.</li>
+                <li><strong>Connexion sécurisée avec JWT</strong> — une sorte de clé numérique qui se renouvelle automatiquement sans que vous le remarquiez.</li>
+                <li><strong>Protection intelligente des pages</strong> — vous ne voyez que les pages qui vous sont destinées.</li>
+                <li><strong>Interface claire</strong> — une action évidente en haut, le reste à la bonne place. Pas de marathon de défilement.</li>
+                <li><strong>Accessible et responsive</strong> — fonctionne sur desktop, tablette et téléphone, y compris avec le clavier ou un lecteur d'écran.</li>
+                <li><strong>Temps de chargement rapide</strong> — images optimisées et outils de build modernes pour que tout se charge instantanément.</li>
             </ul>
-            <h2>Stack & Architecture</h2>
+
+            <h2>Stack & approche</h2>
             <ul>
-                <li><strong>React + Vite</strong> pour la rapidité et l'expérience développeur.</li>
-                <li><strong>React Router</strong> avec gardes (routes privées).</li>
-                <li><strong>Context/Reducer</strong> pour l'auth et les rôles.</li>
-                <li><strong>Fetch interceptors</strong> pour les tokens d'accès/rafraîchissement et les erreurs API.</li>
-                <li><strong>CSS tokens</strong> pour un espacement/typographie cohérents.</li>
+                <li><strong>React + Vite</strong> — outillage moderne pour des builds rapides et une expérience de développement fluide.</li>
+                <li><strong>React Router</strong> avec routes privées — personne n'accède nulle part sans les bonnes autorisations.</li>
+                <li><strong>Context/Reducer</strong> — un seul endroit central pour toute la logique d'auth, pas de chaos dans la codebase.</li>
+                <li><strong>File de rafraîchissement</strong> — quand une session expire, toutes les requêtes en attente patientent et reprennent dès que le nouveau token est prêt. L'utilisateur ne remarque rien.</li>
+                <li><strong>Tokens CSS</strong> — style cohérent dans toute l'application, facile à faire évoluer.</li>
             </ul>
-            <h2>Défis et Solutions</h2>
-            <h3>1) Flux JWT stable</h3>
-            <p>La file de rafraîchissement évite les doubles rafraîchissements; les requêtes parallèles attendent puis continuent.</p>
-            <h3>2) Interface accessible</h3>
-            <p>États de focus, aria-labels, navigation au clavier; tableaux et cartes s'adaptent élégamment au mobile.</p>
-            <h3>3) Architecture de l'information</h3>
-            <p>Au-dessus du pli revu: un CTA principal, trois tâches secondaires; positions prévisibles.</p>
+
+            <h2>Défis dont je suis fière</h2>
+            <h3>Renouvellement de token sans friction</h3>
+            <p>Quand une session expirait en cours d'utilisation, l'application devait silencieusement récupérer un nouveau token en arrière-plan. La difficulté : plusieurs requêtes peuvent expirer simultanément. Avec une file de rafraîchissement, elles sont mises en file d'attente et toutes reprises une fois le nouveau token prêt — pas d'appels en double, pas de messages d'erreur.</p>
+
+            <h3>Accessibilité qui fonctionne vraiment</h3>
+            <p>Pas seulement joli sur grand écran. États de focus, aria-labels et navigation complète au clavier. Les tableaux et cartes s'adaptent au mobile sans perdre la hiérarchie.</p>
+
+            <h3>Architecture de l'information</h3>
+            <p>Qu'est-ce qu'on voit en premier ? J'ai répondu à cette question délibérément. La page est structurée pour que l'action la plus pertinente soit immédiatement visible, le reste apparaissant quand vous êtes prêt.</p>
+
             <h2>Résultats</h2>
             <ul>
-                <li>Temps de chargement rapide (Vite + assets AVIF/WebP).</li>
-                <li>UX cohérente; moins d'errance, plus de fluidité.</li>
-                <li>Composants évolutifs et structure de dossiers claire.</li>
+                <li>Un tableau de bord que les étudiants comprennent immédiatement, sans manuel.</li>
+                <li>Structure de composants évolutive, prête pour de nouvelles fonctionnalités.</li>
+                <li>Code propre qu'un autre développeur peut reprendre directement.</li>
             </ul>
-            <h2>Lien & Source</h2>
-            <p>Live: <a href={LIVE_URL} target="_blank" rel="noreferrer">{LIVE_URL}</a></p>
+
+            <h2>Voir en live</h2>
+            <p><a href={LIVE_URL} target="_blank" rel="noreferrer">{LIVE_URL}</a></p>
         </>
     ),
     de: () => (
         <>
-            <h2>Kontext</h2>
-            <p>Villa Vredestein benötigte ein klares, zuverlässiges Studenten-Dashboard. Kern: schnelle Anmeldung, sofort relevante Infos und null Reibung. Minimalistisches UI, klare Hierarchie.</p>
-            <h2>Ziele</h2>
+            <h2>Was ist dieses Projekt?</h2>
+            <p>Villa Vredestein brauchte einen Ort, wo Studenten ihre Informationen sofort finden konnten. Schnelles Einloggen, direkt sehen was man braucht, kein Aufwand. Ich habe das gesamte Frontend entworfen und gebaut: vom Login-Bildschirm bis zur rollengeschützten Umgebung.</p>
+
+            <h2>Was habe ich gebaut?</h2>
             <ul>
-                <li>Sichere Auth mit <strong>JWT</strong> (Login, Refresh, geschützte Routen).</li>
-                <li>Responsives UI mit guter Typografie und Kontrast.</li>
-                <li>Kernaktionen prominent, Rauschen reduziert.</li>
-                <li>Saubere Komponentenstruktur und testbare Logik.</li>
+                <li><strong>Sicheres Login mit JWT</strong> — eine Art digitaler Schlüssel, der sich automatisch erneuert, ohne dass man es bemerkt.</li>
+                <li><strong>Intelligenter Seitenschutz</strong> — du siehst nur die Seiten, die für dich bestimmt sind.</li>
+                <li><strong>Übersichtliche Benutzeroberfläche</strong> — eine klare Aktion oben, der Rest am richtigen Platz. Kein Scroll-Marathon.</li>
+                <li><strong>Zugänglich und responsiv</strong> — funktioniert auf Desktop, Tablet und Telefon, auch mit Tastatur oder Screenreader.</li>
+                <li><strong>Schnelle Ladezeit</strong> — optimierte Bilder und moderne Build-Tools für sofortiges Laden.</li>
             </ul>
-            <h2>Stack & Architektur</h2>
+
+            <h2>Stack & Ansatz</h2>
             <ul>
-                <li><strong>React + Vite</strong> für Geschwindigkeit und DX.</li>
-                <li><strong>React Router</strong> mit Guards (private Routen).</li>
-                <li><strong>Context/Reducer</strong> für Auth und Rollen.</li>
-                <li><strong>Fetch Interceptors</strong> für Access/Refresh-Tokens und API-Fehler.</li>
-                <li><strong>CSS-Tokens</strong> für konsistentes Spacing/Typografie.</li>
+                <li><strong>React + Vite</strong> — modernes Tooling für schnelle Builds und eine angenehme Entwicklungserfahrung.</li>
+                <li><strong>React Router</strong> mit privaten Routen — niemand kommt irgendwo hin ohne die richtigen Berechtigungen.</li>
+                <li><strong>Context/Reducer</strong> — ein zentraler Ort für die gesamte Auth-Logik, kein Chaos durch die Codebase.</li>
+                <li><strong>Refresh Queue</strong> — wenn eine Session abläuft, warten alle ausstehenden Anfragen ordentlich und werden fortgesetzt, sobald das neue Token bereit ist. Der Nutzer merkt nichts davon.</li>
+                <li><strong>CSS-Tokens</strong> — einheitliches Styling durch die gesamte App, einfach zu skalieren.</li>
             </ul>
-            <h2>Herausforderungen und Lösungen</h2>
-            <h3>1) Stabiler JWT-Flow</h3>
-            <p>Refresh-Queue verhindert doppelte Refreshes; parallele Requests warten und fahren dann fort.</p>
-            <h3>2) Barrierefreies UI</h3>
-            <p>Focus-States, Aria-Labels, Tastaturnavigation; Tabellen und Karten skalieren elegant auf Mobilgeräte.</p>
-            <h3>3) Informationsarchitektur</h3>
-            <p>Above-the-Fold überarbeitet: ein primärer CTA, drei sekundäre Aufgaben; vorhersehbare Positionen.</p>
+
+            <h2>Herausforderungen, auf die ich stolz bin</h2>
+            <h3>Token-Erneuerung ohne Frustration</h3>
+            <p>Wenn eine Session während der Nutzung ablief, musste die App still im Hintergrund ein neues Token holen. Das Knifflige: Mehrere Anfragen können gleichzeitig ablaufen. Mit einer Refresh Queue werden sie ordentlich in die Warteschlange gestellt und alle fortgesetzt, sobald das neue Token bereit ist — keine doppelten Aufrufe, keine Fehlermeldungen.</p>
+
+            <h3>Barrierefreiheit, die wirklich funktioniert</h3>
+            <p>Nicht nur schön auf großem Bildschirm. Focus-States, Aria-Labels und vollständige Tastaturnavigation. Tabellen und Karten skalieren fließend auf Mobilgeräte ohne die Hierarchie zu verlieren.</p>
+
+            <h3>Informationsarchitektur</h3>
+            <p>Was sieht man zuerst? Diese Frage habe ich bewusst beantwortet. Die Seite ist so aufgebaut, dass die relevanteste Aktion sofort sichtbar ist und der Rest erscheint, wenn man bereit dafür ist.</p>
+
             <h2>Ergebnis</h2>
             <ul>
-                <li>Schnelle Ladezeit (Vite + AVIF/WebP Assets).</li>
-                <li>Konsistente UX; weniger Umherwandern, mehr Flow.</li>
-                <li>Skalierbare Komponenten und klare Ordnerstruktur.</li>
+                <li>Ein Dashboard, das Studenten sofort verstehen, ohne Anleitung.</li>
+                <li>Skalierbare Komponentenstruktur, bereit für neue Features.</li>
+                <li>Sauberer Code, den ein anderer Entwickler direkt übernehmen kann.</li>
             </ul>
-            <h2>Link & Quelle</h2>
-            <p>Live: <a href={LIVE_URL} target="_blank" rel="noreferrer">{LIVE_URL}</a></p>
+
+            <h2>Live ansehen</h2>
+            <p><a href={LIVE_URL} target="_blank" rel="noreferrer">{LIVE_URL}</a></p>
         </>
     ),
     es: () => (
         <>
-            <h2>Contexto</h2>
-            <p>Villa Vredestein necesitaba un panel de estudiantes claro y fiable. Lo esencial: inicio de sesión rápido, información directamente relevante y cero fricción. UI minimalista, jerarquía clara.</p>
-            <h2>Objetivos</h2>
+            <h2>¿Qué es este proyecto?</h2>
+            <p>Villa Vredestein necesitaba un lugar donde los estudiantes pudieran encontrar su información directamente. Inicio de sesión rápido, ver lo que necesitas de inmediato, sin complicaciones. Diseñé y construí el frontend completo: desde la pantalla de inicio de sesión hasta el entorno protegido por rol.</p>
+
+            <h2>¿Qué construí?</h2>
             <ul>
-                <li>Auth segura con <strong>JWT</strong> (inicio de sesión, refresco, rutas protegidas).</li>
-                <li>UI responsive con buena tipografía y contraste.</li>
-                <li>Acciones principales prominentes, ruido reducido.</li>
-                <li>Estructura de componentes limpia y lógica testable.</li>
+                <li><strong>Inicio de sesión seguro con JWT</strong> — una especie de llave digital que se renueva automáticamente sin que te des cuenta.</li>
+                <li><strong>Protección inteligente de páginas</strong> — solo ves las páginas destinadas a ti.</li>
+                <li><strong>Interfaz clara</strong> — una acción obvia arriba, el resto en el lugar correcto. Sin maratones de desplazamiento.</li>
+                <li><strong>Accesible y responsivo</strong> — funciona en escritorio, tablet y teléfono, incluso con teclado o lector de pantalla.</li>
+                <li><strong>Tiempo de carga rápido</strong> — imágenes optimizadas y herramientas de build modernas para que todo cargue al instante.</li>
             </ul>
-            <h2>Stack & Arquitectura</h2>
+
+            <h2>Stack & enfoque</h2>
             <ul>
-                <li><strong>React + Vite</strong> para velocidad y DX.</li>
-                <li><strong>React Router</strong> con guardas (rutas privadas).</li>
-                <li><strong>Context/Reducer</strong> para auth y roles.</li>
-                <li><strong>Fetch interceptors</strong> para tokens de acceso/refresco y errores de API.</li>
-                <li><strong>CSS tokens</strong> para espaciado/tipografía consistentes.</li>
+                <li><strong>React + Vite</strong> — herramientas modernas para builds rápidas y una experiencia de desarrollo fluida.</li>
+                <li><strong>React Router</strong> con rutas privadas — nadie accede a nada sin los permisos correctos.</li>
+                <li><strong>Context/Reducer</strong> — un lugar central para toda la lógica de auth, sin caos por el código.</li>
+                <li><strong>Cola de refresco</strong> — cuando una sesión expira, todas las solicitudes pendientes esperan y se reanudan una vez que el nuevo token está listo. El usuario nunca lo nota.</li>
+                <li><strong>Tokens CSS</strong> — estilos consistentes en toda la app, fácil de escalar.</li>
             </ul>
-            <h2>Desafíos y Soluciones</h2>
-            <h3>1) Flujo JWT estable</h3>
-            <p>La cola de refresco evita refrescos dobles; las peticiones paralelas esperan y luego continúan.</p>
-            <h3>2) UI accesible</h3>
-            <p>Estados de foco, aria-labels, navegación por teclado; tablas y tarjetas se adaptan elegantemente al móvil.</p>
-            <h3>3) Arquitectura de información</h3>
-            <p>Above-the-fold revisado: un CTA principal, tres tareas secundarias; posiciones predecibles.</p>
+
+            <h2>Retos de los que estoy orgullosa</h2>
+            <h3>Renovación de token sin fricción</h3>
+            <p>Cuando una sesión expiraba mientras se usaba, la app tenía que obtener silenciosamente un nuevo token en segundo plano. Lo complicado: varias solicitudes pueden expirar simultáneamente. Con una cola de refresco se ponen en cola y todas se reanudan cuando el nuevo token está listo — sin llamadas duplicadas, sin mensajes de error.</p>
+
+            <h3>Accesibilidad que realmente funciona</h3>
+            <p>No solo bonito en pantalla grande. Estados de foco, aria-labels y navegación completa por teclado. Tablas y tarjetas se adaptan al móvil sin perder la jerarquía.</p>
+
+            <h3>Arquitectura de información</h3>
+            <p>¿Qué ves primero? Respondí esa pregunta deliberadamente. La página está estructurada para que la acción más relevante sea inmediatamente visible, y el resto aparece cuando estás listo.</p>
+
             <h2>Resultados</h2>
             <ul>
-                <li>Tiempo de carga rápido (Vite + assets AVIF/WebP).</li>
-                <li>UX consistente; menos deambulación, más flujo.</li>
-                <li>Componentes escalables y estructura de carpetas clara.</li>
+                <li>Un panel que los estudiantes entienden de inmediato, sin manual.</li>
+                <li>Estructura de componentes escalable, lista para nuevas funciones.</li>
+                <li>Código limpio que otro desarrollador puede retomar directamente.</li>
             </ul>
-            <h2>Enlace & Fuente</h2>
-            <p>Live: <a href={LIVE_URL} target="_blank" rel="noreferrer">{LIVE_URL}</a></p>
+
+            <h2>Ver en vivo</h2>
+            <p><a href={LIVE_URL} target="_blank" rel="noreferrer">{LIVE_URL}</a></p>
         </>
     ),
     it: () => (
         <>
-            <h2>Contesto</h2>
-            <p>Villa Vredestein aveva bisogno di un dashboard per studenti chiaro e affidabile. Il nucleo: accesso rapido, informazioni immediatamente rilevanti e zero attrito. UI minimalista, gerarchia chiara.</p>
-            <h2>Obiettivi</h2>
+            <h2>Cos'è questo progetto?</h2>
+            <p>Villa Vredestein aveva bisogno di un posto dove gli studenti potessero trovare le loro informazioni subito. Login rapido, vedere ciò di cui hai bisogno immediatamente, senza complicazioni. Ho progettato e costruito l'intero frontend: dalla schermata di login all'ambiente protetto per ruolo.</p>
+
+            <h2>Cosa ho costruito?</h2>
             <ul>
-                <li>Auth sicura con <strong>JWT</strong> (login, refresh, route protette).</li>
-                <li>UI responsive con buona tipografia e contrasto.</li>
-                <li>Azioni principali in evidenza, rumore ridotto.</li>
-                <li>Struttura di componenti pulita e logica testabile.</li>
+                <li><strong>Login sicuro con JWT</strong> — una sorta di chiave digitale che si rinnova automaticamente senza che te ne accorga.</li>
+                <li><strong>Protezione intelligente delle pagine</strong> — vedi solo le pagine destinate a te.</li>
+                <li><strong>Interfaccia chiara</strong> — un'azione ovvia in cima, il resto al posto giusto. Niente maratone di scorrimento.</li>
+                <li><strong>Accessibile e responsive</strong> — funziona su desktop, tablet e telefono, anche con tastiera o screen reader.</li>
+                <li><strong>Tempo di caricamento rapido</strong> — immagini ottimizzate e strumenti di build moderni per un caricamento istantaneo.</li>
             </ul>
-            <h2>Stack & Architettura</h2>
+
+            <h2>Stack & approccio</h2>
             <ul>
-                <li><strong>React + Vite</strong> per velocità e DX.</li>
-                <li><strong>React Router</strong> con guardie (route private).</li>
-                <li><strong>Context/Reducer</strong> per auth e ruoli.</li>
-                <li><strong>Fetch interceptors</strong> per access/refresh token ed errori API.</li>
-                <li><strong>CSS token</strong> per spaziatura/tipografia coerenti.</li>
+                <li><strong>React + Vite</strong> — strumenti moderni per build veloci e un'esperienza di sviluppo fluida.</li>
+                <li><strong>React Router</strong> con route private — nessuno accede a nulla senza i permessi giusti.</li>
+                <li><strong>Context/Reducer</strong> — un posto centrale per tutta la logica di auth, niente caos nel codice.</li>
+                <li><strong>Coda di refresh</strong> — quando una sessione scade, tutte le richieste in sospeso aspettano e riprendono quando il nuovo token è pronto. L'utente non se ne accorge mai.</li>
+                <li><strong>Token CSS</strong> — stile coerente in tutta l'app, facile da scalare.</li>
             </ul>
-            <h2>Sfide e Soluzioni</h2>
-            <h3>1) Flusso JWT stabile</h3>
-            <p>La coda di refresh evita i double refresh; le richieste parallele attendono e poi proseguono.</p>
-            <h3>2) UI accessibile</h3>
-            <p>Focus-state, aria-label, navigazione da tastiera; tabelle e schede si adattano elegantemente al mobile.</p>
-            <h3>3) Architettura delle informazioni</h3>
-            <p>Above-the-fold rivisto: un CTA principale, tre attività secondarie; posizioni prevedibili.</p>
+
+            <h2>Sfide di cui sono orgogliosa</h2>
+            <h3>Rinnovo del token senza attrito</h3>
+            <p>Quando una sessione scadeva durante l'uso, l'app doveva silenziosamente recuperare un nuovo token in background. La difficoltà: più richieste possono scadere contemporaneamente. Con una coda di refresh vengono messe in coda e riprese tutte quando il nuovo token è pronto — nessuna chiamata duplicata, nessun messaggio di errore.</p>
+
+            <h3>Accessibilità che funziona davvero</h3>
+            <p>Non solo bello su schermo grande. Focus state, aria-label e navigazione completa da tastiera. Tabelle e schede si adattano al mobile senza perdere la gerarchia.</p>
+
+            <h3>Architettura delle informazioni</h3>
+            <p>Cosa vedi per prima? Ho risposto a quella domanda deliberatamente. La pagina è strutturata in modo che l'azione più rilevante sia immediatamente visibile, il resto appare quando sei pronto.</p>
+
             <h2>Risultati</h2>
             <ul>
-                <li>Tempo di caricamento rapido (Vite + asset AVIF/WebP).</li>
-                <li>UX coerente; meno vagabondaggio, piu' flusso.</li>
-                <li>Componenti scalabili e struttura di cartelle chiara.</li>
+                <li>Una dashboard che gli studenti capiscono subito, senza manuale.</li>
+                <li>Struttura di componenti scalabile, pronta per nuove funzionalità.</li>
+                <li>Codice pulito che un altro sviluppatore può riprendere direttamente.</li>
             </ul>
-            <h2>Link & Sorgente</h2>
-            <p>Live: <a href={LIVE_URL} target="_blank" rel="noreferrer">{LIVE_URL}</a></p>
+
+            <h2>Vedi live</h2>
+            <p><a href={LIVE_URL} target="_blank" rel="noreferrer">{LIVE_URL}</a></p>
         </>
     ),
 };
 
 const ui = {
-    nl: { title: "Villa Vredestein – Studenten Dashboard (Frontend)", summary: "Modulair React-frontend voor een studenten dashboard met veilige login (JWT), rol-gebaseerde weergaven en een toegankelijke UI die rust en focus bewaart.", liveBtn: "Bekijk live demo ↗", backBtn: "← Terug naar Portfolio" },
-    en: { title: "Villa Vredestein – Student Dashboard (Frontend)", summary: "Modular React frontend for a student dashboard with secure login (JWT), role-based views and an accessible UI that maintains calm and focus.", liveBtn: "View live demo ↗", backBtn: "← Back to Portfolio" },
-    fr: { title: "Villa Vredestein – Tableau de bord etudiant (Frontend)", summary: "Frontend React modulaire pour un tableau de bord etudiant avec connexion securisee (JWT), vues basees sur les roles et une interface accessible qui preserve le calme et la concentration.", liveBtn: "Voir la demo live ↗", backBtn: "← Retour au Portfolio" },
-    de: { title: "Villa Vredestein – Studenten-Dashboard (Frontend)", summary: "Modulares React-Frontend fuer ein Studenten-Dashboard mit sicherer Anmeldung (JWT), rollenbasierten Ansichten und einem zugaenglichen UI, das Ruhe und Fokus bewahrt.", liveBtn: "Live-Demo ansehen ↗", backBtn: "← Zuruck zum Portfolio" },
-    es: { title: "Villa Vredestein – Panel de Estudiantes (Frontend)", summary: "Frontend React modular para un panel de estudiantes con inicio de sesion seguro (JWT), vistas basadas en roles y una UI accesible que mantiene la calma y el enfoque.", liveBtn: "Ver demo en vivo ↗", backBtn: "← Volver al Portfolio" },
-    it: { title: "Villa Vredestein – Dashboard Studenti (Frontend)", summary: "Frontend React modulare per un dashboard per studenti con login sicuro (JWT), viste basate sui ruoli e una UI accessibile che mantiene calma e concentrazione.", liveBtn: "Vedi demo live ↗", backBtn: "← Torna al Portfolio" },
+    nl: { title: "Villa Vredestein – Studenten Dashboard (Frontend)", summary: "Ik bouwde het volledige React-frontend voor Villa Vredestein: veilig inloggen met JWT, slimme rolbeveiliging en een interface die studenten direct begrijpen zonder handleiding.", liveBtn: "Bekijk live demo ↗", backBtn: "← Terug naar Portfolio" },
+    en: { title: "Villa Vredestein – Student Dashboard (Frontend)", summary: "I built the complete React frontend for Villa Vredestein: secure JWT login, smart role-based protection and an interface students understand immediately without a manual.", liveBtn: "View live demo ↗", backBtn: "← Back to Portfolio" },
+    fr: { title: "Villa Vredestein – Tableau de bord étudiant (Frontend)", summary: "J'ai construit le frontend React complet pour Villa Vredestein : connexion JWT sécurisée, protection intelligente par rôle et une interface que les étudiants comprennent immédiatement sans manuel.", liveBtn: "Voir la démo live ↗", backBtn: "← Retour au Portfolio" },
+    de: { title: "Villa Vredestein – Studenten-Dashboard (Frontend)", summary: "Ich habe das komplette React-Frontend für Villa Vredestein gebaut: sicheres JWT-Login, intelligenter Rollenschutz und eine Benutzeroberfläche, die Studenten sofort verstehen.", liveBtn: "Live-Demo ansehen ↗", backBtn: "← Zurück zum Portfolio" },
+    es: { title: "Villa Vredestein – Panel de Estudiantes (Frontend)", summary: "Construí el frontend React completo para Villa Vredestein: inicio de sesión JWT seguro, protección inteligente por roles y una interfaz que los estudiantes entienden de inmediato.", liveBtn: "Ver demo en vivo ↗", backBtn: "← Volver al Portfolio" },
+    it: { title: "Villa Vredestein – Dashboard Studenti (Frontend)", summary: "Ho costruito il frontend React completo per Villa Vredestein: login JWT sicuro, protezione intelligente per ruolo e un'interfaccia che gli studenti capiscono subito senza manuale.", liveBtn: "Vedi demo live ↗", backBtn: "← Torna al Portfolio" },
 };
 
 export default function FrontendVredestein() {
