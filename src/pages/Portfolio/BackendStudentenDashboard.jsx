@@ -47,7 +47,7 @@ const content = {
     nl: {
         title: "Studenten Verhuur Dashboard",
         subtitle: "Spring Boot · Klaar voor gebruik",
-        tagline: "Verhuur zonder gedoe.\nAlles op één plek.",
+        tagline: "Digitaal verhuren, volledig in control.\nAlles op één plek, uitbreidbaar naar jouw situatie.",
         intro: "Kamers verhuren aan studenten brengt meer papierwerk met zich mee dan je denkt. Betalingen opvolgen, contracten bijhouden, schoonmaak verdelen, regels vastleggen. Dit dashboard neemt dat over.",
         features: [
             "Betalingsoverzicht met automatische herinneringen",
@@ -70,7 +70,7 @@ const content = {
     en: {
         title: "Student Housing Dashboard",
         subtitle: "Spring Boot · Ready to use",
-        tagline: "Renting without hassle.\nEverything in one place.",
+        tagline: "Digital rental management, fully in control.\nEverything in one place, built to scale.",
         intro: "Renting rooms to students brings more paperwork than you'd expect. Tracking payments, managing contracts, organising cleaning, setting rules. This dashboard handles it all.",
         features: [
             "Payment overview with automatic reminders",
@@ -93,7 +93,7 @@ const content = {
     fr: {
         title: "Tableau de bord location étudiante",
         subtitle: "Spring Boot · Prêt à l'emploi",
-        tagline: "Louer sans tracas.\nTout en un seul endroit.",
+        tagline: "Gestion locative numérique, totalement maîtrisée.\nTout en un endroit, extensible selon vos besoins.",
         intro: "Louer des chambres à des étudiants apporte plus de paperasse qu'on ne le pense. Suivi des paiements, gestion des contrats, organisation du ménage, définition des règles. Ce tableau de bord s'en charge.",
         features: [
             "Aperçu des paiements avec rappels automatiques",
@@ -116,7 +116,7 @@ const content = {
     de: {
         title: "Studenten-Vermietungs-Dashboard",
         subtitle: "Spring Boot · Einsatzbereit",
-        tagline: "Vermieten ohne Aufwand.\nAlles an einem Ort.",
+        tagline: "Digital vermieten, vollständig im Griff.\nAlles an einem Ort, skalierbar auf Ihre Situation.",
         intro: "Zimmer an Studenten zu vermieten bringt mehr Papierkram mit sich als erwartet. Zahlungen verfolgen, Verträge verwalten, Reinigung organisieren, Regeln festlegen. Dieses Dashboard übernimmt das.",
         features: [
             "Zahlungsübersicht mit automatischen Erinnerungen",
@@ -139,7 +139,7 @@ const content = {
     es: {
         title: "Dashboard de alquiler estudiantil",
         subtitle: "Spring Boot · Listo para usar",
-        tagline: "Alquilar sin complicaciones.\nTodo en un solo lugar.",
+        tagline: "Gestión digital de alquileres, con control total.\nTodo en un lugar, escalable a tu situación.",
         intro: "Alquilar habitaciones a estudiantes trae más papeleo del esperado. Seguimiento de pagos, gestión de contratos, organización de limpieza, establecimiento de normas. Este dashboard lo gestiona todo.",
         features: [
             "Resumen de pagos con recordatorios automáticos",
@@ -162,7 +162,7 @@ const content = {
     it: {
         title: "Dashboard affitti studenteschi",
         subtitle: "Spring Boot · Pronto all'uso",
-        tagline: "Affittare senza stress.\nTutto in un unico posto.",
+        tagline: "Gestione digitale degli affitti, pieno controllo.\nTutto in un posto, espandibile alle tue esigenze.",
         intro: "Affittare camere a studenti porta più burocrazia del previsto. Seguire i pagamenti, gestire i contratti, organizzare le pulizie, stabilire le regole. Questo dashboard se ne occupa.",
         features: [
             "Panoramica pagamenti con promemoria automatici",
