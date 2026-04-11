@@ -48,41 +48,41 @@ const bodies = {
     nl: () => (
         <>
             <h2>Wat is dit project?</h2>
-            <p>Villa Vredestein had een plek nodig waar studenten hun informatie direct konden vinden. Snel inloggen, meteen zien wat je nodig hebt, geen gedoe. Ik ontwierp en bouwde de volledige frontend: van loginscherm tot afgeschermde omgeving per gebruikersrol.</p>
+            <p>Villa Vredestein is een plek met een verhaal. Ze hadden een website nodig die dat verhaal goed vertelt: wie ze zijn, waar ze voor staan, wat ze doen en hoe je contact opneemt. Geen technisch product, maar een digitaal visitekaartje dat uitnodigt en vertrouwen wekt.</p>
+            <p>Ik bouwde de volledige frontend: van ontwerp tot werkende site.</p>
 
             <h2>Wat heb ik gemaakt?</h2>
             <ul>
-                <li><strong>Veilig inlogsysteem met JWT</strong> — een soort digitale sleutel die automatisch vernieuwd wordt zonder dat je iets merkt.</li>
-                <li><strong>Slimme paginabeveiliging</strong> — je ziet alleen de pagina's die voor jou bedoeld zijn.</li>
-                <li><strong>Overzichtelijke interface</strong> — één duidelijke actie bovenaan, de rest op de juiste plek. Geen scrollmarathon.</li>
-                <li><strong>Toegankelijk en responsief</strong> — werkt op desktop, tablet en telefoon, ook met toetsenbord of screenreader.</li>
-                <li><strong>Snelle laadtijd</strong> — geoptimaliseerde afbeeldingen en moderne buildtools zodat het direct staat.</li>
+                <li><strong>Publieke website</strong> met informatie over de geschiedenis, het doel en de toekomst van Villa Vredestein.</li>
+                <li><strong>Overzichtelijke navigatie</strong> — bezoekers vinden direct wat ze zoeken.</li>
+                <li><strong>Contactmogelijkheden</strong> duidelijk en laagdrempelig gepresenteerd.</li>
+                <li><strong>Responsief en snel</strong> — werkt op elk scherm, laadt direct.</li>
+                <li><strong>Toegankelijk</strong> — ook bruikbaar met toetsenbord en screenreader.</li>
             </ul>
 
             <h2>Stack & aanpak</h2>
             <ul>
-                <li><strong>React + Vite</strong> — moderne tooling voor snelle builds en prettige development-ervaring.</li>
-                <li><strong>React Router</strong> met private routes — niemand komt ergens zonder de juiste rechten.</li>
-                <li><strong>Context/Reducer</strong> — één centrale plek voor alle auth-logica, geen chaos door de codebase.</li>
-                <li><strong>Refresh queue</strong> — als een sessie verloopt, wachten alle openstaande verzoeken netjes en hervatten zodra het token is vernieuwd. De gebruiker merkt er niets van.</li>
-                <li><strong>CSS tokens</strong> — consistente opmaak door de hele app, makkelijk te schalen.</li>
+                <li><strong>React + Vite</strong> — moderne tooling voor een snelle, onderhoudbare codebase.</li>
+                <li><strong>React Router</strong> — soepele navigatie zonder pagina-herlading.</li>
+                <li><strong>CSS tokens</strong> — consistente huisstijl door de hele site.</li>
+                <li><strong>Geoptimaliseerde afbeeldingen</strong> (AVIF/WebP) voor snelle laadtijden.</li>
             </ul>
 
-            <h2>Uitdagingen waar ik trots op ben</h2>
-            <h3>Token vernieuwing zonder frustratie</h3>
-            <p>Wanneer iemands sessie verliep terwijl ze bezig waren, moest de app stil op de achtergrond een nieuw token ophalen. Het lastige: meerdere verzoeken kunnen tegelijk verlopen. Met een refresh queue worden ze keurig in de rij gezet en allemaal hervat zodra het nieuwe token klaar is — geen dubbele calls, geen foutmeldingen.</p>
+            <h2>Waar ik op lette</h2>
+            <h3>Sfeer en vertrouwen</h3>
+            <p>Een website over een plek met geschiedenis vraagt om rust en karakter. De opmaak ondersteunt het verhaal in plaats van ervan af te leiden. Geen onnodige elementen, bewuste typografie, ademruimte.</p>
 
-            <h3>Toegankelijkheid die écht werkt</h3>
-            <p>Niet alleen mooi op groot scherm. Focus-states, aria-labels en volledige toetsenbordnavigatie. Tabellen en kaarten schalen soepel naar mobiel zonder dat de hiërarchie verloren gaat.</p>
+            <h3>Informatiehiërarchie</h3>
+            <p>Wat wil een bezoeker als eerste weten? Die vraag stuurde elke pagina-opbouw. Van de introductie tot de contactpagina: alles staat op de plek waar je het verwacht.</p>
 
-            <h3>Informatie-architectuur</h3>
-            <p>Wat zie je als eerste? Die vraag heb ik bewust beantwoord. De pagina is zo opgebouwd dat de meest relevante actie direct zichtbaar is, en de rest pas als je er klaar voor bent.</p>
+            <h3>Prestatieoptimalisatie</h3>
+            <p>Afbeeldingen in moderne formaten, lazy loading en een lichte bundle zorgen voor een snelle ervaring op elk apparaat en elke verbinding.</p>
 
             <h2>Resultaat</h2>
             <ul>
-                <li>Een dashboard dat studenten direct begrijpen, zonder handleiding.</li>
-                <li>Uitbreidbare componentstructuur, klaar voor nieuwe features.</li>
-                <li>Schone code die een andere developer direct kan oppakken.</li>
+                <li>Een website die het verhaal van Villa Vredestein helder en uitnodigend vertelt.</li>
+                <li>Schone, uitbreidbare code klaar voor toekomstige aanpassingen.</li>
+                <li>Snel, toegankelijk en prettig op elk scherm.</li>
             </ul>
 
             <h2>Live bekijken</h2>
@@ -92,41 +92,41 @@ const bodies = {
     en: () => (
         <>
             <h2>What is this project?</h2>
-            <p>Villa Vredestein needed a place where students could find their information right away. Quick login, see what you need immediately, no hassle. I designed and built the entire frontend: from the login screen to the role-protected environment.</p>
+            <p>Villa Vredestein is a place with a story. They needed a website that tells that story well: who they are, what they stand for, what they do and how to get in touch. Not a technical product, but a digital calling card that invites and builds trust.</p>
+            <p>I built the entire frontend: from design to working site.</p>
 
             <h2>What did I build?</h2>
             <ul>
-                <li><strong>Secure login with JWT</strong> — a kind of digital key that automatically renews itself without you noticing.</li>
-                <li><strong>Smart page protection</strong> — you only see the pages meant for you.</li>
-                <li><strong>Clear interface</strong> — one obvious action at the top, the rest in the right place. No scroll marathons.</li>
-                <li><strong>Accessible and responsive</strong> — works on desktop, tablet and phone, including with keyboard or screen reader.</li>
-                <li><strong>Fast load time</strong> — optimised images and modern build tools so everything loads instantly.</li>
+                <li><strong>Public website</strong> with information about the history, purpose and future of Villa Vredestein.</li>
+                <li><strong>Clear navigation</strong> — visitors find what they're looking for right away.</li>
+                <li><strong>Contact options</strong> presented clearly and accessibly.</li>
+                <li><strong>Responsive and fast</strong> — works on every screen, loads instantly.</li>
+                <li><strong>Accessible</strong> — works with keyboard and screen reader too.</li>
             </ul>
 
             <h2>Stack & approach</h2>
             <ul>
-                <li><strong>React + Vite</strong> — modern tooling for fast builds and a smooth development experience.</li>
-                <li><strong>React Router</strong> with private routes — nobody gets anywhere without the right permissions.</li>
-                <li><strong>Context/Reducer</strong> — one central place for all auth logic, no chaos scattered through the codebase.</li>
-                <li><strong>Refresh queue</strong> — when a session expires, all pending requests wait politely and resume once the new token is ready. The user never notices.</li>
-                <li><strong>CSS tokens</strong> — consistent styling throughout the app, easy to scale.</li>
+                <li><strong>React + Vite</strong> — modern tooling for a fast, maintainable codebase.</li>
+                <li><strong>React Router</strong> — smooth navigation without page reloads.</li>
+                <li><strong>CSS tokens</strong> — consistent brand styling throughout the site.</li>
+                <li><strong>Optimised images</strong> (AVIF/WebP) for fast load times.</li>
             </ul>
 
-            <h2>Challenges I'm proud of</h2>
-            <h3>Token renewal without friction</h3>
-            <p>When a session expired mid-use, the app had to silently fetch a new token in the background. The tricky part: multiple requests can expire simultaneously. With a refresh queue they're queued up and all resumed once the new token is ready — no duplicate calls, no error messages.</p>
+            <h2>What I paid attention to</h2>
+            <h3>Atmosphere and trust</h3>
+            <p>A website about a place with history calls for calm and character. The layout supports the story rather than distracting from it. No unnecessary elements, deliberate typography, breathing room.</p>
 
-            <h3>Accessibility that actually works</h3>
-            <p>Not just pretty on a large screen. Focus states, aria-labels and full keyboard navigation. Tables and cards scale smoothly to mobile without losing hierarchy.</p>
+            <h3>Information hierarchy</h3>
+            <p>What does a visitor want to know first? That question guided every page layout. From the introduction to the contact page: everything is where you expect it.</p>
 
-            <h3>Information architecture</h3>
-            <p>What do you see first? I answered that question deliberately. The page is structured so the most relevant action is immediately visible, and the rest appears when you're ready for it.</p>
+            <h3>Performance optimisation</h3>
+            <p>Images in modern formats, lazy loading and a light bundle ensure a fast experience on every device and connection.</p>
 
             <h2>Results</h2>
             <ul>
-                <li>A dashboard students understand immediately, without a manual.</li>
-                <li>Scalable component structure, ready for new features.</li>
-                <li>Clean code that another developer can pick up straight away.</li>
+                <li>A website that tells the story of Villa Vredestein clearly and invitingly.</li>
+                <li>Clean, extendable code ready for future changes.</li>
+                <li>Fast, accessible and comfortable on every screen.</li>
             </ul>
 
             <h2>View live</h2>
@@ -136,41 +136,41 @@ const bodies = {
     fr: () => (
         <>
             <h2>Qu'est-ce que ce projet ?</h2>
-            <p>Villa Vredestein avait besoin d'un endroit où les étudiants pouvaient trouver leurs informations directement. Connexion rapide, voir ce dont vous avez besoin immédiatement, sans tracas. J'ai conçu et construit l'intégralité du frontend : de l'écran de connexion à l'environnement protégé par rôle.</p>
+            <p>Villa Vredestein est un endroit avec une histoire. Ils avaient besoin d'un site web qui raconte bien cette histoire : qui ils sont, ce pour quoi ils se battent, ce qu'ils font et comment les contacter. Pas un produit technique, mais une carte de visite numérique qui invite et inspire confiance.</p>
+            <p>J'ai construit l'intégralité du frontend : du design au site fonctionnel.</p>
 
             <h2>Qu'ai-je construit ?</h2>
             <ul>
-                <li><strong>Connexion sécurisée avec JWT</strong> — une sorte de clé numérique qui se renouvelle automatiquement sans que vous le remarquiez.</li>
-                <li><strong>Protection intelligente des pages</strong> — vous ne voyez que les pages qui vous sont destinées.</li>
-                <li><strong>Interface claire</strong> — une action évidente en haut, le reste à la bonne place. Pas de marathon de défilement.</li>
-                <li><strong>Accessible et responsive</strong> — fonctionne sur desktop, tablette et téléphone, y compris avec le clavier ou un lecteur d'écran.</li>
-                <li><strong>Temps de chargement rapide</strong> — images optimisées et outils de build modernes pour que tout se charge instantanément.</li>
+                <li><strong>Site web public</strong> avec des informations sur l'histoire, l'objectif et l'avenir de Villa Vredestein.</li>
+                <li><strong>Navigation claire</strong> — les visiteurs trouvent directement ce qu'ils cherchent.</li>
+                <li><strong>Options de contact</strong> présentées clairement et accessiblement.</li>
+                <li><strong>Responsive et rapide</strong> — fonctionne sur tous les écrans, se charge instantanément.</li>
+                <li><strong>Accessible</strong> — utilisable aussi avec le clavier et un lecteur d'écran.</li>
             </ul>
 
             <h2>Stack & approche</h2>
             <ul>
-                <li><strong>React + Vite</strong> — outillage moderne pour des builds rapides et une expérience de développement fluide.</li>
-                <li><strong>React Router</strong> avec routes privées — personne n'accède nulle part sans les bonnes autorisations.</li>
-                <li><strong>Context/Reducer</strong> — un seul endroit central pour toute la logique d'auth, pas de chaos dans la codebase.</li>
-                <li><strong>File de rafraîchissement</strong> — quand une session expire, toutes les requêtes en attente patientent et reprennent dès que le nouveau token est prêt. L'utilisateur ne remarque rien.</li>
-                <li><strong>Tokens CSS</strong> — style cohérent dans toute l'application, facile à faire évoluer.</li>
+                <li><strong>React + Vite</strong> — outillage moderne pour une base de code rapide et maintenable.</li>
+                <li><strong>React Router</strong> — navigation fluide sans rechargement de page.</li>
+                <li><strong>Tokens CSS</strong> — charte graphique cohérente sur tout le site.</li>
+                <li><strong>Images optimisées</strong> (AVIF/WebP) pour des temps de chargement rapides.</li>
             </ul>
 
-            <h2>Défis dont je suis fière</h2>
-            <h3>Renouvellement de token sans friction</h3>
-            <p>Quand une session expirait en cours d'utilisation, l'application devait silencieusement récupérer un nouveau token en arrière-plan. La difficulté : plusieurs requêtes peuvent expirer simultanément. Avec une file de rafraîchissement, elles sont mises en file d'attente et toutes reprises une fois le nouveau token prêt — pas d'appels en double, pas de messages d'erreur.</p>
+            <h2>Ce à quoi j'ai fait attention</h2>
+            <h3>Atmosphère et confiance</h3>
+            <p>Un site web sur un lieu chargé d'histoire demande calme et caractère. La mise en page soutient l'histoire plutôt que de la distraire. Pas d'éléments superflus, typographie soignée, espace pour respirer.</p>
 
-            <h3>Accessibilité qui fonctionne vraiment</h3>
-            <p>Pas seulement joli sur grand écran. États de focus, aria-labels et navigation complète au clavier. Les tableaux et cartes s'adaptent au mobile sans perdre la hiérarchie.</p>
+            <h3>Hiérarchie de l'information</h3>
+            <p>Que veut savoir un visiteur en premier ? Cette question a guidé la construction de chaque page. De l'introduction à la page de contact : tout est là où on l'attend.</p>
 
-            <h3>Architecture de l'information</h3>
-            <p>Qu'est-ce qu'on voit en premier ? J'ai répondu à cette question délibérément. La page est structurée pour que l'action la plus pertinente soit immédiatement visible, le reste apparaissant quand vous êtes prêt.</p>
+            <h3>Optimisation des performances</h3>
+            <p>Images en formats modernes, chargement différé et bundle léger garantissent une expérience rapide sur chaque appareil et connexion.</p>
 
             <h2>Résultats</h2>
             <ul>
-                <li>Un tableau de bord que les étudiants comprennent immédiatement, sans manuel.</li>
-                <li>Structure de composants évolutive, prête pour de nouvelles fonctionnalités.</li>
-                <li>Code propre qu'un autre développeur peut reprendre directement.</li>
+                <li>Un site qui raconte l'histoire de Villa Vredestein clairement et de façon accueillante.</li>
+                <li>Code propre et extensible, prêt pour de futures modifications.</li>
+                <li>Rapide, accessible et agréable sur tous les écrans.</li>
             </ul>
 
             <h2>Voir en live</h2>
@@ -180,41 +180,41 @@ const bodies = {
     de: () => (
         <>
             <h2>Was ist dieses Projekt?</h2>
-            <p>Villa Vredestein brauchte einen Ort, wo Studenten ihre Informationen sofort finden konnten. Schnelles Einloggen, direkt sehen was man braucht, kein Aufwand. Ich habe das gesamte Frontend entworfen und gebaut: vom Login-Bildschirm bis zur rollengeschützten Umgebung.</p>
+            <p>Villa Vredestein ist ein Ort mit einer Geschichte. Sie brauchten eine Website, die diese Geschichte gut erzählt: wer sie sind, wofür sie stehen, was sie tun und wie man Kontakt aufnimmt. Kein technisches Produkt, sondern eine digitale Visitenkarte, die einlädt und Vertrauen aufbaut.</p>
+            <p>Ich habe das gesamte Frontend gebaut: vom Entwurf bis zur fertigen Website.</p>
 
             <h2>Was habe ich gebaut?</h2>
             <ul>
-                <li><strong>Sicheres Login mit JWT</strong> — eine Art digitaler Schlüssel, der sich automatisch erneuert, ohne dass man es bemerkt.</li>
-                <li><strong>Intelligenter Seitenschutz</strong> — du siehst nur die Seiten, die für dich bestimmt sind.</li>
-                <li><strong>Übersichtliche Benutzeroberfläche</strong> — eine klare Aktion oben, der Rest am richtigen Platz. Kein Scroll-Marathon.</li>
-                <li><strong>Zugänglich und responsiv</strong> — funktioniert auf Desktop, Tablet und Telefon, auch mit Tastatur oder Screenreader.</li>
-                <li><strong>Schnelle Ladezeit</strong> — optimierte Bilder und moderne Build-Tools für sofortiges Laden.</li>
+                <li><strong>Öffentliche Website</strong> mit Informationen über die Geschichte, das Ziel und die Zukunft von Villa Vredestein.</li>
+                <li><strong>Übersichtliche Navigation</strong> — Besucher finden sofort, was sie suchen.</li>
+                <li><strong>Kontaktmöglichkeiten</strong> klar und niedrigschwellig präsentiert.</li>
+                <li><strong>Responsiv und schnell</strong> — funktioniert auf jedem Bildschirm, lädt sofort.</li>
+                <li><strong>Zugänglich</strong> — auch mit Tastatur und Screenreader nutzbar.</li>
             </ul>
 
             <h2>Stack & Ansatz</h2>
             <ul>
-                <li><strong>React + Vite</strong> — modernes Tooling für schnelle Builds und eine angenehme Entwicklungserfahrung.</li>
-                <li><strong>React Router</strong> mit privaten Routen — niemand kommt irgendwo hin ohne die richtigen Berechtigungen.</li>
-                <li><strong>Context/Reducer</strong> — ein zentraler Ort für die gesamte Auth-Logik, kein Chaos durch die Codebase.</li>
-                <li><strong>Refresh Queue</strong> — wenn eine Session abläuft, warten alle ausstehenden Anfragen ordentlich und werden fortgesetzt, sobald das neue Token bereit ist. Der Nutzer merkt nichts davon.</li>
-                <li><strong>CSS-Tokens</strong> — einheitliches Styling durch die gesamte App, einfach zu skalieren.</li>
+                <li><strong>React + Vite</strong> — modernes Tooling für eine schnelle, wartbare Codebasis.</li>
+                <li><strong>React Router</strong> — flüssige Navigation ohne Seitenneuladen.</li>
+                <li><strong>CSS-Tokens</strong> — konsistentes Corporate Design über die gesamte Website.</li>
+                <li><strong>Optimierte Bilder</strong> (AVIF/WebP) für schnelle Ladezeiten.</li>
             </ul>
 
-            <h2>Herausforderungen, auf die ich stolz bin</h2>
-            <h3>Token-Erneuerung ohne Frustration</h3>
-            <p>Wenn eine Session während der Nutzung ablief, musste die App still im Hintergrund ein neues Token holen. Das Knifflige: Mehrere Anfragen können gleichzeitig ablaufen. Mit einer Refresh Queue werden sie ordentlich in die Warteschlange gestellt und alle fortgesetzt, sobald das neue Token bereit ist — keine doppelten Aufrufe, keine Fehlermeldungen.</p>
+            <h2>Worauf ich geachtet habe</h2>
+            <h3>Atmosphäre und Vertrauen</h3>
+            <p>Eine Website über einen Ort mit Geschichte braucht Ruhe und Charakter. Das Layout unterstützt die Geschichte, anstatt davon abzulenken. Keine unnötigen Elemente, bewusste Typografie, Atemraum.</p>
 
-            <h3>Barrierefreiheit, die wirklich funktioniert</h3>
-            <p>Nicht nur schön auf großem Bildschirm. Focus-States, Aria-Labels und vollständige Tastaturnavigation. Tabellen und Karten skalieren fließend auf Mobilgeräte ohne die Hierarchie zu verlieren.</p>
+            <h3>Informationshierarchie</h3>
+            <p>Was möchte ein Besucher als erstes wissen? Diese Frage steuerte jeden Seitenaufbau. Von der Einleitung bis zur Kontaktseite: alles ist dort, wo man es erwartet.</p>
 
-            <h3>Informationsarchitektur</h3>
-            <p>Was sieht man zuerst? Diese Frage habe ich bewusst beantwortet. Die Seite ist so aufgebaut, dass die relevanteste Aktion sofort sichtbar ist und der Rest erscheint, wenn man bereit dafür ist.</p>
+            <h3>Leistungsoptimierung</h3>
+            <p>Bilder in modernen Formaten, Lazy Loading und ein leichtes Bundle sorgen für eine schnelle Erfahrung auf jedem Gerät und jeder Verbindung.</p>
 
             <h2>Ergebnis</h2>
             <ul>
-                <li>Ein Dashboard, das Studenten sofort verstehen, ohne Anleitung.</li>
-                <li>Skalierbare Komponentenstruktur, bereit für neue Features.</li>
-                <li>Sauberer Code, den ein anderer Entwickler direkt übernehmen kann.</li>
+                <li>Eine Website, die die Geschichte von Villa Vredestein klar und einladend erzählt.</li>
+                <li>Sauberer, erweiterbarer Code, bereit für zukünftige Änderungen.</li>
+                <li>Schnell, zugänglich und angenehm auf jedem Bildschirm.</li>
             </ul>
 
             <h2>Live ansehen</h2>
@@ -224,41 +224,41 @@ const bodies = {
     es: () => (
         <>
             <h2>¿Qué es este proyecto?</h2>
-            <p>Villa Vredestein necesitaba un lugar donde los estudiantes pudieran encontrar su información directamente. Inicio de sesión rápido, ver lo que necesitas de inmediato, sin complicaciones. Diseñé y construí el frontend completo: desde la pantalla de inicio de sesión hasta el entorno protegido por rol.</p>
+            <p>Villa Vredestein es un lugar con una historia. Necesitaban un sitio web que contara bien esa historia: quiénes son, por qué luchan, qué hacen y cómo contactarlos. No un producto técnico, sino una tarjeta de visita digital que invita y genera confianza.</p>
+            <p>Construí el frontend completo: desde el diseño hasta el sitio funcionando.</p>
 
             <h2>¿Qué construí?</h2>
             <ul>
-                <li><strong>Inicio de sesión seguro con JWT</strong> — una especie de llave digital que se renueva automáticamente sin que te des cuenta.</li>
-                <li><strong>Protección inteligente de páginas</strong> — solo ves las páginas destinadas a ti.</li>
-                <li><strong>Interfaz clara</strong> — una acción obvia arriba, el resto en el lugar correcto. Sin maratones de desplazamiento.</li>
-                <li><strong>Accesible y responsivo</strong> — funciona en escritorio, tablet y teléfono, incluso con teclado o lector de pantalla.</li>
-                <li><strong>Tiempo de carga rápido</strong> — imágenes optimizadas y herramientas de build modernas para que todo cargue al instante.</li>
+                <li><strong>Sitio web público</strong> con información sobre la historia, el propósito y el futuro de Villa Vredestein.</li>
+                <li><strong>Navegación clara</strong> — los visitantes encuentran lo que buscan de inmediato.</li>
+                <li><strong>Opciones de contacto</strong> presentadas de forma clara y accesible.</li>
+                <li><strong>Responsivo y rápido</strong> — funciona en cualquier pantalla, carga al instante.</li>
+                <li><strong>Accesible</strong> — también funciona con teclado y lector de pantalla.</li>
             </ul>
 
             <h2>Stack & enfoque</h2>
             <ul>
-                <li><strong>React + Vite</strong> — herramientas modernas para builds rápidas y una experiencia de desarrollo fluida.</li>
-                <li><strong>React Router</strong> con rutas privadas — nadie accede a nada sin los permisos correctos.</li>
-                <li><strong>Context/Reducer</strong> — un lugar central para toda la lógica de auth, sin caos por el código.</li>
-                <li><strong>Cola de refresco</strong> — cuando una sesión expira, todas las solicitudes pendientes esperan y se reanudan una vez que el nuevo token está listo. El usuario nunca lo nota.</li>
-                <li><strong>Tokens CSS</strong> — estilos consistentes en toda la app, fácil de escalar.</li>
+                <li><strong>React + Vite</strong> — herramientas modernas para una base de código rápida y mantenible.</li>
+                <li><strong>React Router</strong> — navegación fluida sin recargas de página.</li>
+                <li><strong>Tokens CSS</strong> — identidad visual consistente en todo el sitio.</li>
+                <li><strong>Imágenes optimizadas</strong> (AVIF/WebP) para tiempos de carga rápidos.</li>
             </ul>
 
-            <h2>Retos de los que estoy orgullosa</h2>
-            <h3>Renovación de token sin fricción</h3>
-            <p>Cuando una sesión expiraba mientras se usaba, la app tenía que obtener silenciosamente un nuevo token en segundo plano. Lo complicado: varias solicitudes pueden expirar simultáneamente. Con una cola de refresco se ponen en cola y todas se reanudan cuando el nuevo token está listo — sin llamadas duplicadas, sin mensajes de error.</p>
+            <h2>En qué me fijé</h2>
+            <h3>Atmósfera y confianza</h3>
+            <p>Un sitio web sobre un lugar con historia requiere calma y carácter. El diseño apoya la historia en lugar de distraer de ella. Sin elementos innecesarios, tipografía deliberada, espacio para respirar.</p>
 
-            <h3>Accesibilidad que realmente funciona</h3>
-            <p>No solo bonito en pantalla grande. Estados de foco, aria-labels y navegación completa por teclado. Tablas y tarjetas se adaptan al móvil sin perder la jerarquía.</p>
+            <h3>Jerarquía de información</h3>
+            <p>¿Qué quiere saber primero un visitante? Esa pregunta guió cada diseño de página. Desde la introducción hasta la página de contacto: todo está donde se espera.</p>
 
-            <h3>Arquitectura de información</h3>
-            <p>¿Qué ves primero? Respondí esa pregunta deliberadamente. La página está estructurada para que la acción más relevante sea inmediatamente visible, y el resto aparece cuando estás listo.</p>
+            <h3>Optimización del rendimiento</h3>
+            <p>Imágenes en formatos modernos, carga diferida y un bundle ligero garantizan una experiencia rápida en cada dispositivo y conexión.</p>
 
             <h2>Resultados</h2>
             <ul>
-                <li>Un panel que los estudiantes entienden de inmediato, sin manual.</li>
-                <li>Estructura de componentes escalable, lista para nuevas funciones.</li>
-                <li>Código limpio que otro desarrollador puede retomar directamente.</li>
+                <li>Un sitio que cuenta la historia de Villa Vredestein de forma clara y acogedora.</li>
+                <li>Código limpio y extensible listo para cambios futuros.</li>
+                <li>Rápido, accesible y cómodo en cualquier pantalla.</li>
             </ul>
 
             <h2>Ver en vivo</h2>
@@ -268,41 +268,41 @@ const bodies = {
     it: () => (
         <>
             <h2>Cos'è questo progetto?</h2>
-            <p>Villa Vredestein aveva bisogno di un posto dove gli studenti potessero trovare le loro informazioni subito. Login rapido, vedere ciò di cui hai bisogno immediatamente, senza complicazioni. Ho progettato e costruito l'intero frontend: dalla schermata di login all'ambiente protetto per ruolo.</p>
+            <p>Villa Vredestein è un posto con una storia. Avevano bisogno di un sito web che raccontasse bene quella storia: chi sono, per cosa si battono, cosa fanno e come contattarli. Non un prodotto tecnico, ma un biglietto da visita digitale che invita e crea fiducia.</p>
+            <p>Ho costruito l'intero frontend: dal design al sito funzionante.</p>
 
             <h2>Cosa ho costruito?</h2>
             <ul>
-                <li><strong>Login sicuro con JWT</strong> — una sorta di chiave digitale che si rinnova automaticamente senza che te ne accorga.</li>
-                <li><strong>Protezione intelligente delle pagine</strong> — vedi solo le pagine destinate a te.</li>
-                <li><strong>Interfaccia chiara</strong> — un'azione ovvia in cima, il resto al posto giusto. Niente maratone di scorrimento.</li>
-                <li><strong>Accessibile e responsive</strong> — funziona su desktop, tablet e telefono, anche con tastiera o screen reader.</li>
-                <li><strong>Tempo di caricamento rapido</strong> — immagini ottimizzate e strumenti di build moderni per un caricamento istantaneo.</li>
+                <li><strong>Sito web pubblico</strong> con informazioni sulla storia, lo scopo e il futuro di Villa Vredestein.</li>
+                <li><strong>Navigazione chiara</strong> — i visitatori trovano subito quello che cercano.</li>
+                <li><strong>Opzioni di contatto</strong> presentate chiaramente e in modo accessibile.</li>
+                <li><strong>Responsive e veloce</strong> — funziona su qualsiasi schermo, si carica all'istante.</li>
+                <li><strong>Accessibile</strong> — utilizzabile anche con tastiera e screen reader.</li>
             </ul>
 
             <h2>Stack & approccio</h2>
             <ul>
-                <li><strong>React + Vite</strong> — strumenti moderni per build veloci e un'esperienza di sviluppo fluida.</li>
-                <li><strong>React Router</strong> con route private — nessuno accede a nulla senza i permessi giusti.</li>
-                <li><strong>Context/Reducer</strong> — un posto centrale per tutta la logica di auth, niente caos nel codice.</li>
-                <li><strong>Coda di refresh</strong> — quando una sessione scade, tutte le richieste in sospeso aspettano e riprendono quando il nuovo token è pronto. L'utente non se ne accorge mai.</li>
-                <li><strong>Token CSS</strong> — stile coerente in tutta l'app, facile da scalare.</li>
+                <li><strong>React + Vite</strong> — strumenti moderni per una base di codice veloce e manutenibile.</li>
+                <li><strong>React Router</strong> — navigazione fluida senza ricaricamenti di pagina.</li>
+                <li><strong>Token CSS</strong> — identità visiva coerente su tutto il sito.</li>
+                <li><strong>Immagini ottimizzate</strong> (AVIF/WebP) per tempi di caricamento rapidi.</li>
             </ul>
 
-            <h2>Sfide di cui sono orgogliosa</h2>
-            <h3>Rinnovo del token senza attrito</h3>
-            <p>Quando una sessione scadeva durante l'uso, l'app doveva silenziosamente recuperare un nuovo token in background. La difficoltà: più richieste possono scadere contemporaneamente. Con una coda di refresh vengono messe in coda e riprese tutte quando il nuovo token è pronto — nessuna chiamata duplicata, nessun messaggio di errore.</p>
+            <h2>A cosa ho prestato attenzione</h2>
+            <h3>Atmosfera e fiducia</h3>
+            <p>Un sito web su un posto con storia richiede calma e carattere. Il layout supporta la storia invece di distrarre da essa. Nessun elemento inutile, tipografia deliberata, spazio per respirare.</p>
 
-            <h3>Accessibilità che funziona davvero</h3>
-            <p>Non solo bello su schermo grande. Focus state, aria-label e navigazione completa da tastiera. Tabelle e schede si adattano al mobile senza perdere la gerarchia.</p>
+            <h3>Gerarchia delle informazioni</h3>
+            <p>Cosa vuole sapere prima un visitatore? Questa domanda ha guidato ogni struttura di pagina. Dall'introduzione alla pagina dei contatti: tutto è dove ci si aspetta.</p>
 
-            <h3>Architettura delle informazioni</h3>
-            <p>Cosa vedi per prima? Ho risposto a quella domanda deliberatamente. La pagina è strutturata in modo che l'azione più rilevante sia immediatamente visibile, il resto appare quando sei pronto.</p>
+            <h3>Ottimizzazione delle prestazioni</h3>
+            <p>Immagini in formati moderni, lazy loading e un bundle leggero garantiscono un'esperienza veloce su ogni dispositivo e connessione.</p>
 
             <h2>Risultati</h2>
             <ul>
-                <li>Una dashboard che gli studenti capiscono subito, senza manuale.</li>
-                <li>Struttura di componenti scalabile, pronta per nuove funzionalità.</li>
-                <li>Codice pulito che un altro sviluppatore può riprendere direttamente.</li>
+                <li>Un sito che racconta la storia di Villa Vredestein in modo chiaro e accogliente.</li>
+                <li>Codice pulito ed estendibile pronto per future modifiche.</li>
+                <li>Veloce, accessibile e confortevole su qualsiasi schermo.</li>
             </ul>
 
             <h2>Vedi live</h2>
@@ -312,12 +312,12 @@ const bodies = {
 };
 
 const ui = {
-    nl: { title: "Villa Vredestein – Studenten Dashboard (Frontend)", summary: "Ik bouwde het volledige React-frontend voor Villa Vredestein: veilig inloggen met JWT, slimme rolbeveiliging en een interface die studenten direct begrijpen zonder handleiding.", liveBtn: "Bekijk live demo ↗", backBtn: "← Terug naar Portfolio" },
-    en: { title: "Villa Vredestein – Student Dashboard (Frontend)", summary: "I built the complete React frontend for Villa Vredestein: secure JWT login, smart role-based protection and an interface students understand immediately without a manual.", liveBtn: "View live demo ↗", backBtn: "← Back to Portfolio" },
-    fr: { title: "Villa Vredestein – Tableau de bord étudiant (Frontend)", summary: "J'ai construit le frontend React complet pour Villa Vredestein : connexion JWT sécurisée, protection intelligente par rôle et une interface que les étudiants comprennent immédiatement sans manuel.", liveBtn: "Voir la démo live ↗", backBtn: "← Retour au Portfolio" },
-    de: { title: "Villa Vredestein – Studenten-Dashboard (Frontend)", summary: "Ich habe das komplette React-Frontend für Villa Vredestein gebaut: sicheres JWT-Login, intelligenter Rollenschutz und eine Benutzeroberfläche, die Studenten sofort verstehen.", liveBtn: "Live-Demo ansehen ↗", backBtn: "← Zurück zum Portfolio" },
-    es: { title: "Villa Vredestein – Panel de Estudiantes (Frontend)", summary: "Construí el frontend React completo para Villa Vredestein: inicio de sesión JWT seguro, protección inteligente por roles y una interfaz que los estudiantes entienden de inmediato.", liveBtn: "Ver demo en vivo ↗", backBtn: "← Volver al Portfolio" },
-    it: { title: "Villa Vredestein – Dashboard Studenti (Frontend)", summary: "Ho costruito il frontend React completo per Villa Vredestein: login JWT sicuro, protezione intelligente per ruolo e un'interfaccia che gli studenti capiscono subito senza manuale.", liveBtn: "Vedi demo live ↗", backBtn: "← Torna al Portfolio" },
+    nl: { title: "Villa Vredestein – Publieke website (Frontend)", summary: "Een uitnodigende publieke website voor Villa Vredestein: geschiedenis, doel en toekomst helder gepresenteerd. Gebouwd met React, snel, toegankelijk en prettig op elk scherm.", liveBtn: "Bekijk de website ↗", backBtn: "← Terug naar Portfolio" },
+    en: { title: "Villa Vredestein – Public website (Frontend)", summary: "An inviting public website for Villa Vredestein: history, purpose and future clearly presented. Built with React, fast, accessible and comfortable on every screen.", liveBtn: "View the website ↗", backBtn: "← Back to Portfolio" },
+    fr: { title: "Villa Vredestein – Site web public (Frontend)", summary: "Un site web public accueillant pour Villa Vredestein : histoire, objectif et avenir présentés clairement. Construit avec React, rapide, accessible et agréable sur tous les écrans.", liveBtn: "Voir le site ↗", backBtn: "← Retour au Portfolio" },
+    de: { title: "Villa Vredestein – Öffentliche Website (Frontend)", summary: "Eine einladende öffentliche Website für Villa Vredestein: Geschichte, Ziel und Zukunft klar präsentiert. Mit React gebaut, schnell, zugänglich und angenehm auf jedem Bildschirm.", liveBtn: "Website ansehen ↗", backBtn: "← Zurück zum Portfolio" },
+    es: { title: "Villa Vredestein – Sitio web público (Frontend)", summary: "Un sitio web público acogedor para Villa Vredestein: historia, propósito y futuro presentados claramente. Construido con React, rápido, accesible y cómodo en cualquier pantalla.", liveBtn: "Ver el sitio web ↗", backBtn: "← Volver al Portfolio" },
+    it: { title: "Villa Vredestein – Sito web pubblico (Frontend)", summary: "Un sito web pubblico accogliente per Villa Vredestein: storia, scopo e futuro presentati chiaramente. Costruito con React, veloce, accessibile e confortevole su qualsiasi schermo.", liveBtn: "Vedi il sito ↗", backBtn: "← Torna al Portfolio" },
 };
 
 export default function FrontendVredestein() {
@@ -349,15 +349,14 @@ export default function FrontendVredestein() {
                     <span className="tags">
                         <span className="tag">React</span>
                         <span className="tag">Vite</span>
-                        <span className="tag">JWT</span>
                         <span className="tag">UX/UI</span>
-                        <span className="tag">API</span>
+                        <span className="tag">Responsive</span>
                     </span>
                 </div>
 
                 <div className="article-cover">
                     <div className="media">
-                        <GuardedPicture base={COVER_BASE} fallback={FallbackFront} alt="Villa Vredestein – Student Dashboard Frontend" />
+                        <GuardedPicture base={COVER_BASE} fallback={FallbackFront} alt="Villa Vredestein – publieke website" />
                     </div>
                 </div>
 
