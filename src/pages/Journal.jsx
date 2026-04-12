@@ -91,23 +91,25 @@ export default function Journal() {
         }
         .journal-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,.45); }
 
-        .card-link { display: block; color: inherit; text-decoration: none; height: 100%; }
+        .card-link { display: flex; flex-direction: column; color: inherit; text-decoration: none; height: 100%; }
 
-        /* Afbeelding gecentreerd in de card */
+        /* Afbeelding bovenaan de card */
         .card-img {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 180px;
-          background: var(--bg-alt);
+          width: 100%;
+          height: 200px;
           overflow: hidden;
-          margin: -20px -20px 12px;
+          flex-shrink: 0;
         }
-        .card-img picture, .card-img img {
-          max-width: 100%;
-          max-height: 100%;
-          object-fit: cover; 
-          border-radius: 14px 14px 0 0;
+        .card-img picture {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+        .card-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
         }
 
         .card-meta { font-size: .85rem; color: var(--muted); margin: 12px 16px 0; }
@@ -116,11 +118,11 @@ export default function Journal() {
 
         @media (max-width: 920px) {
           .journal-grid { grid-template-columns: repeat(2, 1fr); padding: 0 16px; }
-          .card-img { height: 180px; }
+          .card-img { height: 190px; }
         }
         @media (max-width: 600px) {
           .journal-grid { grid-template-columns: 1fr; padding: 0 12px; gap: 16px; }
-          .card-img { height: 150px; }
+          .card-img { height: 200px; }
         }
       `}</style>
         </section>
