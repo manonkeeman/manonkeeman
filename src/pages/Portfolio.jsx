@@ -42,7 +42,7 @@ const projects = [
     },
     {
         key: "frontend",
-        title: "Villa Vredestein – Webdevelopment",
+        title: "Webdevelopment - Villa Vredestein",
         tags: ["React", "Vite", "UX/UI", "SEO"],
         route: "/frontendvredestein",
         basePublic: PUB_FRONT,

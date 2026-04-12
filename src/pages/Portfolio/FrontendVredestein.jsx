@@ -46,7 +46,7 @@ function GuardedPicture({ base, fallback, alt, sizes = "(max-width: 920px) 100vw
 
 const content = {
     nl: {
-        title: "Villa Vredestein",
+        title: "Webdevelopment - Villa Vredestein",
         subtitle: "Publieke website",
         tagline: "Een plek met een verhaal.\nEen site die het vertelt.",
         intro: "Villa Vredestein vroeg om een website die uitnodigt, informeert en vertrouwen geeft. Geen overdaad,gewoon het verhaal van de plek, helder en mooi gepresenteerd.",
@@ -62,7 +62,7 @@ const content = {
         backBtn: "← Terug naar Portfolio",
     },
     en: {
-        title: "Villa Vredestein",
+        title: "Webdevelopment - Villa Vredestein",
         subtitle: "Public website",
         tagline: "A place with a story.\nA site that tells it.",
         intro: "Villa Vredestein needed a website that invites, informs and builds trust. No excess,just the story of the place, presented clearly and beautifully.",
@@ -78,7 +78,7 @@ const content = {
         backBtn: "← Back to Portfolio",
     },
     fr: {
-        title: "Villa Vredestein",
+        title: "Webdevelopment - Villa Vredestein",
         subtitle: "Site web public",
         tagline: "Un endroit avec une histoire.\nUn site qui la raconte.",
         intro: "Villa Vredestein avait besoin d'un site web qui invite, informe et inspire confiance. Pas d'excès,juste l'histoire du lieu, présentée clairement et joliment.",
@@ -94,7 +94,7 @@ const content = {
         backBtn: "← Retour au Portfolio",
     },
     de: {
-        title: "Villa Vredestein",
+        title: "Webdevelopment - Villa Vredestein",
         subtitle: "Öffentliche Website",
         tagline: "Ein Ort mit einer Geschichte.\nEine Website, die sie erzählt.",
         intro: "Villa Vredestein brauchte eine Website, die einlädt, informiert und Vertrauen aufbaut. Kein Überfluss,nur die Geschichte des Ortes, klar und schön präsentiert.",
@@ -110,7 +110,7 @@ const content = {
         backBtn: "← Zurück zum Portfolio",
     },
     es: {
-        title: "Villa Vredestein",
+        title: "Webdevelopment - Villa Vredestein",
         subtitle: "Sitio web público",
         tagline: "Un lugar con una historia.\nUn sitio que la cuenta.",
         intro: "Villa Vredestein necesitaba un sitio web que invite, informe y genere confianza. Sin excesos,solo la historia del lugar, presentada con claridad y belleza.",
@@ -126,7 +126,7 @@ const content = {
         backBtn: "← Volver al Portfolio",
     },
     it: {
-        title: "Villa Vredestein",
+        title: "Webdevelopment - Villa Vredestein",
         subtitle: "Sito web pubblico",
         tagline: "Un posto con una storia.\nUn sito che la racconta.",
         intro: "Villa Vredestein aveva bisogno di un sito web che invita, informa e crea fiducia. Nessun eccesso,solo la storia del posto, presentata in modo chiaro e bello.",

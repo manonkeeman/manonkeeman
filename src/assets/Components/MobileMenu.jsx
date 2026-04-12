@@ -39,9 +39,9 @@ export default function MobileMenu({ open, onClose }) {
 
                     <details>
                         <summary>{t('nav.portfolio')}</summary>
+                        <NavLink to="/backendstudentendashboard" onClick={onClose}>{t('nav.links.portfolio.backend')}</NavLink>
                         <NavLink to="/frontendvredestein" onClick={onClose}>{t('nav.links.portfolio.frontend')}</NavLink>
                         <NavLink to="/webdesignacupuncture" onClick={onClose}>{t('nav.links.portfolio.acupuncture')}</NavLink>
-                        <NavLink to="/backendstudentendashboard" onClick={onClose}>{t('nav.links.portfolio.backend')}</NavLink>
                     </details>
 
                     <details className="only-tall">

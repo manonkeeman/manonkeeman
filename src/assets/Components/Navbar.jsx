@@ -27,9 +27,9 @@ export default function Navbar() {
                     <div className="nav-group">
                         <NavLink to={{ pathname: "/", hash: "#portfolio" }}>{t('nav.portfolio')}</NavLink>
                         <div className="nav-dropdown">
+                            <NavLink to="/backendstudentendashboard">{t('nav.links.portfolio.backend')}</NavLink>
                             <NavLink to="/frontendvredestein">{t('nav.links.portfolio.frontend')}</NavLink>
                             <NavLink to="/webdesignacupuncture">{t('nav.links.portfolio.acupuncture')}</NavLink>
-                            <NavLink to="/backendstudentendashboard">{t('nav.links.portfolio.backend')}</NavLink>
                         </div>
                     </div>
 
