@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import FallbackAcu from "../../assets/Pics/Portfolio/WebdesignAcupuncture.jpeg";
 import Seo from "../../assets/Components/Seo.jsx";
 
 const COVER_BASE = "/portfolio/webdesign-acupuncture";
+const FallbackAcu = `${COVER_BASE}-800w.webp`;
 const LIVE_URL = "https://acupuncturebysaskia.com/over-saskia/";
 
 function useExistingFormats(base) {

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import FallbackBack from "../../assets/Pics/Portfolio/StudentenDashboardBackend.jpeg";
 import Seo from "../../assets/Components/Seo.jsx";
 
 const COVER_BASE = "/portfolio/studenten-dashboard-backend";
+const FallbackBack = `${COVER_BASE}-800w.webp`;
 
 function useExistingFormats(base) {
     const [state, setState] = useState({ webp: null, avif: null });

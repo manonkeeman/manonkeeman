@@ -1,14 +1,15 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { lazy, Suspense } from "react";
 import Seo from "../../assets/Components/Seo.jsx";
 
-// Artikelen
-import StorytellingForDevelopers from "./Storytelling.jsx";
-import FullStackDeveloper from "./FullStackDeveloper.jsx";
-import DesignChaos from "./DesignChaos.jsx";
-import ToekomstTech from "./ToekomstTech.jsx";
-import Luchtvaartfamilie2018 from "./Luchtvaartfamilie2018.jsx";
-import Korteverhalen365 from "./365Korteverhalen.jsx";
+// Artikelen — elk apart lazy geladen
+const StorytellingForDevelopers = lazy(() => import("./Storytelling.jsx"));
+const FullStackDeveloper         = lazy(() => import("./FullStackDeveloper.jsx"));
+const DesignChaos                = lazy(() => import("./DesignChaos.jsx"));
+const ToekomstTech               = lazy(() => import("./ToekomstTech.jsx"));
+const Luchtvaartfamilie2018      = lazy(() => import("./Luchtvaartfamilie2018.jsx"));
+const Korteverhalen365           = lazy(() => import("./365Korteverhalen.jsx"));
 
 function NotFound({ slug }) {
     return (
@@ -55,7 +56,13 @@ export default function ArticleRoute() {
                 description={t(`seo.journal.${key}.description`, { defaultValue: "" })}
                 path={`/journal/${slug}`}
             />
-            {article}
+            <Suspense fallback={
+                <div style={{ minHeight: "60vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <span style={{ color: "var(--muted)", fontSize: "0.95rem" }}>Loading…</span>
+                </div>
+            }>
+                {article}
+            </Suspense>
         </>
     );
 }

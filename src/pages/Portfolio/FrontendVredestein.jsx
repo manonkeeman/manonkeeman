@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import FallbackFront from "../../assets/Pics/Portfolio/VredesteinFrontend.jpeg";
 import Seo from "../../assets/Components/Seo.jsx";
 
 const COVER_BASE = "/portfolio/villa-vredestein-frontend";
+const FallbackFront = `${COVER_BASE}-800w.webp`;
 const LIVE_URL = "https://villavredestein.com";
 
 function useExistingFormats(base) {
