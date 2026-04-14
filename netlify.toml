@@ -11,7 +11,7 @@
   to = "/index.html"
   status = 200
 
-# Long-term cache for hashed Vite assets (JS/CSS with content hash in filename)
+# Long-term cache for hashed Vite assets (JS/CSS/fonts with content hash in filename)
 [[headers]]
   for = "/assets/*"
   [headers.values]
