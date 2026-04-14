@@ -1,9 +1,9 @@
 [build]
-command = "node scripts/resize.mjs && npm run build"
-publish = "dist"
+  command = "npm run build"
+  publish = "dist"
 
 [build.environment]
-NODE_VERSION = "18"
+  NODE_VERSION = "18"
 
 # SPA fallback — all routes handled by React Router
 [[redirects]]
@@ -11,39 +11,56 @@ NODE_VERSION = "18"
   to = "/index.html"
   status = 200
 
-# Long-term cache for hashed Vite assets
+# Long-term cache for hashed Vite assets (JS/CSS with content hash in filename)
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Cache images for 1 week
+# Cache images 30 days
 [[headers]]
   for = "/*.avif"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=2592000"
 
 [[headers]]
   for = "/*.webp"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=2592000"
 
 [[headers]]
   for = "/portfolio/*.avif"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=2592000"
 
 [[headers]]
   for = "/portfolio/*.webp"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=2592000"
+
+# Capital P — Linux (Netlify) is case-sensitive
+[[headers]]
+  for = "/Portfolio/*.avif"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/Portfolio/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
 
 [[headers]]
   for = "/journal/*.avif"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=2592000"
 
 [[headers]]
   for = "/journal/*.webp"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=2592000"
+
+# HTML never cached — always fresh
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { loadLocale } from '../../i18n/index.js';
 
 const LANGUAGES = [
   { code: 'nl', label: 'NL', name: 'Nederlands' },
@@ -18,8 +17,7 @@ export default function LanguageSwitcher() {
 
   const current = LANGUAGES.find(l => l.code === i18n.language) || LANGUAGES[1];
 
-  const change = async (code) => {
-    await loadLocale(code);
+  const change = (code) => {
     i18n.changeLanguage(code);
     localStorage.setItem('lang', code);
     setOpen(false);
