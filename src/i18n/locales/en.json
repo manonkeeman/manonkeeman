@@ -70,6 +70,15 @@
       "error": "Something went wrong. Please try again."
     }
   },
+  "newsletter": {
+    "label": "New articles in your inbox",
+    "sub": "No spam. Only when there's something new.",
+    "placeholder": "your@email.com",
+    "btn": "Subscribe",
+    "sending": "One moment...",
+    "success": "Done! You're on the list.",
+    "error": "Oops, please try again."
+  },
   "footer": {
     "rights": "All rights reserved | Code & Content - Manon Keeman"
   },

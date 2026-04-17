@@ -70,6 +70,15 @@
       "error": "Une erreur s'est produite. Veuillez réessayer."
     }
   },
+  "newsletter": {
+    "label": "Nouveaux articles dans votre boîte mail",
+    "sub": "Pas de spam. Seulement quand il y a du nouveau.",
+    "placeholder": "votre@email.fr",
+    "btn": "S'inscrire",
+    "sending": "Un instant...",
+    "success": "C'est fait ! Vous êtes sur la liste.",
+    "error": "Oups, veuillez réessayer."
+  },
   "footer": {
     "rights": "Tous droits réservés | Code & Contenu - Manon Keeman"
   },

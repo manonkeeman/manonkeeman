@@ -70,6 +70,15 @@
       "error": "Qualcosa è andato storto. Riprova."
     }
   },
+  "newsletter": {
+    "label": "Nuovi articoli nella tua casella",
+    "sub": "Niente spam. Solo quando c'è qualcosa di nuovo.",
+    "placeholder": "tua@email.it",
+    "btn": "Iscriviti",
+    "sending": "Un momento...",
+    "success": "Fatto! Sei sulla lista.",
+    "error": "Ops, riprova per favore."
+  },
   "footer": {
     "rights": "Tutti i diritti riservati | Codice & Contenuto - Manon Keeman"
   },

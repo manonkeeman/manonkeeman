@@ -70,6 +70,15 @@
       "error": "Er ging iets mis. Probeer het opnieuw."
     }
   },
+  "newsletter": {
+    "label": "Nieuwe artikelen in je inbox",
+    "sub": "Geen spam. Alleen als er iets nieuws is.",
+    "placeholder": "jouw@email.nl",
+    "btn": "Inschrijven",
+    "sending": "Moment...",
+    "success": "Gelukt! Je staat op de lijst.",
+    "error": "Oeps, probeer het opnieuw."
+  },
   "footer": {
     "rights": "Alle rechten voorbehouden | Code & Content - Manon Keeman"
   },

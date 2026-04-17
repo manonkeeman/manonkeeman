@@ -70,6 +70,15 @@
       "error": "Algo salió mal. Por favor inténtalo de nuevo."
     }
   },
+  "newsletter": {
+    "label": "Nuevos artículos en tu bandeja de entrada",
+    "sub": "Sin spam. Solo cuando haya algo nuevo.",
+    "placeholder": "tu@email.es",
+    "btn": "Suscribirme",
+    "sending": "Un momento...",
+    "success": "¡Listo! Estás en la lista.",
+    "error": "Vaya, por favor inténtalo de nuevo."
+  },
   "footer": {
     "rights": "Todos los derechos reservados | Código & Contenido - Manon Keeman"
   },

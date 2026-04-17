@@ -70,6 +70,15 @@
       "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
     }
   },
+  "newsletter": {
+    "label": "Neue Artikel in deinem Posteingang",
+    "sub": "Kein Spam. Nur wenn es etwas Neues gibt.",
+    "placeholder": "deine@email.de",
+    "btn": "Anmelden",
+    "sending": "Moment...",
+    "success": "Geschafft! Du stehst auf der Liste.",
+    "error": "Ups, bitte versuche es erneut."
+  },
   "footer": {
     "rights": "Alle Rechte vorbehalten | Code & Content - Manon Keeman"
   },
