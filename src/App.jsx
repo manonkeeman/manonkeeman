@@ -36,6 +36,14 @@ const BackendStudentenDashboard = lazy(() => import("./pages/Portfolio/BackendSt
 import "./Styles.css";
 
 function Layout({ children }) {
+    useEffect(() => {
+        const shell = document.getElementById("app-shell");
+        if (!shell) return;
+        shell.style.opacity = "0";
+        const t = setTimeout(() => shell.remove(), 260);
+        return () => clearTimeout(t);
+    }, []);
+
     return (
         <>
             <Navbar />
