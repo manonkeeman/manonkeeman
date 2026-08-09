@@ -1,7 +1,7 @@
 import { FaReact, FaGitAlt } from "react-icons/fa";
 import { SiSpringboot, SiPostgresql, SiFigma } from "react-icons/si";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link } from "../assets/Components/LocaleLink.jsx";
 import Seo from "../assets/Components/Seo.jsx";
 import JsonLd from "../assets/Components/JsonLd.jsx";
 

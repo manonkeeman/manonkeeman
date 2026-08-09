@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "../../assets/Components/LocaleLink.jsx";
 import { useTranslation } from "react-i18next";
 import Seo from "../../assets/Components/Seo.jsx";
 import JsonLd from "../../assets/Components/JsonLd.jsx";
@@ -109,6 +109,21 @@ const content = {
         challengeTitle: "La sfida",
         challenge: "Un'officina specializzata in auto americane ha bisogno di un sito che sembri un poster cinematografico, non una pagina prodotto.",
         backBtn: "← Torna al Portfolio",
+    },
+    uk: {
+        title: "Концепт вебдизайну · The Big Three",
+        subtitle: "Концепт сайту · в розробці",
+        tagline: "Зроблено в Америці.\nОбслуговується в Нунспіт.",
+        badge: "Концепт",
+        intro: "The Big Three — спеціалізований гараж американських автомобілів у Нунспіт. Я розробила концепт сайту, що відображає характер бренду: сміливий, автентичний і з повним характером.",
+        cards: [
+            { label: "Що", text: "Повністю кастомний вебдизайн для гаражу американських автомобілів." },
+            { label: "Як", text: "Концепт в HTML/CSS. Темна тема з американським характером: драматична типографіка, палітра червоно-біло-синього." },
+            { label: "Статус", text: "На стадії обговорення. Комерційна пропозиція готова. Цей концепт служить візуальним напрямком для клієнта." },
+        ],
+        challengeTitle: "Виклик",
+        challenge: "Гараж американських автомобілів потребує сайту, що відчувається як кіноафіша, а не як сторінка продукту.",
+        backBtn: "← Назад до Портфоліо",
     },
 };
 

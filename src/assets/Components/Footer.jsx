@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link } from "./LocaleLink.jsx";
+import { useLangPrefix } from "./useLangPrefix.js";
 import { useTranslation } from "react-i18next";
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { SiSubstack } from "react-icons/si";
@@ -6,6 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
     const { t } = useTranslation();
+    const prefix = useLangPrefix();
 
     return (
         <footer className="footer">
@@ -13,14 +15,14 @@ export default function Footer() {
                 {/* Col 1 — Brand */}
                 <div className="footer-col footer-brand">
                     <img src="/logo-compact-dark.svg" alt="ManonIT" height="44" style={{ borderRadius: 0 }} />
-                    <p className="footer-tagline">I make beautiful websites.<br/>You dream it, I Manon it.</p>
+                    <p className="footer-tagline">{t('footer.tagline')}</p>
                 </div>
 
                 {/* Col 2 — Nav */}
                 <nav className="footer-col footer-nav" aria-label="Footer navigation">
                     <p className="footer-heading">Navigation</p>
                     <Link to="/">{t('nav.home')}</Link>
-                    <a href="/#portfolio">{t('nav.portfolio')}</a>
+                    <a href={`${prefix}/#portfolio`}>{t('nav.portfolio')}</a>
                     <Link to="/frontendvredestein">{t('nav.links.portfolio.frontend')}</Link>
                     <Link to="/webdesignacupuncture">{t('nav.links.portfolio.acupuncture')}</Link>
                     <Link to="/thebigthree">{t('nav.links.portfolio.bigthree')}</Link>
@@ -29,7 +31,8 @@ export default function Footer() {
                     <Link to="/journal">{t('nav.journal')}</Link>
                     <Link to="/journal/pastelvanbuiten">{t('nav.links.journal.pastelvanbuiten')}</Link>
                     <Link to="/about">{t('nav.about')}</Link>
-                    <a href="/#contact">{t('nav.contact')}</a>
+                    <Link to="/faq">{t('nav.faq')}</Link>
+                    <a href={`${prefix}/#contact`}>{t('nav.contact')}</a>
                 </nav>
 
                 {/* Col 3 — Legal */}

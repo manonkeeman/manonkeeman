@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { isEnPath } from "./i18n/langPath.js";
 
 // Layout components (always needed)
 import ScrollToTop from "./assets/Components/ScrollToTop";
@@ -22,6 +23,7 @@ const Contact       = lazy(() => import("./pages/Contact.jsx"));
 const About        = lazy(() => import("./pages/About.jsx"));
 const Journal      = lazy(() => import("./pages/Journal.jsx"));
 const ArticleRoute = lazy(() => import("./pages/ArticlesJournal/ArticleRoute.jsx"));
+const Faq          = lazy(() => import("./pages/Faq.jsx"));
 
 // Legal pages
 const Privacy  = lazy(() => import("./pages/Privacy.jsx"));
@@ -92,6 +94,48 @@ function HomeSeo() {
     );
 }
 
+// /en/... is de enige URL-gestuurde taal naast NL (default). Bij het wisselen
+// tussen die twee delen van de boom zet dit i18n gelijk aan de URL; FR/DE/ES/IT/UK
+// blijven client-side taalkeuzes die de URL niet aanraken (zie LanguageSwitcher).
+function LangSync() {
+    const location = useLocation();
+    const { i18n } = useTranslation();
+
+    useEffect(() => {
+        const wantsEn = isEnPath(location.pathname);
+        if (wantsEn) {
+            if (i18n.language !== "en") i18n.changeLanguage("en");
+        } else if (i18n.language === "en") {
+            const saved = localStorage.getItem("lang");
+            i18n.changeLanguage(saved && saved !== "en" ? saved : "nl");
+        }
+    }, [location.pathname, i18n]);
+
+    return null;
+}
+
+// GA4's automatic page_view (disabled in index.html via send_page_view: false)
+// only fires once, on the initial full page load. In a client-side-routed SPA
+// every later navigation needs its own event, or GA only ever sees the landing page.
+// A rAF tick lets react-helmet-async commit the new <title> first.
+function GaPageview() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (typeof window.gtag !== "function") return;
+        const id = requestAnimationFrame(() => {
+            window.gtag("event", "page_view", {
+                page_path: location.pathname + location.search,
+                page_location: window.location.href,
+                page_title: document.title,
+            });
+        });
+        return () => cancelAnimationFrame(id);
+    }, [location.pathname, location.search]);
+
+    return null;
+}
+
 export default function App() {
     useEffect(() => {
         const handleAnchorClick = (e) => {
@@ -113,7 +157,21 @@ export default function App() {
     return (
         <Router>
             <ScrollToTop />
+            <LangSync />
+            <GaPageview />
             <Routes>
+                <Route path="/en/*" element={<AppRoutes />} />
+                <Route path="/*" element={<AppRoutes />} />
+            </Routes>
+        </Router>
+    );
+}
+
+// Twee keer gemount — eenmaal onder "/en/*", eenmaal onder "/*" — zodat elke
+// route in beide taalbomen bestaat zonder de paden zelf te dupliceren.
+function AppRoutes() {
+    return (
+        <Routes>
                 {/* Home — Hero direct, rest lazy (geprefetcht bij idle) */}
                 <Route
                     path="/"
@@ -138,6 +196,18 @@ export default function App() {
                         <Layout>
                             <Suspense fallback={<PageLoader />}>
                                 <About />
+                            </Suspense>
+                        </Layout>
+                    }
+                />
+
+                {/* FAQ — lazy */}
+                <Route
+                    path="/faq"
+                    element={
+                        <Layout>
+                            <Suspense fallback={<PageLoader />}>
+                                <Faq />
                             </Suspense>
                         </Layout>
                     }
@@ -260,7 +330,6 @@ export default function App() {
 
                 {/* 404 */}
                 <Route path="*" element={<Layout><div style={{ padding: 24 }}>Page not found</div></Layout>} />
-            </Routes>
-        </Router>
+        </Routes>
     );
 }

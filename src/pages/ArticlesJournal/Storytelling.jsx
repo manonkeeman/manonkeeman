@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "../../assets/Components/LocaleLink.jsx";
 import { useTranslation } from "react-i18next";
 
 
@@ -309,6 +309,52 @@ const bodies = {
             </p>
         </>
     ),
+    uk: () => (
+        <>
+            <p>
+                Більшість розробників вважають сторітелінг чимось для маркетологів або письменників із MacBook у кав'ярні.
+                Але не помиляйся: навіть в IT це змінює гру. Чи пояснюєш ти фічу product owner,
+                пишеш документацію для команди або презентуєш код на хакатоні — різниця не в логіці,
+                а в історії, яку ти розповідаєш.
+            </p>
+            <p>
+                І до речі про хакатони: коли я вперше про них почула, подумала, що це щось із сокирами.
+                Виявилося — це свого роду творчий марафон на 24–48 годин,
+                де разом із командою безперервно будуєш прототип навколо теми.
+                Очікуй безсонних ночей, забагато піци і залу, повного енергії.
+                А на фіналі — пітч для журі, ніби від цього залежить твоє життя.
+            </p>
+            <h2>1. Код — це логіка, але люди думають історіями</h2>
+            <p>
+                Ти думаєш функціями, класами та API. Решта світу — ні.
+                Гарна історія — це міст: вона показує <em>чому це важливо.</em> Що це вирішує? Для кого?
+            </p>
+            <h2>2. User stories — це насправді міні-оповідання</h2>
+            <p>
+                Agile вже тихо це робить. <em>«Як користувач я хочу X, щоб Y»</em> — Головний герой: користувач.
+                Конфлікт: проблема. Рішення: фіча. Це мікроісторія. Короткі історії = кращий фокус = легше запам'ятати.
+            </p>
+            <h2>3. Сторітелінг у щоденній роботі</h2>
+            <ul>
+                <li><strong>Code review:</strong> розповідай не лише <em>що</em> змінив, але <em>чому</em>.</li>
+                <li><strong>Презентації:</strong> починай із впізнаваного прикладу, а не схеми зі стрілками.</li>
+                <li><strong>Документація:</strong> пиши сценарії. «Уяви, що ти новачок і хочеш запустити за 5 хвилин».</li>
+            </ul>
+            <h2>4. Як стати кращим</h2>
+            <ul>
+                <li><strong>Знай аудиторію.</strong> Дизайнер думає інакше, ніж CTO.</li>
+                <li><strong>Використовуй метафори.</strong> API = меню ресторану. База даних = картотека.</li>
+                <li><strong>Будь точним.</strong> Один анекдот часто говорить більше, ніж десять слайдів.</li>
+                <li><strong>Практикуйся.</strong> Кидай міні-історії на stand-up і дивись, як реагують люди.</li>
+            </ul>
+            <h2>5. Бонус: ти виділяєшся</h2>
+            <p>
+                У світі, де більшість розробників говорять переважно кодом, ти виділяєшся, коли комунікуєш
+                чітко та по-людськи. Сторітелінг робить тебе сильнішим членом команди. Для мене це ще практика,
+                але я вже помічаю: історія відчиняє двері, які суха пояснення тримає зачиненими.
+            </p>
+        </>
+    ),
 };
 
 const ui = {
@@ -318,6 +364,7 @@ const ui = {
     de: { back: "← Zurück zum Journal", date: "14. September 2025", read: "~5 Min. Lesezeit", shareTitle: "Storytelling fur Entwickler", shareText: "Warum auch Ihr Code eine Geschichte erzahlt." },
     es: { back: "← Volver al diario", date: "14 de septiembre de 2025", read: "~5 min de lectura", shareTitle: "Storytelling para Desarrolladores", shareText: "Por que tu codigo tambien cuenta una historia." },
     it: { back: "← Torna al journal", date: "14 settembre 2025", read: "~5 min di lettura", shareTitle: "Storytelling per Sviluppatori", shareText: "Perche anche il tuo codice racconta una storia." },
+    uk: { back: "← Назад до журналу", date: "14 вересня 2025", read: "~5 хв читання", shareTitle: "Сторітелінг для розробників", shareText: "Чому твій код теж розповідає історію." },
 };
 
 const titles = {
@@ -327,6 +374,7 @@ const titles = {
     de: "Storytelling fur Entwickler, eine vergessene Superkraft",
     es: "Storytelling para Desarrolladores, un superpoder olvidado",
     it: "Storytelling per Sviluppatori, un superpotere dimenticato",
+    uk: "Сторітелінг для розробників, забута суперсила",
 };
 
 export default function StorytellingForDevelopers() {

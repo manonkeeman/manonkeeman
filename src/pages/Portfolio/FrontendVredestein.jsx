@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "../../assets/Components/LocaleLink.jsx";
 import { useTranslation } from "react-i18next";
 import Seo from "../../assets/Components/Seo.jsx";
 import JsonLd from "../../assets/Components/JsonLd.jsx";
@@ -116,6 +116,22 @@ const content = {
         imageNote: "📸 Immagine necessaria: screenshot homepage desktop + vista mobile del sito",
         liveBtn: "Vedi il sito ↗",
         backBtn: "← Torna al Portfolio",
+    },
+    uk: {
+        title: "Веброзробка - Villa Vredestein",
+        subtitle: "Публічний сайт",
+        tagline: "Місце з історією.\nСайт, який її розповідає.",
+        intro: "Villa Vredestein потребувала сайту, який запрошує, інформує та викликає довіру. Нічого зайвого — лише історія місця, чітко і гарно представлена.",
+        cards: [
+            { label: "Що", text: "Публічний сайт про історію, мету та майбутнє Villa Vredestein." },
+            { label: "Як", text: "React + Vite. Адаптивний, швидкий і доступний на будь-якому екрані та пристрої." },
+            { label: "Результат", text: "Цифрова візитна картка, яка показує, хто така Villa Vredestein і за що вони стоять." },
+        ],
+        challengeTitle: "Чим я пишаюся",
+        challenge: "Будувати атмосферу за допомогою коду. Сайт мав не просто інформувати — він мав створювати відчуття. Це живе у виборі білого простору, типографіки та ієрархії. Речі, які не помічаєш одразу, але обов'язково відчуваєш.",
+        imageNote: "📸 Потрібне зображення: скріншот головної сторінки на десктопі + мобільний вигляд сайту",
+        liveBtn: "Переглянути сайт ↗",
+        backBtn: "← Назад до Портфоліо",
     },
 };
 

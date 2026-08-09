@@ -1,5 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from "./LocaleLink.jsx";
 import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router-dom";
+import { stripEnPrefix, withLang } from "../../i18n/langPath.js";
 
 const LANGUAGES = [
     { code: 'nl', label: 'NL' },
@@ -13,10 +15,21 @@ const LANGUAGES = [
 
 export default function MobileMenu({ open, onClose }) {
     const { t, i18n } = useTranslation();
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const changeLang = (code) => {
+        const basePath = stripEnPrefix(location.pathname);
+        const target = withLang(basePath, code) + location.search + location.hash;
+        if (target !== location.pathname + location.search + location.hash) {
+            navigate(target);
+        }
         i18n.changeLanguage(code);
-        localStorage.setItem('lang', code);
+        if (code === 'en') {
+            localStorage.removeItem('lang');
+        } else {
+            localStorage.setItem('lang', code);
+        }
         onClose();
     };
 
@@ -90,6 +103,9 @@ export default function MobileMenu({ open, onClose }) {
 
                     <NavLink to="/about" onClick={onClose} className="mob-link mob-link--main">
                         {t('nav.about')}
+                    </NavLink>
+                    <NavLink to="/faq" onClick={onClose} className="mob-link mob-link--main">
+                        {t('nav.faq')}
                     </NavLink>
                     <NavLink to="/#contact" onClick={onClose} className="mob-link mob-link--main">
                         {t('nav.contact')}

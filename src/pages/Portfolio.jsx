@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "../assets/Components/LocaleLink.jsx";
+import { useLangPrefix } from "../assets/Components/useLangPrefix.js";
 import { useTranslation } from "react-i18next";
 
-const PUB_ACU  = "/Portfolio/webdesign-acupuncture";
 const PUB_BACK = "/Portfolio/studenten-dashboard-backend";
 
 function PortfolioImage({ basePublic, imgSrc, alt }) {
@@ -79,6 +79,7 @@ const projects = [
 
 export default function Portfolio() {
     const { t } = useTranslation();
+    const prefix = useLangPrefix();
     const trackRef = useRef(null);
 
     const scroll = (dir) => {
@@ -144,7 +145,7 @@ export default function Portfolio() {
                         <p className="cta-card-label">{t('portfolio.cta.label')}</p>
                         <h3>{t('portfolio.cta.title')}</h3>
                         <p className="cta-card-sub">{t('portfolio.cta.sub')}</p>
-                        <a href="/#contact" className="btn-cta-solid">{t('portfolio.cta.btn')} →</a>
+                        <a href={`${prefix}/#contact`} className="btn-cta-solid">{t('portfolio.cta.btn')} →</a>
                     </div>
                 </article>
             </div>

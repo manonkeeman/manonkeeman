@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { lazy, Suspense } from "react";
 import Seo from "../../assets/Components/Seo.jsx";

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "../../assets/Components/LocaleLink.jsx";
 import { useTranslation } from "react-i18next";
 import Seo from "../../assets/Components/Seo.jsx";
 import JsonLd from "../../assets/Components/JsonLd.jsx";
@@ -98,6 +98,19 @@ const content = {
         ],
         liveBtn: "Vedi il sito ↗",
         backBtn: "← Torna al Portfolio",
+    },
+    uk: {
+        title: "Вебдизайн – Acupuncture by Saskia",
+        subtitle: "Сайт на WordPress",
+        tagline: "Спокій і ясність.\nСайт, який викликає довіру.",
+        intro: "Практика Saskia випромінює спокій. Сайт мав робити те саме: одразу давати відвідувачам відчуття, що вони на правильному місці.",
+        cards: [
+            { label: "Що", text: "Сайт на WordPress для акупунктурної практики: інформація, тарифи, локація та простий шлях до контакту." },
+            { label: "Як", text: "WordPress зі спокійним фірмовим стилем, Adobe Suite для візуалів. Адаптивний, швидкий та SEO-оптимізований." },
+            { label: "Результат", text: "Сайт, що пасує практиці: спокійний, чіткий і без бар'єрів для відвідувача." },
+        ],
+        liveBtn: "Переглянути сайт ↗",
+        backBtn: "← Назад до Портфоліо",
     },
 };
 

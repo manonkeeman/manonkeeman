@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "../assets/Components/LocaleLink.jsx";
 import { useTranslation } from "react-i18next";
 import { SiSubstack } from "react-icons/si";
 import data from "../content/contentJournal.json";

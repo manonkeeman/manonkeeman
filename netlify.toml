@@ -6,8 +6,12 @@
   path = "/journal/*"
   function = "og-inject"
 
+[[edge_functions]]
+  path = "/en/journal/*"
+  function = "og-inject"
+
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
 # SPA fallback — all routes handled by React Router
 [[redirects]]

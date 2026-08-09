@@ -22,7 +22,8 @@
         "365korteverhalen": "365 Short Stories",
         "pastelvanbuiten": "Pastel on the outside, surprising on the inside"
       }
-    }
+    },
+    "faq": "FAQ"
   },
   "share": {
     "label": "Share",
@@ -31,7 +32,7 @@
   "hero": {
     "greeting": "Need a website that actually brings in clients?",
     "tagline": "You dream it, I Manon it.",
-    "bio": "Behind every beautiful website is someone who makes the difference. I design, write and build websites that are fast, findable on Google and built to convert visitors into clients. From design and code to copy and SEO, all under one roof. So you can focus on what you do best.",
+    "bio": "Is your website not doing what you need? Or don't you have one yet? I solve that. I figure out the solution, design the site, write the copy and build it myself. Fast, findable on Google, and built to turn visitors into clients.",
     "roles": "Web Development • Web Design • Copywriting • SEO • React",
     "projects": "View my work",
     "journal": "Journal",
@@ -46,7 +47,7 @@
     "bio2": "My path was anything but straight. From the Gerrit Rietveld Academie to SAE Institute and the Schrijversacademie, always searching for how to make something not just beautiful, but also understandable.",
     "bio3": "After years working for clients like Renault, the Municipality of Amsterdam and KLM, I noticed something frustrating: I could see exactly what could be better… but I couldn't always build it myself.",
     "bio4": "So I decided to change that. I retrained as a Full Stack Developer at NOVI College. Because I no longer wanted a gap between idea and execution.",
-    "bio5": "Now I design, write and build myself. And I make sure that what you create not only makes sense, but actually lands with the people it's meant for.",
+    "bio5": "In plain terms: I solve technical problems and build the website that goes with the solution. No detours, no separate specialists working past each other. One person who takes it from idea to launch.",
     "journalCta": "Curious about my writing, interviews and travel stories?",
     "journalBtn": "Go to the journal",
     "skillsTitle": "Skills",
@@ -146,7 +147,8 @@
     }
   },
   "footer": {
-    "rights": "All rights reserved | Code & Content - Manon Keeman"
+    "rights": "All rights reserved | Code & Content - Manon Keeman",
+    "tagline": "I solve technical problems and build the website that goes with it."
   },
   "portfolio": {
     "viewBtn": "View",
@@ -176,8 +178,8 @@
   },
   "seo": {
     "home": {
-      "title": "Manon Keeman — Full Stack Developer",
-      "description": "Portfolio of Manon Keeman — Full Stack Developer, Systems Thinker, Designer & Storyteller. React, Spring Boot, UX design. Available for work."
+      "title": "ManonIT — Website Development | Web Development & Design",
+      "description": "Need a website that brings in clients? ManonIT builds websites that are fast, found on Google, and built to turn visitors into clients. Web development, web design, copywriting and SEO under one roof."
     },
     "about": {
       "title": "About me — Manon Keeman | Full Stack Developer",
@@ -234,6 +236,10 @@
         "title": "Web Design Marie Boddaert — Writer's Website | ManonIT",
         "description": "Personal writer's website for Marie H. Boddaert with stories, poems and diary notes. Custom HTML/CSS with a literary aesthetic."
       }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions | ManonIT",
+      "description": "Answers to the most common questions about getting a website built: cost, timeline, technology and SEO."
     }
   },
   "journalSection": {
@@ -295,5 +301,45 @@
         "role": "Recreation & rental"
       }
     }
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently Asked Questions",
+    "intro": "Still on the fence? Here are the questions I get asked most, about cost, timeline, tech, and how I work.",
+    "items": [
+      {
+        "q": "What does ManonIT actually do?",
+        "a": "I solve technical problems and build the website or web app that goes with it: a slow site, an outdated design, a missing booking system, or an idea that doesn't exist yet. I design, write the copy and build it myself, with no middlemen and no handoff queue between designer and developer."
+      },
+      {
+        "q": "How much does a website cost?",
+        "a": "Pricing depends on scope and functionality. A straightforward business website starts from €1,200 excl. VAT. You always get a clear quote first, so you know exactly what to expect before anything gets built."
+      },
+      {
+        "q": "How long does it take to build a website?",
+        "a": "A standard business website is usually ready within 2 to 4 weeks. Larger custom projects with extra functionality, like a dashboard or booking system, take 6 to 10 weeks. We agree on the timeline upfront."
+      },
+      {
+        "q": "What technologies do you use?",
+        "a": "I work with React, Vite, Spring Boot, WordPress and PostgreSQL, depending on what the project needs. WordPress is usually the fastest, most affordable choice for a smaller business site. For custom functionality, like a client portal, I use React and Spring Boot."
+      },
+      {
+        "q": "Do you also take care of SEO?",
+        "a": "Yes. Every website I build is technically SEO-optimized by default: fast load times, correct meta tags, structured data and a mobile-friendly design. On request I also do keyword research and write the content."
+      },
+      {
+        "q": "Can I order just copywriting or web design?",
+        "a": "Yes. Web design, copywriting, SEO and photo & video are also available separately. You don't need a full website build, get in touch to discuss the options."
+      },
+      {
+        "q": "What's the difference between you and a web design agency?",
+        "a": "At an agency you usually talk to an account manager who hands the work off to a developer you never actually speak to. With me, you talk directly to the person designing, writing and building it. That means less noise, faster decisions, and a site that matches what you actually meant."
+      },
+      {
+        "q": "Who do you work with?",
+        "a": "Dutch freelancers and SMEs who want their website to actually bring in clients, not just look good. From a slow or outdated site to an idea that hasn't been built yet."
+      }
+    ],
+    "ctaText": "Don't see your question here?"
   }
 }

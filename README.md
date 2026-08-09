@@ -89,11 +89,11 @@ Netlify voert dit automatisch uit via `netlify.toml`:
 
 ```toml
 [build]
-command = "node scripts/resize.mjs && npm run build"
+command = "npm run build"
 publish = "dist"
 ```
 
-De `resize.mjs` genereert responsive AVIF/WebP varianten (400w, 800w, 1200w) via sharp.
+Responsive AVIF/WebP-varianten (400w, 800w, 1200w) worden lokaal gegenereerd via `node scripts/resize.mjs` en gecommit naar `public/` — dit draait niet als onderdeel van de Netlify build.
 
 ---
 

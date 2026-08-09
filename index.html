@@ -13,7 +13,6 @@
   <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#5C1A1B">
@@ -39,7 +38,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-C2623Y1T63');
+    // send_page_view: false — dit is een SPA (React Router, geen full page reloads),
+    // dus elke navigatie moet zelf een page_view sturen (zie GaPageview in App.jsx).
+    // Zonder deze vlag ziet GA4 alleen de allereerste pagina van elke sessie.
+    gtag('config', 'G-C2623Y1T63', { send_page_view: false });
   </script>
 
   <!-- Structured data: Person -->
@@ -162,55 +164,8 @@
   }
   </script>
 
-  <!-- Structured data: FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Wat kost een website laten maken?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "De prijs van een website hangt af van de omvang en functionaliteit. Een eenvoudige zakelijke website begint vanaf €1.200 excl. btw. Ik stel altijd een heldere offerte op zodat je precies weet waar je aan toe bent."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hoe lang duurt het bouwen van een website?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Een standaard zakelijke website is doorgaans binnen 2 tot 4 weken klaar. Grotere maatwerk-projecten met extra functionaliteit kunnen 6 tot 10 weken duren. We spreken de planning vooraf duidelijk af."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Welke technologieën gebruik je voor websites?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ik werk met React, Vite, Spring Boot, WordPress en PostgreSQL, afhankelijk van wat het project vraagt. Voor kleinere sites is WordPress vaak de beste keuze; voor maatwerk-webapps gebruik ik React en Spring Boot."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Zorg je ook voor SEO en vindbaarheid in Google?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja. Elke website die ik bouw is standaard technisch SEO-geoptimaliseerd: snelle laadtijden, correcte meta-tags, gestructureerde data en mobielvriendelijk. Op aanvraag verzorg ik ook zoekwoordenonderzoek en content."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Kan ik ook alleen copywriting of webdesign bestellen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, dat kan. Ik bied webdesign, copywriting, SEO en foto & video ook los aan. Je hoeft niet per se een complete website te laten bouwen. Neem contact op voor de mogelijkheden."
-        }
-      }
-    ]
-  }
-  </script>
+  <!-- FAQPage structured data staat op /faq zelf (via Seo/JsonLd), naast de
+       zichtbare content die het beschrijft — niet hier global op elke pagina. -->
 </head>
 <body>
 <div id="root"></div>
@@ -231,7 +186,7 @@
   <div style="flex:1;display:flex;align-items:center;padding:0 clamp(20px,6vw,80px);max-width:1100px;width:100%;margin:0 auto;">
     <div>
       <p style="margin:0 0 8px;font-size:.85rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#FF6B1A;">Beschikbaar voor nieuwe opdrachten</p>
-      <h1 style="margin:0 0 16px;font-size:clamp(2rem,5vw,3.4rem);font-weight:500;line-height:1.1;color:#5C1A1B;font-family:'Courier Prime','Courier New',monospace;">I make beautiful websites.</h1>
+      <h1 style="margin:0 0 16px;font-size:clamp(2rem,5vw,3.4rem);font-weight:500;line-height:1.1;color:#5C1A1B;font-family:'Courier Prime','Courier New',monospace;">Website laten maken die klanten trekt?</h1>
       <p style="margin:0;font-size:1.05rem;color:rgba(42,16,16,.6);max-width:480px;line-height:1.6;font-style:italic;">You dream it, I Manon it.</p>
     </div>
   </div>

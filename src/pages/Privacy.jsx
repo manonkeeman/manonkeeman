@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "../assets/Components/LocaleLink.jsx";
 import Seo from "../assets/Components/Seo.jsx";
 
 export default function Privacy() {

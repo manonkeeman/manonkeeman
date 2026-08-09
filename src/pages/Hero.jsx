@@ -1,8 +1,10 @@
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
+import { useLangPrefix } from "../assets/Components/useLangPrefix.js";
 
 function Hero() {
     const { t } = useTranslation();
+    const prefix = useLangPrefix();
 
     return (
         <section id="home" style={{ padding: 0, margin: 0 }}>
@@ -43,8 +45,8 @@ function Hero() {
                     <p style={{ whiteSpace: 'pre-line' }}>{t('hero.bio')}</p>
                     <p className="small">{t('hero.roles')}</p>
                     <div className="hero-ctas">
-                        <a href="/#portfolio" className="btn btn-primary" data-arrow data-wide>{t('hero.ctaWork')}</a>
-                        <a href="/#contact" className="btn btn-outline" data-arrow data-narrow>{t('hero.ctaContact')}</a>
+                        <a href={`${prefix}/#portfolio`} className="btn btn-primary" data-arrow data-wide>{t('hero.ctaWork')}</a>
+                        <a href={`${prefix}/#contact`} className="btn btn-outline" data-arrow data-narrow>{t('hero.ctaContact')}</a>
                     </div>
                 </div>
             </div>

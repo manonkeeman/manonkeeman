@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { NavLink } from "./LocaleLink.jsx";
 import { useTranslation } from "react-i18next";
 import { FaGithub } from "react-icons/fa";
 import MobileMenu from "./MobileMenu.jsx";
@@ -49,6 +50,7 @@ export default function Navbar() {
                     </div>
 
                     <NavLink to="/about">{t('nav.about')}</NavLink>
+                    <NavLink to="/faq">{t('nav.faq')}</NavLink>
                     <NavLink to={{ pathname: "/", hash: "#contact" }}>{t('nav.contact')}</NavLink>
 
 

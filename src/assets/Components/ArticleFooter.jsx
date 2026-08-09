@@ -15,8 +15,7 @@ export default function ArticleFooter({ shareTitle, shareText }) {
     }, []);
 
     const enc = encodeURIComponent(articleUrl);
-    const encTitle = encodeURIComponent(shareTitle || "");
-    const encTweet = encodeURIComponent(`${shareTitle} — door Manon Keeman`);
+    const encTweet = encodeURIComponent(`${shareText || shareTitle} — door Manon Keeman`);
 
     const handleCopy = async () => {
         try {

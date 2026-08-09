@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "../../assets/Components/LocaleLink.jsx";
 import { useTranslation } from "react-i18next";
 import Seo from "../../assets/Components/Seo.jsx";
 import JsonLd from "../../assets/Components/JsonLd.jsx";
@@ -122,6 +122,22 @@ const content = {
         approach: "Un sito di scrittrice non deve essere d'ostacolo. La struttura distingue chiaramente tre tipi di contenuto, senza che Marie debba pensare alla tecnologia per raggiungere i suoi lettori.",
         liveBtn: "Vedi il sito ↗",
         backBtn: "← Torna al Portfolio",
+    },
+    uk: {
+        title: "Вебдизайн · Marie H. Boddaert",
+        subtitle: "Письменницький сайт · хоститься на Netlify",
+        tagline: "Слова заслуговують простору.\nМісце, де дихають історії.",
+        badge: "Онлайн",
+        intro: "Marie H. Boddaert пише блоги, вірші та тексти на замовлення. Я розробила для неї особистий сайт, що відчувається як її власна книга: легкий, спокійний і повністю налаштований на її голос.",
+        cards: [
+            { label: "Що", text: "Особистий письменницький сайт з трьома розділами контенту: оповідання, вірші та короткі щоденникові нотатки. З інтеграцією Substack для розсилки." },
+            { label: "Як", text: "Індивідуальний дизайн в HTML/CSS. Світла кольорова палітра, великий білий простір і типографіка, що ставить текст у центр." },
+            { label: "Статус", text: "Онлайн на Netlify. Marie керує своїм контентом через CMS і публікує нові історії без технічної допомоги." },
+        ],
+        approachTitle: "Підхід",
+        approach: "Письменницький сайт не повинен заважати. Структура чітко розділяє три типи контенту, щоб Marie не думала про технологію, а просто досягала своїх читачів.",
+        liveBtn: "Переглянути сайт ↗",
+        backBtn: "← Назад до Портфоліо",
     },
 };
 

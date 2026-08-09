@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { stripEnPrefix, withLang } from '../../i18n/langPath.js';
 
 const LANGUAGES = [
   { code: 'nl', label: 'NL', name: 'Nederlands' },
@@ -13,14 +15,27 @@ const LANGUAGES = [
 
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
 
-  const current = LANGUAGES.find(l => l.code === i18n.language) || LANGUAGES[1];
+  const current = LANGUAGES.find(l => l.code === i18n.language) || LANGUAGES[0];
 
+  // NL en EN zijn de enige talen met een eigen, indexeerbare URL (/ vs /en/...).
+  // FR/DE/ES/IT/UK schakelen alleen i18n om, zonder de URL aan te raken.
   const change = (code) => {
+    const basePath = stripEnPrefix(location.pathname);
+    const target = withLang(basePath, code) + location.search + location.hash;
+    if (target !== location.pathname + location.search + location.hash) {
+      navigate(target);
+    }
     i18n.changeLanguage(code);
-    localStorage.setItem('lang', code);
+    if (code === 'en') {
+      localStorage.removeItem('lang');
+    } else {
+      localStorage.setItem('lang', code);
+    }
     setOpen(false);
   };
 

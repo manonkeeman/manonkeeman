@@ -22,7 +22,8 @@
         "365korteverhalen": "365 Korte Verhalen",
         "pastelvanbuiten": "Pastel van buiten, verrassend van binnen"
       }
-    }
+    },
+    "faq": "Veelgestelde vragen"
   },
   "share": {
     "label": "Delen",
@@ -31,7 +32,7 @@
   "hero": {
     "greeting": "Website laten maken die klanten trekt?",
     "tagline": "You dream it, I Manon it.",
-    "bio": "Achter elke mooie website zit iemand die het verschil maakt. Ik ontwerp, schrijf en bouw websites die snel zijn, vindbaar in Google en ingericht om bezoekers te overtuigen. Van design en code tot tekst en SEO, alles onder één dak. Zodat jij kunt doen waar je goed in bent.",
+    "bio": "Werkt je website niet zoals je wilt? Of heb je er nog geen? Ik los dat op. Ik bedenk de oplossing, ontwerp de site, schrijf de teksten en bouw het zelf. Snel, vindbaar in Google en gemaakt om bezoekers om te zetten in klanten.",
     "roles": "Webdevelopment • Webdesign • Copywriting • SEO • React",
     "projects": "Bekijk mijn werk",
     "journal": "Journal",
@@ -46,7 +47,7 @@
     "bio2": "Mijn pad was allesbehalve recht. Van de Gerrit Rietveld Academie naar het SAE Institute en de Schrijversacademie, steeds op zoek naar hoe je iets niet alleen mooi maakt, maar ook begrijpelijk.",
     "bio3": "Na jaren werken voor klanten als Renault, de Gemeente Amsterdam en KLM merkte ik iets frustrerends: ik zag precies wat er beter kon… maar kon het niet altijd zelf bouwen.",
     "bio4": "Dus besloot ik dat te veranderen. Ik liet me omscholen tot Full Stack Developer aan het NOVI College. Omdat ik geen afhankelijkheid meer wilde tussen idee en uitvoering.",
-    "bio5": "Nu ontwerp, schrijf en bouw ik zelf. En zorg ik dat wat je maakt niet alleen klopt, maar ook echt landt bij de mensen voor wie het bedoeld is.",
+    "bio5": "In gewone taal: ik los technische problemen op en bouw daar een website voor die gewoon werkt. Geen omwegen, geen losse specialisten die langs elkaar heen werken. Eén persoon die het van idee tot livegang aanpakt.",
     "journalCta": "Meer lezen over mijn schrijven, interviews en reisverhalen?",
     "journalBtn": "Naar het journal",
     "skillsTitle": "Skills",
@@ -146,7 +147,8 @@
     }
   },
   "footer": {
-    "rights": "Alle rechten voorbehouden | Code & Content - Manon Keeman"
+    "rights": "Alle rechten voorbehouden | Code & Content - Manon Keeman",
+    "tagline": "Ik los technische problemen op en bouw de website die daarbij hoort."
   },
   "portfolio": {
     "viewBtn": "Bekijk",
@@ -241,6 +243,10 @@
         "title": "Webdesign Marie Boddaert — Schrijverswebsite | ManonIT",
         "description": "Persoonlijke schrijverswebsite voor Marie H. Boddaert: verhalen, gedichten en dagboeknotities. Live gebouwd in HTML/CSS met Substack-integratie."
       }
+    },
+    "faq": {
+      "title": "Veelgestelde vragen | ManonIT",
+      "description": "Antwoord op de meest gestelde vragen over een website laten maken: kosten, doorlooptijd, technologie en SEO."
     }
   },
   "journalSection": {
@@ -306,5 +312,45 @@
         "role": "Recreatie & verhuur"
       }
     }
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Veelgestelde vragen",
+    "intro": "Twijfel je nog? Hier staan de vragen die ik het vaakst krijg, over kosten, doorlooptijd, techniek en hoe ik werk.",
+    "items": [
+      {
+        "q": "Wat doet ManonIT precies?",
+        "a": "Ik los technische problemen op en bouw de website of webapp die daarbij hoort. Denk aan een trage site, een verouderd design, een ontbrekend boekingssysteem of een idee dat nog nergens staat. Ik ontwerp, schrijf de teksten en bouw de site zelf, zonder tussenpersonen en zonder wachtrij tussen designer en developer."
+      },
+      {
+        "q": "Wat kost een website laten maken?",
+        "a": "De prijs hangt af van de omvang en functionaliteit. Een eenvoudige zakelijke website begint vanaf €1.200 excl. btw. Je krijgt altijd eerst een heldere offerte, zodat je precies weet waar je aan toe bent voordat er iets gebouwd wordt."
+      },
+      {
+        "q": "Hoe lang duurt het bouwen van een website?",
+        "a": "Een standaard zakelijke website is meestal binnen 2 tot 4 weken klaar. Grotere maatwerkprojecten met extra functionaliteit, zoals een dashboard of boekingssysteem, duren 6 tot 10 weken. De planning spreken we vooraf duidelijk af."
+      },
+      {
+        "q": "Welke technologieën gebruik je?",
+        "a": "Ik werk met React, Vite, Spring Boot, WordPress en PostgreSQL, afhankelijk van wat het project nodig heeft. Voor een kleinere bedrijfssite is WordPress vaak de snelste, goedkoopste keuze. Voor maatwerk met eigen functionaliteit, bijvoorbeeld een klantportaal, gebruik ik React en Spring Boot."
+      },
+      {
+        "q": "Zorg je ook voor SEO en vindbaarheid in Google?",
+        "a": "Ja. Elke website die ik bouw is standaard technisch SEO-geoptimaliseerd: snelle laadtijden, correcte metatags, gestructureerde data en een mobielvriendelijk ontwerp. Op aanvraag doe ik ook zoekwoordenonderzoek en schrijf ik de content."
+      },
+      {
+        "q": "Kan ik ook alleen copywriting of webdesign bestellen?",
+        "a": "Ja. Webdesign, copywriting, SEO en foto & video bied ik ook los aan. Je hoeft niet per se een complete website te laten bouwen, neem contact op om de mogelijkheden te bespreken."
+      },
+      {
+        "q": "Wat is het verschil tussen jou en een webdesignbureau?",
+        "a": "Bij een bureau praat je vaak met een accountmanager die het werk doorzet naar een developer die je nooit spreekt. Bij mij praat je rechtstreeks met de persoon die ontwerpt, schrijft én bouwt. Dat betekent minder ruis, snellere beslissingen en een site die klopt met wat je bedoelde."
+      },
+      {
+        "q": "Voor wie werk je het liefst?",
+        "a": "Voor Nederlandse zzp'ers en MKB'ers die willen dat hun website daadwerkelijk klanten oplevert, niet alleen mooi staat. Van een trage of verouderde site tot een idee dat nog nergens gebouwd is."
+      }
+    ],
+    "ctaText": "Staat je vraag er niet bij?"
   }
 }

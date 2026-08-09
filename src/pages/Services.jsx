@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { useLangPrefix } from "../assets/Components/useLangPrefix.js";
 
 export default function Services() {
     const { t } = useTranslation();
+    const prefix = useLangPrefix();
 
     const services = [
         { key: "websites" },
@@ -58,7 +60,7 @@ export default function Services() {
                     </div>
 
                     <div className="svc-steps-cta">
-                        <a href="/#contact" className="btn btn-primary" data-arrow>{t("howItWorks.cta")}</a>
+                        <a href={`${prefix}/#contact`} className="btn btn-primary" data-arrow>{t("howItWorks.cta")}</a>
                     </div>
                 </div>
             </section>

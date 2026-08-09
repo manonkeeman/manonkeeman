@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "./LocaleLink.jsx";
 
 /**
  * items = [{ label: "Home", to: "/" }, { label: "Journal", to: "/#journal" }, { label: "Article Title" }]

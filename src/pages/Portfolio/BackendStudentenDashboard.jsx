@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link } from "../../assets/Components/LocaleLink.jsx";
+import { useLangPrefix } from "../../assets/Components/useLangPrefix.js";
 import { useEffect, useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import Seo from "../../assets/Components/Seo.jsx";
@@ -197,12 +198,36 @@ const content = {
         ctaBtn: "Contattami →",
         backBtn: "← Torna al Portfolio",
     },
+    uk: {
+        title: "Панель управління орендою студентів",
+        subtitle: "Spring Boot · Готово до використання",
+        tagline: "Цифрова оренда, повний контроль.\nВсе в одному місці, масштабується під твою ситуацію.",
+        intro: "Оренда кімнат студентам приносить більше паперової роботи, ніж очікуєш. Відстеження платежів, ведення договорів, організація прибирання, встановлення правил. Ця панель бере це на себе.",
+        features: [
+            "Огляд платежів з автоматичними нагадуваннями",
+            "Графік прибирання для кожного об'єкта",
+            "Цифрові договори та правила будинку",
+            "Окремі акаунти для кожного орендаря",
+            "Рольовий доступ: орендодавець і студент",
+        ],
+        cards: [
+            { label: "Для кого", text: "Приватні орендодавці з кількома студентськими кімнатами, які хочуть контролювати платежі, адміністрацію та комунікацію." },
+            { label: "Що включено", text: "Платежі, нагадування, графік прибирання, договори, правила будинку та управління орендарями в одному захищеному середовищі." },
+            { label: "Технічно", text: "Spring Boot, PostgreSQL, JWT-безпека та REST API, що підключається до будь-якого frontend. Повністю розширювана." },
+        ],
+        featuresTitle: "Що включено",
+        ctaTitle: "Зацікавлені?",
+        ctaText: "Ця панель доступна для інших орендодавців. Зв'яжіться для демонстрації, індивідуальної розробки або додаткової інформації.",
+        ctaBtn: "Зв'язатися →",
+        backBtn: "← Назад до Портфоліо",
+    },
 };
 
 export default function BackendStudentenDashboard() {
     const { t: tr, i18n } = useTranslation();
     const lang = i18n.language.split("-")[0];
     const c = content[lang] || content.en;
+    const prefix = useLangPrefix();
     const [lightbox, setLightbox] = useState(false);
 
     const closeLightbox = useCallback(() => setLightbox(false), []);
@@ -244,7 +269,7 @@ export default function BackendStudentenDashboard() {
                         <span className="tag">JWT</span>
                         <span className="tag">REST API</span>
                     </div>
-                    <a className="btn btn-primary vr-cta" href="/#contact">{c.ctaBtn}</a>
+                    <a className="btn btn-primary vr-cta" href={`${prefix}/#contact`}>{c.ctaBtn}</a>
                 </div>
                 <div
                     className="vr-hero-image"
@@ -325,7 +350,7 @@ export default function BackendStudentenDashboard() {
             <section className="vr-cta-block">
                 <h2>{c.ctaTitle}</h2>
                 <p>{c.ctaText}</p>
-                <a className="btn btn-primary" href="/#contact">{c.ctaBtn}</a>
+                <a className="btn btn-primary" href={`${prefix}/#contact`}>{c.ctaBtn}</a>
             </section>
 
             {/* ── FOOTER ── */}
