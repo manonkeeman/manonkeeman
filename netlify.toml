@@ -13,6 +13,18 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Privacy/Colofon zijn NL-only (geen EN-content) — /en/... was per ongeluk
+# bereikbaar en indexeerbaar, wat Google als duplicate content zag
+[[redirects]]
+  from = "/en/privacy"
+  to = "/privacy"
+  status = 301
+
+[[redirects]]
+  from = "/en/colofon"
+  to = "/colofon"
+  status = 301
+
 # SPA fallback — all routes handled by React Router
 [[redirects]]
   from = "/*"

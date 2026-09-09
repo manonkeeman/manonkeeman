@@ -1,4 +1,5 @@
 import { Link } from "./LocaleLink.jsx";
+import { Link as RouterLink } from "react-router-dom";
 import { useLangPrefix } from "./useLangPrefix.js";
 import { useTranslation } from "react-i18next";
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
@@ -38,8 +39,9 @@ export default function Footer() {
                 {/* Col 3 — Legal */}
                 <div className="footer-col footer-legal-col">
                     <p className="footer-heading">Juridisch</p>
-                    <Link to="/privacy">Privacybeleid</Link>
-                    <Link to="/colofon">Colofon</Link>
+                    {/* Plain RouterLink: geen /en-prefix — deze pagina's zijn NL-only */}
+                    <RouterLink to="/privacy">Privacybeleid</RouterLink>
+                    <RouterLink to="/colofon">Colofon</RouterLink>
                     <a href="/sitemap.xml" target="_blank" rel="noreferrer">Sitemap</a>
                     <p className="footer-copy" style={{ marginTop: 8 }}>KVK: 42053266</p>
                     <p className="footer-copy">BTW: NL005459093B94</p>
